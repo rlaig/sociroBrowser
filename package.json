@@ -4,7 +4,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"serve": "live-server ./dist/Web",
-		"live": "live-server .  --no-browser --port=8000",
+		"live": "live-server .  --no-browser --port=8001",
 		"build": "node ./tools/builder-web.js",
 		"build:online": "npm run build -- -O",
 		"build:mapviewer": "npm run build -- -V",
