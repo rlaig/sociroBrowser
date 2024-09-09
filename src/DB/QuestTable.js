@@ -98,8 +98,8 @@ define(function () {
           "Description": [
             "You spoke with ^0000FFFather Mareusis^000000 to become an Acolyte. He ordered you to visit ^0000FFFather Rubalkabara^000000, who has been Practicing Asceticism near the Relics, Northeast of Prontera City."
           ],
-          "NpcPosY": "255",
-          "NpcPosX": "365",
+          "NpcPosY": 255,
+          "NpcPosX": 365,
           "NpcSpr": "4_M_ORIENT02",
           "Summary": "Talk to Father Rubalkabara",
           "Title": "Job Change to Acolyte",
@@ -109,8 +109,8 @@ define(function () {
           "Description": [
             "You spoke with ^0000FFFather Mareusis^000000 to become an Acolyte. He ordered you to visit ^0000FFMother Mathilda^000000, who has been Practicing Asceticism near Morroc Town, located Southwest of Prontera City."
           ],
-          "NpcPosY": "218",
-          "NpcPosX": "41",
+          "NpcPosY": 218,
+          "NpcPosX": 41,
           "NpcSpr": "4_F_SISTER",
           "Summary": "Talk to Mother Mathilda",
           "Title": "Job Change to Acolyte",
@@ -120,8 +120,8 @@ define(function () {
           "Description": [
             "You spoke with ^0000FFFather Mareusis^000000 to become an Acolyte. He ordered you to visit ^0000FFFather Yosuke^000000, who has been Practicing Asceticism near a bridge, located Northwest of Prontera."
           ],
-          "NpcPosY": "355",
-          "NpcPosX": "208",
+          "NpcPosY": 355,
+          "NpcPosX": 208,
           "NpcSpr": "4W_M_02",
           "Summary": "Talk to Father Yosuke",
           "Title": "Job Change to Acolyte",
@@ -367,7 +367,7 @@ define(function () {
         },
         "1119": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Knights of the Neighborhood",
           "Description": [
@@ -607,7 +607,7 @@ define(function () {
         },
         "1152": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Help the Bad Cats in Danger!",
           "Description": [
@@ -1384,7 +1384,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Cursed Swordman",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "1262": {
           "Description": [
@@ -1661,7 +1661,7 @@ define(function () {
         },
         "1299": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Patrol Once a Day",
           "Description": [
@@ -1793,7 +1793,7 @@ define(function () {
           ],
           "Summary": "Visit Vallery after 04:00 AM",
           "Title": "[Standby] Today's Vin Chaud making is over",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "1318": {
           "Description": [
@@ -1882,7 +1882,7 @@ define(function () {
         },
         "1329": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Spotty in the Dreamland",
           "Description": [
@@ -1911,7 +1911,7 @@ define(function () {
         },
         "1332": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Wash Blood with Blood",
           "Description": [
@@ -1931,7 +1931,7 @@ define(function () {
           ],
           "Summary": "Visit the suffering man after 04:00",
           "Title": "[Standby] Sweet Temptation is fleeting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "1335": {
           "Description": [
@@ -1960,7 +1960,7 @@ define(function () {
           ],
           "Summary": "Visit Miss Fortuna after 4 AM",
           "Title": "No more Sweets",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "1340": {
           "Description": [
@@ -4280,7 +4280,7 @@ define(function () {
         },
         "2182": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Dr. Lifeguard's Request",
           "Description": [
@@ -4314,7 +4314,7 @@ define(function () {
         },
         "2186": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Spirit of Alfheim",
           "Description": [
@@ -5065,7 +5065,7 @@ define(function () {
         },
         "2290": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Suspicious Cat: Envy",
           "Description": [
@@ -5074,7 +5074,7 @@ define(function () {
         },
         "2291": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Suspicious Cat: Annoying Fellow",
           "Description": [
@@ -5728,7 +5728,7 @@ define(function () {
           ],
           "Summary": "Reset after 12 hours",
           "Title": "[Standby] The Curse of Baphomet - Grave Blood",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "3041": {
           "Description": [
@@ -6053,7 +6053,7 @@ define(function () {
         },
         "3091": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset after 5 minutes",
           "Title": "Report to the Continent - The Result of the search",
           "Description": [
@@ -6345,7 +6345,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 days at 04:00",
           "Title": "[Standby] Nidhoggr's Nest",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "3136": {
           "Description": [
@@ -6795,7 +6795,7 @@ define(function () {
         },
         "3331": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Sharing a Happy Festival Today",
           "Description": [
@@ -6820,7 +6820,7 @@ define(function () {
         },
         "3334": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Today's Sweets Drops Punishment",
           "Description": [
@@ -6854,7 +6854,7 @@ define(function () {
         },
         "3338": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Golden Corn in June",
           "Description": [
@@ -6887,7 +6887,7 @@ define(function () {
         },
         "3342": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] The volcanic island of Comodo in June",
           "Description": [
@@ -6912,7 +6912,7 @@ define(function () {
         },
         "3345": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Healthy herbs of June",
           "Description": [
@@ -7003,7 +7003,7 @@ define(function () {
         },
         "3370": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Resurrected Twig",
           "Description": [
@@ -7020,7 +7020,7 @@ define(function () {
         },
         "3372": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Hungry Wild Boars",
           "Description": [
@@ -7053,7 +7053,7 @@ define(function () {
         },
         "3376": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Preparation for the harvesting agent",
           "Description": [
@@ -7086,7 +7086,7 @@ define(function () {
         },
         "3380": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Turkey'y Food",
           "Description": [
@@ -7119,7 +7119,7 @@ define(function () {
         },
         "3384": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Reasons to move to Kunlun",
           "Description": [
@@ -7152,7 +7152,7 @@ define(function () {
         },
         "3388": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Harvest Festival Sweets Delivery",
           "Description": [
@@ -7177,7 +7177,7 @@ define(function () {
         },
         "3391": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion Sprinkled Potato Chips",
           "Description": [
@@ -7250,7 +7250,7 @@ define(function () {
         },
         "3400": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Insect Monster Hunt",
           "Description": [
@@ -7267,7 +7267,7 @@ define(function () {
         },
         "3402": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Brute Monster Hunt",
           "Description": [
@@ -7284,7 +7284,7 @@ define(function () {
         },
         "3404": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Fish Monster Hunt",
           "Description": [
@@ -7301,7 +7301,7 @@ define(function () {
         },
         "3406": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Dragon Monster Hunt",
           "Description": [
@@ -7360,7 +7360,7 @@ define(function () {
         },
         "3414": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Collect Abyssal Essence",
           "Description": [
@@ -7377,7 +7377,7 @@ define(function () {
         },
         "3416": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Defeat Deep Sea Creatures in the Upper Layers",
           "Description": [
@@ -7394,7 +7394,7 @@ define(function () {
         },
         "3418": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Defeat Deep Sea Creatures in the Lower Layers",
           "Description": [
@@ -7411,7 +7411,7 @@ define(function () {
         },
         "3420": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Defeat Deep Sea fishmen in the Lower Layers",
           "Description": [
@@ -7571,7 +7571,7 @@ define(function () {
         },
         "3448": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion of Moonlight 100 Kills",
           "Description": [
@@ -7595,7 +7595,7 @@ define(function () {
         },
         "3451": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion of Frozen 100 Kills",
           "Description": [
@@ -7619,7 +7619,7 @@ define(function () {
         },
         "3454": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion of Vampire 100 Kills",
           "Description": [
@@ -7643,7 +7643,7 @@ define(function () {
         },
         "3457": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion of Teddy Bear 100 Kills",
           "Description": [
@@ -7667,7 +7667,7 @@ define(function () {
         },
         "3460": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion of Abyss 100 Kills",
           "Description": [
@@ -7691,7 +7691,7 @@ define(function () {
         },
         "3463": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion of Luanda 100 Kills",
           "Description": [
@@ -7715,7 +7715,7 @@ define(function () {
         },
         "3466": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion of Labyrinth 100 Kills",
           "Description": [
@@ -7739,7 +7739,7 @@ define(function () {
         },
         "3469": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion of Underwater 100 Kills",
           "Description": [
@@ -7763,7 +7763,7 @@ define(function () {
         },
         "3472": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Einbroch Field-2",
           "Description": [
@@ -7780,7 +7780,7 @@ define(function () {
         },
         "3474": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Lighthalzen Field-2",
           "Description": [
@@ -7797,7 +7797,7 @@ define(function () {
         },
         "3476": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Ida Plains-1",
           "Description": [
@@ -7814,7 +7814,7 @@ define(function () {
         },
         "3478": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Veins Field-1",
           "Description": [
@@ -7831,7 +7831,7 @@ define(function () {
         },
         "3480": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Ida Plains-2",
           "Description": [
@@ -7848,7 +7848,7 @@ define(function () {
         },
         "3482": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Veins Field-2",
           "Description": [
@@ -7865,7 +7865,7 @@ define(function () {
         },
         "3484": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Ice Cave 1st Floor",
           "Description": [
@@ -7882,7 +7882,7 @@ define(function () {
         },
         "3486": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] (Skilled) Insect Monster Hunting",
           "Description": [
@@ -7899,7 +7899,7 @@ define(function () {
         },
         "3488": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] (Skilled) Brute Monster Hunting",
           "Description": [
@@ -7916,7 +7916,7 @@ define(function () {
         },
         "3490": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] (Skilled) Fish Monster Hunting",
           "Description": [
@@ -7933,7 +7933,7 @@ define(function () {
         },
         "3492": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] (Skilled) Dragon Monster Hunting",
           "Description": [
@@ -8030,7 +8030,7 @@ define(function () {
         },
         "3504": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Look at the Atmosphere",
           "Description": [
@@ -8070,7 +8070,7 @@ define(function () {
         },
         "3509": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion of Twins 100 Kills",
           "Description": [
@@ -8447,7 +8447,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Anori's Purification Potion",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4150": {
           "Description": [
@@ -8763,7 +8763,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "[Standby] Octopus",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4198": {
           "Description": [
@@ -8771,7 +8771,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4199": {
           "Description": [
@@ -8779,7 +8779,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4200": {
           "Description": [
@@ -8787,7 +8787,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4201": {
           "Description": [
@@ -8795,7 +8795,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4202": {
           "Description": [
@@ -8803,7 +8803,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4203": {
           "Description": [
@@ -8811,7 +8811,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4204": {
           "Description": [
@@ -8819,7 +8819,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4205": {
           "Description": [
@@ -8827,7 +8827,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4206": {
           "Description": [
@@ -8835,7 +8835,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4207": {
           "Description": [
@@ -8843,7 +8843,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4208": {
           "Description": [
@@ -8851,7 +8851,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4209": {
           "Description": [
@@ -8859,7 +8859,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4210": {
           "Description": [
@@ -8867,7 +8867,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4211": {
           "Description": [
@@ -8875,7 +8875,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 86-90 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4212": {
           "Description": [
@@ -8883,7 +8883,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4213": {
           "Description": [
@@ -8891,7 +8891,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4214": {
           "Description": [
@@ -8899,7 +8899,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4215": {
           "Description": [
@@ -8907,7 +8907,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4216": {
           "Description": [
@@ -8915,7 +8915,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4217": {
           "Description": [
@@ -8923,7 +8923,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4218": {
           "Description": [
@@ -8931,7 +8931,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4219": {
           "Description": [
@@ -8939,7 +8939,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4220": {
           "Description": [
@@ -8947,7 +8947,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4221": {
           "Description": [
@@ -8955,7 +8955,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4222": {
           "Description": [
@@ -8963,7 +8963,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4223": {
           "Description": [
@@ -8971,7 +8971,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4224": {
           "Description": [
@@ -8979,7 +8979,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4225": {
           "Description": [
@@ -8987,7 +8987,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4226": {
           "Description": [
@@ -8995,7 +8995,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4227": {
           "Description": [
@@ -9003,7 +9003,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] 91-99 Mission Board",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4228": {
           "Description": [
@@ -9018,7 +9018,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Devil in the Cave",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4230": {
           "Description": [
@@ -9444,7 +9444,7 @@ define(function () {
           ],
           "Summary": "Reset after 10 minutes",
           "Title": "[Standby] Labyrinth Event",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4291": {
           "Description": [
@@ -9484,7 +9484,7 @@ define(function () {
         },
         "4296": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Take a Break",
           "Description": [
@@ -9748,7 +9748,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Modori's Reward",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4344": {
           "Description": [
@@ -9798,7 +9798,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Wait for Santa Lunatic",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4362": {
           "Description": [
@@ -9806,7 +9806,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Wait for Santa Goblin",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4363": {
           "Description": [
@@ -9814,7 +9814,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Wait for Santa Orc",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4364": {
           "Description": [
@@ -9822,7 +9822,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Wait for Santa Jakk",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "4999": {
           "Description": [
@@ -9872,7 +9872,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Holgren",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5006": {
           "Description": [
@@ -9880,7 +9880,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Prontera Guide",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5007": {
           "Description": [
@@ -9888,7 +9888,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Payon Guide",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5008": {
           "Description": [
@@ -9896,7 +9896,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Geffen Guide",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5009": {
           "Description": [
@@ -9904,7 +9904,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Morroc Guide",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5010": {
           "Description": [
@@ -9912,7 +9912,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Shoe Cream",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5011": {
           "Description": [
@@ -9920,7 +9920,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Jin Ha Lee",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5012": {
           "Description": [
@@ -9928,7 +9928,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Zonda Agency Staff",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5013": {
           "Description": [
@@ -9936,7 +9936,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Arles Orleans",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5014": {
           "Description": [
@@ -9944,7 +9944,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Seiryu Lee",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5015": {
           "Description": [
@@ -9952,7 +9952,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Morroc Guide",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5016": {
           "IconName": "ico_nq.bmp",
@@ -9997,7 +9997,7 @@ define(function () {
         },
         "5020": {
           "IconName": "ico_nq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Let's go back to the researchers after 24 hours",
           "Title": "[Standby] Scanning the Sample",
           "Description": [
@@ -10032,7 +10032,7 @@ define(function () {
         },
         "5023": {
           "IconName": "ico_nq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset after 6 hours",
           "Title": "[Standby] During Sample Inspection",
           "Description": [
@@ -10089,7 +10089,7 @@ define(function () {
         },
         "5028": {
           "IconName": "ico_nq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset after 12 hours",
           "Title": "[Standby] During Sample Inspection",
           "Description": [
@@ -10099,7 +10099,7 @@ define(function () {
         },
         "5029": {
           "IconName": "ico_nq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset after 60 minutes",
           "Title": "[Standby] Unidentified creature",
           "Description": [
@@ -10225,7 +10225,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Help the old man!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5045": {
           "Description": [
@@ -10394,7 +10394,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Repair Wishes",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5069": {
           "Description": [
@@ -10409,7 +10409,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Rock-Paper-Scissors Practice Match",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5071": {
           "Description": [
@@ -10417,7 +10417,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Cham Cham Cham Practice Game",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5072": {
           "Description": [
@@ -10425,7 +10425,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Kong nyang kong Practice match",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5073": {
           "Description": [
@@ -10433,7 +10433,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Challenging of flag wave",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5074": {
           "Description": [
@@ -10644,7 +10644,7 @@ define(function () {
           ],
           "Summary": "Reset after 2 hours",
           "Title": "[Standby] (Angel) Please Wait!!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5104": {
           "Description": [
@@ -10666,7 +10666,7 @@ define(function () {
           ],
           "Summary": "Reset after 2 hours",
           "Title": "(Devil) Wait!!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5107": {
           "Description": [
@@ -10709,7 +10709,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 days at 4 o'clock",
           "Title": "Lab Access Restrictions",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5113": {
           "Description": [
@@ -11021,7 +11021,7 @@ define(function () {
         },
         "5161": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Low Level Collection Request",
           "Description": [
@@ -11086,7 +11086,7 @@ define(function () {
         },
         "5169": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Mid Level Collection Request",
           "Description": [
@@ -11127,7 +11127,7 @@ define(function () {
         },
         "5174": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "High Level Collection Request",
           "Description": [
@@ -11498,7 +11498,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Energy Crystal Accumulation",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5226": {
           "Description": [
@@ -11506,7 +11506,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Energy Crystal Accumulation",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5227": {
           "Description": [
@@ -11514,7 +11514,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Energy Crystal Accumulation",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5228": {
           "Description": [
@@ -11522,7 +11522,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] <Wave Mode-Forest>",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5229": {
           "Description": [
@@ -11551,7 +11551,7 @@ define(function () {
           ],
           "Summary": "Reset after 10 minutes",
           "Title": "[Standby] Rest",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5233": {
           "Description": [
@@ -11587,7 +11587,7 @@ define(function () {
           ],
           "Summary": "Reset after 10 minutes",
           "Title": "[Standby] Rest",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5238": {
           "Description": [
@@ -11595,7 +11595,7 @@ define(function () {
           ],
           "Summary": "Reset after 30 minutes",
           "Title": "[Standby] Harvest Waiting Time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5251": {
           "Description": [
@@ -11610,7 +11610,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Wood Supply Mission",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5253": {
           "Description": [
@@ -11625,7 +11625,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Wood Delivery Mission",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5255": {
           "Description": [
@@ -11640,7 +11640,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Rope Making Mission",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5257": {
           "Description": [
@@ -11655,7 +11655,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Rope Delivery Mission",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5259": {
           "Description": [
@@ -11670,7 +11670,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Brick Making Mission",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5261": {
           "Description": [
@@ -11685,7 +11685,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Brick Delivery Mission",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5263": {
           "Description": [
@@ -11700,7 +11700,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Snack Order",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5265": {
           "Description": [
@@ -11736,7 +11736,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Purging the Land",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5270": {
           "Description": [
@@ -11779,7 +11779,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "[Standby] Worker Transport",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5276": {
           "Description": [
@@ -11948,7 +11948,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] <Wave Mode-Sky>",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5304": {
           "Description": [
@@ -12059,7 +12059,7 @@ define(function () {
         },
         "5318": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Come Back Tomorrow",
           "Description": [
@@ -12068,7 +12068,7 @@ define(function () {
         },
         "5341": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Limits of Journeys",
           "Description": [
@@ -12149,7 +12149,7 @@ define(function () {
         },
         "5351": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Limits of Journeys",
           "Description": [
@@ -12206,7 +12206,7 @@ define(function () {
         },
         "5358": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Limits of Journeys",
           "Description": [
@@ -12247,7 +12247,7 @@ define(function () {
         },
         "5363": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Limits of Journeys",
           "Description": [
@@ -12272,7 +12272,7 @@ define(function () {
         },
         "5366": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Limits of Journeys",
           "Description": [
@@ -12345,7 +12345,7 @@ define(function () {
           ],
           "Summary": "Reset after 12 hours",
           "Title": "[Standby] Subjugation of Common Soldiers (Premium)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5376": {
           "Description": [
@@ -12353,7 +12353,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation of Common Soldiers",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5377": {
           "Description": [
@@ -12382,7 +12382,7 @@ define(function () {
           ],
           "Summary": "Reset after 12 hours",
           "Title": "[Standby] Subjugation of Elite Soldiers (Premium)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5381": {
           "Description": [
@@ -12390,7 +12390,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation of Elite Soldiers",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5382": {
           "Description": [
@@ -12419,7 +12419,7 @@ define(function () {
           ],
           "Summary": "Reset after 12 hours",
           "Title": "[Standby] Subjugation of Captains (Premium)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5386": {
           "Description": [
@@ -12427,7 +12427,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation of Captains",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5387": {
           "Description": [
@@ -12463,7 +12463,7 @@ define(function () {
           ],
           "Summary": "Reset after 12 hours",
           "Title": "[Standby] Massacre of Common Soldiers (Premium)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5392": {
           "Description": [
@@ -12471,7 +12471,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Massacre of Common Soldiers",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5393": {
           "Description": [
@@ -12500,7 +12500,7 @@ define(function () {
           ],
           "Summary": "Reset after 12 hours",
           "Title": "[Standby] Massacre of Elite Soldiers (Premium)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5397": {
           "Description": [
@@ -12508,7 +12508,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Massacre of Elite Soldiers",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5398": {
           "Description": [
@@ -12629,7 +12629,7 @@ define(function () {
         },
         "5414": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Warrior Discipline",
           "Description": [
@@ -12726,7 +12726,7 @@ define(function () {
         },
         "5426": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] To My Beloved Fellow",
           "Description": [
@@ -12751,7 +12751,7 @@ define(function () {
         },
         "5429": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Lowly Standards",
           "Description": [
@@ -12784,7 +12784,7 @@ define(function () {
         },
         "5433": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Clean Life",
           "Description": [
@@ -12817,7 +12817,7 @@ define(function () {
         },
         "5437": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Finding Lights",
           "Description": [
@@ -12842,7 +12842,7 @@ define(function () {
         },
         "5440": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Refreshing Prison Life",
           "Description": [
@@ -12867,7 +12867,7 @@ define(function () {
         },
         "5443": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Suppressing Darkness",
           "Description": [
@@ -12892,7 +12892,7 @@ define(function () {
         },
         "5446": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Bothersome Little Thing",
           "Description": [
@@ -12941,7 +12941,7 @@ define(function () {
         },
         "5452": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Request from Chief Guard",
           "Description": [
@@ -13082,7 +13082,7 @@ define(function () {
           ],
           "Summary": "Reset on Wednesday at 04:00",
           "Title": "[Standby] Waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5471": {
           "Description": [
@@ -13265,7 +13265,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] (Delivery Request)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5497": {
           "Description": [
@@ -13833,7 +13833,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] (Delivery Request)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5578": {
           "Description": [
@@ -14527,7 +14527,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] (Delivery Request)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5677": {
           "Description": [
@@ -14969,7 +14969,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Mercifulness of the Recorded",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5740": {
           "Description": [
@@ -14977,7 +14977,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5846": {
           "Description": [
@@ -14985,11 +14985,11 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Illusion Corridor",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "5847": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "255",
+          "NpcPosY": 255,
           "Summary": "",
           "NpcNavi": "com_d02_i",
           "Description": [
@@ -14999,144 +14999,144 @@ define(function () {
           "NpcSpr": "4_M_THAIONGBAK",
           "RewardEXP": "1120000",
           "Title": "A story to tell Luanda",
-          "NpcPosX": "241"
+          "NpcPosX": 241
         },
         "5848": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "255",
+          "NpcPosY": 255,
           "Summary": "3x Megalithic Token",
           "NpcNavi": "com_d02_i",
           "Description": [
             "The village is in trouble because of the Megalith monsters. If you collect 3 <ITEM>[Megalithic Token]<INFO>25638</INFO></ITEM> by defeating them, they will reward you once a day."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25271",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "2800000",
           "NpcSpr": "4_M_THAIONGBAK",
           "RewardEXP": "4300000",
           "Title": "Evidence of Fighting the Megaliths",
-          "NpcPosX": "241"
+          "NpcPosX": 241
         },
         "5849": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "255",
+          "NpcPosY": 255,
           "Summary": "Reset at 04:00",
           "NpcNavi": "com_d02_i",
           "Description": [
             "<NAVI>[Defense Officer Luanda]<INFO>com_d02_i,241,255,0,101,0</INFO></NAVI> will reward you tomorrow as well if you bring proof of defeating the Megaliths."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_THAIONGBAK",
           "Title": "[Standby] Evidence of Fighting the Megaliths",
-          "NpcPosX": "241"
+          "NpcPosX": 241
         },
         "5850": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "255",
+          "NpcPosY": 255,
           "Summary": "3x Wootan's Token",
           "NpcNavi": "com_d02_i",
           "Description": [
             "The village is in trouble because of the Wootan monsters. If you collect 3 <ITEM>[Wootan's Token]<INFO>25633</INFO></ITEM> by defeating them, they will reward you once a day."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25271",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "2800000",
           "NpcSpr": "4_M_THAIONGBAK",
           "RewardEXP": "4300000",
           "Title": "Evidence of Fighting the Wootans",
-          "NpcPosX": "241"
+          "NpcPosX": 241
         },
         "5851": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "255",
+          "NpcPosY": 255,
           "Summary": "Reset at 04:00",
           "NpcNavi": "com_d02_i",
           "Description": [
             "<NAVI>[Defense Officer Luanda]<INFO>com_d02_i,241,255,0,101,0</INFO></NAVI> will reward you tomorrow as well if you bring proof of defeating the Wootans."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_THAIONGBAK",
           "Title": "[Standby] Evidence of Fighting the Wootans",
-          "NpcPosX": "241"
+          "NpcPosX": 241
         },
         "5852": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "255",
+          "NpcPosY": 255,
           "Summary": "",
           "NpcNavi": "com_d02_i",
           "Description": [
             "The village is planning to subdue the megalithic people. Hunt 5x <NAVI>[Ancient Tri Joint]<INFO>ILL_TRI_JOINT,0,0,3,-222,0</INFO></NAVI>, <NAVI>[Ancient Stalactic Golem]<INFO>ILL_STALACTIC_GOLEM,0,0,3,-222,0</INFO></NAVI> and <NAVI>[Ancient Megalith]<INFO>ILL_MEGALITH,0,0,3,-222,0</INFO></NAVI> and report it to <NAVI>[Defense Officer Luanda]<INFO>com_d02_i,241,255,0,101,0</INFO></NAVI>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25271",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "2800000",
           "NpcSpr": "4_M_THAIONGBAK",
           "RewardEXP": "4300000",
           "Title": "Megalith Hunt",
-          "NpcPosX": "241"
+          "NpcPosX": 241
         },
         "5853": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "255",
+          "NpcPosY": 255,
           "Summary": "Reset at 04:00",
           "NpcNavi": "com_d02_i",
           "Description": [
             "<NAVI>[Defense Officer Luanda]<INFO>com_d02_i,241,255,0,101,0</INFO></NAVI> expects you to subdue the Megaliths tomorrow as well."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_THAIONGBAK",
           "Title": "[Standby] Megalith Hunt",
-          "NpcPosX": "241"
+          "NpcPosX": 241
         },
         "5854": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "255",
+          "NpcPosY": 255,
           "Summary": "",
           "NpcNavi": "com_d02_i",
           "Description": [
             "The village is planning to subdue megalithic people. Hunt 5x <NAVI>[Ancient Stone Shooter]<INFO>ILL_STONE_SHOOTER,0,0,3,-222,0</INFO></NAVI>, <NAVI>[Ancient Wootan Shooter]<INFO>ILL_WOOTAN_SHOOTER,0,0,3,-222,0</INFO></NAVI> and <NAVI>[Ancient Wootan Fighter]<INFO>ILL_WOOTAN_FIGHTER,0,0,3,-222,0</INFO></NAVI> and report it to <NAVI>[Defense Officer Luanda]<INFO>com_d02_i,241,255,0,101,0</INFO></NAVI>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25271",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "2800000",
           "NpcSpr": "4_M_THAIONGBAK",
           "RewardEXP": "4300000",
           "Title": "Wootan Hunt",
-          "NpcPosX": "241"
+          "NpcPosX": 241
         },
         "5855": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "255",
+          "NpcPosY": 255,
           "Summary": "Reset at 04:00",
           "NpcNavi": "com_d02_i",
           "Description": [
             "<NAVI>[Defense Officer Luanda]<INFO>com_d02_i,241,255,0,101,0</INFO></NAVI> expects you to subdue the Wootan's tomorrow as well."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_THAIONGBAK",
           "Title": "[Standby] Wootan Hunt",
-          "NpcPosX": "241"
+          "NpcPosX": 241
         },
         "5856": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
-          "NpcPosX": "130",
+          "NpcPosY": 200,
+          "NpcPosX": 130,
           "NpcNavi": "sp_rudus",
           "NpcSpr": "4_EP17_MORNING",
           "Summary": "",
@@ -15151,7 +15151,7 @@ define(function () {
         },
         "5857": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "Poring's Egg",
           "NpcNavi": "sp_rudus",
           "Description": [
@@ -15160,21 +15160,21 @@ define(function () {
             "So, by the way, can I get a <ITEM>[Poring's Egg]<INFO>9001</INFO></ITEM> and give it to the Morning? Please. Friend.",
             "-Olg"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25723",
               "ItemNum": "3"
             }
-          },
+          ],
           "RewardJEXP": "800000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "Lv110 5%",
           "Title": "Make Morning your friend",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5858": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "Rocker's Egg",
           "NpcNavi": "sp_rudus",
           "Description": [
@@ -15184,21 +15184,21 @@ define(function () {
             "Can I get <ITEM>[Rocker's Egg]<INFO>9011</INFO></ITEM> this time? Please, friend.",
             "-Olg"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25723",
               "ItemNum": "3"
             }
-          },
+          ],
           "RewardJEXP": "800000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "Lv110 5%",
           "Title": "Make Morning your friend",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5859": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "Pickey's Egg",
           "NpcNavi": "sp_rudus",
           "Description": [
@@ -15207,21 +15207,21 @@ define(function () {
             "Can I get <ITEM>[Picky Egg]<INFO>9005</INFO></ITEM> this time? I can't take care of you often, but I have to make a lot of friends.. Please, friend.",
             "-Olg"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25723",
               "ItemNum": "3"
             }
-          },
+          ],
           "RewardJEXP": "800000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "Lv110 5%",
           "Title": "Make Morning your friend",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5860": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "Lunatic Egg",
           "NpcNavi": "sp_rudus",
           "Description": [
@@ -15230,270 +15230,270 @@ define(function () {
             "Can I get <ITEM>[Lunatic Egg]<INFO>9004</INFO></ITEM>? I'm begging you, friend.",
             "-Olg"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25723",
               "ItemNum": "6"
             }
-          },
+          ],
           "RewardJEXP": "800000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "Lv110 5%",
           "Title": "Make Morning your friend",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5861": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "Reset at 04:00",
           "NpcNavi": "sp_rudus",
           "Description": [
             "I took care of <NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI>'s meal. If you can afford it, wouldn't it be better to take care of it tomorrow too?"
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_EP17_MORNING",
           "Title": "[Standby] Take care of the Morning",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5862": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Jellopy",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat Jellopy today. Bring 10 <ITEM>[Jellopy]<INFO>909</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5863": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Tree Root",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat the roots of an old tree today. Bring 10 <ITEM>[Tree Root]<INFO>902</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5864": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Grasshopper's Leg",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat the grasshopper's hind legs today. Bring 10 <ITEM>[Grasshopper's Leg]<INFO>940</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5865": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Clover",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat clover today. Bring 10 <ITEM>[Clover]<INFO>705</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5866": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Feather of Birds",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat bird feathers today. Bring 10 <ITEM>[Feather of Birds]<INFO>916</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5867": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Rat Tail",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat the tail of a mouse today. Bring 10 <ITEM>[Rat Tail]<INFO>1016</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5868": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Venom Canine",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat venom canine today. Bring 10 <ITEM>[Venom Canine]<INFO>937</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5869": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Yoyo Tail",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat a monkey's tail today. Bring 10 <ITEM>[Yoyo Tail]<INFO>942</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5870": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Tooth of Bat",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat the bat's teeth today. Bring 10 <ITEM>[Tooth of Bat]<INFO>913</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5871": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "200",
+          "NpcPosY": 200,
           "Summary": "10x Bear's Footskin",
           "NpcNavi": "sp_rudus",
           "Description": [
             "<NAVI>[Morning]<INFO>sp_rudus,130,200,0,101,0</INFO></NAVI> seems to want to eat the bear's paw today. Bring 10 <ITEM>[Bear's Footskin]<INFO>948</INFO></ITEM>."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "NpcSpr": "4_EP17_MORNING",
           "RewardEXP": "300000",
           "Title": "Morning's Menu Selection",
-          "NpcPosX": "130"
+          "NpcPosX": 130
         },
         "5892": {
           "IconName": "ico_nq.bmp",
@@ -15541,7 +15541,7 @@ define(function () {
         },
         "5896": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "EP17_2_OMEGA_CLEANER",
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Sewage Treatment Plant Cleaning",
@@ -15588,7 +15588,7 @@ define(function () {
         },
         "5900": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "EP17_2_OMEGA_CLEANER",
           "Summary": "Reset at 04:00",
           "Title": "[Standby] 1st Power Plant Cleaning",
@@ -15626,8 +15626,8 @@ define(function () {
         },
         "5904": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "345",
-          "NpcPosX": "47",
+          "NpcPosY": 345,
+          "NpcPosX": 47,
           "NpcNavi": "um_fild01",
           "NpcSpr": "4_FROG",
           "Summary": "",
@@ -15684,16 +15684,16 @@ define(function () {
         },
         "5909": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "86",
+          "NpcPosY": 86,
           "Summary": "Reset at 04:00 after 3 days",
           "NpcNavi": "dali02",
           "Description": [
             "You can enter the Airship Crash Site once every 3 days. If you want to go back to Airship Crash Site, go to <NAVI>[Dr. Dry Circle Strong]<INFO>dali02,137,86,0,101,0</INFO></NAVI> after a while."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_FAIRYANG",
           "Title": "[Standby] Airplane Crash Site",
-          "NpcPosX": "137"
+          "NpcPosX": 137
         },
         "5910": {
           "IconName": "ico_nq.bmp",
@@ -15754,8 +15754,8 @@ define(function () {
         },
         "5916": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "351",
-          "NpcPosX": "257",
+          "NpcPosY": 351,
+          "NpcPosX": 257,
           "NpcNavi": "ein_fild06",
           "NpcSpr": "4_F_CHNDRESS1",
           "Summary": "",
@@ -15766,21 +15766,21 @@ define(function () {
         },
         "5917": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "351",
+          "NpcPosY": 351,
           "Summary": "Reset at 04:00",
           "NpcNavi": "ein_fild06",
           "Description": [
             "The Yuno Monster Society's Einbroch Field Subjugation Request can be resumed tomorrow. When the time is up, let's go to <NAVI>[Inspector Inpiyu]<INFO>ein_fild06,257,351,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_CHNDRESS1",
           "Title": "[Standby] Subjugation-Einbroch Field-1",
-          "NpcPosX": "257"
+          "NpcPosX": 257
         },
         "5918": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "107",
-          "NpcPosX": "240",
+          "NpcPosY": 107,
+          "NpcPosX": 240,
           "NpcNavi": "lhz_fild01",
           "NpcSpr": "4_M_HUBOY",
           "Summary": "",
@@ -15791,21 +15791,21 @@ define(function () {
         },
         "5919": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "107",
+          "NpcPosY": 107,
           "Summary": "Reset at 04:00",
           "NpcNavi": "lhz_fild01",
           "Description": [
             "The Yuno Monster Society Lighthalzen Field Subjugation Request can be resumed tomorrow. When the time is up, let's go to <NAVI>[Inspector Lipiri]<INFO>lhz_fild01,240,107,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_HUBOY",
           "Title": "[Standby] Subjugation-Lighthalzen Field-1",
-          "NpcPosX": "240"
+          "NpcPosX": 240
         },
         "5920": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "31",
-          "NpcPosX": "209",
+          "NpcPosY": 31,
+          "NpcPosX": 209,
           "NpcNavi": "gef_fild06",
           "NpcSpr": "4_M_MIDDLE",
           "Summary": "",
@@ -15816,21 +15816,21 @@ define(function () {
         },
         "5921": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "31",
+          "NpcPosY": 31,
           "Summary": "Reset at 04:00",
           "NpcNavi": "gef_fild06",
           "Description": [
             "The Yuno Monster Society's Geffen Field Subjugation Request can be resumed tomorrow. When the time is up, go to <NAVI>[Inspector Gepil]<INFO>gef_fild06,209,31,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_MIDDLE",
           "Title": "[Standby] Subjugation-Geffen Field",
-          "NpcPosX": "209"
+          "NpcPosX": 209
         },
         "5922": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "46",
-          "NpcPosX": "159",
+          "NpcPosY": 46,
+          "NpcPosX": 159,
           "NpcNavi": "tur_dun01",
           "NpcSpr": "4_M_BRZ_MAN1",
           "Summary": "",
@@ -15841,21 +15841,21 @@ define(function () {
         },
         "5923": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "46",
+          "NpcPosY": 46,
           "Summary": "Reset at 04:00",
           "NpcNavi": "tur_dun01",
           "Description": [
             "The Yuno Monster Society's Turtle Island Subjugation Request can be resumed tomorrow. When the time is up, go to <NAVI>[Inspector Tural]<INFO>tur_dun01,159,46,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_BRZ_MAN1",
           "Title": "[Standby] Subjugation-Turtle Island",
-          "NpcPosX": "159"
+          "NpcPosX": 159
         },
         "5924": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "157",
-          "NpcPosX": "133",
+          "NpcPosY": 157,
+          "NpcPosX": 133,
           "NpcNavi": "hu_fild01",
           "NpcSpr": "4_MAL_CAPTAIN",
           "Summary": "",
@@ -15866,21 +15866,21 @@ define(function () {
         },
         "5925": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "157",
+          "NpcPosY": 157,
           "Summary": "Reset at 04:00",
           "NpcNavi": "hu_fild01",
           "Description": [
             "The Yuno Monster Society's In front of Thanatos Tower Subjugation Request can be resumed tomorrow. When the time is up, go to <NAVI>[Inspector Huff]<INFO>hu_fild01,133,157,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_MAL_CAPTAIN",
           "Title": "[Standby] Subjugation-In front of Thanatos Tower",
-          "NpcPosX": "133"
+          "NpcPosX": 133
         },
         "5926": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "126",
-          "NpcPosX": "141",
+          "NpcPosY": 126,
+          "NpcPosX": 141,
           "NpcNavi": "mal_dun01",
           "NpcSpr": "4_F_TAEKWON",
           "Summary": "",
@@ -15891,21 +15891,21 @@ define(function () {
         },
         "5927": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "126",
+          "NpcPosY": 126,
           "Summary": "Reset at 04:00",
           "NpcNavi": "mal_dun01",
           "Description": [
             "The Yuno Monster Society's Starlight Coral Zone Subjugation Request can be resumed tomorrow. When the time is up, go to <NAVI>[Inspector Mother One]<INFO>mal_dun01,141,126,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_TAEKWON",
           "Title": "[Standby] Subjugation-Starlight Coral Zone",
-          "NpcPosX": "141"
+          "NpcPosX": 141
         },
         "5928": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "256",
-          "NpcPosX": "151",
+          "NpcPosY": 256,
+          "NpcPosX": 151,
           "NpcNavi": "tur_dun02",
           "NpcSpr": "4_M_NINJA_BLUE",
           "Summary": "",
@@ -15916,21 +15916,21 @@ define(function () {
         },
         "5929": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "256",
+          "NpcPosY": 256,
           "Summary": "Reset at 04:00",
           "NpcNavi": "tur_dun02",
           "Description": [
             "The Yuno Monster Society's Turtle Island Dungeon Subjugation Request can be resumed tomorrow. When the time is up, go to <NAVI>[Inspector Tidun]<INFO>tur_dun02,151,256,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_NINJA_BLUE",
           "Title": "[Standby] Subjugation-Turtle Island Dungeon",
-          "NpcPosX": "151"
+          "NpcPosX": 151
         },
         "5930": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "186",
-          "NpcPosX": "125",
+          "NpcPosY": 186,
+          "NpcPosX": 125,
           "NpcNavi": "tur_dun03",
           "NpcSpr": "4_M_SIT_NOVICE",
           "Summary": "",
@@ -15941,16 +15941,16 @@ define(function () {
         },
         "5931": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "186",
+          "NpcPosY": 186,
           "Summary": "Reset at 04:00",
           "NpcNavi": "tur_dun03",
           "Description": [
             "The Yuno Monster Society's Turtle Village Subjugation Request can be resumed tomorrow. When the time is up, go to <NAVI>[Inspector Tsensor]<INFO>tur_dun03,125,186,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_SIT_NOVICE",
           "Title": "[Standby] Subjugation-Turtle Village",
-          "NpcPosX": "125"
+          "NpcPosX": 125
         },
         "5932": {
           "IconName": "ico_ep.bmp",
@@ -15963,8 +15963,8 @@ define(function () {
         },
         "5933": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "135",
-          "NpcPosX": "70",
+          "NpcPosY": 135,
+          "NpcPosX": 70,
           "NpcNavi": "rachel",
           "NpcSpr": "4_M_DST_CHILD",
           "Summary": "",
@@ -15977,8 +15977,8 @@ define(function () {
         },
         "5934": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "135",
-          "NpcPosX": "70",
+          "NpcPosY": 135,
+          "NpcPosX": 70,
           "NpcNavi": "rachel",
           "NpcSpr": "4_M_DST_CHILD",
           "Summary": "",
@@ -16008,8 +16008,8 @@ define(function () {
         },
         "5936": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "135",
-          "NpcPosX": "70",
+          "NpcPosY": 135,
+          "NpcPosX": 70,
           "NpcNavi": "rachel",
           "NpcSpr": "4_M_DST_CHILD",
           "Summary": "",
@@ -16020,7 +16020,7 @@ define(function () {
         },
         "5937": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "135",
+          "NpcPosY": 135,
           "Summary": "Reset at 04:00",
           "NpcNavi": "rachel",
           "Description": [
@@ -16030,10 +16030,10 @@ define(function () {
             "If you want to do the next job after the waiting time,",
             "go to <NAVI>[President Mezai]<INFO>rachel,70,135,0,101,0</INFO></NAVI>À» Ã£¾Æ°¡º¸me."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_DST_CHILD",
           "Title": "[Standby] Flower Room's Work",
-          "NpcPosX": "70"
+          "NpcPosX": 70
         },
         "5938": {
           "IconName": "ico_dq.bmp",
@@ -16281,7 +16281,7 @@ define(function () {
         },
         "5961": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Devil's Meal",
           "Description": [
@@ -16314,7 +16314,7 @@ define(function () {
         },
         "5965": {
           "IconName": "ico_nq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at Monday 04:00",
           "Title": "[Standby] Devil's Special",
           "Description": [
@@ -16331,7 +16331,7 @@ define(function () {
         },
         "5967": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Devil's Snack",
           "Description": [
@@ -16340,7 +16340,7 @@ define(function () {
         },
         "5968": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Devil's Pet Mimic",
           "Description": [
@@ -16382,7 +16382,7 @@ define(function () {
         },
         "5973": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Patrol with Irwin",
           "Description": [
@@ -16418,7 +16418,7 @@ define(function () {
         },
         "5977": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Do not feed",
           "Description": [
@@ -16461,7 +16461,7 @@ define(function () {
         },
         "5981": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Secret Fun",
           "Description": [
@@ -16515,21 +16515,21 @@ define(function () {
         },
         "5985": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "Reset at 04:00",
           "NpcNavi": "jor_back2",
           "Description": [
             "I took care of <NAVI>[Lunch]<INFO>jor_back2,250,30,0,101,0</INFO></NAVI>'s meal. If you can afford it, wouldn't it be better to take care of it tomorrow as well?"
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_EP19_LUNCH",
           "Title": "[Standby] Lunch Menu Selection",
-          "NpcPosX": "250"
+          "NpcPosX": 250
         },
         "5986": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Broken Liquor Jar",
@@ -16540,8 +16540,8 @@ define(function () {
         },
         "5987": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Cloud Crumb",
@@ -16552,8 +16552,8 @@ define(function () {
         },
         "5988": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Straw Basket",
@@ -16564,8 +16564,8 @@ define(function () {
         },
         "5989": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Denture from Dragon Mask",
@@ -16576,8 +16576,8 @@ define(function () {
         },
         "5990": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Yaga's Pestle",
@@ -16588,8 +16588,8 @@ define(function () {
         },
         "5991": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Leopard Skin",
@@ -16600,8 +16600,8 @@ define(function () {
         },
         "5992": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Cendrawasih Feather",
@@ -16612,8 +16612,8 @@ define(function () {
         },
         "5993": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Jejellopy",
@@ -16624,8 +16624,8 @@ define(function () {
         },
         "5994": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Brown Rat Tail",
@@ -16636,8 +16636,8 @@ define(function () {
         },
         "5995": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
-          "NpcPosX": "250",
+          "NpcPosY": 30,
+          "NpcPosX": 250,
           "NpcNavi": "jor_back2",
           "NpcSpr": "4_EP19_LUNCH",
           "Summary": "Get 10x Piece of Bamboo",
@@ -16771,7 +16771,7 @@ define(function () {
           ],
           "Summary": "Reset after 5 minutes",
           "Title": "[Standby] KVM Guillaume",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "6026": {
           "Description": [
@@ -17363,7 +17363,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Periodic Report",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7074": {
           "IconName": "ico_nq.bmp",
@@ -17399,7 +17399,7 @@ define(function () {
         },
         "7078": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Collecting Dragon Eggs",
           "Description": [
@@ -17416,7 +17416,7 @@ define(function () {
         },
         "7080": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Mysterious Ore - Refined Bradium",
           "Description": [
@@ -17433,7 +17433,7 @@ define(function () {
         },
         "7082": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Craftsmanship - Yai's Decoration Material",
           "Description": [
@@ -17453,7 +17453,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Tteokguk-Will you bring it again?",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7085": {
           "Description": [
@@ -17496,7 +17496,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Rice Delivery - Next time again",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7091": {
           "IconName": "ico_jq.bmp",
@@ -18332,7 +18332,7 @@ define(function () {
         },
         "7200": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Cheshire's Call",
           "Description": [
@@ -18388,7 +18388,7 @@ define(function () {
         },
         "7208": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Will you come tomorrow too?",
           "Description": [
@@ -18413,7 +18413,7 @@ define(function () {
         },
         "7211": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset after 150 minutes",
           "Title": "[Standby] Hazy Forest Exploration",
           "Description": [
@@ -18631,7 +18631,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Thorn's Errands",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7242": {
           "Description": [
@@ -18688,7 +18688,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Nyadventure - Bang! See you next time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7250": {
           "Description": [
@@ -18817,7 +18817,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Appointed time with Cleanyang",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7268": {
           "Description": [
@@ -18881,7 +18881,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Promise to deliver more food",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7281": {
           "Description": [
@@ -19548,7 +19548,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Love and Spiritual Protection Continues",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7376": {
           "Description": [
@@ -19570,7 +19570,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Old Man and Cast-Iron Caldron-Regular Trades",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7379": {
           "Description": [
@@ -19592,7 +19592,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] High Demand on Spiritual Protection Material",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7382": {
           "Description": [
@@ -19656,7 +19656,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Worried about Maries's Child",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7391": {
           "Description": [
@@ -19671,7 +19671,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Collect Jejellopy Regularly",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7393": {
           "Description": [
@@ -19686,7 +19686,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Shiny Tomorrow",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7395": {
           "Description": [
@@ -19736,7 +19736,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] All Aboard for Perry Sailing",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7402": {
           "Description": [
@@ -19765,7 +19765,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Get Rid of Jejeling",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7406": {
           "Description": [
@@ -19787,7 +19787,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Agree please to collect bones! - Will you come back tomorrow?",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7409": {
           "Description": [
@@ -19802,7 +19802,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Punish them again tomorrow!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7411": {
           "IconName": "ico_ep.bmp",
@@ -19950,7 +19950,7 @@ define(function () {
         },
         "7429": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] The latest trend is wild!",
           "Description": [
@@ -19967,7 +19967,7 @@ define(function () {
         },
         "7431": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] The postman never rests!",
           "Description": [
@@ -19984,7 +19984,7 @@ define(function () {
         },
         "7433": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Need constant guidance",
           "Description": [
@@ -20137,8 +20137,8 @@ define(function () {
         },
         "7452": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "91",
-          "NpcPosX": "311",
+          "NpcPosY": 91,
+          "NpcPosX": 311,
           "NpcNavi": "bif_fild02",
           "NpcSpr": "4_FAIRYDEADLEAF",
           "Summary": "Survey Northern Bifrost",
@@ -20196,7 +20196,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Dessert Class Ticket",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7460": {
           "Description": [
@@ -20253,7 +20253,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Part time Chocolate business",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7468": {
           "Description": [
@@ -20268,7 +20268,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Jinha's part time business",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7471": {
           "IconName": "ico_gq.bmp",
@@ -20770,7 +20770,7 @@ define(function () {
         },
         "7543": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Valkyrie Realm Challenge 1",
           "Description": [
@@ -20779,7 +20779,7 @@ define(function () {
         },
         "7544": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Valkyrie Realm Challenge 2",
           "Description": [
@@ -20788,7 +20788,7 @@ define(function () {
         },
         "7545": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "Standby for Valkyrie Realm Challenge 3",
           "Description": [
@@ -20797,7 +20797,7 @@ define(function () {
         },
         "7546": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Luina Challenge 1",
           "Description": [
@@ -20806,7 +20806,7 @@ define(function () {
         },
         "7547": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Luina Challenge 2",
           "Description": [
@@ -20823,7 +20823,7 @@ define(function () {
         },
         "7549": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Britoniah Challenge 1",
           "Description": [
@@ -20832,7 +20832,7 @@ define(function () {
         },
         "7550": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Britoniah Challenge 2",
           "Description": [
@@ -20841,7 +20841,7 @@ define(function () {
         },
         "7551": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "Standby for Britoniah Challenge 3",
           "Description": [
@@ -20850,7 +20850,7 @@ define(function () {
         },
         "7552": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Greenwood Lake Challenge 1",
           "Description": [
@@ -20859,7 +20859,7 @@ define(function () {
         },
         "7553": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Greenwood Lake Challenge 2",
           "Description": [
@@ -20868,7 +20868,7 @@ define(function () {
         },
         "7554": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "Standby for Greenwood Lake Challenge 3",
           "Description": [
@@ -20877,7 +20877,7 @@ define(function () {
         },
         "7555": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Nidabehl Challenge 1",
           "Description": [
@@ -20886,7 +20886,7 @@ define(function () {
         },
         "7556": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Nidabehl Challenge 2",
           "Description": [
@@ -20895,7 +20895,7 @@ define(function () {
         },
         "7557": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Valfreyja Challenge 1",
           "Description": [
@@ -20904,7 +20904,7 @@ define(function () {
         },
         "7558": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Valfreyja Challenge 2",
           "Description": [
@@ -20913,7 +20913,7 @@ define(function () {
         },
         "7559": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Gloria Challenge 1",
           "Description": [
@@ -20922,7 +20922,7 @@ define(function () {
         },
         "7560": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Gloria Challenge 2",
           "Description": [
@@ -20947,7 +20947,7 @@ define(function () {
         },
         "7563": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Kafragaten Challenge 1",
           "Description": [
@@ -20956,7 +20956,7 @@ define(function () {
         },
         "7564": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby for Kafragaten Challenge 2",
           "Description": [
@@ -21046,7 +21046,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Space distortion",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7578": {
           "Description": [
@@ -21065,7 +21065,7 @@ define(function () {
         },
         "7580": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Collecting Every Day",
           "Description": [
@@ -21082,7 +21082,7 @@ define(function () {
         },
         "7582": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Daily Cleaning",
           "Description": [
@@ -21091,7 +21091,7 @@ define(function () {
         },
         "7583": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "107",
+          "NpcPosY": 107,
           "Summary": "3 Mana Crystallines",
           "NpcNavi": "moro_vol",
           "Description": [
@@ -21101,20 +21101,20 @@ define(function () {
           "NpcSpr": "4_M_FAIRYAVANT",
           "RewardEXP": "350000",
           "Title": "Collecting Mana",
-          "NpcPosX": "98"
+          "NpcPosX": 98
         },
         "7584": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "107",
+          "NpcPosY": 107,
           "Summary": "Reset at 04:00",
           "NpcNavi": "moro_vol",
           "Description": [
             "The Demons are siphoning off the mana to maintain their strength. You've decided to come back to Avant every day, to help him collect Mana Crystallines."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_FAIRYAVANT",
           "Title": "Unending Battle",
-          "NpcPosX": "98"
+          "NpcPosX": 98
         },
         "7585": {
           "Description": [
@@ -21164,7 +21164,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cleaning steadily",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7592": {
           "Description": [
@@ -21172,7 +21172,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The durability of silk",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7593": {
           "Description": [
@@ -21189,23 +21189,23 @@ define(function () {
           "Title": "Frost Spider and Fire Wolf"
         },
         "7595": {
-          "NpcPosY": "108",
+          "NpcPosY": 108,
           "Summary": "",
           "NpcNavi": "moro_vol",
           "Description": [
             "Collect the mana stolen from Yggdrasil and the Orb: hit and scatter Brilliant Manas, Life Manas, and Earth Manas."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "22567",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "500000",
           "NpcSpr": "4_M_FARIY_HISIE",
           "RewardEXP": "1000000",
           "Title": "Wandering Orb Magic",
-          "NpcPosX": "95"
+          "NpcPosX": 95
         },
         "7596": {
           "Description": [
@@ -21215,23 +21215,23 @@ define(function () {
           "Title": "Qualifications of the Guests"
         },
         "7597": {
-          "NpcPosY": "88",
+          "NpcPosY": 88,
           "Summary": "Report to the Commander",
           "NpcNavi": "moro_vol",
           "Description": [
             "You defeated Demon God Morroc, who wanted to create a new world and play God. Report to Commander Hiva Agip."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "22567",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardJEXP": "500000",
           "NpcSpr": "4_M_REDSWORD",
           "RewardEXP": "1000000",
           "Title": "Fall of the False God",
-          "NpcPosX": "108"
+          "NpcPosX": 108
         },
         "7598": {
           "Description": [
@@ -21239,7 +21239,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Caged God",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7599": {
           "Description": [
@@ -21247,15 +21247,15 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Unending Hunt",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7600": {
           "Description": [
             "The Orb of Eclage and Yggdrasil have lost a substantial amount of mana, and thus the mana collection work continues until most of it is retrieved. Take a rest and come back to Hishieh before you move on to the Temple of the Demon God."
           ],
-          "NpcPosY": "108",
-          "NpcPosX": "95",
-          "CoolTimeQuest": "1",
+          "NpcPosY": 108,
+          "NpcPosX": 95,
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_FARIY_HISIE",
           "Summary": "Reset at 04:00",
           "Title": "Promising Tomorrow",
@@ -21307,8 +21307,8 @@ define(function () {
           "Description": [
             "The <NAVI>Eden Group's leader<INFO>moc_para01,133,170,0,101,0</INFO></NAVI> has been revealed. She wants to talk to you as to Phantasmagorika. Go to the farthest room on the left side on the second floor."
           ],
-          "NpcPosY": "170",
-          "NpcPosX": "133",
+          "NpcPosY": 170,
+          "NpcPosX": 133,
           "NpcSpr": "4_F_EDEN_MASTER",
           "Summary": "Talk to the Eden Group Commander",
           "Title": "Eden Group Leader",
@@ -21318,8 +21318,8 @@ define(function () {
           "Description": [
             "The Eden Group Commander has asked you to talk to <NAVI>Laime Evenor<INFO>moc_para01,38,175,0,101,0</INFO></NAVI> in the employee office as to joining the excavation project. The employee office is the next room."
           ],
-          "NpcPosY": "175",
-          "NpcPosX": "38",
+          "NpcPosY": 175,
+          "NpcPosX": 38,
           "NpcSpr": "4_F_EDEN_OFFICER",
           "Summary": "Talk to Laime in the employee office",
           "Title": "Atnad Excavation Team - 1",
@@ -21329,8 +21329,8 @@ define(function () {
           "Description": [
             "Use the Juperos dungeon to move to the newly discovered area. Don't forget to register with the <NAVI>Central Command Center<INFO>verus04,182,168,0,101,0</INFO></NAVI> upon your arrival. Tell her your team's name is ^0000FFAtnad^000000."
           ],
-          "NpcPosY": "168",
-          "NpcPosX": "182",
+          "NpcPosY": 168,
+          "NpcPosX": 182,
           "NpcSpr": "4_F_HUWOMAN",
           "Summary": "Register as an Atnad Excavation Team member",
           "Title": "Atnad Excavation Team - 2",
@@ -21353,7 +21353,7 @@ define(function () {
         },
         "7612": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Passage Cleaning",
           "Description": [
@@ -21370,7 +21370,7 @@ define(function () {
         },
         "7614": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Eliminating Risks",
           "Description": [
@@ -21387,7 +21387,7 @@ define(function () {
         },
         "7616": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Core Collection",
           "Description": [
@@ -21404,7 +21404,7 @@ define(function () {
         },
         "7618": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Reporting the Results",
           "Description": [
@@ -21487,7 +21487,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Tomorrow for Tomorrow's Energy",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7630": {
           "Description": [
@@ -21502,7 +21502,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Limit",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7632": {
           "Description": [
@@ -21584,7 +21584,7 @@ define(function () {
         },
         "7651": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "One Memory a Day",
           "Description": [
@@ -21601,7 +21601,7 @@ define(function () {
         },
         "7653": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "One Memory a Day 2",
           "Description": [
@@ -21649,7 +21649,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The lambs keep running away",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7673": {
           "Description": [
@@ -21664,7 +21664,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "It's not a dream ..",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7675": {
           "Description": [
@@ -21679,7 +21679,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "New clothes are always new",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7681": {
           "Description": [
@@ -21862,7 +21862,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Nillem Is Not Almighty",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7711": {
           "Description": [
@@ -22045,7 +22045,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sweeping the remnants",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7744": {
           "Description": [
@@ -22060,7 +22060,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hiding Researcher",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7746": {
           "Description": [
@@ -22180,7 +22180,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Make Chimeras rest in peace",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7763": {
           "Description": [
@@ -22328,7 +22328,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Stop the Wizard! - Pending",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7784": {
           "Description": [
@@ -22343,7 +22343,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "No Mercy for Illusions - Pending",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7786": {
           "Description": [
@@ -22358,7 +22358,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Remembering My Ancestors - Pending",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7788": {
           "Description": [
@@ -22378,8 +22378,8 @@ define(function () {
           "Description": [
             "^0000FFKaram Pucci^000000 said Rock Ridge needs help. I should go to Rock Ridge and talk to ^0000FFMayor Costello^000000 by the dock."
           ],
-          "NpcPosY": "218",
-          "NpcPosX": "80",
+          "NpcPosY": 218,
+          "NpcPosX": 80,
           "NpcSpr": "4_m_costell",
           "Summary": "Talk to Costello",
           "Title": "Problems in Rock Ridge",
@@ -22389,8 +22389,8 @@ define(function () {
           "Description": [
             "^0000FFMayor Costello^000000 said Rock Ridge is in trouble because of the Buffalo Bandits, and that he wants me to solve the problem in concert with the sheriff. I should go to the sheriff's office and meet Wyatt Warp."
           ],
-          "NpcPosY": "30",
-          "NpcPosX": "20",
+          "NpcPosY": 30,
+          "NpcPosX": 20,
           "NpcSpr": "4_m_yattwarp",
           "Summary": "Talk to Wyatt Warp",
           "Title": "Problems in Rock Ridge 2",
@@ -22400,8 +22400,8 @@ define(function () {
           "Description": [
             "^0000FFJohnny James^000000, the leader of the Buffalo Bandits, only wants to negotiate with ^0000FFMayor Costello^000000. I should deliver this exciting news to ^0000FFCostello^000000 at the dock."
           ],
-          "NpcPosY": "218",
-          "NpcPosX": "80",
+          "NpcPosY": 218,
+          "NpcPosX": 80,
           "NpcSpr": "4_m_costell",
           "Summary": "Talk to Costello",
           "Title": "Good News",
@@ -22411,8 +22411,8 @@ define(function () {
           "Description": [
             "^0000FFCostello^000000, too afraid of the bandits to go negotiate with them, asked me to go on his behalf. I should go tell ^0000FFSheriff Warp^000000."
           ],
-          "NpcPosY": "30",
-          "NpcPosX": "20",
+          "NpcPosY": 30,
+          "NpcPosX": 20,
           "NpcSpr": "4_m_yattwarp",
           "Summary": "Talk to Wyatt Warp",
           "Title": "Expected Response",
@@ -22430,8 +22430,8 @@ define(function () {
           "Description": [
             "^0000FFCactus vigilantes^000000 have helped us capture the leader of the Buffalo Bandits, ^0000FFJohnny James^000000. I should return to the sheriff's office and talk to ^0000FFthe Sheriffs^000000 about our next move."
           ],
-          "NpcPosY": "30",
-          "NpcPosX": "20",
+          "NpcPosY": 30,
+          "NpcPosX": 20,
           "NpcSpr": "4_m_yattwarp",
           "Summary": "Talk to Wyatt and Ivoka",
           "Title": "Unexpected Arrest",
@@ -22449,8 +22449,8 @@ define(function () {
           "Description": [
             "^0000FFJohnny James^000000 is convinced that ^0000FFAlbert Ford^000000 betrayed him. He asked me to get rid of ^0000FFAlbert^000000 and bring his mane as proof. I should report to the ^0000FFSheriff^000000 for now."
           ],
-          "NpcPosY": "30",
-          "NpcPosX": "20",
+          "NpcPosY": 30,
+          "NpcPosX": 20,
           "NpcSpr": "4_m_yattwarp",
           "Summary": "Talk to Wyatt Warp",
           "Title": "Perfectly Primed",
@@ -22460,8 +22460,8 @@ define(function () {
           "Description": [
             "^0000FFSheriff Warp^000000 said ^0000FFForeman McCurdy^000000 has a good bargaining chip. He's at the plaza."
           ],
-          "NpcPosY": "193",
-          "NpcPosX": "288",
+          "NpcPosY": 193,
+          "NpcPosX": 288,
           "NpcSpr": "4_m_seanmccurdy",
           "Summary": "Talk to Shawn McCurdy",
           "Title": "Shawn McCurdy's Weapon 1",
@@ -22471,8 +22471,8 @@ define(function () {
           "Description": [
             "I could get some purple ores, which I thought could no longer be mined because of the ^0000FFBuffalo Bandits^000000. I should find ^0000FFShawn McCurdy^000000 south from the entrance to the mine."
           ],
-          "NpcPosY": "86",
-          "NpcPosX": "10",
+          "NpcPosY": 86,
+          "NpcPosX": 10,
           "NpcSpr": "4_m_seanmccurdy",
           "Summary": "Talk to Shawn McCurdy",
           "Title": "Shawn McCurdy's Weapon 2",
@@ -22489,8 +22489,8 @@ define(function () {
           "Description": [
             "I should ^009900knock on the signaling rock 3 times^000000, and then talk to ^0000FFAlbert Ford^000000 about his gang's future."
           ],
-          "NpcPosY": "309",
-          "NpcPosX": "295",
+          "NpcPosY": 309,
+          "NpcPosX": 295,
           "NpcSpr": "4_m_albertford",
           "Summary": "Talk to Albert Ford",
           "Title": "Hear Me Out 2",
@@ -22508,8 +22508,8 @@ define(function () {
           "Description": [
             "^0000FFJohnny^000000 told me where he hid the ores: \"^009900Under the elevator on the second floor of the mine^000000\". I should report to ^0000FFSheriff Warp^000000 with this information."
           ],
-          "NpcPosY": "30",
-          "NpcPosX": "20",
+          "NpcPosY": 30,
+          "NpcPosX": 20,
           "NpcSpr": "4_m_yattwarp",
           "Summary": "Talk to Wyatt Warp",
           "Title": "Location of the Ores",
@@ -22519,8 +22519,8 @@ define(function () {
           "Description": [
             "^0000FFShawn McCurdy^000000 is at the ^009900temporary entrance to the second floor of the mine^000000. I should tell him where the ores are and follow him to the inside of the mine."
           ],
-          "NpcPosY": "86",
-          "NpcPosX": "10",
+          "NpcPosY": 86,
+          "NpcPosX": 10,
           "NpcSpr": "4_m_seanmccurdy",
           "Summary": "Talk to Shawn McCurdy",
           "Title": "Location of the Ores 2",
@@ -22530,8 +22530,8 @@ define(function () {
           "Description": [
             "The broken elevator is to the north from the center of the second floor. I should find an <ITEM>Ore Box<INFO>25248</INFO></ITEM> underneath the elevator, and bring it to ^0000FFShawn McCurdy^000000."
           ],
-          "NpcPosY": "86",
-          "NpcPosX": "10",
+          "NpcPosY": 86,
+          "NpcPosX": 10,
           "NpcSpr": "4_m_seanmccurdy",
           "Summary": "Find 1 Ore Box",
           "Title": "Location of the Ores 3",
@@ -22549,22 +22549,22 @@ define(function () {
           "Description": [
             "I might have burned my bridges with ^0000FFAlbert Ford^000000, but I don't care. I don't have to see him anymore. I should report to ^0000FFSheriff Warp^000000."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "28495",
               "ItemNum": "1"
             },
-            "2": {
+            {
               "ItemID": "28496",
               "ItemNum": "1"
             },
-            "3": {
+            {
               "ItemID": "25250",
               "ItemNum": "200"
             }
-          },
-          "NpcPosY": "30",
-          "NpcPosX": "20",
+          ],
+          "NpcPosY": 30,
+          "NpcPosX": 20,
           "NpcSpr": "4_m_yattwarp",
           "Summary": "Talk to Wyatt Warp",
           "Title": "Case Solved",
@@ -22737,7 +22737,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Today's exciting festival preparation",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7840": {
           "Description": [
@@ -22759,7 +22759,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Today's Sweets Drops Avenger-Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7850": {
           "IconName": "ico_ep.bmp",
@@ -22827,12 +22827,12 @@ define(function () {
         },
         "7858": {
           "IconName": "ico_ep.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25723",
               "ItemNum": "15"
             }
-          },
+          ],
           "RewardJEXP": "800000",
           "RewardEXP": "800000",
           "Summary": "Monster hunt",
@@ -22901,12 +22901,12 @@ define(function () {
         },
         "7866": {
           "IconName": "ico_ep.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25669",
               "ItemNum": "25"
             }
-          },
+          ],
           "RewardJEXP": "800000",
           "RewardEXP": "1000000",
           "Summary": "Talk to Tes",
@@ -22927,7 +22927,7 @@ define(function () {
         },
         "7868": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Merc vs. Merc - Pending",
           "Description": [
@@ -23009,8 +23009,8 @@ define(function () {
         },
         "7879": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
-          "NpcPosX": "143",
+          "NpcPosY": 244,
+          "NpcPosX": 143,
           "NpcNavi": "einbech",
           "NpcSpr": "4_F_LGTGIRL",
           "Summary": "Hunt Poisonous, Toxious",
@@ -23021,21 +23021,21 @@ define(function () {
         },
         "7880": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
+          "NpcPosY": 244,
           "Summary": "Reset at 04:00",
           "NpcNavi": "einbech",
           "Description": [
             "After the waiting time expires, you can receive the 'New Poison Gas Research' quest from <NAVI>[Apprentice Researcher Sally]<INFO>einbech,143,244,0,101,0</INFO></NAVI> near the Einbech Mine again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_LGTGIRL",
           "Title": "New Poison Gas Research",
-          "NpcPosX": "143"
+          "NpcPosX": 143
         },
         "7881": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
-          "NpcPosX": "143",
+          "NpcPosY": 244,
+          "NpcPosX": 143,
           "NpcNavi": "einbech",
           "NpcSpr": "4_F_LGTGIRL",
           "Summary": "Hunt Green Mineral, Red Mineral",
@@ -23046,21 +23046,21 @@ define(function () {
         },
         "7882": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
+          "NpcPosY": 244,
           "Summary": "Reset at 04:00",
           "NpcNavi": "einbech",
           "Description": [
             "After the waiting time expires, you can receive the 'Special Mineral Research 1' quest from <NAVI>[Apprentice Researcher Sally]<INFO>einbech,143,244,0,101,0</INFO></NAVI> near the Einbech Mine again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_LGTGIRL",
           "Title": "Special Mineral Research 1",
-          "NpcPosX": "143"
+          "NpcPosX": 143
         },
         "7883": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
-          "NpcPosX": "143",
+          "NpcPosY": 244,
+          "NpcPosX": 143,
           "NpcNavi": "einbech",
           "NpcSpr": "4_F_LGTGIRL",
           "Summary": "Hunt White Mineral, Purple Mineral",
@@ -23071,21 +23071,21 @@ define(function () {
         },
         "7884": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
+          "NpcPosY": 244,
           "Summary": "Reset at 04:00",
           "NpcNavi": "einbech",
           "Description": [
             "After the waiting time expires, you can receive the 'Special Mineral Research 2' quest from <NAVI>[Apprentice Researcher Sally]<INFO>einbech,143,244,0,101,0</INFO></NAVI> near the Einbech Mine again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_LGTGIRL",
           "Title": "Special Mineral Research 2",
-          "NpcPosX": "143"
+          "NpcPosX": 143
         },
         "7885": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
-          "NpcPosX": "143",
+          "NpcPosY": 244,
+          "NpcPosX": 143,
           "NpcNavi": "einbech",
           "NpcSpr": "4_F_LGTGIRL",
           "Summary": "Hunt Abyssman",
@@ -23096,21 +23096,21 @@ define(function () {
         },
         "7886": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
+          "NpcPosY": 244,
           "Summary": "Reset at 04:00",
           "NpcNavi": "einbech",
           "Description": [
             "After the waiting time expires, you can receive the 'Abyssman Research' quest from <NAVI>[Apprentice Researcher Sally]<INFO>einbech,143,244,0,101,0</INFO></NAVI> near the Einbech Mine again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_LGTGIRL",
           "Title": "Abyssman Research",
-          "NpcPosX": "143"
+          "NpcPosX": 143
         },
         "7887": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
-          "NpcPosX": "143",
+          "NpcPosY": 244,
+          "NpcPosX": 143,
           "NpcNavi": "einbech",
           "NpcSpr": "4_F_LGTGIRL",
           "Summary": "Hunt White Porcellio, Jewelry Ant",
@@ -23121,21 +23121,21 @@ define(function () {
         },
         "7888": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "244",
+          "NpcPosY": 244,
           "Summary": "Reset at 04:00",
           "NpcNavi": "einbech",
           "Description": [
             "After the waiting time expires, you can receive the 'Mineworm Research' quest from <NAVI>[Apprentice Researcher Sally]<INFO>einbech,143,244,0,101,0</INFO></NAVI> near the Einbech Mine again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_LGTGIRL",
           "Title": "Mineworm Research",
-          "NpcPosX": "143"
+          "NpcPosX": 143
         },
         "7889": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "152",
-          "NpcPosX": "108",
+          "NpcPosY": 152,
+          "NpcPosX": 108,
           "NpcNavi": "odin_tem01",
           "NpcSpr": "4_M_SITDOWN",
           "Summary": "Hunt two types of Angelgolt",
@@ -23146,21 +23146,21 @@ define(function () {
         },
         "7890": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "152",
+          "NpcPosY": 152,
           "Summary": "Reset at 04:00",
           "NpcNavi": "odin_tem01",
           "Description": [
             "After the waiting time expires, you can receive the 'X Century XX Gold' quest from <NAVI>[Folklorist Cinnamon]<INFO>odin_tem01,108,152,0,101,0</INFO></NAVI> waiting at the ferry in Odin Temple again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_SITDOWN",
           "Title": "X Century XX Gold",
-          "NpcPosX": "108"
+          "NpcPosX": 108
         },
         "7891": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "152",
-          "NpcPosX": "108",
+          "NpcPosY": 152,
+          "NpcPosX": 108,
           "NpcNavi": "odin_tem01",
           "NpcSpr": "4_M_SITDOWN",
           "Summary": "Hunt Holy Frus, Holy Skogul",
@@ -23171,21 +23171,21 @@ define(function () {
         },
         "7892": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "152",
+          "NpcPosY": 152,
           "Summary": "Reset at 04:00",
           "NpcNavi": "odin_tem01",
           "Description": [
             "After the waiting time expires, you can receive the 'What is a Valkyrie' quest from <NAVI>[Folklorist Cinnamon]<INFO>odin_tem01,108,152,0,101,0</INFO></NAVI> waiting at the ferry in Odin Temple again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_SITDOWN",
           "Title": "What is a Valkyrie",
-          "NpcPosX": "108"
+          "NpcPosX": 108
         },
         "7893": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "143",
-          "NpcPosX": "102",
+          "NpcPosY": 143,
+          "NpcPosX": 102,
           "NpcNavi": "hugel",
           "NpcSpr": "4_F_HUWOMAN",
           "Summary": "Hunt Purple Ferus",
@@ -23196,21 +23196,21 @@ define(function () {
         },
         "7894": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "143",
+          "NpcPosY": 143,
           "Summary": "Reset at 04:00",
           "NpcNavi": "hugel",
           "Description": [
             "After the waiting time expires, you can receive the 'Purple Ferrus Research' quest from <NAVI>[Folklorist Marigold]<INFO>hugel,102,148,0,101,0</INFO></NAVI> waiting in Hugel Square again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_HUWOMAN",
           "Title": "Purple Ferrus Research",
-          "NpcPosX": "102"
+          "NpcPosX": 102
         },
         "7895": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "143",
-          "NpcPosX": "102",
+          "NpcPosY": 143,
+          "NpcPosX": 102,
           "NpcNavi": "hugel",
           "NpcSpr": "4_F_HUWOMAN",
           "Summary": "Hunt Treasure Mimic",
@@ -23221,21 +23221,21 @@ define(function () {
         },
         "7896": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "143",
+          "NpcPosY": 143,
           "Summary": "Reset at 04:00",
           "NpcNavi": "hugel",
           "Description": [
             "After the waiting time expires, you can receive the 'New Mimic Investigation' quest from <NAVI>[Folklorist Marigold]<INFO>hugel,102,148,0,101,0</INFO></NAVI> waiting in Hugel Square again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_HUWOMAN",
           "Title": "New Mimic Investigation",
-          "NpcPosX": "102"
+          "NpcPosX": 102
         },
         "7897": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "143",
-          "NpcPosX": "102",
+          "NpcPosY": 143,
+          "NpcPosX": 102,
           "NpcNavi": "hugel",
           "NpcSpr": "4_F_HUWOMAN",
           "Summary": "Hunt Black Acidus, Silver Acidus",
@@ -23246,21 +23246,21 @@ define(function () {
         },
         "7898": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "143",
+          "NpcPosY": 143,
           "Summary": "Reset at 04:00",
           "NpcNavi": "hugel",
           "Description": [
             "After the waiting time expires, you can receive the 'Acidus Property Research' quest from <NAVI>[Folklorist Marigold]<INFO>hugel,102,148,0,101,0</INFO></NAVI> waiting in Hugel Square again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_HUWOMAN",
           "Title": "Acidus Property Research",
-          "NpcPosX": "102"
+          "NpcPosX": 102
         },
         "7899": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "143",
-          "NpcPosX": "102",
+          "NpcPosY": 143,
+          "NpcPosX": 102,
           "NpcNavi": "hugel",
           "NpcSpr": "4_F_HUWOMAN",
           "Summary": "Hunt Bone Ferus, Bone Acidus",
@@ -23271,20 +23271,20 @@ define(function () {
         },
         "7900": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "143",
+          "NpcPosY": 143,
           "Summary": "Reset at 04:00",
           "NpcNavi": "hugel",
           "Description": [
             "After the waiting time expires, you can receive the 'Things against Providence' quest from <NAVI>[Folklorist Marigold]<INFO>hugel,102,148,0,101,0</INFO></NAVI> waiting in Hugel Square again."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_HUWOMAN",
           "Title": "Things against Providence",
-          "NpcPosX": "102"
+          "NpcPosX": 102
         },
         "7996": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "I donated the parfait!",
           "Description": [
@@ -23297,7 +23297,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The real taste of canned cats",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "7998": {
           "Description": [
@@ -23312,7 +23312,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "'Regression' in the backbone",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "8000": {
           "Description": [
@@ -25165,264 +25165,264 @@ define(function () {
           "Title": "One time a one hour!"
         },
         "8266": {
-          "NpcPosY": "42",
+          "NpcPosY": 42,
           "Summary": "",
           "NpcNavi": "geffen",
           "Description": [
             "Hunt 10 Poison Spores and then report to Sponiac in Geffen. You can find the most Poison Spores at Mt. Mjolnir 6."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "100"
             }
-          },
+          ],
           "NpcSpr": "4W_M_03",
           "RewardEXP": "1000",
           "Title": "Hunting Poison Spore",
-          "NpcPosX": "104"
+          "NpcPosX": 104
         },
         "8267": {
-          "NpcPosY": "42",
+          "NpcPosY": 42,
           "Summary": "",
           "NpcNavi": "geffen",
           "Description": [
             "Hunt 10 Smokies and then report to Sponiac in Geffen. You can find the most Poison Spores at Mt. Mjolnir 6."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "100"
             }
-          },
+          ],
           "NpcSpr": "4W_M_03",
           "RewardEXP": "1000",
           "Title": "Hunting Smokie",
-          "NpcPosX": "104"
+          "NpcPosX": 104
         },
         "8268": {
-          "NpcPosY": "42",
+          "NpcPosY": 42,
           "Summary": "",
           "NpcNavi": "geffen",
           "Description": [
             "Hunt 10 Elder Willows and then report to Sponiac in Geffen. You can find Elder Willows in the fields East of Prontera and Payon."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "110"
             }
-          },
+          ],
           "RewardJEXP": "100",
           "NpcSpr": "4W_M_03",
           "RewardEXP": "1000",
           "Title": "Hunting Elder Willow",
-          "NpcPosX": "104"
+          "NpcPosX": 104
         },
         "8269": {
-          "NpcPosY": "42",
+          "NpcPosY": 42,
           "Summary": "",
           "NpcNavi": "geffen",
           "Description": [
             "Hunt 10 Coco and then report to Sponiac in Geffen. You can find Cocos around Geffen Field 2."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "150"
             }
-          },
+          ],
           "RewardJEXP": "200",
           "NpcSpr": "4W_M_03",
           "RewardEXP": "1000",
           "Title": "Hunting Coco",
-          "NpcPosX": "104"
+          "NpcPosX": 104
         },
         "8270": {
-          "NpcPosY": "42",
+          "NpcPosY": 42,
           "Summary": "",
           "NpcNavi": "geffen",
           "Description": [
             "Hunt 10 Thara Frog and then report to Sponiac in Geffen. You can find Thara Frogs in the dungeon east of Comodo."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "200"
             }
-          },
+          ],
           "RewardJEXP": "300",
           "NpcSpr": "4W_M_03",
           "RewardEXP": "1500",
           "Title": "Hunting Thara Frog",
-          "NpcPosX": "104"
+          "NpcPosX": 104
         },
         "8271": {
-          "NpcPosY": "89",
+          "NpcPosY": 89,
           "Summary": "Deliver the insecticide",
           "NpcNavi": "pay_fild07",
           "Description": [
             "Find <NAVI>Dieshin Man<INFO>moc_ruins,173,55,0,101,0</INFO></NAVI> at the Morroc Ruins and deliver his <ITEM>Delivery Box<INFO>6218</INFO></ITEM> to a Zoologist somewhere in Payon Field 7."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "100"
             }
-          },
+          ],
           "NpcSpr": "4_M_ORIENT02",
           "RewardEXP": "1000",
           "Title": "Toxic an insecticide",
-          "NpcPosX": "83"
+          "NpcPosX": 83
         },
         "8272": {
-          "NpcPosY": "254",
+          "NpcPosY": 254,
           "Summary": "Deliver the Honey",
           "NpcNavi": "prt_fild03",
           "Description": [
             "Find <NAVI>Dieshin Man<INFO>moc_ruins,173,55,0,101,0</INFO></NAVI> at the Morroc Ruins and deliver his <ITEM>Delivery Box<INFO>6218</INFO></ITEM> to an Entomologist somewhere in Prontera Field 3."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "100"
             }
-          },
+          ],
           "NpcSpr": "4_M_01",
           "RewardEXP": "1000",
           "Title": "Deliver a honey!",
-          "NpcPosX": "30"
+          "NpcPosX": 30
         },
         "8273": {
-          "NpcPosY": "57",
+          "NpcPosY": 57,
           "Summary": "Deliver the Blanket",
           "NpcNavi": "xmas_fild01",
           "Description": [
             "Find <NAVI>Dieshin Man<INFO>moc_ruins,173,55,0,101,0</INFO></NAVI> at the Morroc Ruins and bring his <ITEM>Delivery Box<INFO>6218</INFO></ITEM> to a Biologist somewhere in Lutie Field."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "100"
             }
-          },
+          ],
           "NpcSpr": "4W_M_01",
           "RewardEXP": "1000",
           "Title": "Deliver a blanket!",
-          "NpcPosX": "92"
+          "NpcPosX": 92
         },
         "8274": {
-          "NpcPosY": "66",
+          "NpcPosY": 66,
           "Summary": "Deliver items to Dashia in Payon",
           "NpcNavi": "payon",
           "Description": [
             "Gather 10 <ITEM>Skel-Bone<INFO>932</INFO></ITEM>. Monster that drop it is Skeleton in Payon Cave."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "100"
             }
-          },
+          ],
           "RewardJEXP": "100",
           "NpcSpr": "4_M_RACHMAN1",
           "RewardEXP": "1000",
           "Title": "Collect Bones",
-          "NpcPosX": "179"
+          "NpcPosX": 179
         },
         "8275": {
-          "NpcPosY": "66",
+          "NpcPosY": 66,
           "Summary": "Deliver items to Dashia in Payon",
           "NpcNavi": "payon",
           "Description": [
             "Collect 10 <ITEM>Bear's Footskin<INFO>948</INFO></ITEM> and 5 <ITEM>Animal Skin<INFO>919</INFO></ITEM>. Bigfoot monsters drop them at Payon Field 7"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "100"
             }
-          },
+          ],
           "NpcSpr": "4_M_RACHMAN1",
           "RewardEXP": "1000",
           "Title": "Collect Skins",
-          "NpcPosX": "179"
+          "NpcPosX": 179
         },
         "8276": {
-          "NpcPosY": "66",
+          "NpcPosY": 66,
           "Summary": "Deliver items to Dashia in Payon",
           "NpcNavi": "payon",
           "Description": [
             "Collect 20 <ITEM>Worm Peeling<INFO>955</INFO></ITEM> and 20 <ITEM>Garlet<INFO>910</INFO></ITEM>. You can gather these items in the Ant Hell dungeon at Fortress Saint Darmain (East)."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "100"
             }
-          },
+          ],
           "RewardJEXP": "100",
           "NpcSpr": "4_M_RACHMAN1",
           "RewardEXP": "1000",
           "Title": "Collect Peelings",
-          "NpcPosX": "179"
+          "NpcPosX": 179
         },
         "8277": {
-          "NpcPosY": "66",
+          "NpcPosY": 66,
           "Summary": "Deliver items to Dashia in Payon",
           "NpcNavi": "payon",
           "Description": [
             "Collect 10 <ITEM>Yoyo Tail<INFO>942</INFO></ITEM>, 10 <ITEM>Acorn<INFO>1026</INFO></ITEM> and 10 <ITEM>Raccoon Leaf<INFO>945</INFO></ITEM>. You can get these items from Yoyo, Coco, and Smokie at the Eastern field of Ayothaya."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "150"
             }
-          },
+          ],
           "RewardJEXP": "200",
           "NpcSpr": "4_M_RACHMAN1",
           "RewardEXP": "1000",
           "Title": "Collect tails!",
-          "NpcPosX": "179"
+          "NpcPosX": 179
         },
         "8278": {
-          "NpcPosY": "66",
+          "NpcPosY": 66,
           "Summary": "Deliver items to Dashia in Payon",
           "NpcNavi": "payon",
           "Description": [
             "Collect 5 <ITEM>Well-baked Cookie<INFO>538</INFO></ITEM> and 1 <ITEM>Piece of Cake<INFO>539</INFO></ITEM>. You can get these items from Cookie and Mystcase in the Toy Factory of Lutie."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "150"
             }
-          },
+          ],
           "RewardJEXP": "200",
           "NpcSpr": "4_M_RACHMAN1",
           "RewardEXP": "1000",
           "Title": "Collect cookies!",
-          "NpcPosX": "179"
+          "NpcPosX": 179
         },
         "8279": {
-          "NpcPosY": "66",
+          "NpcPosY": 66,
           "Summary": "Deliver items to Dashia in Payon",
           "NpcNavi": "payon",
           "Description": [
             "Collect 5 <ITEM>Mole Whiskers<INFO>1017</INFO></ITEM> and 3 <ITEM>Mole Claw<INFO>1018</INFO></ITEM>. You can get these items from Martin in the Mjolnir Dead Pit"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "569",
               "ItemNum": "150"
             }
-          },
+          ],
           "RewardJEXP": "200",
           "NpcSpr": "4_M_RACHMAN1",
           "RewardEXP": "1000",
           "Title": "Collect mustache!",
-          "NpcPosX": "179"
+          "NpcPosX": 179
         },
         "8280": {
           "Description": [
@@ -25514,7 +25514,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "My kids love melon parfait-wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "8293": {
           "Description": [
@@ -25655,7 +25655,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "A big melon contest is being held-waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "8313": {
           "Description": [
@@ -25729,21 +25729,21 @@ define(function () {
         },
         "8323": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "19",
+          "NpcPosY": 19,
           "Summary": "Reset after 7 days at 4 o'clock",
           "NpcNavi": "alberta_in",
           "Description": [
             "In order to protect the client's privacy, the Merchant Union's Employment Department says that one person is only asked once every seven days. Let's wait for the next request."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "1_F_MERCHANT_01",
           "Title": "Request from stall Part Time Job management center-waiting",
-          "NpcPosX": "20"
+          "NpcPosX": 20
         },
         "8324": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "57",
-          "NpcPosX": "56",
+          "NpcPosY": 57,
+          "NpcPosX": 56,
           "NpcNavi": "prt_in",
           "NpcSpr": "4_LAM",
           "Summary": "box delivery",
@@ -25754,7 +25754,7 @@ define(function () {
         },
         "8325": {
           "IconName": "ico_nq.bmp",
-          "NpcPosX": "20",
+          "NpcPosX": 20,
           "NpcNavi": "alberta_in",
           "NpcSpr": "1_F_MERCHANT_01",
           "Summary": "Submit receipt",
@@ -25765,8 +25765,8 @@ define(function () {
         },
         "8326": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "174",
-          "NpcPosX": "140",
+          "NpcPosY": 174,
+          "NpcPosX": 140,
           "NpcNavi": "payon",
           "NpcSpr": "4_LAM",
           "Summary": "box delivery",
@@ -25777,8 +25777,8 @@ define(function () {
         },
         "8327": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "19",
-          "NpcPosX": "20",
+          "NpcPosY": 19,
+          "NpcPosX": 20,
           "NpcNavi": "alberta_in",
           "NpcSpr": "1_F_MERCHANT_01",
           "Summary": "Submit receipt",
@@ -25789,8 +25789,8 @@ define(function () {
         },
         "8328": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "171",
-          "NpcPosX": "128",
+          "NpcPosY": 171,
+          "NpcPosX": 128,
           "NpcNavi": "cmd_in01",
           "NpcSpr": "4_LAM",
           "Summary": "box delivery",
@@ -25801,8 +25801,8 @@ define(function () {
         },
         "8329": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "19",
-          "NpcPosX": "20",
+          "NpcPosY": 19,
+          "NpcPosX": 20,
           "NpcNavi": "alberta_in",
           "NpcSpr": "1_F_MERCHANT_01",
           "Summary": "Submit receipt",
@@ -25813,8 +25813,8 @@ define(function () {
         },
         "8330": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "55",
-          "NpcPosX": "97",
+          "NpcPosY": 55,
+          "NpcPosX": 97,
           "NpcNavi": "aldeba_in",
           "NpcSpr": "4_LAM",
           "Summary": "box delivery",
@@ -25825,8 +25825,8 @@ define(function () {
         },
         "8331": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "19",
-          "NpcPosX": "20",
+          "NpcPosY": 19,
+          "NpcPosX": 20,
           "NpcNavi": "alberta_in",
           "NpcSpr": "1_F_MERCHANT_01",
           "Summary": "Submit receipt",
@@ -25837,8 +25837,8 @@ define(function () {
         },
         "8332": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "258",
-          "NpcPosX": "162",
+          "NpcPosY": 258,
+          "NpcPosX": 162,
           "NpcNavi": "Morroc",
           "NpcSpr": "4_LAM",
           "Summary": "box delivery",
@@ -25849,8 +25849,8 @@ define(function () {
         },
         "8333": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "19",
-          "NpcPosX": "20",
+          "NpcPosY": 19,
+          "NpcPosX": 20,
           "NpcNavi": "alberta_in",
           "NpcSpr": "1_F_MERCHANT_01",
           "Summary": "Submit receipt",
@@ -26013,7 +26013,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Would you like to use the street stall?-Wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "8401": {
           "Description": [
@@ -26028,7 +26028,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Tomorrow in the King's Shoe Heel Again",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "8417": {
           "Description": [
@@ -26422,7 +26422,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Delayed Insurance-Waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "8529": {
           "Description": [
@@ -26473,7 +26473,7 @@ define(function () {
         },
         "8538": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Renting an advanced oxygen mask",
           "Description": [
@@ -26490,7 +26490,7 @@ define(function () {
         },
         "8542": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Nothing to See - Wait",
           "Description": [
@@ -26515,7 +26515,7 @@ define(function () {
         },
         "8545": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "High Freezing Point - Wait",
           "Description": [
@@ -26540,7 +26540,7 @@ define(function () {
         },
         "8548": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "A Mirror - Wait",
           "Description": [
@@ -26565,7 +26565,7 @@ define(function () {
         },
         "8551": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "The Dealer That Caused Evolution",
           "Description": [
@@ -26590,7 +26590,7 @@ define(function () {
         },
         "8554": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Eradicate the nightmare that became reality",
           "Description": [
@@ -26615,7 +26615,7 @@ define(function () {
         },
         "8557": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Check Density",
           "Description": [
@@ -26640,7 +26640,7 @@ define(function () {
         },
         "8560": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Small Things",
           "Description": [
@@ -26689,7 +26689,7 @@ define(function () {
         },
         "8581": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Sweet and Sour Melon is delicious",
           "Description": [
@@ -26706,7 +26706,7 @@ define(function () {
         },
         "8583": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Sour Performance Analysis",
           "Description": [
@@ -26738,7 +26738,7 @@ define(function () {
         },
         "8587": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Daily Farm Experience",
           "Description": [
@@ -26801,7 +26801,7 @@ define(function () {
         },
         "8595": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Playing With Pitaya",
           "Description": [
@@ -27036,7 +27036,7 @@ define(function () {
         },
         "8642": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "It looks cute",
           "Description": [
@@ -27061,7 +27061,7 @@ define(function () {
         },
         "8645": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "It's not an instrument",
           "Description": [
@@ -27086,7 +27086,7 @@ define(function () {
         },
         "8648": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Play the Piano",
           "Description": [
@@ -27111,7 +27111,7 @@ define(function () {
         },
         "8651": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Hairy Kids",
           "Description": [
@@ -27136,7 +27136,7 @@ define(function () {
         },
         "8654": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Kids with Dolls",
           "Description": [
@@ -27161,7 +27161,7 @@ define(function () {
         },
         "8657": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Wake them up",
           "Description": [
@@ -27194,7 +27194,7 @@ define(function () {
         },
         "8661": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Audumla Grasslands-3",
           "Description": [
@@ -27219,7 +27219,7 @@ define(function () {
         },
         "8664": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Ida Plains-3",
           "Description": [
@@ -27244,7 +27244,7 @@ define(function () {
         },
         "8667": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Audumla Grasslands-1",
           "Description": [
@@ -27269,7 +27269,7 @@ define(function () {
         },
         "8670": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Audumla Grasslands-2",
           "Description": [
@@ -27294,7 +27294,7 @@ define(function () {
         },
         "8673": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Porto Luna",
           "Description": [
@@ -27319,7 +27319,7 @@ define(function () {
         },
         "8676": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Veins Field-3",
           "Description": [
@@ -27344,7 +27344,7 @@ define(function () {
         },
         "8679": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Subjugation-Veins Field-4",
           "Description": [
@@ -28633,7 +28633,7 @@ define(function () {
         },
         "8844": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Example of Silent Answer",
           "Description": [
@@ -28703,7 +28703,7 @@ define(function () {
         },
         "8852": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] I've come this far",
           "Description": [
@@ -28739,7 +28739,7 @@ define(function () {
         },
         "8856": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Collection of Soft Delicacies",
           "Description": [
@@ -28920,7 +28920,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Strange Hydra : present conditions",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9030": {
           "Description": [
@@ -28942,7 +28942,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Lost Puppies",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9058": {
           "Description": [
@@ -29188,7 +29188,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Izlude Dungeon Anomaly (1)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9180": {
           "Description": [
@@ -29210,7 +29210,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Izlude Dungeon Anomaly (4)",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9183": {
           "Description": [
@@ -29225,7 +29225,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Explore strange areas-waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9185": {
           "Description": [
@@ -29478,7 +29478,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "9th Anniversary of the World",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9222": {
           "Description": [
@@ -29493,7 +29493,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "Will there be Peace at the Hospital?",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9224": {
           "Description": [
@@ -29501,7 +29501,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "Explore Hospital 2F",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9225": {
           "Description": [
@@ -29824,7 +29824,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Current status of beach cleaning",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9284": {
           "Description": [
@@ -30056,7 +30056,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Re-exploring the dimensional gap",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9318": {
           "Description": [
@@ -30071,7 +30071,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Pursuing Hiding Morroc Continues",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9321": {
           "Description": [
@@ -30079,7 +30079,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Purchase chocolate from Kim Money",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9322": {
           "Description": [
@@ -30094,7 +30094,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Your Love Chocolate Delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9324": {
           "Description": [
@@ -30151,7 +30151,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Go to Chief Assistant Officer Kang Tae-gong",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9334": {
           "Description": [
@@ -30159,7 +30159,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Go to a professional angler",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9335": {
           "Description": [
@@ -30174,7 +30174,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "Go back to Professor Bernhard",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9337": {
           "Description": [
@@ -30644,7 +30644,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Go to Chief Assistant Officer Kang Tae-gong",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9408": {
           "Description": [
@@ -30652,7 +30652,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Go to a professional angler",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9418": {
           "Description": [
@@ -30667,7 +30667,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 days at 4 o'clock",
           "Title": "Attack Air Fortress Invading Prontera",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9421": {
           "Description": [
@@ -30766,7 +30766,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Good days once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9436": {
           "Description": [
@@ -30786,8 +30786,8 @@ define(function () {
           "Description": [
             "Talk to <NAVI>Karam Pucci<INFO>alberta,240,103,0,101,0</INFO></NAVI> in Alberta and go to the new land."
           ],
-          "NpcPosY": "103",
-          "NpcPosX": "240",
+          "NpcPosY": 103,
+          "NpcPosX": 240,
           "NpcSpr": "4_M_SEAMAN",
           "Summary": "Talk to Karam Pucci in Alberta",
           "Title": "To the New Land!",
@@ -30797,8 +30797,8 @@ define(function () {
           "Description": [
             "<NAVI>Costello<INFO>harboro1,80,218,0,101,0</INFO></NAVI> in Rock Ridge needs help for some problem that his village is having."
           ],
-          "NpcPosY": "218",
-          "NpcPosX": "80",
+          "NpcPosY": 218,
+          "NpcPosX": 80,
           "NpcSpr": "4_m_costell",
           "Summary": "Meet Costello in Rock Ridge",
           "Title": "Serious Problem",
@@ -30943,7 +30943,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Too Early for Pipe Cleaning",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "9460": {
           "Description": [
@@ -30958,7 +30958,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Enough Ores",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "10000": {
           "Description": [
@@ -31361,8 +31361,8 @@ define(function () {
         },
         "10057": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "138",
-          "NpcPosX": "127",
+          "NpcPosY": 138,
+          "NpcPosX": 127,
           "NpcNavi": "aldebaran",
           "NpcSpr": "4W_SAILOR",
           "Summary": "",
@@ -31373,8 +31373,8 @@ define(function () {
         },
         "10058": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "138",
-          "NpcPosX": "127",
+          "NpcPosY": 138,
+          "NpcPosX": 127,
           "NpcNavi": "aldebaran",
           "NpcSpr": "4W_SAILOR",
           "Summary": "",
@@ -31385,8 +31385,8 @@ define(function () {
         },
         "10059": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "67",
-          "NpcPosX": "90",
+          "NpcPosY": 67,
+          "NpcPosX": 90,
           "NpcNavi": "geffen",
           "NpcSpr": "4W_SAILOR",
           "Summary": "",
@@ -31397,8 +31397,8 @@ define(function () {
         },
         "10060": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "67",
-          "NpcPosX": "90",
+          "NpcPosY": 67,
+          "NpcPosX": 90,
           "NpcNavi": "geffen",
           "NpcSpr": "4W_SAILOR",
           "Summary": "",
@@ -31409,8 +31409,8 @@ define(function () {
         },
         "10061": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "67",
-          "NpcPosX": "90",
+          "NpcPosY": 67,
+          "NpcPosX": 90,
           "NpcNavi": "geffen",
           "NpcSpr": "4W_SAILOR",
           "Summary": "",
@@ -31421,8 +31421,8 @@ define(function () {
         },
         "10062": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "171",
-          "NpcPosX": "102",
+          "NpcPosY": 171,
+          "NpcPosX": 102,
           "NpcNavi": "izlude",
           "NpcSpr": "4W_SAILOR",
           "Summary": "",
@@ -31433,8 +31433,8 @@ define(function () {
         },
         "10063": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "171",
-          "NpcPosX": "102",
+          "NpcPosY": 171,
+          "NpcPosX": 102,
           "NpcNavi": "izlude",
           "NpcSpr": "4W_SAILOR",
           "Summary": "Level up to base 70 or more",
@@ -31445,8 +31445,8 @@ define(function () {
         },
         "10064": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "165",
-          "NpcPosX": "207",
+          "NpcPosY": 165,
+          "NpcPosX": 207,
           "NpcNavi": "prt_cas",
           "NpcSpr": "4_M_MANAGER",
           "Summary": "Talk to Recruiter in Prontera Castle",
@@ -31457,8 +31457,8 @@ define(function () {
         },
         "10065": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "259",
-          "NpcPosX": "132",
+          "NpcPosY": 259,
+          "NpcPosX": 132,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_LGTGUARD2",
           "Summary": "Talk to Sikaiz",
@@ -31469,8 +31469,8 @@ define(function () {
         },
         "10066": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "259",
-          "NpcPosX": "132",
+          "NpcPosY": 259,
+          "NpcPosX": 132,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_LGTGUARD2",
           "Summary": "Talk to Sikaiz",
@@ -31481,8 +31481,8 @@ define(function () {
         },
         "10067": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "259",
-          "NpcPosX": "132",
+          "NpcPosY": 259,
+          "NpcPosX": 132,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_LGTGUARD2",
           "Summary": "",
@@ -31493,8 +31493,8 @@ define(function () {
         },
         "10068": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "53",
-          "NpcPosX": "163",
+          "NpcPosY": 53,
+          "NpcPosX": 163,
           "NpcNavi": "prt_cas",
           "NpcSpr": "4W_SAILOR",
           "Summary": "",
@@ -31505,8 +31505,8 @@ define(function () {
         },
         "10069": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "259",
-          "NpcPosX": "132",
+          "NpcPosY": 259,
+          "NpcPosX": 132,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_LGTGUARD2",
           "Summary": "Go back to Sikaiz",
@@ -31517,8 +31517,8 @@ define(function () {
         },
         "10070": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "259",
-          "NpcPosX": "132",
+          "NpcPosY": 259,
+          "NpcPosX": 132,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_LGTGUARD2",
           "Summary": "Continue the conversation",
@@ -31529,8 +31529,8 @@ define(function () {
         },
         "10071": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "113",
-          "NpcPosX": "119",
+          "NpcPosY": 113,
+          "NpcPosX": 119,
           "NpcNavi": "ra_temple",
           "NpcSpr": "4_M_TRAINEE",
           "Summary": "Talk to Alliance Manager at Rachel Temple",
@@ -31541,7 +31541,7 @@ define(function () {
         },
         "10072": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "259",
+          "NpcPosY": 259,
           "Summary": "Go back to Sikaiz again",
           "NpcNavi": "lhz_in01",
           "Description": [
@@ -31549,12 +31549,12 @@ define(function () {
           ],
           "NpcSpr": "4_M_LGTGUARD2",
           "Title": "Onward to the Other World",
-          "NpcPosX": "132"
+          "NpcPosX": 132
         },
         "10073": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "259",
-          "NpcPosX": "132",
+          "NpcPosY": 259,
+          "NpcPosX": 132,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_LGTGUARD2",
           "Summary": "",
@@ -31565,8 +31565,8 @@ define(function () {
         },
         "10074": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "22",
-          "NpcPosX": "32",
+          "NpcPosY": 22,
+          "NpcPosX": 32,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_MANAGER",
           "Summary": "",
@@ -31577,8 +31577,8 @@ define(function () {
         },
         "10075": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "22",
-          "NpcPosX": "32",
+          "NpcPosY": 22,
+          "NpcPosX": 32,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_MANAGER",
           "Summary": "Give your report to them",
@@ -31589,8 +31589,8 @@ define(function () {
         },
         "10076": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "197",
-          "NpcPosX": "230",
+          "NpcPosY": 197,
+          "NpcPosX": 230,
           "NpcNavi": "moc_fild22b",
           "NpcSpr": "4_M_RUSMAN1",
           "Summary": "",
@@ -31601,8 +31601,8 @@ define(function () {
         },
         "10077": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "197",
-          "NpcPosX": "230",
+          "NpcPosY": 197,
+          "NpcPosX": 230,
           "NpcNavi": "moc_fild22b",
           "NpcSpr": "4_M_RUSMAN1",
           "Summary": "Defeat 50 Mobsters",
@@ -31613,8 +31613,8 @@ define(function () {
         },
         "10078": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "197",
-          "NpcPosX": "230",
+          "NpcPosY": 197,
+          "NpcPosX": 230,
           "NpcNavi": "moc_fild22b",
           "NpcSpr": "4_M_RUSMAN1",
           "Summary": "",
@@ -32673,7 +32673,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Resting time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11105": {
           "Description": [
@@ -32737,11 +32737,11 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Until radering is functioning",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11114": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32750,11 +32750,11 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "900",
           "Title": "Hornet Hunting",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11115": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32763,11 +32763,11 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "1800",
           "Title": "Condor Hunting",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11116": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32776,11 +32776,11 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "1400",
           "Title": "Grasshopper Legs",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11117": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32789,11 +32789,11 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "2600",
           "Title": "Worm Tail Hunting",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11118": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32802,11 +32802,11 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "3900",
           "Title": "Spore Hunting",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11119": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32815,11 +32815,11 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "2900",
           "Title": "Pest control",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11120": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32828,11 +32828,11 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "3200",
           "Title": "Muka Hunting",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11121": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32841,11 +32841,11 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "3200",
           "Title": "Familiar Hunting",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11122": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32854,11 +32854,11 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "5400",
           "Title": "Peco Peco Hunting",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11123": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "30",
+          "NpcPosY": 30,
           "Summary": "",
           "NpcNavi": "moc_para01",
           "Description": [
@@ -32867,7 +32867,7 @@ define(function () {
           "NpcSpr": "4_F_CHILD",
           "RewardEXP": "6000",
           "Title": "Collect Poison Spores",
-          "NpcPosX": "31"
+          "NpcPosX": 31
         },
         "11124": {
           "Description": [
@@ -32882,7 +32882,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Condor Hunting complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11126": {
           "Description": [
@@ -32890,7 +32890,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Grasshopper Legs complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11127": {
           "Description": [
@@ -32898,7 +32898,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Worm Tail Hunting complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11128": {
           "Description": [
@@ -32906,7 +32906,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Spore Hunting complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11129": {
           "Description": [
@@ -32914,7 +32914,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Pest Control complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11130": {
           "Description": [
@@ -32922,7 +32922,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Muka Hunting complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11131": {
           "Description": [
@@ -32930,7 +32930,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Familiar Hunting complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11132": {
           "Description": [
@@ -32938,7 +32938,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Peco Peco Hunting complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11133": {
           "Description": [
@@ -32946,7 +32946,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Collect Poison Spores complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11134": {
           "Description": [
@@ -33475,8 +33475,8 @@ define(function () {
         },
         "11209": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "61",
-          "NpcPosX": "182",
+          "NpcPosY": 61,
+          "NpcPosX": 182,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_M_BOSSCAT",
           "Summary": "Participate in the meeting.",
@@ -33487,8 +33487,8 @@ define(function () {
         },
         "11210": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "58",
-          "NpcPosX": "177",
+          "NpcPosY": 58,
+          "NpcPosX": 177,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_SAILOR3",
           "Summary": "Let's hear Scottfold's opinion.",
@@ -33506,8 +33506,8 @@ define(function () {
         },
         "11212": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "64",
-          "NpcPosX": "174",
+          "NpcPosY": 64,
+          "NpcPosX": 174,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_MERMASTER",
           "Summary": "Let's hear Llinguist Devore's production of study.",
@@ -33518,8 +33518,8 @@ define(function () {
         },
         "11213": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "57",
-          "NpcPosX": "179",
+          "NpcPosY": 57,
+          "NpcPosX": 179,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_ADV1",
           "Summary": "Let's hear Geologist Mali's production of study.",
@@ -33530,8 +33530,8 @@ define(function () {
         },
         "11214": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "55",
-          "NpcPosX": "181",
+          "NpcPosY": 55,
+          "NpcPosX": 181,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_SAILOR2",
           "Summary": "Let's hear Brie's opinion.",
@@ -33542,8 +33542,8 @@ define(function () {
         },
         "11215": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "55",
-          "NpcPosX": "181",
+          "NpcPosY": 55,
+          "NpcPosX": 181,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_SAILOR2",
           "Summary": "Let's hear Brie's Story.",
@@ -33554,8 +33554,8 @@ define(function () {
         },
         "11216": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "169",
-          "NpcPosX": "114",
+          "NpcPosY": 169,
+          "NpcPosX": 114,
           "NpcNavi": "mal_in01",
           "NpcSpr": "4_CAT_SAILOR4",
           "Summary": "Let's meet Brie's father Mr. Rican.",
@@ -33575,8 +33575,8 @@ define(function () {
         },
         "11218": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "168",
-          "NpcPosX": "116",
+          "NpcPosY": 168,
+          "NpcPosX": 116,
           "NpcNavi": "mal_in01",
           "NpcSpr": "2_SLOT_MACHINE",
           "Summary": "Let's put Yggdrasilberry in that machine.",
@@ -33587,8 +33587,8 @@ define(function () {
         },
         "11219": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "169",
-          "NpcPosX": "114",
+          "NpcPosY": 169,
+          "NpcPosX": 114,
           "NpcNavi": "mal_in01",
           "NpcSpr": "4_CAT_SAILOR4",
           "Summary": "Let's talk to Rican.",
@@ -33599,8 +33599,8 @@ define(function () {
         },
         "11220": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "55",
-          "NpcPosX": "181",
+          "NpcPosY": 55,
+          "NpcPosX": 181,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_SAILOR2",
           "Summary": "Let's find Brie.",
@@ -33611,8 +33611,8 @@ define(function () {
         },
         "11221": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "94",
-          "NpcPosX": "140",
+          "NpcPosY": 94,
+          "NpcPosX": 140,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_DOWN",
           "Summary": "Let's meet the assistant Bob.",
@@ -33632,8 +33632,8 @@ define(function () {
         },
         "11223": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "94",
-          "NpcPosX": "140",
+          "NpcPosY": 94,
+          "NpcPosX": 140,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_DOWN",
           "Summary": "let's get back to Bob.",
@@ -33644,8 +33644,8 @@ define(function () {
         },
         "11224": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "57",
-          "NpcPosX": "179",
+          "NpcPosY": 57,
+          "NpcPosX": 179,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_ADV1",
           "Summary": "Let's see Dr. Mali.",
@@ -33656,8 +33656,8 @@ define(function () {
         },
         "11225": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "64",
-          "NpcPosX": "174",
+          "NpcPosY": 64,
+          "NpcPosX": 174,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_MERMASTER",
           "Summary": "Llinguist Devore might be fell into slump. Let's talk to him.",
@@ -33668,8 +33668,8 @@ define(function () {
         },
         "11226": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "122",
-          "NpcPosX": "136",
+          "NpcPosY": 122,
+          "NpcPosX": 136,
           "NpcNavi": "mal_dun01",
           "NpcSpr": "4_F_STARFISHGIRL",
           "Summary": "Let's research about the Starfish.",
@@ -33680,8 +33680,8 @@ define(function () {
         },
         "11227": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "64",
-          "NpcPosX": "174",
+          "NpcPosY": 64,
+          "NpcPosX": 174,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_MERMASTER",
           "Summary": "Let's go to Dr. Devore.",
@@ -33692,8 +33692,8 @@ define(function () {
         },
         "11228": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "122",
-          "NpcPosX": "136",
+          "NpcPosY": 122,
+          "NpcPosX": 136,
           "NpcNavi": "mal_dun01",
           "NpcSpr": "4_ASTER",
           "Summary": "Let's get back to Biscuit.",
@@ -33704,8 +33704,8 @@ define(function () {
         },
         "11229": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "122",
-          "NpcPosX": "136",
+          "NpcPosY": 122,
+          "NpcPosX": 136,
           "NpcNavi": "mal_dun01",
           "NpcSpr": "4_ASTER",
           "Summary": "Let's talk to Biscuit.",
@@ -33716,8 +33716,8 @@ define(function () {
         },
         "11230": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "122",
-          "NpcPosX": "136",
+          "NpcPosY": 122,
+          "NpcPosX": 136,
           "NpcNavi": "mal_dun01",
           "NpcSpr": "4_ASTER",
           "Summary": "Continue the conversation.",
@@ -33728,8 +33728,8 @@ define(function () {
         },
         "11231": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "122",
-          "NpcPosX": "136",
+          "NpcPosY": 122,
+          "NpcPosX": 136,
           "NpcNavi": "mal_dun01",
           "NpcSpr": "4_ASTER",
           "Summary": "Let's get back with 30 delicious Jelly.",
@@ -33740,8 +33740,8 @@ define(function () {
         },
         "11232": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "122",
-          "NpcPosX": "136",
+          "NpcPosY": 122,
+          "NpcPosX": 136,
           "NpcNavi": "mal_dun01",
           "NpcSpr": "4_ASTER",
           "Summary": "Let's find out what is going on.",
@@ -33770,8 +33770,8 @@ define(function () {
         },
         "11235": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "122",
-          "NpcPosX": "136",
+          "NpcPosY": 122,
+          "NpcPosX": 136,
           "NpcNavi": "mal_dun01",
           "NpcSpr": "4_ASTER",
           "Summary": "Let's get back to Biscuit.",
@@ -33782,8 +33782,8 @@ define(function () {
         },
         "11236": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "64",
-          "NpcPosX": "174",
+          "NpcPosY": 64,
+          "NpcPosX": 174,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_MERMASTER",
           "Summary": "Let's send to Dr. Devore.",
@@ -33794,57 +33794,57 @@ define(function () {
         },
         "11237": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "62",
+          "NpcPosY": 62,
           "Summary": "Let's see the chief Tomas.",
           "NpcNavi": "mal_in02",
           "Description": [
             "Please send this good news to chief Tomas."
           ],
           "NpcSpr": "4_CAT_ADMIRAL",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "6422",
               "ItemNum": "30"
             }
-          },
+          ],
           "Title": "Mr. Tomas' distress",
-          "NpcPosX": "22"
+          "NpcPosX": 22
         },
         "11238": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "169",
+          "NpcPosY": 169,
           "Summary": "Bring 30 fresh Yggdrasilberry.",
           "NpcNavi": "mal_in01",
           "Description": [
             "The discount is just like before. Bring 30 fresh Yggdrasilberry to <NAVI>Rican<INFO>mal_in01,114,169,0,101,0,</INFO></NAVI> that easily found in island Malangdo!!"
           ],
           "NpcSpr": "4_CAT_SAILOR4",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "6422",
               "ItemNum": "20"
             }
-          },
+          ],
           "Title": "Yggdrasilberry",
-          "NpcPosX": "114"
+          "NpcPosX": 114
         },
         "11239": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "169",
+          "NpcPosY": 169,
           "Summary": "Reset at 04:00",
           "NpcNavi": "mal_in01",
           "Description": [
             "You can't receive any request from <NAVI>Rican<INFO>mal_in01,114,169,0,101,0,</INFO></NAVI> for one day."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_CAT_SAILOR4",
           "Title": "Yggdrasilberry",
-          "NpcPosX": "114"
+          "NpcPosX": 114
         },
         "11240": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "94",
-          "NpcPosX": "140",
+          "NpcPosY": 94,
+          "NpcPosX": 140,
           "NpcNavi": "mal_in02",
           "NpcSpr": "4_CAT_DOWN",
           "Summary": "Let's see assistant Bob.",
@@ -33864,65 +33864,65 @@ define(function () {
         },
         "11242": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "57",
+          "NpcPosY": 57,
           "Summary": "Let's get back to Dr. Mali.",
           "NpcNavi": "mal_in02",
           "Description": [
             "The crack is filled up as well. Let's report to <NAVI>Dr. Mali<INFO>mal_in02,179,57,0,101,0,</INFO></NAVI>."
           ],
           "NpcSpr": "4_CAT_ADV1",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "6422",
               "ItemNum": "20"
             }
-          },
+          ],
           "Title": "The most soft jelly in the world",
-          "NpcPosX": "179"
+          "NpcPosX": 179
         },
         "11243": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "57",
+          "NpcPosY": 57,
           "Summary": "Reset at 04:00",
           "NpcNavi": "mal_in02",
           "Description": [
             "You can't receive any request from Dr. Mali during one day."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_CAT_ADV1",
           "Title": "The most soft jelly in the world",
-          "NpcPosX": "179"
+          "NpcPosX": 179
         },
         "11244": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "122",
+          "NpcPosY": 122,
           "Summary": "Let's get back with 30 Delicious Jelly.",
           "NpcNavi": "mal_dun01",
           "Description": [
             "Just catch some <ITEM>Delicious Jelly<INFO>12624</INFO></ITEM> around here from <NAVI>Siorava<INFO>SIORAVA,0,0,3,-222,0</INFO></NAVI>. I think that 30 Delicious Jelly are enough for one meal."
           ],
           "NpcSpr": "4_ASTER",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "6422",
               "ItemNum": "5"
             }
-          },
+          ],
           "Title": "Soft Jelly",
-          "NpcPosX": "136"
+          "NpcPosX": 136
         },
         "11245": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "122",
+          "NpcPosY": 122,
           "Summary": "Reset at 04:00",
           "NpcNavi": "mal_dun01",
           "Description": [
             "You can't receive any request from Biscuit during one day."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_ASTER",
           "Title": "Soft Jelly",
-          "NpcPosX": "136"
+          "NpcPosX": 136
         },
         "11246": {
           "Description": [
@@ -33930,7 +33930,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Part-time break",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11247": {
           "Description": [
@@ -34008,7 +34008,7 @@ define(function () {
           ],
           "Summary": "Reset after 16 hours",
           "Title": "Marie Poogi",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11266": {
           "Description": [
@@ -34793,7 +34793,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Act of Kindness",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11378": {
           "Description": [
@@ -34808,7 +34808,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Last Room",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11380": {
           "Description": [
@@ -34893,7 +34893,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Part time completed",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11392": {
           "Description": [
@@ -35111,7 +35111,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Complete Today's Sauce",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11423": {
           "Description": [
@@ -35133,7 +35133,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Complete Today's Grilled Griffin",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11426": {
           "Description": [
@@ -35148,7 +35148,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Complete Today's Dish Collecting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11428": {
           "Description": [
@@ -35310,7 +35310,7 @@ define(function () {
         },
         "11450": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Jakk and Jakk's Jakky days",
           "Description": [
@@ -35338,7 +35338,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Consideration for guests",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11454": {
           "Description": [
@@ -35430,7 +35430,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Dien's High Class Tea",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11467": {
           "Description": [
@@ -35445,7 +35445,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Ridsh's Old Letter",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11469": {
           "Description": [
@@ -35460,7 +35460,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cotness's Shiny Ring",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11484": {
           "IconName": "ico_ev.bmp",
@@ -35570,7 +35570,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "You and My Lost Memory",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11498": {
           "Description": [
@@ -35606,7 +35606,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Jakk and Jakk's Jakk Day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11503": {
           "Description": [
@@ -35782,7 +35782,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Wind from Black Hill",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11528": {
           "Description": [
@@ -35853,7 +35853,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fatal seduction-wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11538": {
           "Description": [
@@ -35992,7 +35992,7 @@ define(function () {
         },
         "11555": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "In search of the taste of hometown-waiting",
           "Description": [
@@ -36075,7 +36075,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Escape !!!!-Wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11567": {
           "Description": [
@@ -36097,7 +36097,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Present not to exist-wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11570": {
           "Description": [
@@ -36112,7 +36112,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Let the light consume the darkness.-Wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "11572": {
           "Description": [
@@ -36313,12 +36313,12 @@ define(function () {
         },
         "11605": {
           "IconName": "ico_ev.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "23921",
               "ItemNum": "1"
             }
-          },
+          ],
           "Summary": "Jack The Giant",
           "Title": "Jack The Giant Pumpkin",
           "Description": [
@@ -36327,7 +36327,7 @@ define(function () {
         },
         "11606": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Jack The Giant Pumpkin",
           "Description": [
@@ -36376,16 +36376,16 @@ define(function () {
         },
         "11612": {
           "IconName": "ico_ev.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "23921",
               "ItemNum": "1"
             },
-            "2": {
+            {
               "ItemID": "7804",
               "ItemNum": "1"
             }
-          },
+          ],
           "Summary": "Talk to Guladia",
           "Title": "How many octopus can I eat?",
           "Description": [
@@ -36394,16 +36394,16 @@ define(function () {
         },
         "11613": {
           "IconName": "ico_ev.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "23921",
               "ItemNum": "1"
             },
-            "2": {
+            {
               "ItemID": "7804",
               "ItemNum": "1"
             }
-          },
+          ],
           "Summary": "Find the lost octopus",
           "Title": "How many octopus can I eat?",
           "Description": [
@@ -36412,7 +36412,7 @@ define(function () {
         },
         "11614": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "How many octopus can I eat?",
           "Description": [
@@ -38269,7 +38269,7 @@ define(function () {
         },
         "11878": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Jack and the Mystic Brothers",
           "Description": [
@@ -38294,7 +38294,7 @@ define(function () {
         },
         "11881": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Jack and the Mystic Brothers",
           "Description": [
@@ -38319,7 +38319,7 @@ define(function () {
         },
         "11884": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Jack and the Mystic Brothers",
           "Description": [
@@ -38344,7 +38344,7 @@ define(function () {
         },
         "11887": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Jack and the Mystic Brothers",
           "Description": [
@@ -38369,7 +38369,7 @@ define(function () {
         },
         "11890": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Jack and the Mystic Brothers",
           "Description": [
@@ -38386,7 +38386,7 @@ define(function () {
         },
         "11892": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Jack and the Mystic Brothers",
           "Description": [
@@ -38563,7 +38563,7 @@ define(function () {
         },
         "11914": {
           "IconName": "ico_vr.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Larva - Exciting Sausage Hero's Adventure",
           "Description": [
@@ -38652,7 +38652,7 @@ define(function () {
         },
         "11925": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "04:00 Reset",
           "Title": "[Standby] Make Chewy Dough",
           "Description": [
@@ -38853,7 +38853,7 @@ define(function () {
         },
         "11950": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Escargo!",
           "Description": [
@@ -38870,7 +38870,7 @@ define(function () {
         },
         "11952": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] It's Dangerous!",
           "Description": [
@@ -38887,7 +38887,7 @@ define(function () {
         },
         "11954": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] I Hope They Reconcile (1)",
           "Description": [
@@ -38904,7 +38904,7 @@ define(function () {
         },
         "11956": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] I Hope They Reconcile (2)",
           "Description": [
@@ -39323,7 +39323,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "Admission Restricted to the 102 Tower",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12059": {
           "Description": [
@@ -39331,7 +39331,7 @@ define(function () {
           ],
           "Summary": "Reset after 2 hours",
           "Title": "Orc's Memory Time Limit",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12060": {
           "Description": [
@@ -39339,7 +39339,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Today's Fishing Closed",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12061": {
           "Description": [
@@ -39354,7 +39354,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Today's Mining Closed",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12070": {
           "Description": [
@@ -39362,7 +39362,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Limited access time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12071": {
           "Description": [
@@ -39370,15 +39370,15 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Limited access time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12072": {
           "Description": [
             "Have you seen a red frog? It is called Thara Frog and it's very rare. We are trying to verify where it inhabits. So please hunt 20 Thara Frogs in the dungeon east of Comodo."
           ],
           "RewardEXP": "9600",
-          "NpcPosY": "36",
-          "NpcPosX": "40",
+          "NpcPosY": 36,
+          "NpcPosX": 40,
           "NpcSpr": "4_BOARD3",
           "Summary": "Hunt 20 Thara Frogs",
           "Title": "Thara Frog Hunting",
@@ -40048,7 +40048,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quest record from Laponte",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12160": {
           "Description": [
@@ -40056,7 +40056,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quest record from Kalipo",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12161": {
           "Description": [
@@ -40064,7 +40064,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quest record from Pura",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12162": {
           "Description": [
@@ -40072,7 +40072,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quest record from Tragis",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12163": {
           "Description": [
@@ -40080,7 +40080,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quest record from Calyon",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12164": {
           "Description": [
@@ -40088,7 +40088,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quest record from Moltuka",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12165": {
           "Description": [
@@ -40544,7 +40544,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12231": {
           "Description": [
@@ -40622,7 +40622,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12242": {
           "Description": [
@@ -40630,7 +40630,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12243": {
           "Description": [
@@ -40708,7 +40708,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12254": {
           "Description": [
@@ -40716,7 +40716,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Now it's cleaning",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12255": {
           "Description": [
@@ -40836,7 +40836,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "In progress general culvert single day service",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12272": {
           "Description": [
@@ -40844,7 +40844,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "In progress hard culvert single day service",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12273": {
           "Description": [
@@ -40852,7 +40852,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "In progress general culvert weekly service",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12274": {
           "Description": [
@@ -40860,7 +40860,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "In progress hard culvert weekly service",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12275": {
           "Description": [
@@ -40889,7 +40889,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "Towards Bakonawa Lake...",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12279": {
           "Description": [
@@ -41163,7 +41163,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trace of Time Travel",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12318": {
           "Description": [
@@ -41220,7 +41220,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Faceworm's Nest after-effects",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12326": {
           "Description": [
@@ -41228,7 +41228,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The owner of old ring",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12327": {
           "Description": [
@@ -41236,7 +41236,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The memory of old photo album",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12328": {
           "Description": [
@@ -41244,7 +41244,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Dol-Seoi's Sorrow",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12329": {
           "Description": [
@@ -41252,7 +41252,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Keaton's Bracelet",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12330": {
           "Description": [
@@ -41267,7 +41267,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trail of Toy Factory",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12332": {
           "Description": [
@@ -41289,7 +41289,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 days at 4 o'clock",
           "Title": "Trace of Time Travel",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12335": {
           "Description": [
@@ -41381,7 +41381,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trace of Laboratory Access",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12348": {
           "Description": [
@@ -41424,7 +41424,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Stop Today",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12354": {
           "Description": [
@@ -41432,7 +41432,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Reject further requests",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12355": {
           "Description": [
@@ -41503,7 +41503,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 hours",
           "Title": "Gloomy Spirit of the Underground",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12366": {
           "Description": [
@@ -41546,7 +41546,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "End of investment today",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12372": {
           "Description": [
@@ -41554,7 +41554,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Today's Artifact Collection Completed",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12374": {
           "Description": [
@@ -41569,7 +41569,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Base maintenance",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12376": {
           "Description": [
@@ -41591,7 +41591,7 @@ define(function () {
           ],
           "Summary": "Reset at midnight",
           "Title": "Fatigue recovery required",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12379": {
           "Description": [
@@ -41599,7 +41599,7 @@ define(function () {
           ],
           "Summary": "Reset at midnight",
           "Title": "Fatigue recovery required",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12380": {
           "Description": [
@@ -41621,7 +41621,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Distributing Food",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12383": {
           "Description": [
@@ -41678,7 +41678,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Relieved for Now",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12391": {
           "Description": [
@@ -41728,7 +41728,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "You're Good",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12399": {
           "Description": [
@@ -41771,7 +41771,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Are You Not Tired?",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12405": {
           "Description": [
@@ -41821,7 +41821,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Come Back Tomorrow",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12412": {
           "Description": [
@@ -41836,7 +41836,7 @@ define(function () {
           ],
           "Summary": "Reset Thursday at 4 o'clock",
           "Title": "Goodbye until Thursday ~",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12414": {
           "Description": [
@@ -41844,7 +41844,7 @@ define(function () {
           ],
           "Summary": "Reset Thursday at 4 o'clock",
           "Title": "Goodbye until Thursday ~",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12415": {
           "Description": [
@@ -41866,7 +41866,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Recovering Fatigue",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12418": {
           "Description": [
@@ -41888,7 +41888,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Recovering Fatigue",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12421": {
           "Description": [
@@ -41896,7 +41896,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Aftereffects that saved the world",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12422": {
           "Description": [
@@ -41995,7 +41995,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Operation Pending",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12454": {
           "Description": [
@@ -42010,7 +42010,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Operation Pending",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12456": {
           "Description": [
@@ -42018,7 +42018,7 @@ define(function () {
           ],
           "Summary": "Reset after 6 hours",
           "Title": "Aftereffects that eliminated the aftereffects that saved the world",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12457": {
           "Description": [
@@ -42047,7 +42047,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Aftereffects of the Fall",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12461": {
           "Description": [
@@ -42055,7 +42055,7 @@ define(function () {
           ],
           "Summary": "Reset after 3 days at 4 o'clock",
           "Title": "The aftereffects of powerful death",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12462": {
           "Description": [
@@ -42068,12 +42068,12 @@ define(function () {
           "Description": [
             "Andrea has been fatally wounded by a scythe wielded by a small creature that only comes to her knees. He wants to give the little creature the same death rest. ^Ff0000 \" The cute look of the guy Don't be fooled by. He's more than a devil. \"^000000 I think we should check if he's really cute."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25271",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardEXP": "1750000",
           "Summary": "Defeat Chaos Baphomet Junior",
           "Title": "Andrea's Revenge I",
@@ -42083,12 +42083,12 @@ define(function () {
           "Description": [
             "Andrea tried to heal with her own spiritual power after suffering the fatal wound of the body, but had to give up her revival by being overwhelmed by the soul of this chaotic being. It is his desire to purify these evil beings. ^Ff0000 \" Perhaps It must be the soul of an adventurer who died longer than me. What else or how? "
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25271",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardEXP": "1750000",
           "Summary": "Crushing the Chaos Ghosting",
           "Title": "Andrea's Revenge II",
@@ -42098,12 +42098,12 @@ define(function () {
           "Description": [
             "This fast and evil insect has done a critical blow to Anes, who is about to die. She believes that all winged insects in the world must be eradicated. ^Ff0099 \" Just don't be vigilant that they look like flies. The prey of the guys also includes people who are 'alive'\". ^000000There seems to be a very bad memory between her and this insect."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25271",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardEXP": "1750000",
           "Summary": "kill Chaos Hunterfly",
           "Title": "Anes' Revenge I",
@@ -42113,12 +42113,12 @@ define(function () {
           "Description": [
             "Somehow lost, she was attacked by this cruel predator who had run out of the bush and was fatally wounded. Unfortunately, it was the moment when she bite the sandwich she made from dawn for exploration. ^Ff0099 \" If you find a damn thing, take all your legs off and throw it in a pile of mud. \"^000000 It would be a big deal if anyone interrupted the mealtime."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25271",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardEXP": "1750000",
           "Summary": "kill killer mantis in chaos",
           "Title": "Anes' Revenge II",
@@ -42128,12 +42128,12 @@ define(function () {
           "Description": [
             "Silbano clearly remembers who the opponent attacked and drove to death. The enemy in his memory was similar to the monster that attacked Anes, but had other characteristics. ^Ff0077 \" Sister Annes wanted what Did you? Alas, you also wanted to eradicate them all. Then I would like the same, \"^000000"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25781",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardEXP": "1750000",
           "Summary": "kill mantis in chaos",
           "Title": "Silano's Revenge I",
@@ -42143,12 +42143,12 @@ define(function () {
           "Description": [
             "Since Sylvano, who was in a poor state, tried to use a potion because he didn't even have time to chant a recovery spell, all the potions in his inventory were swallowed up by this lingering monster. ^Ff0077 \" Will it work? It won't be there yet. I just don't want an adventurer to take the same damage. \"^000000It's up to the next adventurer to listen to his little hope."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25782",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardEXP": "1750000",
           "Summary": "Corporation of Chaos",
           "Title": "Silano's Revenge II",
@@ -42158,12 +42158,12 @@ define(function () {
           "Description": [
             "^0000ff \" Watch out for the snake, because it's a lot wilder than it looks. As soon as you turn your attention, it will attack. \"^000000 Cecilia is briefly exhausted and is bitten by this monster in her seat. She is unable to move because of the paralysis poison that has spread to her body in an instant. ^0000ff \" Labyrinth If you want to take a break at, I won't dry it. But if I'm alive, I want to avoid that ... \"^000000"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25783",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardEXP": "1750000",
           "Summary": "kill the sidewinder in chaos",
           "Title": "Cecilia's Revenge I",
@@ -42173,12 +42173,12 @@ define(function () {
           "Description": [
             "She was driven into a situation where she couldn't move with a paralysis poison, and she was wearing a piercing statue by this pointy monster. ^0000ff \" Do you know how you can't use your hands or feet when the skewer's wounds stop? If I had just been paralyzed, I could have lived because it's all that damn skewer monster! \"^000000It's worth understanding her anger."
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25784",
               "ItemNum": "1"
             }
-          },
+          ],
           "RewardEXP": "1750000",
           "Summary": "Treat the Chaos Stemworm",
           "Title": "Cecilia's Revenge II",
@@ -42188,12 +42188,12 @@ define(function () {
           "Description": [
             "It is a request to eradicate one of the four priest's thoughts that are Loaming the labyrinth. This thought was created by the condensation of resentment and hatred in the process of the purification of the soul, regardless of the will of the soul. ^Ff0000This mission can only be performed once a week.^000000 ^ff00ccPurification targets may change weekly.^000000"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25781",
               "ItemNum": "3"
             }
-          },
+          ],
           "RewardEXP": "2500000",
           "Summary": "Erad Andreas",
           "Title": "Ideology purification",
@@ -42203,12 +42203,12 @@ define(function () {
           "Description": [
             "It is a request to eradicate one of the four priest's thoughts that are Loaming the labyrinth. This thought was created by the condensation of resentment and hatred in the process of the purification of the soul, regardless of the will of the soul. ^Ff0000This mission can only be performed once a week.^000000 ^ff00ccPurification targets may change weekly.^000000"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25782",
               "ItemNum": "3"
             }
-          },
+          ],
           "RewardEXP": "2500000",
           "Summary": "Extermination of Anes",
           "Title": "Ideology purification",
@@ -42218,12 +42218,12 @@ define(function () {
           "Description": [
             "It is a request to eradicate one of the four priest's thoughts that are Loaming the labyrinth. This thought was created by the condensation of resentment and hatred in the process of the purification of the soul, regardless of the will of the soul. ^Ff0000This mission can only be performed once a week.^000000 ^ff00ccPurification targets may change weekly.^000000 "
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25783",
               "ItemNum": "3"
             }
-          },
+          ],
           "RewardEXP": "2500000",
           "Summary": "Fighting Silvano",
           "Title": "Ideology purification",
@@ -42233,12 +42233,12 @@ define(function () {
           "Description": [
             "It is a request to eradicate one of the four priest's thoughts that are Loaming the labyrinth. This thought was created by the condensation of resentment and hatred in the process of the purification of the soul, regardless of the will of the soul. ^Ff0000This mission can only be performed once a week.^000000 ^ff00ccPurification targets may change weekly.^000000"
           ],
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25784",
               "ItemNum": "3"
             }
-          },
+          ],
           "RewardEXP": "2500000",
           "Summary": "Eradication of Cecilia",
           "Title": "Ideology purification",
@@ -42306,7 +42306,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Receive today's mission",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12491": {
           "Description": [
@@ -42314,7 +42314,7 @@ define(function () {
           ],
           "Summary": "Reset Saturday at 4 o'clock",
           "Title": "Receive this week's mission",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12492": {
           "Description": [
@@ -42329,7 +42329,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00 after 3 days",
           "Title": "Aftermath of the Challenge",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12494": {
           "Description": [
@@ -42351,7 +42351,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Permission to enter the Flower Garden",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12497": {
           "Description": [
@@ -42366,7 +42366,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Permission to enter the Secure Area",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12499": {
           "Description": [
@@ -42409,7 +42409,7 @@ define(function () {
         },
         "12506": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Crack Seal Retry",
           "Description": [
@@ -42456,7 +42456,7 @@ define(function () {
           ],
           "Summary": "3 days later, the game resumes at 4 a.m.",
           "Title": "No Game Today",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12512": {
           "Description": [
@@ -42478,7 +42478,7 @@ define(function () {
           ],
           "Summary": "Re-entry at 4 am after 3 days",
           "Title": "Aftermath of entering the tower",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12515": {
           "Description": [
@@ -42535,7 +42535,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Old House Syndrome",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12531": {
           "IconName": "ico_ep.bmp",
@@ -42630,7 +42630,7 @@ define(function () {
           ],
           "Summary": "Re-entry at 4 am after 3 days",
           "Title": "High Tide Time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12542": {
           "Description": [
@@ -42788,7 +42788,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Neutralization of Unfairness",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "12561": {
           "Description": [
@@ -42938,7 +42938,7 @@ define(function () {
         },
         "12576": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Donation is enough",
           "Description": [
@@ -42947,7 +42947,7 @@ define(function () {
         },
         "12577": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Local Cleanup",
           "Description": [
@@ -42956,7 +42956,7 @@ define(function () {
         },
         "12578": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Rift Cleanup",
           "Description": [
@@ -42965,7 +42965,7 @@ define(function () {
         },
         "12579": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Local Cleanup(Dangerous)",
           "Description": [
@@ -42974,7 +42974,7 @@ define(function () {
         },
         "12580": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Slaughter of the Origin",
           "Description": [
@@ -42983,7 +42983,7 @@ define(function () {
         },
         "12581": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Motion Sickness lasting for 1 hour",
           "Title": "Dimensional Motion Sickness",
           "Description": [
@@ -43008,7 +43008,7 @@ define(function () {
         },
         "12584": {
           "IconName": "ico_vr.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] I'm the only pure-blooded in the Academy ",
           "Description": [
@@ -43033,7 +43033,7 @@ define(function () {
         },
         "12587": {
           "IconName": "ico_vr.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "I'm the only pure-blooded in the Academy Forbidden Restrictions",
           "Description": [
@@ -43042,7 +43042,7 @@ define(function () {
         },
         "12588": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] The Immortal",
           "Description": [
@@ -43051,7 +43051,7 @@ define(function () {
         },
         "12589": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at Dawn after 3 Days",
           "Title": "[Standby] The Immortal (Advanced)",
           "Description": [
@@ -43087,7 +43087,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "RWC2011Card Gathering",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13002": {
           "Description": [
@@ -43109,7 +43109,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Carat request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13005": {
           "Description": [
@@ -43124,7 +43124,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Arclouse request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13007": {
           "Description": [
@@ -43139,7 +43139,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Anolian request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13009": {
           "Description": [
@@ -43154,7 +43154,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sting request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13011": {
           "Description": [
@@ -43169,7 +43169,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Majoruros request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13013": {
           "Description": [
@@ -43184,7 +43184,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Pinguicula request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13015": {
           "Description": [
@@ -43199,7 +43199,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Luciola Vespa request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13017": {
           "Description": [
@@ -43214,7 +43214,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Desert Wolf request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13019": {
           "Description": [
@@ -43229,7 +43229,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Snowier request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13021": {
           "Description": [
@@ -43244,7 +43244,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Ice Titan request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13023": {
           "Description": [
@@ -43259,7 +43259,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Nightmare Terror request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13025": {
           "Description": [
@@ -43274,7 +43274,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Deleter request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13027": {
           "Description": [
@@ -43296,7 +43296,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Clean and confident with confidence-waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13030": {
           "Description": [
@@ -43325,7 +43325,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Patience of Weedling-Waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13034": {
           "Description": [
@@ -43347,7 +43347,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "For my beloved grandmother-waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13037": {
           "Description": [
@@ -43383,7 +43383,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Loli Ruri request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13042": {
           "Description": [
@@ -43398,7 +43398,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Medusa request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13044": {
           "Description": [
@@ -43413,7 +43413,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Anubis request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13046": {
           "Description": [
@@ -43428,7 +43428,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Tendrilion request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13048": {
           "Description": [
@@ -43443,7 +43443,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Tendrilion request",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13050": {
           "Description": [
@@ -43514,7 +43514,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "End of project",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13060": {
           "Description": [
@@ -43522,7 +43522,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Safety confirmation complete!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13061": {
           "Description": [
@@ -43537,7 +43537,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Food support - complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13063": {
           "Description": [
@@ -43552,7 +43552,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Dusting off - complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13065": {
           "Description": [
@@ -43567,7 +43567,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "This is enough for souvenirs",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13067": {
           "Description": [
@@ -43582,7 +43582,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Raydric research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13069": {
           "Description": [
@@ -43597,7 +43597,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Khalitzburg research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13071": {
           "Description": [
@@ -43612,7 +43612,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Wander Man research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13073": {
           "Description": [
@@ -43627,7 +43627,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Ancient Mimic research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13075": {
           "Description": [
@@ -43642,7 +43642,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Death Word research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13077": {
           "Description": [
@@ -43657,7 +43657,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Owl Baron research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13079": {
           "Description": [
@@ -43672,7 +43672,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Bloody Page Research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13081": {
           "Description": [
@@ -43687,7 +43687,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Dark Pinguicula research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13083": {
           "Description": [
@@ -43702,7 +43702,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Nepenthes research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13085": {
           "Description": [
@@ -43717,7 +43717,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Naga research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13087": {
           "Description": [
@@ -43732,7 +43732,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Centipede Larva research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13089": {
           "Description": [
@@ -43747,7 +43747,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cornus research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13091": {
           "Description": [
@@ -43762,7 +43762,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Mystic Horn Researcj",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13093": {
           "Description": [
@@ -43777,7 +43777,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Ancient Mummy research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13095": {
           "Description": [
@@ -43792,7 +43792,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Geffenia expedition",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13097": {
           "Description": [
@@ -43807,7 +43807,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Juperos expedition",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13099": {
           "Description": [
@@ -43822,7 +43822,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fragments and Rusty Screw",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13101": {
           "Description": [
@@ -43928,7 +43928,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Thanatos Tower Search",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13116": {
           "Description": [
@@ -43936,7 +43936,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Rachel holy ground Search",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13117": {
           "Description": [
@@ -43944,7 +43944,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Nameless Island Search",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13118": {
           "Description": [
@@ -43952,7 +43952,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Abyss Lake Search",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13119": {
           "Description": [
@@ -43967,7 +43967,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Baroness of Retribution",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13121": {
           "Description": [
@@ -43982,7 +43982,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Lady Solace",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13123": {
           "Description": [
@@ -43997,7 +43997,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Mistress of Shelter",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13125": {
           "Description": [
@@ -44012,7 +44012,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Dame of Sentinel",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13127": {
           "Description": [
@@ -44027,7 +44027,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Vanberk and Isilla",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13129": {
           "Description": [
@@ -44042,7 +44042,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Hodremlin",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13131": {
           "Description": [
@@ -44057,7 +44057,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Agav and Echio",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13133": {
           "Description": [
@@ -44072,7 +44072,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Ragged Zombie",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13135": {
           "Description": [
@@ -44087,7 +44087,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Zombie Slaughter",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13137": {
           "Description": [
@@ -44102,7 +44102,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Banshee",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13139": {
           "Description": [
@@ -44117,7 +44117,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Ferus and Bewler",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13141": {
           "Description": [
@@ -44132,7 +44132,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Defeat Acidus",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13143": {
           "Description": [
@@ -44147,7 +44147,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Egnigem Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13145": {
           "Description": [
@@ -44162,7 +44162,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Armeyer Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13147": {
           "Description": [
@@ -44177,7 +44177,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Whikebain Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13149": {
           "Description": [
@@ -44192,7 +44192,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Kavach Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13151": {
           "Description": [
@@ -44207,7 +44207,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Errende Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13153": {
           "Description": [
@@ -44222,7 +44222,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Laurell Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13155": {
           "Description": [
@@ -44237,7 +44237,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Morroc Story 1",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13157": {
           "Description": [
@@ -44252,7 +44252,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Morroc Story 2",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13159": {
           "Description": [
@@ -44267,7 +44267,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Morroc Story 3",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13161": {
           "Description": [
@@ -44282,7 +44282,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "One-Horned Scaraba Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13163": {
           "Description": [
@@ -44297,7 +44297,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Two-Horned Scaraba Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13165": {
           "Description": [
@@ -44312,7 +44312,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Antler-Horned Scaraba Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13167": {
           "Description": [
@@ -44327,7 +44327,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Rake-Horned Scaraba Story",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13169": {
           "Description": [
@@ -44363,7 +44363,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "RWC Card Collection-Waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13174": {
           "Description": [
@@ -44427,7 +44427,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Nightmarish Jitterbug: Waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13183": {
           "Description": [
@@ -44449,7 +44449,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Charleston Factory",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13186": {
           "Description": [
@@ -44471,7 +44471,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Deal with the Staff",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13190": {
           "Description": [
@@ -44528,7 +44528,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Krotzel's Request - Complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13200": {
           "Description": [
@@ -44543,7 +44543,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Rookie's Request - Complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13202": {
           "Description": [
@@ -44558,7 +44558,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Photo Journalist's Request - Complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "13204": {
           "Description": [
@@ -44573,7 +44573,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Grylls' Request - Complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14001": {
           "Description": [
@@ -45036,7 +45036,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Re-enter Bosnia",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14182": {
           "Description": [
@@ -45394,7 +45394,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Tomorrow again !!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14233": {
           "Description": [
@@ -45402,7 +45402,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Daily Challenge!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14234": {
           "Description": [
@@ -45410,7 +45410,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "It's difficult now",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14235": {
           "Description": [
@@ -45565,7 +45565,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "You can work part-time tomorrow",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14257": {
           "Description": [
@@ -45685,7 +45685,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Wind Habit",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14274": {
           "Description": [
@@ -45987,7 +45987,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "One week break",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14317": {
           "Description": [
@@ -46478,7 +46478,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "24 hours",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14387": {
           "Description": [
@@ -46584,7 +46584,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "24 hours",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14402": {
           "Description": [
@@ -46872,7 +46872,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "classification time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14443": {
           "Description": [
@@ -46901,7 +46901,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Time to make",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14447": {
           "Description": [
@@ -47014,7 +47014,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The party continues for one day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14465": {
           "Description": [
@@ -47022,7 +47022,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "They are still quiet",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14466": {
           "Description": [
@@ -47030,7 +47030,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "One week break",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14467": {
           "Description": [
@@ -47038,7 +47038,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "One week break",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14468": {
           "Description": [
@@ -47046,7 +47046,7 @@ define(function () {
           ],
           "Summary": "Reset after 7 days at 4 o'clock",
           "Title": "One week break",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14469": {
           "Description": [
@@ -47215,7 +47215,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "There Is a Silver Lining",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14493": {
           "Description": [
@@ -47335,7 +47335,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Still Making It",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14510": {
           "Description": [
@@ -47399,7 +47399,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Bubble Gum Reusable Time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14519": {
           "Description": [
@@ -47407,7 +47407,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Course reuse time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14520": {
           "Description": [
@@ -47478,7 +47478,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Find me again tomorrow,",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14530": {
           "Description": [
@@ -47486,7 +47486,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Egg Piece Wait Time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14531": {
           "Description": [
@@ -47690,7 +47690,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Charm Effect Duration",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14560": {
           "Description": [
@@ -47719,7 +47719,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Free time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14564": {
           "Description": [
@@ -47811,7 +47811,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Meal Box Delivery Time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14577": {
           "Description": [
@@ -47882,7 +47882,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Time to sleep",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14587": {
           "Description": [
@@ -47925,7 +47925,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Resting Time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14593": {
           "Description": [
@@ -48045,7 +48045,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quiet time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14610": {
           "Description": [
@@ -48067,7 +48067,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Time for repair",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14613": {
           "Description": [
@@ -48159,7 +48159,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Som is not off yet",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14626": {
           "Description": [
@@ -48174,7 +48174,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Recharge time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14628": {
           "Description": [
@@ -48280,7 +48280,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "I'm making hard",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14643": {
           "Description": [
@@ -48295,7 +48295,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "I have what I need today",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14645": {
           "Description": [
@@ -48310,7 +48310,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "I have a source to use today",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14647": {
           "Description": [
@@ -48325,7 +48325,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The ice has not melted",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14649": {
           "Description": [
@@ -48340,7 +48340,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Currently in production",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14651": {
           "Description": [
@@ -48467,7 +48467,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Get Some Rest",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14669": {
           "Description": [
@@ -48482,7 +48482,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Time for Dreaming",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14671": {
           "Description": [
@@ -48504,7 +48504,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Time to Make Bombs",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14674": {
           "Description": [
@@ -48512,7 +48512,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Time to Digest",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14675": {
           "Description": [
@@ -48527,7 +48527,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Break Time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14677": {
           "Description": [
@@ -48542,7 +48542,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Time to Study",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14679": {
           "Description": [
@@ -48557,7 +48557,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Time to Research",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14681": {
           "Description": [
@@ -48565,7 +48565,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Free replacement of attributes once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14682": {
           "Description": [
@@ -48700,7 +48700,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Event once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14700": {
           "Description": [
@@ -48715,7 +48715,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Event once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14702": {
           "Description": [
@@ -48730,7 +48730,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Event once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14704": {
           "Description": [
@@ -48745,7 +48745,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "I'm feeling the stone",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14706": {
           "Description": [
@@ -48830,7 +48830,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Express ships operate once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14718": {
           "Description": [
@@ -49228,7 +49228,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Time when surveillance is severe",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14780": {
           "Description": [
@@ -49271,7 +49271,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Full Boar",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14786": {
           "Description": [
@@ -49286,7 +49286,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trap grooming time",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14788": {
           "Description": [
@@ -49336,7 +49336,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Food preparation",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14808": {
           "IconName": "ico_nq.bmp",
@@ -49450,7 +49450,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Chilly feeling is remained",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14855": {
           "Description": [
@@ -49465,7 +49465,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cotton is being wrapped",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14857": {
           "Description": [
@@ -49501,7 +49501,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Card exchange is once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "14864": {
           "IconName": "ico_nq.bmp",
@@ -49617,7 +49617,7 @@ define(function () {
         },
         "14965": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Waiting: Today's noodles",
           "Description": [
@@ -49634,7 +49634,7 @@ define(function () {
         },
         "14967": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Waiting: Watermelon Debt",
           "Description": [
@@ -49651,7 +49651,7 @@ define(function () {
         },
         "14969": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Waiting: Hunting Bad Noodles",
           "Description": [
@@ -49668,7 +49668,7 @@ define(function () {
         },
         "14971": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Waiting: Cool Sweet Ice Cream",
           "Description": [
@@ -49759,7 +49759,7 @@ define(function () {
         },
         "14982": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby: Resurrected Branch",
           "Description": [
@@ -49776,7 +49776,7 @@ define(function () {
         },
         "14984": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Waiting: Hungry Boar",
           "Description": [
@@ -49809,7 +49809,7 @@ define(function () {
         },
         "14988": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Waiting: Preparing for the harvest festival",
           "Description": [
@@ -49898,7 +49898,7 @@ define(function () {
         },
         "14999": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Waiting: Delivering fruit lunches",
           "Description": [
@@ -49915,8 +49915,8 @@ define(function () {
         },
         "15001": {
           "IconName": "ico_gq.bmp",
-          "NpcPosY": "260",
-          "NpcPosX": "140",
+          "NpcPosY": 260,
+          "NpcPosX": 140,
           "NpcNavi": "izlude",
           "NpcSpr": "4_M_LIEMAN",
           "Summary": "Speak with trainer Argos after 20 seconds",
@@ -49931,7 +49931,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Memorial Dungeon: Sara's Memory",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15003": {
           "Description": [
@@ -49946,7 +49946,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Memorial Dungeon: Isle of Bios",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15006": {
           "Description": [
@@ -49961,7 +49961,7 @@ define(function () {
           ],
           "Summary": "Reset after 5 minutes",
           "Title": "Memorial Dungeon: Isle of Bios",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15008": {
           "Description": [
@@ -49969,7 +49969,7 @@ define(function () {
           ],
           "Summary": "Reset after 5 minutes",
           "Title": "Memorial Dungeon: Isle of Bios",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15014": {
           "Description": [
@@ -50159,7 +50159,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Let's run with sweat",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15043": {
           "Description": [
@@ -50174,7 +50174,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Creating watermelon frost",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15050": {
           "Description": [
@@ -50182,7 +50182,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Memorial Dungeon: Airship Assault",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15051": {
           "Description": [
@@ -50225,7 +50225,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Christmas: Cooldown Timer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15060": {
           "Description": [
@@ -50268,7 +50268,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Don't litter Comodo",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15072": {
           "Description": [
@@ -50283,7 +50283,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Promote the 12th Anniversary",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15074": {
           "Description": [
@@ -50333,7 +50333,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Creating watermelon frost",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15091": {
           "Description": [
@@ -50341,7 +50341,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Clean Comodo",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15092": {
           "Description": [
@@ -50356,7 +50356,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Promote the 13th Anniversary",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15094": {
           "Description": [
@@ -50497,7 +50497,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Bride and Jace",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15116": {
           "Description": [
@@ -50547,7 +50547,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Chocolate Delivery Complete",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "15129": {
           "Description": [
@@ -50555,7 +50555,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Daily Draw Limitation",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16000": {
           "Description": [
@@ -50633,7 +50633,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Battle in great condition",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16011": {
           "Description": [
@@ -50704,7 +50704,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Daily babysitting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16021": {
           "Description": [
@@ -50803,7 +50803,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sweet cookies once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16035": {
           "Description": [
@@ -50825,7 +50825,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Material collection once a day",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16038": {
           "Description": [
@@ -50861,7 +50861,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Charity temporarily stays",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16043": {
           "Description": [
@@ -50911,7 +50911,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quiet dawn",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16050": {
           "Description": [
@@ -50975,7 +50975,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Slow advertising effect",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16059": {
           "Description": [
@@ -51046,7 +51046,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Finding the Soul Pieces",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16069": {
           "Description": [
@@ -51054,7 +51054,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Finding the Soul Pieces",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16070": {
           "Description": [
@@ -51097,7 +51097,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Serin's Ambitions",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16076": {
           "Description": [
@@ -51112,7 +51112,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Serin's Release",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16078": {
           "Description": [
@@ -51127,7 +51127,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Sign",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16080": {
           "Description": [
@@ -51310,7 +51310,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Kiel Hyre Academy",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16106": {
           "Description": [
@@ -51332,7 +51332,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Kiel Hyre Academy",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16109": {
           "Description": [
@@ -51347,7 +51347,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Kiel Hyre Academy",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16111": {
           "Description": [
@@ -51369,7 +51369,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Kiel Hyre Academy",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16114": {
           "Description": [
@@ -51412,7 +51412,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Snake swords",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16120": {
           "Description": [
@@ -51434,7 +51434,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Old Copper Key",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16123": {
           "Description": [
@@ -51463,7 +51463,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Kiel Hyre Academy",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16127": {
           "Description": [
@@ -51716,7 +51716,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Hot Monsters-Waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16163": {
           "Description": [
@@ -51745,7 +51745,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Volcano Island Comodo!-Wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16167": {
           "Description": [
@@ -51760,7 +51760,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Costume disposable 3D glasses rental",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16169": {
           "Description": [
@@ -51768,7 +51768,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Costume Disposable Popcorn Hat Rental",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16170": {
           "Description": [
@@ -52021,7 +52021,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Break and Relaxation",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16218": {
           "Description": [
@@ -52047,7 +52047,7 @@ define(function () {
         },
         "16221": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Save Your Life",
           "Description": [
@@ -52095,7 +52095,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Insect hunting under 99Lv",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16228": {
           "Description": [
@@ -52110,7 +52110,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting animals under 99Lv",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16230": {
           "Description": [
@@ -52125,7 +52125,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Insect hunting over 100Lv",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16232": {
           "Description": [
@@ -52140,7 +52140,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Animals Over 100Lv",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16234": {
           "Description": [
@@ -52190,7 +52190,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting equipment rental",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16241": {
           "Description": [
@@ -52198,7 +52198,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Supper for Hunters",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16242": {
           "Description": [
@@ -52220,7 +52220,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Happy Egg Exploration",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16263": {
           "Description": [
@@ -52242,7 +52242,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Happy Clover Decoration",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16266": {
           "Description": [
@@ -52313,7 +52313,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sweet Ready",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16276": {
           "Description": [
@@ -52370,7 +52370,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Happy Walk",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16284": {
           "Description": [
@@ -52469,7 +52469,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Golden Corn of June",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16339": {
           "Description": [
@@ -52491,7 +52491,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Corrodo Island of June",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16342": {
           "Description": [
@@ -52513,7 +52513,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Healthy Herb of June",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16345": {
           "Description": [
@@ -52646,7 +52646,7 @@ define(function () {
         },
         "16362": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Innocent Cleanup - Pending",
           "Description": [
@@ -52671,7 +52671,7 @@ define(function () {
         },
         "16365": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Help the Farm - Pending",
           "Description": [
@@ -52768,7 +52768,7 @@ define(function () {
         },
         "16377": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset after 10 minutes",
           "Title": "EL1_A17T Overpower",
           "Description": [
@@ -52788,7 +52788,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting insect-type monsters",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16380": {
           "Description": [
@@ -52803,7 +52803,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Animal Monster Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16382": {
           "Description": [
@@ -52818,7 +52818,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Fish Monsters",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16384": {
           "Description": [
@@ -52833,7 +52833,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Balaur Monster",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16386": {
           "Description": [
@@ -52841,7 +52841,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Today's help",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "16387": {
           "Description": [
@@ -52868,7 +52868,7 @@ define(function () {
         },
         "16390": {
           "IconName": "ico_nq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby",
           "Description": [
@@ -52941,12 +52941,12 @@ define(function () {
         },
         "16399": {
           "IconName": "ico_nq.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25787",
               "ItemNum": "2"
             }
-          },
+          ],
           "Summary": "Explore mode in progress",
           "Title": "The Path of Exploration",
           "Description": [
@@ -52955,16 +52955,16 @@ define(function () {
         },
         "16400": {
           "IconName": "ico_nq.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25787",
               "ItemNum": "5"
             },
-            "2": {
+            {
               "ItemID": "25786",
               "ItemNum": "3"
             }
-          },
+          ],
           "Summary": "Combat Mode Progress",
           "Title": "Road of Battle",
           "Description": [
@@ -52995,7 +52995,7 @@ define(function () {
         },
         "16405": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Happy Egg Exploration-Standby",
           "Description": [
@@ -53012,7 +53012,7 @@ define(function () {
         },
         "16407": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Happy Clover Decoration-Standby",
           "Description": [
@@ -53029,7 +53029,7 @@ define(function () {
         },
         "16409": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Happy Egg Ingredient Delivery-Standby",
           "Description": [
@@ -53070,7 +53070,7 @@ define(function () {
         },
         "16414": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Happy Cuppet Walk-Wait",
           "Description": [
@@ -53215,7 +53215,7 @@ define(function () {
         },
         "16432": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Silva Papilia Hunt-Standby",
           "Description": [
@@ -53232,7 +53232,7 @@ define(function () {
         },
         "16434": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Grand Papelia Hunting-Standby",
           "Description": [
@@ -53249,7 +53249,7 @@ define(function () {
         },
         "16436": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Search-wait for gardeners",
           "Description": [
@@ -53274,7 +53274,7 @@ define(function () {
         },
         "16439": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Award Garden-Waiting",
           "Description": [
@@ -53424,7 +53424,7 @@ define(function () {
           "Description": [
             "I decided to take the exam to become an Inquisitor. I have to enter the Abbey's underground barrier alone, defeat the monstrous monster, and return to <NAVI>[Einhar]<INFO>prt_monk,97,214,0,101,0</INFO></NAVI>.",
             "Ned - Aihe",
-            "Barrier",
+            "|\tWard\t|",
             "Scott - Yuyuan"
           ]
         },
@@ -53435,7 +53435,7 @@ define(function () {
           "Description": [
             "I decided to take the exam to become an Inquisitor. I have to enter the Abbey's underground barrier alone again, defeat the monstrous monster, and return to <NAVI>[Einhar]<INFO>prt_monk,97,214,0,101,0</INFO></NAVI>.",
             "Ned - Aihe",
-            " Barrier",
+            "|\tWard\t|",
             "Scott - Yuyuan"
           ]
         },
@@ -53446,7 +53446,7 @@ define(function () {
           "Description": [
             "I decided to take the exam to become an Inquisitor. I have to enter the Abbey's underground barrier alone again, defeat the monstrous monster, and return to <NAVI>[Einhar]<INFO>prt_monk,97,214,0,101,0</INFO></NAVI>.",
             "Ned - Aihe",
-            "Barrier",
+            "|\tWard\t|",
             "Scott - Yuyuan"
           ]
         },
@@ -53484,7 +53484,7 @@ define(function () {
         },
         "16464": {
           "IconName": "ico_nq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Tomb of Remorse",
           "Description": [
@@ -53501,7 +53501,7 @@ define(function () {
         },
         "16466": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Broken Bond-Standby",
           "Description": [
@@ -53518,7 +53518,7 @@ define(function () {
         },
         "16468": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Shedding Tears-Standby",
           "Description": [
@@ -53535,7 +53535,7 @@ define(function () {
         },
         "16470": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Fragmented Memory",
           "Description": [
@@ -53552,7 +53552,7 @@ define(function () {
         },
         "16472": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Fragmented Past",
           "Description": [
@@ -53657,7 +53657,7 @@ define(function () {
         },
         "16523": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Abyssal Solitude",
           "Description": [
@@ -53674,7 +53674,7 @@ define(function () {
         },
         "16525": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Transformation and Evolution",
           "Description": [
@@ -53691,7 +53691,7 @@ define(function () {
         },
         "16527": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Data Backup",
           "Description": [
@@ -53716,7 +53716,7 @@ define(function () {
         },
         "16530": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Earth and Fire",
           "Description": [
@@ -53733,7 +53733,7 @@ define(function () {
         },
         "16532": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Water and Wind",
           "Description": [
@@ -53750,7 +53750,7 @@ define(function () {
         },
         "16534": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Werner's Trail",
           "Description": [
@@ -53767,7 +53767,7 @@ define(function () {
         },
         "16536": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Imitation and Reality",
           "Description": [
@@ -53784,7 +53784,7 @@ define(function () {
         },
         "16538": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Natural Change",
           "Description": [
@@ -53865,8 +53865,8 @@ define(function () {
         },
         "16548": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "97",
-          "NpcPosX": "147",
+          "NpcPosY": 97,
+          "NpcPosX": 147,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_DST_CHILD",
           "Summary": "",
@@ -53877,8 +53877,8 @@ define(function () {
         },
         "16549": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "97",
-          "NpcPosX": "147",
+          "NpcPosY": 97,
+          "NpcPosX": 147,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_DST_CHILD",
           "Summary": "",
@@ -53889,21 +53889,21 @@ define(function () {
         },
         "16550": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "97",
+          "NpcPosY": 97,
           "Summary": "Reset at 04:00",
           "NpcNavi": "wolfvill",
           "Description": [
             "This quest is a daily quest, and you can receive it again when the waiting time expires. You can receive quest orders through <NAVI>[Ahir]<INFO>wolfvill,147,97,0,101,0</INFO></NAVI> in the Gray Wolf Village."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_DST_CHILD",
           "Title": "[Standby] Clearing Firewind Kites",
-          "NpcPosX": "147"
+          "NpcPosX": 147
         },
         "16551": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "224",
-          "NpcPosX": "106",
+          "NpcPosY": 224,
+          "NpcPosX": 106,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_F_DST_CHILD",
           "Summary": "Talk to Dina",
@@ -53914,8 +53914,8 @@ define(function () {
         },
         "16552": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "204",
-          "NpcPosX": "180",
+          "NpcPosY": 204,
+          "NpcPosX": 180,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_F_DESERT",
           "Summary": "Talk to Amira",
@@ -53926,8 +53926,8 @@ define(function () {
         },
         "16553": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "184",
-          "NpcPosX": "154",
+          "NpcPosY": 184,
+          "NpcPosX": 154,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_F_DST_GRAND",
           "Summary": "Talk to Shanina",
@@ -53938,8 +53938,8 @@ define(function () {
         },
         "16554": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "170",
-          "NpcPosX": "61",
+          "NpcPosY": 170,
+          "NpcPosX": 61,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_F_SHABBY",
           "Summary": "Talk to Gudra",
@@ -53950,8 +53950,8 @@ define(function () {
         },
         "16555": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "224",
-          "NpcPosX": "106",
+          "NpcPosY": 224,
+          "NpcPosX": 106,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_F_DST_CHILD",
           "Summary": "µð³ª¸£¿Í ´ëÈ­",
@@ -53962,8 +53962,8 @@ define(function () {
         },
         "16556": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "204",
-          "NpcPosX": "180",
+          "NpcPosY": 204,
+          "NpcPosX": 180,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_F_DESERT",
           "Summary": "Talk to Amira",
@@ -53974,8 +53974,8 @@ define(function () {
         },
         "16557": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "184",
-          "NpcPosX": "154",
+          "NpcPosY": 184,
+          "NpcPosX": 154,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_F_DST_GRAND",
           "Summary": "Talk to Shanina",
@@ -53986,8 +53986,8 @@ define(function () {
         },
         "16558": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "170",
-          "NpcPosX": "61",
+          "NpcPosY": 170,
+          "NpcPosX": 61,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_F_SHABBY",
           "Summary": "Talk to Gudra",
@@ -53998,21 +53998,21 @@ define(function () {
         },
         "16559": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "170",
+          "NpcPosY": 170,
           "Summary": "Reset at 04:00",
           "NpcNavi": "wolfvill",
           "Description": [
             "This quest is a daily quest, and you can receive it again when the waiting time expires. You can receive quest orders through <NAVI>[Gudra]<INFO>wolfvill,61,170,0,101,0</INFO></NAVI> in the Gray Wolf Village."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_SHABBY",
           "Title": "[Standby] Collecting Folklore",
-          "NpcPosX": "61"
+          "NpcPosX": 61
         },
         "16560": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "109",
-          "NpcPosX": "83",
+          "NpcPosY": 109,
+          "NpcPosX": 83,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4W_M_03",
           "Summary": "Talk to Kayar",
@@ -54023,8 +54023,8 @@ define(function () {
         },
         "16561": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "109",
-          "NpcPosX": "87",
+          "NpcPosY": 109,
+          "NpcPosX": 87,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_DESERT",
           "Summary": "Talk to Desel",
@@ -54035,8 +54035,8 @@ define(function () {
         },
         "16562": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "155",
-          "NpcPosX": "127",
+          "NpcPosY": 155,
+          "NpcPosX": 127,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_MIDDLE1",
           "Summary": "Talk to Ahab",
@@ -54047,8 +54047,8 @@ define(function () {
         },
         "16563": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "64",
-          "NpcPosX": "135",
+          "NpcPosY": 64,
+          "NpcPosX": 135,
           "NpcNavi": "rachel",
           "NpcSpr": "4_M_RACHMAN2",
           "Summary": "Talk to the Shop Keeper",
@@ -54059,8 +54059,8 @@ define(function () {
         },
         "16564": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "155",
-          "NpcPosX": "127",
+          "NpcPosY": 155,
+          "NpcPosX": 127,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_MIDDLE1",
           "Summary": "Talk to Ahab",
@@ -54071,8 +54071,8 @@ define(function () {
         },
         "16565": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "155",
-          "NpcPosX": "127",
+          "NpcPosY": 155,
+          "NpcPosX": 127,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_MIDDLE1",
           "Summary": "Talk to Ahab",
@@ -54083,8 +54083,8 @@ define(function () {
         },
         "16566": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "111",
-          "NpcPosX": "85",
+          "NpcPosY": 111,
+          "NpcPosX": 85,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_RACHMAN1",
           "Summary": "",
@@ -54095,8 +54095,8 @@ define(function () {
         },
         "16567": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "151",
-          "NpcPosX": "144",
+          "NpcPosY": 151,
+          "NpcPosX": 144,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_EP18_SUAD",
           "Summary": "Talk to Suad",
@@ -54107,8 +54107,8 @@ define(function () {
         },
         "16568": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "146",
-          "NpcPosX": "145",
+          "NpcPosY": 146,
+          "NpcPosX": 145,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_EP18_GW_MAN01",
           "Summary": "Talk to the Radical Young Man",
@@ -54119,8 +54119,8 @@ define(function () {
         },
         "16569": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "148",
-          "NpcPosX": "139",
+          "NpcPosY": 148,
+          "NpcPosX": 139,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_EP18_GW_OLD01",
           "Summary": "Talk to a Native Old Man",
@@ -54131,8 +54131,8 @@ define(function () {
         },
         "16570": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "147",
-          "NpcPosX": "150",
+          "NpcPosY": 147,
+          "NpcPosX": 150,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_MIDDLE",
           "Summary": "Talk to the Radical Old Man",
@@ -54143,8 +54143,8 @@ define(function () {
         },
         "16571": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "145",
-          "NpcPosX": "152",
+          "NpcPosY": 145,
+          "NpcPosX": 152,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_RACHMAN1",
           "Summary": "Talk to the Skeptical Young Man",
@@ -54155,8 +54155,8 @@ define(function () {
         },
         "16572": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "151",
-          "NpcPosX": "144",
+          "NpcPosY": 151,
+          "NpcPosX": 144,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_EP18_SUAD",
           "Summary": "Talk to Suad",
@@ -54167,8 +54167,8 @@ define(function () {
         },
         "16573": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "151",
-          "NpcPosX": "148",
+          "NpcPosY": 151,
+          "NpcPosX": 148,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_EP18_MIRIAM",
           "Summary": "Talk to Miriam",
@@ -54179,8 +54179,8 @@ define(function () {
         },
         "16574": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "145",
-          "NpcPosX": "143",
+          "NpcPosY": 145,
+          "NpcPosX": 143,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_RASWORD",
           "Summary": "Talk to the Radical Man",
@@ -54191,8 +54191,8 @@ define(function () {
         },
         "16575": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "44",
-          "NpcPosX": "75",
+          "NpcPosY": 44,
+          "NpcPosX": 75,
           "NpcNavi": "rachel",
           "NpcSpr": "4_M_MIDDLE1",
           "Summary": "Talk to Bearded Jack",
@@ -54203,8 +54203,8 @@ define(function () {
         },
         "16576": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "282",
-          "NpcPosX": "293",
+          "NpcPosY": 282,
+          "NpcPosX": 293,
           "NpcNavi": "veins",
           "NpcSpr": "4_M_DESERT",
           "Summary": "Talk to Dandelion",
@@ -54215,8 +54215,8 @@ define(function () {
         },
         "16577": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "53",
-          "NpcPosX": "133",
+          "NpcPosY": 53,
+          "NpcPosX": 133,
           "NpcNavi": "que_thr",
           "NpcSpr": "4_EP18_MARAM",
           "Summary": "Tangent to Maram",
@@ -54245,8 +54245,8 @@ define(function () {
         },
         "16580": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "112",
-          "NpcPosX": "140",
+          "NpcPosY": 112,
+          "NpcPosX": 140,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_EP18_SUAD",
           "Summary": "Talk to Suad",
@@ -54257,8 +54257,8 @@ define(function () {
         },
         "16581": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "41",
-          "NpcPosX": "37",
+          "NpcPosY": 41,
+          "NpcPosX": 37,
           "NpcNavi": "rachel",
           "NpcSpr": "4_M_RACHMAN1",
           "Summary": "Talk to Kar",
@@ -54269,8 +54269,8 @@ define(function () {
         },
         "16582": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "45",
-          "NpcPosX": "40",
+          "NpcPosY": 45,
+          "NpcPosX": 40,
           "NpcNavi": "rachel",
           "NpcSpr": "4_M_DST_CHILD",
           "Summary": "Talk to Lucy",
@@ -54281,8 +54281,8 @@ define(function () {
         },
         "16583": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "45",
-          "NpcPosX": "36",
+          "NpcPosY": 45,
+          "NpcPosX": 36,
           "NpcNavi": "rachel",
           "NpcSpr": "4_F_DST_CHILD",
           "Summary": "Talk to Naiman",
@@ -54293,8 +54293,8 @@ define(function () {
         },
         "16584": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "95",
-          "NpcPosX": "136",
+          "NpcPosY": 95,
+          "NpcPosX": 136,
           "NpcNavi": "rachel",
           "NpcSpr": "4_M_RACHMAN2",
           "Summary": "Talk to Dahil",
@@ -54305,8 +54305,8 @@ define(function () {
         },
         "16585": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "51",
-          "NpcPosX": "181",
+          "NpcPosY": 51,
+          "NpcPosX": 181,
           "NpcNavi": "rachel",
           "NpcSpr": "4_M_MIDDLE",
           "Summary": "Talk to Amodipine",
@@ -54920,7 +54920,7 @@ define(function () {
         },
         "16663": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Simulation Battle",
           "Description": [
@@ -54937,7 +54937,7 @@ define(function () {
         },
         "16665": {
           "IconName": "ico_vr.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Elena Bolkova, the Great Flame",
           "Description": [
@@ -54962,7 +54962,7 @@ define(function () {
         },
         "16668": {
           "IconName": "ico_vr.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Raw Rice",
           "Description": [
@@ -55259,7 +55259,7 @@ define(function () {
         },
         "16705": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Making Happy Eggs",
           "Description": [
@@ -55308,7 +55308,7 @@ define(function () {
         },
         "16711": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Happy Hide and Seek",
           "Description": [
@@ -55421,7 +55421,7 @@ define(function () {
         },
         "16736": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Specimen Research",
           "Description": [
@@ -55438,7 +55438,7 @@ define(function () {
         },
         "16738": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Monday Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Specimen Advanced Research",
           "Description": [
@@ -55455,7 +55455,7 @@ define(function () {
         },
         "16740": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Fire Specimen Research I",
           "Description": [
@@ -55472,7 +55472,7 @@ define(function () {
         },
         "16742": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Fire Specimen Research II",
           "Description": [
@@ -55489,7 +55489,7 @@ define(function () {
         },
         "16744": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Ice Specimen Research I",
           "Description": [
@@ -55506,7 +55506,7 @@ define(function () {
         },
         "16746": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Ice Specimen Research II",
           "Description": [
@@ -55523,7 +55523,7 @@ define(function () {
         },
         "16748": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Earth Specimen Research I",
           "Description": [
@@ -55540,7 +55540,7 @@ define(function () {
         },
         "16750": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Earth Specimen Research II",
           "Description": [
@@ -55557,7 +55557,7 @@ define(function () {
         },
         "16752": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Storm Specimen Research I",
           "Description": [
@@ -55574,7 +55574,7 @@ define(function () {
         },
         "16754": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Storm Specimen Research II",
           "Description": [
@@ -55591,7 +55591,7 @@ define(function () {
         },
         "16756": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Purification Specimen Research I",
           "Description": [
@@ -55608,7 +55608,7 @@ define(function () {
         },
         "16758": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Purification Specimen Research II",
           "Description": [
@@ -55625,7 +55625,7 @@ define(function () {
         },
         "16760": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Corruption Specimen Research I",
           "Description": [
@@ -55642,7 +55642,7 @@ define(function () {
         },
         "16762": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Corruption Specimen Research II",
           "Description": [
@@ -55659,7 +55659,7 @@ define(function () {
         },
         "16764": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Soul Specimen Research I",
           "Description": [
@@ -55676,7 +55676,7 @@ define(function () {
         },
         "16766": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Soul Specimen Research II",
           "Description": [
@@ -55693,7 +55693,7 @@ define(function () {
         },
         "16768": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Venom Specimen Research I",
           "Description": [
@@ -55710,7 +55710,7 @@ define(function () {
         },
         "16770": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 4 AM",
           "Title": "[Standby] Deep 1st Floor Venom Specimen Research II",
           "Description": [
@@ -55751,7 +55751,7 @@ define(function () {
         },
         "16780": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Sample Research",
           "Description": [
@@ -55768,7 +55768,7 @@ define(function () {
         },
         "16782": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Demi-Human Sample Research",
           "Description": [
@@ -55785,7 +55785,7 @@ define(function () {
         },
         "16784": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Brute Sample Research",
           "Description": [
@@ -55802,7 +55802,7 @@ define(function () {
         },
         "16786": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Plant Sample Research",
           "Description": [
@@ -55819,7 +55819,7 @@ define(function () {
         },
         "16788": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Fish Sample Research",
           "Description": [
@@ -55836,7 +55836,7 @@ define(function () {
         },
         "16790": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Demon Sample Research",
           "Description": [
@@ -55853,7 +55853,7 @@ define(function () {
         },
         "16792": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Undead Sample Research",
           "Description": [
@@ -55870,7 +55870,7 @@ define(function () {
         },
         "16794": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Dragon Sample Research",
           "Description": [
@@ -55887,7 +55887,7 @@ define(function () {
         },
         "16796": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Angel Sample Research",
           "Description": [
@@ -55904,7 +55904,7 @@ define(function () {
         },
         "16798": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Formless Sample Research",
           "Description": [
@@ -55921,7 +55921,7 @@ define(function () {
         },
         "16800": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Depth Abyss Insect Sample Research",
           "Description": [
@@ -56038,12 +56038,12 @@ define(function () {
         },
         "17013": {
           "IconName": "ico_ep.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25723",
               "ItemNum": "20"
             }
-          },
+          ],
           "RewardJEXP": "600000",
           "RewardEXP": "600000",
           "Summary": "",
@@ -56203,12 +56203,12 @@ define(function () {
         },
         "17032": {
           "IconName": "ico_ep.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25723",
               "ItemNum": "20"
             }
-          },
+          ],
           "RewardJEXP": "600000",
           "RewardEXP": "600000",
           "Summary": "To Kaya Tos",
@@ -56227,16 +56227,16 @@ define(function () {
         },
         "17034": {
           "IconName": "ico_ep.bmp",
-          "RewardItemList": {
-            "1": {
+          "RewardItemList": [
+            {
               "ItemID": "25723",
               "ItemNum": "1"
             },
-            "2": {
+            {
               "ItemID": "25669",
               "ItemNum": "5"
             }
-          },
+          ],
           "RewardJEXP": "300000",
           "RewardEXP": "300000",
           "Summary": "Test Subject Identification Bracelet 10",
@@ -56247,7 +56247,7 @@ define(function () {
         },
         "17035": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] To Rudus",
           "Description": [
@@ -56264,7 +56264,7 @@ define(function () {
         },
         "17037": {
           "IconName": "ico_ep.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Replace attribute",
           "Description": [
@@ -56929,7 +56929,7 @@ define(function () {
         },
         "17143": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Cold is still left",
           "Description": [
@@ -56946,7 +56946,7 @@ define(function () {
         },
         "17145": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Cotton is packing",
           "Description": [
@@ -56987,7 +56987,7 @@ define(function () {
         },
         "17150": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Waiting: Card exchange once a day",
           "Description": [
@@ -57052,7 +57052,7 @@ define(function () {
         },
         "17158": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Waiting: Raising eyes",
           "Description": [
@@ -58261,7 +58261,7 @@ define(function () {
         },
         "17314": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Noodle of the Day",
           "Description": [
@@ -58278,7 +58278,7 @@ define(function () {
         },
         "17316": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Watermelon Fan",
           "Description": [
@@ -58295,7 +58295,7 @@ define(function () {
         },
         "17318": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Bad Noodle Hunt",
           "Description": [
@@ -58368,7 +58368,7 @@ define(function () {
         },
         "17327": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Delicacy Noodles",
           "Description": [
@@ -58481,7 +58481,7 @@ define(function () {
         },
         "17341": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] No Signal",
           "Description": [
@@ -58634,7 +58634,7 @@ define(function () {
         },
         "17360": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] First Warehouse Floor Cleanup",
           "Description": [
@@ -58651,7 +58651,7 @@ define(function () {
         },
         "17362": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Underground Warehouse Cleanup",
           "Description": [
@@ -58772,7 +58772,7 @@ define(function () {
         },
         "17377": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Help With Hard Work",
           "Description": [
@@ -58797,7 +58797,7 @@ define(function () {
         },
         "17380": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Bathhouse Cleanup",
           "Description": [
@@ -58862,7 +58862,7 @@ define(function () {
         },
         "17388": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] The cold remains",
           "Description": [
@@ -58879,7 +58879,7 @@ define(function () {
         },
         "17390": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Cotton is being packed",
           "Description": [
@@ -58920,7 +58920,7 @@ define(function () {
         },
         "17395": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Card exchange once a day",
           "Description": [
@@ -58985,7 +58985,7 @@ define(function () {
         },
         "17403": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Need Attention",
           "Description": [
@@ -59106,7 +59106,7 @@ define(function () {
         },
         "17422": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Thanatos Tower 9th Floor",
           "Description": [
@@ -59115,7 +59115,7 @@ define(function () {
         },
         "17423": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Thanatos Tower 10th Floor",
           "Description": [
@@ -59124,7 +59124,7 @@ define(function () {
         },
         "17424": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Thanatos Tower 11th Floor",
           "Description": [
@@ -59133,7 +59133,7 @@ define(function () {
         },
         "17425": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Thanatos Tower 12th Floor",
           "Description": [
@@ -59430,7 +59430,7 @@ define(function () {
         },
         "17509": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Shortage of Materials",
           "Description": [
@@ -59487,7 +59487,7 @@ define(function () {
         },
         "17516": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] An Unexpected Shepherd",
           "Description": [
@@ -59576,7 +59576,7 @@ define(function () {
         },
         "17527": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Sweep Operation",
           "Description": [
@@ -59894,7 +59894,7 @@ define(function () {
         },
         "17566": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Codename! Is it a star button?!",
           "Description": [
@@ -60207,7 +60207,7 @@ define(function () {
         },
         "17605": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Best Snowman",
           "Description": [
@@ -60264,7 +60264,7 @@ define(function () {
         },
         "17612": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Biosphere - Severe Cold",
           "Description": [
@@ -60273,7 +60273,7 @@ define(function () {
         },
         "17613": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Biosphere - Fire",
           "Description": [
@@ -60282,7 +60282,7 @@ define(function () {
         },
         "17614": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Biosphere - Grassland",
           "Description": [
@@ -60291,7 +60291,7 @@ define(function () {
         },
         "17615": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Biosphere - Death",
           "Description": [
@@ -60668,7 +60668,7 @@ define(function () {
         },
         "17662": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Find a hiding place on the ground",
           "Description": [
@@ -60693,7 +60693,7 @@ define(function () {
         },
         "17665": {
           "IconName": "ico_vr.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] The Lady of Gold Spoon wants to live quietly ",
           "Description": [
@@ -60718,7 +60718,7 @@ define(function () {
         },
         "17668": {
           "IconName": "ico_vr.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Me and Me ",
           "Description": [
@@ -60815,7 +60815,7 @@ define(function () {
         },
         "17680": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Souvenir of this World ",
           "Description": [
@@ -61064,7 +61064,7 @@ define(function () {
         },
         "17711": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "4 AM Reset",
           "Title": "[Standby] Cleaning the Serpent's Maze",
           "Description": [
@@ -61113,7 +61113,7 @@ define(function () {
         },
         "17717": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "4 AM Reset",
           "Title": "[Standby] Taste of Leisure",
           "Description": [
@@ -61202,7 +61202,7 @@ define(function () {
         },
         "17731": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "4 AM Reset",
           "Title": "[Standby] Fishing Preparation",
           "Description": [
@@ -61410,7 +61410,7 @@ define(function () {
         },
         "18023": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Hey! Sweetie!",
           "Description": [
@@ -61427,7 +61427,7 @@ define(function () {
         },
         "18025": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Core Collection",
           "Description": [
@@ -61436,8 +61436,8 @@ define(function () {
         },
         "18026": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "367",
-          "NpcPosX": "154",
+          "NpcPosY": 367,
+          "NpcPosX": 154,
           "NpcNavi": "thana_step",
           "NpcSpr": "4_M_AC_RUMIN",
           "Summary": "Defeat Thanatos' Memory",
@@ -61448,8 +61448,8 @@ define(function () {
         },
         "18027": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "367",
-          "NpcPosX": "154",
+          "NpcPosY": 367,
+          "NpcPosX": 154,
           "NpcNavi": "thana_step",
           "NpcSpr": "5_M_AC_RUMIN",
           "Summary": "Defeat the Broken Memory of Thanatos",
@@ -61460,16 +61460,16 @@ define(function () {
         },
         "18028": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "367",
+          "NpcPosY": 367,
           "Summary": "Reset at 04:00",
           "NpcNavi": "thana_step",
           "Description": [
             "You can receive the quest again through <NAVI>[Lumine]<INFO>thana_step,154,367,0,101,0</INFO></NAVI> in the Thanatos Tower after the waiting time has passed."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "6_M_AC_RUMIN",
           "Title": "[Standby] Memory of Magic Swordsman Thanatos",
-          "NpcPosX": "154"
+          "NpcPosX": 154
         },
         "18029": {
           "IconName": "ico_nq.bmp",
@@ -61481,7 +61481,7 @@ define(function () {
         },
         "18030": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Let's catch Fabre!",
           "Description": [
@@ -61498,7 +61498,7 @@ define(function () {
         },
         "18032": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Payon Field Exploration",
           "Description": [
@@ -61515,7 +61515,7 @@ define(function () {
         },
         "18034": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Culvert Exploration",
           "Description": [
@@ -61532,7 +61532,7 @@ define(function () {
         },
         "18036": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Mjolnir Abandoned Mine Exploration",
           "Description": [
@@ -61549,7 +61549,7 @@ define(function () {
         },
         "18038": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Izlude Undersea Tunnel Exploration",
           "Description": [
@@ -61566,7 +61566,7 @@ define(function () {
         },
         "18040": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Payon Dungeon Exploration",
           "Description": [
@@ -61583,7 +61583,7 @@ define(function () {
         },
         "18042": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Aldebaran Clock Tower Exploration",
           "Description": [
@@ -61600,7 +61600,7 @@ define(function () {
         },
         "18044": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Alberta Turtle Island Exploration",
           "Description": [
@@ -61617,7 +61617,7 @@ define(function () {
         },
         "18046": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Seasoned Hunter Beginner",
           "Description": [
@@ -61634,7 +61634,7 @@ define(function () {
         },
         "18048": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Seasoned Hunter Advanced",
           "Description": [
@@ -61651,7 +61651,7 @@ define(function () {
         },
         "18050": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Seasoned Hunter Level 1",
           "Description": [
@@ -61668,7 +61668,7 @@ define(function () {
         },
         "18052": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Seasoned Hunter Level 2",
           "Description": [
@@ -61677,8 +61677,8 @@ define(function () {
         },
         "18053": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "222",
-          "NpcPosX": "232",
+          "NpcPosY": 222,
+          "NpcPosX": 232,
           "NpcNavi": "c_tower1",
           "NpcSpr": "4_M_RUSMAN2",
           "Summary": "",
@@ -61689,7 +61689,7 @@ define(function () {
         },
         "18054": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Clock Tower Nightmare Attack",
           "Description": [
@@ -61698,8 +61698,8 @@ define(function () {
         },
         "18055": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "273",
-          "NpcPosX": "191",
+          "NpcPosY": 273,
+          "NpcPosX": 191,
           "NpcNavi": "glast_01",
           "NpcSpr": "4_M_JOB_WIZARD",
           "Summary": "",
@@ -61710,7 +61710,7 @@ define(function () {
         },
         "18056": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Abyss Glastheim Attack",
           "Description": [
@@ -61727,7 +61727,7 @@ define(function () {
         },
         "18058": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Einbech Mine Attack",
           "Description": [
@@ -61902,7 +61902,7 @@ define(function () {
         },
         "18080": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Glastheim Prison 1st Floor Attack",
           "Description": [
@@ -61911,7 +61911,7 @@ define(function () {
         },
         "18081": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Delivery of Orc Warrior's Tokens",
           "Description": [
@@ -61920,8 +61920,8 @@ define(function () {
         },
         "18082": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "179",
-          "NpcPosX": "180",
+          "NpcPosY": 179,
+          "NpcPosX": 180,
           "NpcNavi": "wolfvill",
           "NpcSpr": "4_M_DST_CHILD",
           "Summary": "Ask the village boy where the conference is",
@@ -61956,8 +61956,8 @@ define(function () {
         },
         "18086": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "101",
-          "NpcPosX": "32",
+          "NpcPosY": 101,
+          "NpcPosX": 32,
           "NpcNavi": "gw_fild01",
           "NpcSpr": "4_M_SITDOWN",
           "Summary": "Subdue monsters in the Gray Wolf Forest",
@@ -61968,16 +61968,16 @@ define(function () {
         },
         "18087": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "101",
+          "NpcPosY": 101,
           "Summary": "Reset at 04:00",
           "NpcNavi": "gw_fild01",
           "Description": [
             "You can receive the quest again after the waiting time has passed through the Gray Wolf Village's <NAVI>[Gatekeeper]<INFO>gw_fild01,32,101,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_M_SITDOWN",
           "Title": "[Standby] Make the gray wolf forest safer",
-          "NpcPosX": "32"
+          "NpcPosX": 32
         },
         "18088": {
           "IconName": "ico_dq.bmp",
@@ -61989,7 +61989,7 @@ define(function () {
         },
         "18089": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Attack on the Banquet Hall of the Dead",
           "Description": [
@@ -62006,7 +62006,7 @@ define(function () {
         },
         "18091": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Attack on the 1st floor of Amicitia Lab",
           "Description": [
@@ -62023,7 +62023,7 @@ define(function () {
         },
         "18093": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Attack on the 2nd floor of Amicitia Lab",
           "Description": [
@@ -62040,7 +62040,7 @@ define(function () {
         },
         "18095": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Attack on the Collapsed Opera House",
           "Description": [
@@ -62057,7 +62057,7 @@ define(function () {
         },
         "18097": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 1",
           "Description": [
@@ -62074,7 +62074,7 @@ define(function () {
         },
         "18099": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 2",
           "Description": [
@@ -62091,7 +62091,7 @@ define(function () {
         },
         "18101": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 3",
           "Description": [
@@ -62108,7 +62108,7 @@ define(function () {
         },
         "18103": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 4",
           "Description": [
@@ -62125,7 +62125,7 @@ define(function () {
         },
         "18105": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 5",
           "Description": [
@@ -62142,7 +62142,7 @@ define(function () {
         },
         "18107": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 6",
           "Description": [
@@ -62159,7 +62159,7 @@ define(function () {
         },
         "18109": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 7",
           "Description": [
@@ -62176,7 +62176,7 @@ define(function () {
         },
         "18111": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 8",
           "Description": [
@@ -62193,7 +62193,7 @@ define(function () {
         },
         "18113": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 9",
           "Description": [
@@ -62210,7 +62210,7 @@ define(function () {
         },
         "18115": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 10",
           "Description": [
@@ -62227,7 +62227,7 @@ define(function () {
         },
         "18117": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Special Delivery Request 11",
           "Description": [
@@ -62339,7 +62339,7 @@ define(function () {
         },
         "18131": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Procurement of research materials for Vellgunde",
           "Description": [
@@ -62388,7 +62388,7 @@ define(function () {
         },
         "18137": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Search for the Lost",
           "Description": [
@@ -62413,7 +62413,7 @@ define(function () {
         },
         "18140": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Our Precious Food",
           "Description": [
@@ -62430,7 +62430,7 @@ define(function () {
         },
         "18142": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Elegant Hobbies",
           "Description": [
@@ -62447,7 +62447,7 @@ define(function () {
         },
         "18144": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] For Safe Work",
           "Description": [
@@ -62576,8 +62576,8 @@ define(function () {
         },
         "18160": {
           "IconName": "ico_vr.bmp",
-          "NpcPosY": "60",
-          "NpcPosX": "59",
+          "NpcPosY": 60,
+          "NpcPosX": 59,
           "NpcNavi": "prt_elib",
           "NpcSpr": "4_VR_BOOK_BLUE",
           "Summary": "Returning books to the library",
@@ -62588,16 +62588,16 @@ define(function () {
         },
         "18161": {
           "IconName": "ico_vr.bmp",
-          "NpcPosY": "60",
+          "NpcPosY": 60,
           "Summary": "Reset at 04:00",
           "NpcNavi": "prt_elib",
           "Description": [
             "Your rental record of the Fantasy Series 'A Scientist's Escape Record' remains. You need to recharge your magic power, so if you want to experience it again, please use the book <NAVI>[cradle]<INFO>prt_elib,59,60,0,101,0</INFO></NAVI> in the East Library of Prontera after the charging time has passed."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_VR_BOOK_BLUE",
           "Title": "[Standby] A Scientist's Escape Record",
-          "NpcPosX": "59"
+          "NpcPosX": 59
         },
         "18162": {
           "IconName": "ico_vr.bmp",
@@ -62953,8 +62953,8 @@ define(function () {
         },
         "18207": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "341",
-          "NpcPosX": "352",
+          "NpcPosY": 341,
+          "NpcPosX": 352,
           "NpcNavi": "ra_fild10",
           "NpcSpr": "4_F_TRAINEE",
           "Summary": "Defeat monstery in the Power Twisted Plains",
@@ -62965,8 +62965,8 @@ define(function () {
         },
         "18208": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "341",
-          "NpcPosX": "352",
+          "NpcPosY": 341,
+          "NpcPosX": 352,
           "NpcNavi": "ra_fild10",
           "NpcSpr": "4_F_TRAINEE",
           "Summary": "Defeat monstery in the Power Twisted Plains",
@@ -62977,21 +62977,21 @@ define(function () {
         },
         "18209": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "341",
+          "NpcPosY": 341,
           "Summary": "Reset at 04:00",
           "NpcNavi": "ra_fild10",
           "Description": [
             "This quest is a daily quest, and you can take it again when the waiting time expires. You can accept quests through <NAVI>[Priest Pano]<INFO>ra_fild10,352,341,0,101,0</INFO></NAVI> in Rachel's Od Canyon."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_TRAINEE",
           "Title": "[Standby] Daily Cleansing",
-          "NpcPosX": "352"
+          "NpcPosX": 352
         },
         "18210": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "341",
-          "NpcPosX": "352",
+          "NpcPosY": 341,
+          "NpcPosX": 352,
           "NpcNavi": "ra_fild10",
           "NpcSpr": "4_F_TRAINEE",
           "Summary": "Defeat monstery in the Power Twisted Plains",
@@ -63002,16 +63002,16 @@ define(function () {
         },
         "18211": {
           "IconName": "ico_nq.bmp",
-          "NpcPosY": "341",
+          "NpcPosY": 341,
           "Summary": "Reset at 04:00 on Saturday",
           "NpcNavi": "ra_fild10",
           "Description": [
             "This quest is a weekly quest and can be taken again when the waiting time expires. You can accept quests through <NAVI>[Priest Pano]<INFO>ra_fild10,352,341,0,101,0</INFO></NAVI> in Rachel's Od Canyon."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "4_F_TRAINEE",
           "Title": "[Standby] Weekly Cleansing",
-          "NpcPosX": "352"
+          "NpcPosX": 352
         },
         "18212": {
           "IconName": "ico_nq.bmp",
@@ -63039,7 +63039,7 @@ define(function () {
         },
         "18215": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Daily Monster Subjugation",
           "Description": [
@@ -63056,7 +63056,7 @@ define(function () {
         },
         "18217": {
           "IconName": "ico_nq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00 on Saturday",
           "Title": "[Standby] Large-scale Monster Subjugation",
           "Description": [
@@ -63201,7 +63201,7 @@ define(function () {
         },
         "18235": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "04:00 Reset",
           "Title": "[Standby] Awin's Awin Worry",
           "Description": [
@@ -63218,7 +63218,7 @@ define(function () {
         },
         "18237": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "04:00 Reset",
           "Title": "[Standby] Boclinde's Extermination Operation 1",
           "Description": [
@@ -63235,7 +63235,7 @@ define(function () {
         },
         "18239": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "04:00 Reset",
           "Title": "[Standby] Boclinde's Extermination Operation 2",
           "Description": [
@@ -63262,7 +63262,7 @@ define(function () {
         },
         "19001": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Blooming Flower Land",
           "Description": [
@@ -63281,7 +63281,7 @@ define(function () {
         },
         "19003": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Large Bath Meditathio",
           "Description": [
@@ -63300,7 +63300,7 @@ define(function () {
         },
         "19005": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Library Memory Corridor",
           "Description": [
@@ -63319,7 +63319,7 @@ define(function () {
         },
         "19007": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Sewage Treatment Plant",
           "Description": [
@@ -63338,7 +63338,7 @@ define(function () {
         },
         "19009": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] 1st Power Plant",
           "Description": [
@@ -63357,7 +63357,7 @@ define(function () {
         },
         "19011": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Dragon Nest",
           "Description": [
@@ -63376,7 +63376,7 @@ define(function () {
         },
         "19013": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Bifrost Tower",
           "Description": [
@@ -63395,7 +63395,7 @@ define(function () {
         },
         "19015": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Dragon Nest",
           "Description": [
@@ -63414,7 +63414,7 @@ define(function () {
         },
         "19017": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Prontera Prison",
           "Description": [
@@ -63433,7 +63433,7 @@ define(function () {
         },
         "19019": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Invaded Prontera",
           "Description": [
@@ -63452,7 +63452,7 @@ define(function () {
         },
         "19021": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Rockridge Mine",
           "Description": [
@@ -63471,7 +63471,7 @@ define(function () {
         },
         "19023": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Glastheim Castle F2(Nightmare)",
           "Description": [
@@ -63490,7 +63490,7 @@ define(function () {
         },
         "19025": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Underground Bunker",
           "Description": [
@@ -63509,7 +63509,7 @@ define(function () {
         },
         "19027": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Laboratory-OPTATIO",
           "Description": [
@@ -63528,7 +63528,7 @@ define(function () {
         },
         "19029": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Twisted Clock Tower F2",
           "Description": [
@@ -63547,7 +63547,7 @@ define(function () {
         },
         "19031": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Lost Farm Valley",
           "Description": [
@@ -63566,7 +63566,7 @@ define(function () {
         },
         "19033": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Twisted Clock Tower F3",
           "Description": [
@@ -63585,7 +63585,7 @@ define(function () {
         },
         "19035": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Od Canyon and Ida Plains",
           "Description": [
@@ -63604,7 +63604,7 @@ define(function () {
         },
         "19037": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Rudus, Experiment Waste Disposal F2",
           "Description": [
@@ -63623,7 +63623,7 @@ define(function () {
         },
         "19039": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Eastern Ruins of Juperos",
           "Description": [
@@ -63642,7 +63642,7 @@ define(function () {
         },
         "19041": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Verus City",
           "Description": [
@@ -63661,7 +63661,7 @@ define(function () {
         },
         "19043": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Upper Floor of Tartaros Storage",
           "Description": [
@@ -63680,7 +63680,7 @@ define(function () {
         },
         "19045": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Oz Labyrinth 1st Floor",
           "Description": [
@@ -63699,7 +63699,7 @@ define(function () {
         },
         "19047": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Rudus, Experiment Waste Disposal F3",
           "Description": [
@@ -63718,7 +63718,7 @@ define(function () {
         },
         "19049": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Nogg Road F3",
           "Description": [
@@ -63737,7 +63737,7 @@ define(function () {
         },
         "19051": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Lower Floor of Tartaros Storage",
           "Description": [
@@ -63756,7 +63756,7 @@ define(function () {
         },
         "19053": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Abyss Glastheim Castle F1",
           "Description": [
@@ -63775,7 +63775,7 @@ define(function () {
         },
         "19055": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Gray Wolf Forest",
           "Description": [
@@ -63794,7 +63794,7 @@ define(function () {
         },
         "19057": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Gray Wolf Forest",
           "Description": [
@@ -63813,7 +63813,7 @@ define(function () {
         },
         "19059": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Einbech Mine 3F",
           "Description": [
@@ -63832,7 +63832,7 @@ define(function () {
         },
         "19061": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Ancient Odin Temple",
           "Description": [
@@ -63851,7 +63851,7 @@ define(function () {
         },
         "19063": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Hugel Abyss Lake Underground Cave 4F",
           "Description": [
@@ -63870,7 +63870,7 @@ define(function () {
         },
         "19065": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] 2nd Power Plant",
           "Description": [
@@ -63889,7 +63889,7 @@ define(function () {
         },
         "19067": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Request of White Paper",
           "Description": [
@@ -64338,8 +64338,8 @@ define(function () {
         },
         "19116": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "108",
-          "NpcPosX": "33",
+          "NpcPosY": 108,
+          "NpcPosX": 33,
           "NpcNavi": "yuno_in04",
           "NpcSpr": "4_M_ALCHE_D",
           "Summary": "",
@@ -64356,8 +64356,8 @@ define(function () {
         },
         "19117": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "108",
-          "NpcPosX": "33",
+          "NpcPosY": 108,
+          "NpcPosX": 33,
           "NpcNavi": "yuno_in04",
           "NpcSpr": "4_M_ALCHE_D",
           "Summary": "20 Carnivorous Plant's Seeds",
@@ -64370,8 +64370,8 @@ define(function () {
         },
         "19118": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "108",
-          "NpcPosX": "33",
+          "NpcPosY": 108,
+          "NpcPosX": 33,
           "NpcNavi": "yuno_in04",
           "NpcSpr": "4_M_ALCHE_D",
           "Summary": "1 Carnivorous Plant's Seed",
@@ -64384,8 +64384,8 @@ define(function () {
         },
         "19119": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "108",
-          "NpcPosX": "33",
+          "NpcPosY": 108,
+          "NpcPosX": 33,
           "NpcNavi": "yuno_in04",
           "NpcSpr": "4_M_ALCHE_D",
           "Summary": "1 Sphinx Glasses",
@@ -64407,8 +64407,8 @@ define(function () {
         },
         "19121": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "72",
-          "NpcPosX": "169",
+          "NpcPosY": 72,
+          "NpcPosX": 169,
           "NpcNavi": "morocc_in",
           "NpcSpr": "2_M_BARD_ORIENT",
           "Summary": "",
@@ -64421,8 +64421,8 @@ define(function () {
         },
         "19122": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "72",
-          "NpcPosX": "169",
+          "NpcPosY": 72,
+          "NpcPosX": 169,
           "NpcNavi": "morocc_in",
           "NpcSpr": "2_M_BARD_ORIENT",
           "Summary": "5 Ihire's Eggs",
@@ -64441,8 +64441,8 @@ define(function () {
         },
         "19123": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "72",
-          "NpcPosX": "169",
+          "NpcPosY": 72,
+          "NpcPosX": 169,
           "NpcNavi": "morocc_in",
           "NpcSpr": "2_M_BARD_ORIENT",
           "Summary": "1 Ihire Doll",
@@ -64455,8 +64455,8 @@ define(function () {
         },
         "19124": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "242",
-          "NpcPosX": "297",
+          "NpcPosY": 242,
+          "NpcPosX": 297,
           "NpcNavi": "gef_fild13",
           "NpcSpr": "4_M_CRU",
           "Summary": "Find Knight Slarti",
@@ -64469,8 +64469,8 @@ define(function () {
         },
         "19125": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "242",
-          "NpcPosX": "297",
+          "NpcPosY": 242,
+          "NpcPosX": 297,
           "NpcNavi": "gef_fild13",
           "NpcSpr": "4_M_CRU",
           "Summary": "Give a Red Potion to Slarti",
@@ -64483,8 +64483,8 @@ define(function () {
         },
         "19126": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "117",
-          "NpcPosX": "110",
+          "NpcPosY": 117,
+          "NpcPosX": 110,
           "NpcNavi": "geffen",
           "NpcSpr": "4_M_CRU_OLD",
           "Summary": "To Ford...",
@@ -64497,8 +64497,8 @@ define(function () {
         },
         "19127": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "125",
-          "NpcPosX": "87",
+          "NpcPosY": 125,
+          "NpcPosX": 87,
           "NpcNavi": "prt_church",
           "NpcSpr": "4_M_SAGE_C",
           "Summary": "To Arthur...",
@@ -64511,8 +64511,8 @@ define(function () {
         },
         "19128": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "125",
-          "NpcPosX": "87",
+          "NpcPosY": 125,
+          "NpcPosX": 87,
           "NpcNavi": "prt_church",
           "NpcSpr": "4_M_SAGE_C",
           "Summary": "Remedy Ingredients",
@@ -64528,8 +64528,8 @@ define(function () {
         },
         "19129": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "125",
-          "NpcPosX": "87",
+          "NpcPosY": 125,
+          "NpcPosX": 87,
           "NpcNavi": "prt_church",
           "NpcSpr": "4_M_SAGE_C",
           "Summary": "Check the Remedy",
@@ -64542,8 +64542,8 @@ define(function () {
         },
         "19130": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "242",
-          "NpcPosX": "297",
+          "NpcPosY": 242,
+          "NpcPosX": 297,
           "NpcNavi": "gef_fild13",
           "NpcSpr": "4_M_CRU",
           "Summary": "To Britoria...",
@@ -64556,8 +64556,8 @@ define(function () {
         },
         "19131": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "125",
-          "NpcPosX": "87",
+          "NpcPosY": 125,
+          "NpcPosX": 87,
           "NpcNavi": "prt_church",
           "NpcSpr": "4_M_SAGE_C",
           "Summary": "To Arthur...",
@@ -64571,8 +64571,8 @@ define(function () {
         },
         "19132": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "140",
-          "NpcPosX": "224",
+          "NpcPosY": 140,
+          "NpcPosX": 224,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "1_M_LIBRARYMASTER",
           "Summary": "",
@@ -64585,8 +64585,8 @@ define(function () {
         },
         "19133": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "122",
-          "NpcPosX": "225",
+          "NpcPosY": 122,
+          "NpcPosX": 225,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_SAGE_A",
           "Summary": "",
@@ -64599,8 +64599,8 @@ define(function () {
         },
         "19134": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "138",
-          "NpcPosX": "204",
+          "NpcPosY": 138,
+          "NpcPosX": 204,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "4_M_ALCHE_C",
           "Summary": "",
@@ -64613,8 +64613,8 @@ define(function () {
         },
         "19135": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "273",
-          "NpcPosX": "278",
+          "NpcPosY": 273,
+          "NpcPosX": 278,
           "NpcNavi": "lhz_in02",
           "NpcSpr": "4_M_SEAMAN",
           "Summary": "",
@@ -64627,8 +64627,8 @@ define(function () {
         },
         "19136": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "140",
-          "NpcPosX": "224",
+          "NpcPosY": 140,
+          "NpcPosX": 224,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "1_M_LIBRARYMASTER",
           "Summary": "",
@@ -64641,8 +64641,8 @@ define(function () {
         },
         "19137": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "34",
-          "NpcPosX": "106",
+          "NpcPosY": 34,
+          "NpcPosX": 106,
           "NpcNavi": "lhz_in03",
           "NpcSpr": "4_M_KID1",
           "Summary": "",
@@ -64655,8 +64655,8 @@ define(function () {
         },
         "19138": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "140",
-          "NpcPosX": "224",
+          "NpcPosY": 140,
+          "NpcPosX": 224,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "1_M_LIBRARYMASTER",
           "Summary": "",
@@ -64669,8 +64669,8 @@ define(function () {
         },
         "19139": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "140",
-          "NpcPosX": "224",
+          "NpcPosY": 140,
+          "NpcPosX": 224,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "1_M_LIBRARYMASTER",
           "Summary": "",
@@ -64683,8 +64683,8 @@ define(function () {
         },
         "19140": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "140",
-          "NpcPosX": "224",
+          "NpcPosY": 140,
+          "NpcPosX": 224,
           "NpcNavi": "lhz_in01",
           "NpcSpr": "1_M_LIBRARYMASTER",
           "Summary": "",
@@ -64707,8 +64707,8 @@ define(function () {
         },
         "19142": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "99",
-          "NpcPosX": "85",
+          "NpcPosY": 99,
+          "NpcPosX": 85,
           "NpcNavi": "prt_in",
           "NpcSpr": "4_M_JOB_KNIGHT2",
           "Summary": "",
@@ -64721,8 +64721,8 @@ define(function () {
         },
         "19143": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "99",
-          "NpcPosX": "85",
+          "NpcPosY": 99,
+          "NpcPosX": 85,
           "NpcNavi": "prt_in",
           "NpcSpr": "4_M_JOB_KNIGHT2",
           "Summary": "For the discouraged knight",
@@ -64735,8 +64735,8 @@ define(function () {
         },
         "19144": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "99",
-          "NpcPosX": "85",
+          "NpcPosY": 99,
+          "NpcPosX": 85,
           "NpcNavi": "prt_in",
           "NpcSpr": "4_M_JOB_KNIGHT2",
           "Summary": "",
@@ -64749,8 +64749,8 @@ define(function () {
         },
         "19145": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "198",
-          "NpcPosX": "270",
+          "NpcPosY": 198,
+          "NpcPosX": 270,
           "NpcNavi": "prt_monk",
           "NpcSpr": "4_M_MONK",
           "Summary": "",
@@ -64763,8 +64763,8 @@ define(function () {
         },
         "19146": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "198",
-          "NpcPosX": "270",
+          "NpcPosY": 198,
+          "NpcPosX": 270,
           "NpcNavi": "prt_monk",
           "NpcSpr": "4_M_MONK",
           "Summary": "",
@@ -64778,8 +64778,8 @@ define(function () {
         },
         "19147": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "69",
-          "NpcPosX": "316",
+          "NpcPosY": 69,
+          "NpcPosX": 316,
           "NpcNavi": "monk_test",
           "NpcSpr": "4_M_CHNMONK",
           "Summary": "",
@@ -64792,8 +64792,8 @@ define(function () {
         },
         "19148": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "69",
-          "NpcPosX": "316",
+          "NpcPosY": 69,
+          "NpcPosX": 316,
           "NpcNavi": "monk_test",
           "NpcSpr": "4_M_CHNMONK",
           "Summary": "",
@@ -64807,8 +64807,8 @@ define(function () {
         },
         "19149": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "69",
-          "NpcPosX": "316",
+          "NpcPosY": 69,
+          "NpcPosX": 316,
           "NpcNavi": "monk_test",
           "NpcSpr": "4_M_CHNMONK",
           "Summary": "",
@@ -64821,8 +64821,8 @@ define(function () {
         },
         "19150": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "112",
-          "NpcPosX": "111",
+          "NpcPosY": 112,
+          "NpcPosX": 111,
           "NpcNavi": "prt_church",
           "NpcSpr": "1_F_PRIEST",
           "Summary": "",
@@ -64836,8 +64836,8 @@ define(function () {
         },
         "19151": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "72",
-          "NpcPosX": "178",
+          "NpcPosY": 72,
+          "NpcPosX": 178,
           "NpcNavi": "geffen",
           "NpcSpr": "4_F_JOB_BLACKSMITH",
           "Summary": "Materials for learning the skill",
@@ -64855,8 +64855,8 @@ define(function () {
         },
         "19152": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "72",
-          "NpcPosX": "178",
+          "NpcPosY": 72,
+          "NpcPosX": 178,
           "NpcNavi": "geffen",
           "NpcSpr": "4_F_JOB_BLACKSMITH",
           "Summary": "Please wait for a moment.",
@@ -64869,8 +64869,8 @@ define(function () {
         },
         "19153": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "72",
-          "NpcPosX": "178",
+          "NpcPosY": 72,
+          "NpcPosX": 178,
           "NpcNavi": "geffen",
           "NpcSpr": "4_F_JOB_BLACKSMITH",
           "Summary": "",
@@ -64885,8 +64885,8 @@ define(function () {
         },
         "19154": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "72",
-          "NpcPosX": "178",
+          "NpcPosY": 72,
+          "NpcPosX": 178,
           "NpcNavi": "geffen",
           "NpcSpr": "4_F_JOB_BLACKSMITH",
           "Summary": "Please wait for a moment.",
@@ -64899,8 +64899,8 @@ define(function () {
         },
         "19155": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "72",
-          "NpcPosX": "178",
+          "NpcPosY": 72,
+          "NpcPosX": 178,
           "NpcNavi": "geffen",
           "NpcSpr": "4_F_JOB_BLACKSMITH",
           "Summary": "",
@@ -64914,8 +64914,8 @@ define(function () {
         },
         "19156": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "72",
-          "NpcPosX": "178",
+          "NpcPosY": 72,
+          "NpcPosX": 178,
           "NpcNavi": "geffen",
           "NpcSpr": "4_F_JOB_BLACKSMITH",
           "Summary": "Please wait for a moment.",
@@ -64928,8 +64928,8 @@ define(function () {
         },
         "19157": {
           "IconName": "ico_jq.bmp",
-          "NpcPosY": "52",
-          "NpcPosX": "172",
+          "NpcPosY": 52,
+          "NpcPosX": 172,
           "NpcNavi": "geffen",
           "NpcSpr": "4_M_DWARF",
           "Summary": "",
@@ -64943,8 +64943,8 @@ define(function () {
         },
         "19158": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "62",
-          "NpcPosX": "100",
+          "NpcPosY": 62,
+          "NpcPosX": 100,
           "NpcNavi": "icas_in",
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Summary": "Talk to Orlito Joveng",
@@ -64955,8 +64955,8 @@ define(function () {
         },
         "19159": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "62",
-          "NpcPosX": "100",
+          "NpcPosY": 62,
+          "NpcPosX": 100,
           "NpcNavi": "icas_in",
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Summary": "Listen to the briefing",
@@ -64967,8 +64967,8 @@ define(function () {
         },
         "19160": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "62",
-          "NpcPosX": "100",
+          "NpcPosY": 62,
+          "NpcPosX": 100,
           "NpcNavi": "icas_in",
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Summary": "Attend the meeting",
@@ -64979,8 +64979,8 @@ define(function () {
         },
         "19161": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "62",
-          "NpcPosX": "100",
+          "NpcPosY": 62,
+          "NpcPosX": 100,
           "NpcNavi": "icas_in",
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Summary": "Listen to the explanation",
@@ -64991,35 +64991,35 @@ define(function () {
         },
         "19162": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "62",
+          "NpcPosY": 62,
           "Summary": "Expiration at 04:00",
           "NpcNavi": "icas_in",
           "Description": [
             "According to the Eagle Patrol regulations, I received today's watchword from Orlito Joveng. It seems that verbally received watchwords will expire at 04:00.",
             "¡Ø If you forget the watchword, you can listen to it again by talking to <NAVI>[Orlito Joveng]<INFO>icas_in,100,62,0,101,0</INFO></NAVI>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Title": "Today's Watchword",
-          "NpcPosX": "100"
+          "NpcPosX": 100
         },
         "19163": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "62",
+          "NpcPosY": 62,
           "Summary": "Resets at 04:00",
           "NpcNavi": "icas_in",
           "Description": [
             "I found the spy hidden in the Ice Castle and received a reward from <NAVI>[Orlito Joveng]<INFO>icas_in,100,62,0,101,0</INFO></NAVI>. Since I'm not the only one searching for spies in the Ice Castle, it's a relief for today."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Title": "[Standby] Spy Search",
-          "NpcPosX": "100"
+          "NpcPosX": 100
         },
         "19164": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "62",
-          "NpcPosX": "100",
+          "NpcPosY": 62,
+          "NpcPosX": 100,
           "NpcNavi": "icas_in",
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Summary": "Talk to Orlito Joveng",
@@ -65030,21 +65030,21 @@ define(function () {
         },
         "19165": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "62",
+          "NpcPosY": 62,
           "Summary": "Resets at 04:00",
           "NpcNavi": "icas_in",
           "Description": [
             "I received intelligence information collected by dispatched members and received a reward from <NAVI>[Orlito Joveng]<INFO>icas_in,100,62,0,101,0</INFO>."
           ],
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Title": "[Standby] Retrieve Espionage Info",
-          "NpcPosX": "100"
+          "NpcPosX": 100
         },
         "19166": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "62",
-          "NpcPosX": "100",
+          "NpcPosY": 62,
+          "NpcPosX": 100,
           "NpcNavi": "icas_in",
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Summary": "Talk to Orlito Joveng",
@@ -65055,8 +65055,8 @@ define(function () {
         },
         "19167": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "62",
-          "NpcPosX": "100",
+          "NpcPosY": 62,
+          "NpcPosX": 100,
           "NpcNavi": "icas_in",
           "NpcSpr": "EP19_NPC_IWIN_SR",
           "Summary": "Talk to Orlito Joveng",
@@ -65318,7 +65318,7 @@ define(function () {
         },
         "20014": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 11:00",
           "Title": "Stamp again tomorrow",
           "Description": [
@@ -65328,7 +65328,7 @@ define(function () {
         },
         "20021": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 11:00",
           "Title": "[Standby] Sweet and Cozy",
           "Description": [
@@ -65362,7 +65362,7 @@ define(function () {
         },
         "20025": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 11:00",
           "Title": "[Standby] I am the Refine God!",
           "Description": [
@@ -65372,7 +65372,7 @@ define(function () {
         },
         "20026": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 11:00",
           "Title": "[Standby] Cham Cham Cham",
           "Description": [
@@ -65382,7 +65382,7 @@ define(function () {
         },
         "20031": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 11:00",
           "Title": "RO Quiz Competition",
           "Description": [
@@ -66059,7 +66059,7 @@ define(function () {
         },
         "21016": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Undead War-break",
           "Description": [
@@ -66076,7 +66076,7 @@ define(function () {
         },
         "21018": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Soul Cleanse Ritual-break",
           "Description": [
@@ -66093,7 +66093,7 @@ define(function () {
         },
         "21020": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Break sorrow with a drink",
           "Description": [
@@ -66110,7 +66110,7 @@ define(function () {
         },
         "21022": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Treatment of Anti-Magic",
           "Description": [
@@ -66127,7 +66127,7 @@ define(function () {
         },
         "21024": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Fox hunting continues",
           "Description": [
@@ -66165,7 +66165,7 @@ define(function () {
         },
         "21029": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby",
           "Description": [
@@ -66189,7 +66189,7 @@ define(function () {
         },
         "21032": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Pro Snake Hunter",
           "Description": [
@@ -66213,7 +66213,7 @@ define(function () {
         },
         "21035": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "It is a harmful onion.",
           "Description": [
@@ -66237,7 +66237,7 @@ define(function () {
         },
         "21038": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Before Mushroom Heaven.",
           "Description": [
@@ -66261,7 +66261,7 @@ define(function () {
         },
         "21041": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "The Prisoners Dreaming of Prison Break",
           "Description": [
@@ -66278,7 +66278,7 @@ define(function () {
         },
         "21043": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Malicious Advisor",
           "Description": [
@@ -66295,7 +66295,7 @@ define(function () {
         },
         "21045": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby",
           "Description": [
@@ -66319,7 +66319,7 @@ define(function () {
         },
         "21048": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "The Nightmare of Moscow",
           "Description": [
@@ -66336,7 +66336,7 @@ define(function () {
         },
         "21050": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Beautiful Doll",
           "Description": [
@@ -66353,7 +66353,7 @@ define(function () {
         },
         "21052": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Moments in the Sand?",
           "Description": [
@@ -66370,7 +66370,7 @@ define(function () {
         },
         "21054": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby",
           "Description": [
@@ -66387,7 +66387,7 @@ define(function () {
         },
         "21056": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "The Lion of the Temple",
           "Description": [
@@ -66404,7 +66404,7 @@ define(function () {
         },
         "21058": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Rainbow Bird",
           "Description": [
@@ -66421,7 +66421,7 @@ define(function () {
         },
         "21060": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Broom and cast iron pot and grandmother",
           "Description": [
@@ -66438,7 +66438,7 @@ define(function () {
         },
         "21062": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Lost and Winner and Remnant",
           "Description": [
@@ -66455,7 +66455,7 @@ define(function () {
         },
         "21064": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Standby",
           "Description": [
@@ -66472,7 +66472,7 @@ define(function () {
         },
         "21066": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Sandby the Secret Sleeper",
           "Description": [
@@ -66489,7 +66489,7 @@ define(function () {
         },
         "21068": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "I hear at the end of the night and I hear at the end of the day",
           "Description": [
@@ -66506,7 +66506,7 @@ define(function () {
         },
         "21070": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Noble Son Goku",
           "Description": [
@@ -66523,7 +66523,7 @@ define(function () {
         },
         "21072": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "The Old Man on the Cloud",
           "Description": [
@@ -66735,7 +66735,7 @@ define(function () {
         },
         "21102": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Hunt Hunter Fly",
           "Description": [
@@ -66759,7 +66759,7 @@ define(function () {
         },
         "21105": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "Ghoul and Jack Hunt",
           "Description": [
@@ -66787,7 +66787,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Marionette and Debirucci hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21109": {
           "Description": [
@@ -66809,7 +66809,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Horse Running the Nightmare",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21112": {
           "Description": [
@@ -66831,7 +66831,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cute Petite",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21115": {
           "Description": [
@@ -66853,7 +66853,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cute Petite",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21118": {
           "Description": [
@@ -66875,7 +66875,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Watch your friends",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21122": {
           "Description": [
@@ -66911,7 +66911,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Eat in Kukre",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21127": {
           "Description": [
@@ -66933,7 +66933,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Economy Logic Without",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21130": {
           "Description": [
@@ -66969,7 +66969,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Promise to the dead",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21135": {
           "Description": [
@@ -66977,7 +66977,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Clean the first floor of the wreck",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21136": {
           "Description": [
@@ -66992,7 +66992,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Clean the second floor of the wreck",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21138": {
           "Description": [
@@ -67014,7 +67014,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "A Peaceful Pilgrimage",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21142": {
           "Description": [
@@ -67036,7 +67036,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Guardian of Beauty",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21145": {
           "Description": [
@@ -67058,7 +67058,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Stone Swallowing Stone",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21148": {
           "Description": [
@@ -67080,7 +67080,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Turtle Island explore",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21151": {
           "Description": [
@@ -67123,7 +67123,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Slay Turtle Swarm",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21157": {
           "Description": [
@@ -67145,7 +67145,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Season",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21160": {
           "Description": [
@@ -67202,7 +67202,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trust of the Village",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21168": {
           "Description": [
@@ -67210,7 +67210,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trust of the Village",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21169": {
           "Description": [
@@ -67218,7 +67218,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trust of the Village",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21170": {
           "Description": [
@@ -67226,7 +67226,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trust of the Village",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21171": {
           "Description": [
@@ -67234,7 +67234,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trust of the Village",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21172": {
           "Description": [
@@ -67242,7 +67242,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trust of the Village",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21173": {
           "Description": [
@@ -67250,7 +67250,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Trust of the Village",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21180": {
           "Description": [
@@ -67391,7 +67391,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "You are like Mia, not Mia, like Mia",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21204": {
           "Description": [
@@ -67413,7 +67413,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "You're not just sleeping a day, are you?",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21207": {
           "Description": [
@@ -67470,7 +67470,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting to Kiell Isis",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21215": {
           "Description": [
@@ -67485,7 +67485,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sphinx worker Waiting to Kiell",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21217": {
           "Description": [
@@ -67500,7 +67500,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sphinx's Secret Wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21219": {
           "Description": [
@@ -67515,7 +67515,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Unbreakable Dream",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21221": {
           "Description": [
@@ -67537,7 +67537,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Noisy Guys",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21224": {
           "Description": [
@@ -67559,7 +67559,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Eggs and Grasshoppers",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21227": {
           "Description": [
@@ -67581,7 +67581,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Biology is the most difficult to sample",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21230": {
           "Description": [
@@ -67603,7 +67603,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "You should row when you get in.",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21233": {
           "Description": [
@@ -67646,7 +67646,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Caring for Friends",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21239": {
           "Description": [
@@ -67661,7 +67661,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cooking Ingredients",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21241": {
           "Description": [
@@ -67683,7 +67683,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Annoying Sentinels",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21244": {
           "Description": [
@@ -67691,7 +67691,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Woman in Fantasy",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21246": {
           "Description": [
@@ -67741,7 +67741,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Operation Stabilization-Waiting for Hornet",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21253": {
           "Description": [
@@ -67749,7 +67749,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Operation Stabilization-Waiting for Rocker",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21254": {
           "Description": [
@@ -67757,7 +67757,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Legendary Knight, Amber Knight! Wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21255": {
           "Description": [
@@ -67779,7 +67779,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Orc, Overlooked Operation!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21258": {
           "Description": [
@@ -67794,7 +67794,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Dirty Orcs",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21260": {
           "Description": [
@@ -67809,7 +67809,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21262": {
           "Description": [
@@ -67824,7 +67824,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Ferocious Goblin Theorem",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21264": {
           "Description": [
@@ -67839,7 +67839,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Slim Goblin Theorem",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21266": {
           "Description": [
@@ -67861,7 +67861,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "I'm Here",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21269": {
           "Description": [
@@ -67876,7 +67876,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Troubled Guys",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21271": {
           "Description": [
@@ -67898,7 +67898,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby Purification",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21274": {
           "Description": [
@@ -67913,7 +67913,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Stallby Stabilization",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21276": {
           "Description": [
@@ -67935,7 +67935,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Work at the Border Checkpoint",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21279": {
           "Description": [
@@ -67957,7 +67957,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Strengthening School Safety",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21282": {
           "Description": [
@@ -67972,7 +67972,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "A breakthrough business item",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21284": {
           "Description": [
@@ -67987,7 +67987,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Definite End",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21286": {
           "Description": [
@@ -68002,7 +68002,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Clean the first floor of the clock tower",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21288": {
           "Description": [
@@ -68017,7 +68017,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Watches Living and Moving 1",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21290": {
           "Description": [
@@ -68032,7 +68032,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Watch That Lives and Moves 2",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21292": {
           "Description": [
@@ -68047,7 +68047,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Laughter from the Underground",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21294": {
           "Description": [
@@ -68076,7 +68076,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for Noble War",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21298": {
           "Description": [
@@ -68084,7 +68084,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Wait for clam digging",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21299": {
           "Description": [
@@ -68092,7 +68092,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Autumnary Atmosphere in Waterway Failure",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21300": {
           "Description": [
@@ -68100,7 +68100,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Mom's Hand Lunch Box",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21301": {
           "Description": [
@@ -68122,7 +68122,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Please clean up the surroundings",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21304": {
           "Description": [
@@ -68144,7 +68144,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Shadow Miner",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21307": {
           "Description": [
@@ -68159,7 +68159,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Why is that moving!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21309": {
           "Description": [
@@ -68174,7 +68174,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Jumping Mineral",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21311": {
           "Description": [
@@ -68196,7 +68196,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Floating Toxic Gas 1",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21314": {
           "Description": [
@@ -68211,7 +68211,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Floating Toxic Gas 2",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21316": {
           "Description": [
@@ -68226,7 +68226,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cute and terrible ..",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21318": {
           "Description": [
@@ -68248,7 +68248,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Why do you have such a large pool!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21321": {
           "Description": [
@@ -68263,7 +68263,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Slap your ankle!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21323": {
           "Description": [
@@ -68278,7 +68278,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Name of the Grim Reaper",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21325": {
           "Description": [
@@ -68475,7 +68475,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby Iron Ant-1",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21353": {
           "Description": [
@@ -68490,7 +68490,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby Iron Ant-2",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21355": {
           "Description": [
@@ -68505,7 +68505,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Let's wait for Dirk-1 in colorful",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21357": {
           "Description": [
@@ -68520,7 +68520,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Atmospheric Dimic-2 Waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21359": {
           "Description": [
@@ -68563,7 +68563,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for Purification of Unknown Island",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21365": {
           "Description": [
@@ -68578,7 +68578,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cry and cry and cry and wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21367": {
           "Description": [
@@ -68593,7 +68593,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for the master of a dead marionette",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21369": {
           "Description": [
@@ -68608,7 +68608,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for purification in the western part of the Temple Sanctuary",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21371": {
           "Description": [
@@ -68623,7 +68623,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for purification in the eastern part of the Shrine Sanctuary",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21373": {
           "Description": [
@@ -68638,7 +68638,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for purification in the southern section of the Shrine Sanctuary",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21375": {
           "Description": [
@@ -68653,7 +68653,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "First Field Brawl-Kobold Flight Waiting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21377": {
           "Description": [
@@ -68668,7 +68668,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "First Field Brawl-Waiting for Hillwind",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21379": {
           "Description": [
@@ -68683,7 +68683,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "You don't want to use dog hair. Wait.",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21381": {
           "Description": [
@@ -68698,7 +68698,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for Weed War",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21383": {
           "Description": [
@@ -68713,7 +68713,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for the mutation of a volcano",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21385": {
           "Description": [
@@ -68728,7 +68728,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Meadow Melee-Wait for Desert Wolf",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21387": {
           "Description": [
@@ -68743,7 +68743,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cold heart, waiting for cool dishes",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21389": {
           "Description": [
@@ -68758,7 +68758,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for Yeti Without Speech",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21391": {
           "Description": [
@@ -68773,7 +68773,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "How hard is the ice decision? Wait",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21393": {
           "Description": [
@@ -68788,7 +68788,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Waiting for research on dreams",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21401": {
           "Description": [
@@ -68852,7 +68852,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Barbie Q's Cooking Hell",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21411": {
           "Description": [
@@ -68867,7 +68867,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Honey Skin Bunny Q",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21413": {
           "Description": [
@@ -68882,7 +68882,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Kessera Sera Kocerasera",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21415": {
           "Description": [
@@ -68904,7 +68904,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cute Guys",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21418": {
           "Description": [
@@ -68919,7 +68919,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hard Guys",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21420": {
           "Description": [
@@ -68934,7 +68934,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Scruffy Guys",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21422": {
           "Description": [
@@ -68942,7 +68942,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise _ delivery of sticky webbing",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21423": {
           "Description": [
@@ -68950,7 +68950,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Delivery of grasshoppers",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21424": {
           "Description": [
@@ -68958,7 +68958,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Snail Shell Delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21425": {
           "Description": [
@@ -68966,7 +68966,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise _ Saeui beak delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21426": {
           "Description": [
@@ -68974,7 +68974,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Delivery of Bear Foot",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21427": {
           "Description": [
@@ -68982,7 +68982,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise _ Supply of dead wood",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21428": {
           "Description": [
@@ -68990,7 +68990,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Monkey Tail Delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21429": {
           "Description": [
@@ -68998,7 +68998,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Lantern Delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21430": {
           "Description": [
@@ -69006,7 +69006,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Sora delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21431": {
           "Description": [
@@ -69014,7 +69014,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Mermaid Heart Delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21432": {
           "Description": [
@@ -69022,7 +69022,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise _ delivery of wild boar mane",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21433": {
           "Description": [
@@ -69030,7 +69030,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise _ long hair delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21434": {
           "Description": [
@@ -69038,7 +69038,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise _ horseshoe delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21435": {
           "Description": [
@@ -69046,7 +69046,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise _ short leg delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21436": {
           "Description": [
@@ -69054,7 +69054,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_supply sand",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21437": {
           "Description": [
@@ -69062,7 +69062,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Delivery of dry sand",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21438": {
           "Description": [
@@ -69070,7 +69070,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise _ Turtle Back Shell Delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21439": {
           "Description": [
@@ -69078,7 +69078,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Deliver of the Little Devil",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21440": {
           "Description": [
@@ -69086,7 +69086,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise_Ice Heart Delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21441": {
           "Description": [
@@ -69094,7 +69094,7 @@ define(function () {
           ],
           "Summary": "Reset after 1 hour",
           "Title": "Paradise _ fluffy delivery",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21442": {
           "Description": [
@@ -69130,7 +69130,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Floating Hornet",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21503": {
           "Description": [
@@ -69145,7 +69145,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Rocker",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21505": {
           "Description": [
@@ -69160,7 +69160,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Amber Night",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21507": {
           "Description": [
@@ -69175,7 +69175,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Boss Muka",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21509": {
           "Description": [
@@ -69190,7 +69190,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Boss Bigfoot Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21511": {
           "Description": [
@@ -69205,7 +69205,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Strong Horn Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21513": {
           "Description": [
@@ -69220,7 +69220,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Elder Willow Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21515": {
           "Description": [
@@ -69235,7 +69235,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Strong Coco Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21517": {
           "Description": [
@@ -69250,7 +69250,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quick Yo-Yo Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21519": {
           "Description": [
@@ -69265,7 +69265,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the White Lotus",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21521": {
           "Description": [
@@ -69280,7 +69280,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Wrath of the Orc Warrior",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21523": {
           "Description": [
@@ -69295,7 +69295,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Goblin Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21525": {
           "Description": [
@@ -69310,7 +69310,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Goblin Wandering",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21527": {
           "Description": [
@@ -69325,7 +69325,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quick Petite Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21529": {
           "Description": [
@@ -69340,7 +69340,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Strong Petite Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21531": {
           "Description": [
@@ -69355,7 +69355,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunt Sandman of Wrath",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21533": {
           "Description": [
@@ -69370,7 +69370,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quick Perseal Hunt",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21535": {
           "Description": [
@@ -69385,7 +69385,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Grove",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21537": {
           "Description": [
@@ -69400,7 +69400,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sturdy Alligator Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21539": {
           "Description": [
@@ -69415,7 +69415,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunt the Wrath Fighter of Wrath",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21541": {
           "Description": [
@@ -69430,7 +69430,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quick Dryad Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21543": {
           "Description": [
@@ -69445,7 +69445,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quick Shell Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21545": {
           "Description": [
@@ -69460,7 +69460,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Strong Geographer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21547": {
           "Description": [
@@ -69475,7 +69475,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Boss Grand Peco",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21549": {
           "Description": [
@@ -69490,7 +69490,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Boss Goat Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21551": {
           "Description": [
@@ -69505,7 +69505,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quick Sleeper Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21553": {
           "Description": [
@@ -69520,7 +69520,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Stemworm Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21555": {
           "Description": [
@@ -69535,7 +69535,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Holden",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21557": {
           "Description": [
@@ -69550,7 +69550,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Rafflesia Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21559": {
           "Description": [
@@ -69565,7 +69565,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Boss Benomus",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21561": {
           "Description": [
@@ -69580,7 +69580,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunt the Angus of Wrath",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21563": {
           "Description": [
@@ -69595,7 +69595,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Floating Novus",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21565": {
           "Description": [
@@ -69610,7 +69610,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sturdy Lowwin Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21567": {
           "Description": [
@@ -69625,7 +69625,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Boss Staffo",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21569": {
           "Description": [
@@ -69640,7 +69640,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Smoky Hunt of Wrath",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21571": {
           "Description": [
@@ -69655,7 +69655,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Boss Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21573": {
           "Description": [
@@ -69670,7 +69670,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Human's Tucan Hunt",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21575": {
           "Description": [
@@ -69685,7 +69685,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sturdy Sidewinder Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21577": {
           "Description": [
@@ -69700,7 +69700,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Caracasa Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21579": {
           "Description": [
@@ -69715,7 +69715,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Wandering Food",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21581": {
           "Description": [
@@ -69737,7 +69737,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21584": {
           "Description": [
@@ -69759,7 +69759,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Devil Purification",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21587": {
           "Description": [
@@ -69781,7 +69781,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Before You Are",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21590": {
           "Description": [
@@ -69810,7 +69810,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Egnigem Cenia",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21594": {
           "Description": [
@@ -69832,7 +69832,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Army Dinge",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21597": {
           "Description": [
@@ -69854,7 +69854,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Stickby Tree",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21600": {
           "Description": [
@@ -69876,7 +69876,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Kavach Icarus",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21603": {
           "Description": [
@@ -69898,7 +69898,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Errende Ebecee",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21606": {
           "Description": [
@@ -69920,7 +69920,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Laurell Weinder",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21609": {
           "Description": [
@@ -69942,7 +69942,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cecil Damon",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21612": {
           "Description": [
@@ -69964,7 +69964,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Kathryne Keyron",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21615": {
           "Description": [
@@ -69986,7 +69986,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Margaret Sorin",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21618": {
           "Description": [
@@ -70008,7 +70008,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Saren Windsor",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21621": {
           "Description": [
@@ -70030,7 +70030,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Eremes Gail",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21624": {
           "Description": [
@@ -70052,7 +70052,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Howard Alteisen",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21627": {
           "Description": [
@@ -70081,7 +70081,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Nightmare Terror Capture",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21631": {
           "Description": [
@@ -70103,7 +70103,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Dealer Capture",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21634": {
           "Description": [
@@ -70125,7 +70125,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Cracked Lava",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21637": {
           "Description": [
@@ -70161,7 +70161,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Dragon of the Lake",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21642": {
           "Description": [
@@ -70183,7 +70183,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Lake of the Lake",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21645": {
           "Description": [
@@ -70205,7 +70205,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Lake Sambyon",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21648": {
           "Description": [
@@ -70241,7 +70241,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "In Mimic's Box",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21653": {
           "Description": [
@@ -70263,7 +70263,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21656": {
           "Description": [
@@ -70285,7 +70285,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "God's Baron",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21659": {
           "Description": [
@@ -70307,7 +70307,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sheets of Knowledge",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21662": {
           "Description": [
@@ -70329,7 +70329,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Old Magic Record",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21665": {
           "Description": [
@@ -70351,7 +70351,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Collection of Recyclables",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21668": {
           "Description": [
@@ -70373,7 +70373,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Surveillance and Punishment",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21671": {
           "Description": [
@@ -70395,7 +70395,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21674": {
           "Description": [
@@ -70417,7 +70417,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby by Death",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21677": {
           "Description": [
@@ -70439,7 +70439,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Seed of Control",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21680": {
           "Description": [
@@ -70475,7 +70475,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Poor Clown",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21685": {
           "Description": [
@@ -70497,7 +70497,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "One Little Worm",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21688": {
           "Description": [
@@ -70519,7 +70519,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "If you are alive, go to heaven",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21691": {
           "Description": [
@@ -70541,7 +70541,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Don't doubt",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21694": {
           "Description": [
@@ -70563,7 +70563,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Delicious, no poor soul",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21697": {
           "Description": [
@@ -70585,7 +70585,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Just empty armor",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21700": {
           "Description": [
@@ -70607,7 +70607,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Maybe a straight soul",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21703": {
           "Description": [
@@ -70629,7 +70629,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Knight's Nemesis",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21706": {
           "Description": [
@@ -70651,7 +70651,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21709": {
           "Description": [
@@ -70694,7 +70694,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Girl Who Leaves the Leaf",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21715": {
           "Description": [
@@ -70716,7 +70716,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21718": {
           "Description": [
@@ -70738,7 +70738,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The King of the World",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21721": {
           "Description": [
@@ -70760,7 +70760,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Lady with Leaves",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21724": {
           "Description": [
@@ -70782,7 +70782,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Dried Flower Bookmark",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21727": {
           "Description": [
@@ -70804,7 +70804,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Good ... muscles!",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21730": {
           "Description": [
@@ -70826,7 +70826,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21733": {
           "Description": [
@@ -70848,7 +70848,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21736": {
           "Description": [
@@ -70870,7 +70870,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Horse with Magic",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21739": {
           "Description": [
@@ -70892,7 +70892,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Poisonous Worm",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21742": {
           "Description": [
@@ -70914,7 +70914,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Incompetent idler",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21745": {
           "Description": [
@@ -70936,7 +70936,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Shell by appearance",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21748": {
           "Description": [
@@ -70958,7 +70958,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21751": {
           "Description": [
@@ -70980,7 +70980,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21754": {
           "Description": [
@@ -71002,7 +71002,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby the Deer Horn",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21757": {
           "Description": [
@@ -71024,7 +71024,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Stuck by the Razorhorn",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21760": {
           "Description": [
@@ -71046,7 +71046,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Morroc's Harassment",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21763": {
           "Description": [
@@ -71068,7 +71068,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Morroc's Farm",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21766": {
           "Description": [
@@ -71090,7 +71090,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Standby",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21769": {
           "Description": [
@@ -71112,7 +71112,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Little Naughty",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21772": {
           "Description": [
@@ -71141,7 +71141,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Angel's Form",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21776": {
           "Description": [
@@ -71163,7 +71163,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Blessing of Rest",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21779": {
           "Description": [
@@ -71185,7 +71185,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Joy of Servant",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21782": {
           "Description": [
@@ -71207,7 +71207,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Pure implementation",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21785": {
           "Description": [
@@ -71229,7 +71229,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Carat",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21788": {
           "Description": [
@@ -71244,7 +71244,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hate Meizhou Ross Hunt",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21790": {
           "Description": [
@@ -71259,7 +71259,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Strong Raidrick Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21792": {
           "Description": [
@@ -71274,7 +71274,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quick Raidrick Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21794": {
           "Description": [
@@ -71289,7 +71289,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunt the Wanderer of Anger",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21796": {
           "Description": [
@@ -71304,7 +71304,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Zombie Slitter Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21798": {
           "Description": [
@@ -71319,7 +71319,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Banshee Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21800": {
           "Description": [
@@ -71334,7 +71334,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Boss Necromancer Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21802": {
           "Description": [
@@ -71349,7 +71349,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "The Nightmare Terror Hunt of Wrath",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21804": {
           "Description": [
@@ -71364,7 +71364,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Boss Ancient Mimic Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21806": {
           "Description": [
@@ -71379,7 +71379,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Strong Deathword Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21808": {
           "Description": [
@@ -71394,7 +71394,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunt Benath of Wrath",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21810": {
           "Description": [
@@ -71409,7 +71409,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Dimit Hunt",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21812": {
           "Description": [
@@ -71424,7 +71424,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hurry's Ferrus Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21814": {
           "Description": [
@@ -71439,7 +71439,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sturdy Assassin's Hunt",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21816": {
           "Description": [
@@ -71454,7 +71454,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunt the Wanderer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21818": {
           "Description": [
@@ -71469,7 +71469,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Watcher",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21820": {
           "Description": [
@@ -71484,7 +71484,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hiding Boss Laurell Weinder",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21822": {
           "Description": [
@@ -71499,7 +71499,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Strong Cecil Damon",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21824": {
           "Description": [
@@ -71514,7 +71514,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quick Hill Wind Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21826": {
           "Description": [
@@ -71529,7 +71529,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sturdy Kobold Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21828": {
           "Description": [
@@ -71544,7 +71544,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Kobold Archer Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21830": {
           "Description": [
@@ -71559,7 +71559,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Sturdy Snowy Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21832": {
           "Description": [
@@ -71574,7 +71574,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Quick Ice Titan Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21834": {
           "Description": [
@@ -71589,7 +71589,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Isilla",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21836": {
           "Description": [
@@ -71604,7 +71604,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Boss Echio Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21838": {
           "Description": [
@@ -71619,7 +71619,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Agave Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21840": {
           "Description": [
@@ -71634,7 +71634,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Luciola Vespa",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21842": {
           "Description": [
@@ -71649,7 +71649,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Strong Pingucula Dark Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21844": {
           "Description": [
@@ -71664,7 +71664,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Fast Sentipede Hunting",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21846": {
           "Description": [
@@ -71679,7 +71679,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting Boss Dolomedes",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21848": {
           "Description": [
@@ -71694,7 +71694,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Falling Antlers Scarab",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21850": {
           "Description": [
@@ -71709,7 +71709,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Board Miming Hunt",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21852": {
           "Description": [
@@ -71724,7 +71724,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Hunting the Little Pathum of Wrath",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "21900": {
           "Description": [
@@ -72309,7 +72309,7 @@ define(function () {
         },
         "23019": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Sweets are my strength",
           "Description": [
@@ -72334,7 +72334,7 @@ define(function () {
         },
         "23022": {
           "IconName": "ico_vr.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Reset at 04:00",
           "Title": "[Standby] Criatura Business Manual",
           "Description": [
@@ -72863,7 +72863,7 @@ define(function () {
         },
         "23088": {
           "IconName": "ico_ev.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 04:00",
           "Title": "[Standby] Carrots are Precious",
           "Description": [
@@ -72919,8 +72919,8 @@ define(function () {
         },
         "23103": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "212",
-          "NpcPosX": "141",
+          "NpcPosY": 212,
+          "NpcPosX": 141,
           "NpcNavi": "icecastle",
           "NpcSpr": "4_EP19_IWIN",
           "Summary": "Talk to Kokoro",
@@ -72931,8 +72931,8 @@ define(function () {
         },
         "23104": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "212",
-          "NpcPosX": "141",
+          "NpcPosY": 212,
+          "NpcPosX": 141,
           "NpcNavi": "icecastle",
           "NpcSpr": "4_EP19_IWIN",
           "Summary": "Find the White Cat",
@@ -72943,8 +72943,8 @@ define(function () {
         },
         "23105": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "212",
-          "NpcPosX": "141",
+          "NpcPosY": 212,
+          "NpcPosX": 141,
           "NpcNavi": "icecastle",
           "NpcSpr": "4_EP19_IWIN",
           "Summary": "Find the White Cat again",
@@ -72955,8 +72955,8 @@ define(function () {
         },
         "23106": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "212",
-          "NpcPosX": "141",
+          "NpcPosY": 212,
+          "NpcPosX": 141,
           "NpcNavi": "icecastle",
           "NpcSpr": "4_EP19_IWIN",
           "Summary": "Find Leo and Aureli",
@@ -72975,8 +72975,8 @@ define(function () {
         },
         "23108": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "212",
-          "NpcPosX": "141",
+          "NpcPosY": 212,
+          "NpcPosX": 141,
           "NpcNavi": "icecastle",
           "NpcSpr": "4_EP19_IWIN",
           "Summary": "Talk to Aureli",
@@ -72987,8 +72987,8 @@ define(function () {
         },
         "23109": {
           "IconName": "ico_ep.bmp",
-          "NpcPosY": "212",
-          "NpcPosX": "141",
+          "NpcPosY": 212,
+          "NpcPosX": 141,
           "NpcNavi": "icecastle",
           "NpcSpr": "4_EP19_IWIN",
           "Summary": "Defeat 5 Yormungand Cult Ritualists",
@@ -72999,7 +72999,7 @@ define(function () {
         },
         "23110": {
           "IconName": "ico_dq.bmp",
-          "CoolTimeQuest": "1",
+          "CoolTimeQuest": 1,
           "Summary": "Resets at 04:00",
           "Title": "[Standby] Pulling Out Yormungand's Roots",
           "Description": [
@@ -73008,8 +73008,8 @@ define(function () {
         },
         "23111": {
           "IconName": "ico_dq.bmp",
-          "NpcPosY": "212",
-          "NpcPosX": "141",
+          "NpcPosY": 212,
+          "NpcPosX": 141,
           "NpcNavi": "icecastle",
           "NpcSpr": "4_EP19_IWIN",
           "Summary": "Defeat 15 Yormungand Cult Ritualists",
@@ -76055,7 +76055,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Upgrade Event timer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "60549": {
           "Description": [
@@ -77470,7 +77470,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Lunar New Year Timer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "60919": {
           "Description": [
@@ -78934,7 +78934,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Frantic Christmas: Merry Christmas",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "62360": {
           "Description": [
@@ -83114,7 +83114,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "2011 RWC Celebration",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "70021": {
           "Description": [
@@ -83241,7 +83241,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Amatsu - Daily Quest Timer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "70039": {
           "Description": [
@@ -83256,7 +83256,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Amatsu - Daily Quest Timer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "70041": {
           "Description": [
@@ -83271,7 +83271,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Amatsu - Daily Quest Timer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "70043": {
           "Description": [
@@ -83286,7 +83286,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Amatsu - Daily Quest Timer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "70045": {
           "Description": [
@@ -83539,7 +83539,7 @@ define(function () {
           ],
           "Summary": "Reset at 04:00",
           "Title": "Food Ingredient timer",
-          "CoolTimeQuest": "1"
+          "CoolTimeQuest": 1
         },
         "70101": {
           "Description": [
