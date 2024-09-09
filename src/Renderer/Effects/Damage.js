@@ -16,7 +16,6 @@ define(function( require )
 	// Load dependencies
 	var WebGL          = require('Utils/WebGL');
 	var Client         = require('Core/Client');
-	var Configs        = require('Core/Configs');
 	var Sprite         = require('Loaders/Sprite');
 	var Renderer       = require('Renderer/Renderer');
 	var SpriteRenderer = require('Renderer/SpriteRenderer');
@@ -63,14 +62,10 @@ define(function( require )
 	};
 
 
-	// Get the number of sprites to be used
-	var numberOfSprites;
-
-
 	/**
 	 * @var {string} Sprite of the damage sprite
 	 */
-	var _numbers;
+	var _numbers = new Array(12);
 	var _msgNames = {
 		0: 'miss',
 		1: 'guard',
@@ -99,9 +94,6 @@ define(function( require )
 	 */
 	Damage.init = function init( gl )
 	{
-		numberOfSprites = Configs.get('enableDmgSuffix') ? 12 : 10;
-		_numbers = new Array(numberOfSprites);
-
 		// Already loaded
 		if (_numbers[0] && _msg.miss && _msgBlue.miss) {
 			return;
@@ -128,7 +120,7 @@ define(function( require )
 			}
 
 			// Create SpriteSheet
-			for (var i = 0; i < numberOfSprites; ++i) {
+			for (var i = 0; i < 12; ++i) {
 				_numbers[i]  = sprNumbers.getCanvasFromFrame(i);
 			}
 
@@ -211,16 +203,14 @@ define(function( require )
 		var ctx     = canvas.getContext('2d');
 		var numbers;
 		var suffix = null;
-
-		if (numberOfSprites === 12) {
-			// Check for large numbers and convert accordingly
-			if (damage >= 100000000) {
-				damage = Math.floor(damage / 1000000);
-				suffix = 11; // 'M'
-			} else if (damage >= 1000000) {
-				damage = Math.floor(damage / 1000);
-				suffix = 10; // 'K'
-			}
+	
+		// Check for large numbers and convert accordingly
+		if (damage >= 100000000) {
+			damage = Math.floor(damage / 1000000);
+			suffix = 11; // 'M'
+		} else if (damage >= 1000000) {
+			damage = Math.floor(damage / 1000);
+			suffix = 10; // 'K'
 		}
 
 		numbers = damage.toString().split('');
