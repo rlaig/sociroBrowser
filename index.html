@@ -1,0 +1,68 @@
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+                <title>Sociro - v20240909</title>
+            </head>
+            <body>
+                <script>
+                    window.addEventListener("load", (event) => {
+                        window.ROConfig = {
+                            development: false, // don't need to compile javascript files in chrome app since it's already a package.
+							remoteClient:  "https://grf.rlaig.com/",
+                            servers: [
+                                {
+                                    display: 'Sociro',
+                                    desc: "Social Ragnarok Online",
+                                    address: 'rlaig.com',
+                                    port: 6900,
+                                    version: 55,
+                                    langtype: 1,
+                                    packetver: 20220406,
+                                    forceUseAddress: false,
+                                    socketProxy: "wss://rlaig.com:5999/",
+                                    packetKeys: false,
+									renewal: true
+                                },
+								{
+                                    display: 'sociro-beta-experiment',
+                                    desc: "Beta-Experimental",
+                                    address: 'rlaig.com',
+                                    port: 6900,
+                                    version: 55,
+                                    langtype: 1,
+                                    packetver: 20220406,
+                                    forceUseAddress: false,
+                                    socketProxy: "wss://rlaig.com:5999/",
+                                    packetKeys: false,
+									renewal: true
+                                },
+
+                            ],
+							version: 20240909.00,
+                            packetDump:  false,
+                            skipServerList:  false,
+                            skipIntro:       true,
+                            plugins: {
+                                KeyToMove: 'KeyToMove/KeyToMove',
+							},
+							clientHash: null,
+							enableCashShop: false,
+							enableBank: true,
+							enableMapName: true,
+                            enableRefineUI: true,
+                            enableDmgSuffix: true,
+							enableCheckAttendance: true,
+							CameraMaxZoomOut: 3,
+                            loadLua: true,
+                        };
+
+                        script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.src = 'Online.js';
+                        document.getElementsByTagName('body')[0].appendChild(script);
+                    });
+                </script>
+            </body>
+        </html>
