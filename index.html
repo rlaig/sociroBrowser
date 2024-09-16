@@ -2,6 +2,7 @@
         <!DOCTYPE html>
         <html>
             <head>
+                <link rel="manifest" href="robrowser.webmanifest">
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
                 <title>siro-client-v20240916</title>
             </head>
@@ -9,7 +10,7 @@
                 <script>
                     window.addEventListener("load", (event) => {
                         window.ROConfig = {
-                            development: false, // don't need to compile javascript files in chrome app since it's already a package.
+                            development: false,
 							remoteClient:  "https://grf.rlaig.com/",
                             servers: [
                                 {
@@ -40,11 +41,8 @@
 							CameraMaxZoomOut: 3,
                             loadLua: true,
                         };
-                        script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.src = 'Online.js';
-                        document.getElementsByTagName('body')[0].appendChild(script);
                     });
                 </script>
+                <script type="text/javascript" src="./Online.js"></script>
             </body>
         </html>
