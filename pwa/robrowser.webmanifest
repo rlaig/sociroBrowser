@@ -5,7 +5,7 @@
   "icons": [
       {
           "src": "src/UI/Components/Intro/images/icon.png",
-          "sizes": "65x64",
+          "sizes": "64x64",
           "type": "image/png"
       }
   ],
