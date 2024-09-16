@@ -7,6 +7,14 @@ For info on how to setup the client read the contents of our [Getting Started do
 
 All credits to the original owners/creators and the new ones.
 
+## DEMO
+
+[PLAY!](https://mrantares.github.io/roBrowserLegacy/)
+
+_Use `<Username>_M` or `<Username>_F` to register a male or a female account on the login screen._
+
+Visit [#robrowser-servers](https://discord.gg/MFtJj9n5Hr) for more live examples.
+
 ## Guide
 Checkout the [getting started guide](doc/README.md)
 

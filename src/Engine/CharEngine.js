@@ -193,14 +193,14 @@ define(function( require )
 		  * Later PACKETVERs have the char server handle this on initial connection,
 		  * so the button was removed, and we don't have to do anything here.
 		  */
-		if (PACKETVER.value < 20180124 && PACKETVER.value >= 20110309) {
-			sendPincodeRequest();
+		//if (PACKETVER.value < 20180124 && PACKETVER.value >= 20110309) {
+			//sendPincodeRequest(); // This causes duplicate packets, please fix
 
 			/**
 			 * TODO: rAthena says this button was removed with PACKETVER >= 20180124. See also: rathena/src/char/char.hpp
 			 * Need to find out where this button is supposed to be and place it on the correct screen.
 			 */
-		}
+		//}
 	}
 
 
@@ -584,11 +584,17 @@ define(function( require )
 	}
 
 	function onPincodeCheckSuccess(pkt) {
+		if(!PincodeWindow.__active && pkt.State == 0){
+			console.log("Pincode is disabled.");
+			return;
+		}
+		
 		PincodeWindow.remove();
+		
 		if (PACKETVER.value < 20110309) {
 			console.log("Pincode packet sent from server, but PACKETVER is too old. Ignoring.");
 			return;
-                }
+        }
 		PincodeWindow.onPincodeCheckRequest = onPincodeCheckRequest;
 		PincodeWindow.onUserPincodeResetReq = onUserPincodeResetReq;
 		PincodeWindow.onExitRequest = function(){
@@ -610,7 +616,7 @@ define(function( require )
 		 * S 08ba <AID>.L <new>.4B - set PIN
 		 * R 08b9 <seed>.L <AID>.L <state>.W
 		 *	State:
-		 *	0 = pin is correct
+		 *	0 = pin is correct OR pincode feature is disabled
 		 *	1 = ask for pin - client sends 0x8b8
 		 *	2 = create new pin - client sends 0x8ba
 		 *	3 = pin must be changed - client 0x8be
