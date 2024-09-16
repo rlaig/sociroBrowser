@@ -1,0 +1,16 @@
+{
+  "name": "roBrowser Progressive Web App",
+  "short_name": "roBrowser",
+  "description": "Progressive Web App for roBrowser.",
+  "icons": [
+      {
+          "src": "src/UI/Components/Intro/images/icon.png",
+          "sizes": "65x64",
+          "type": "image/png"
+      }
+  ],
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "theme_color": "#4e84e9",
+  "background_color": "#ffffff"
+}
