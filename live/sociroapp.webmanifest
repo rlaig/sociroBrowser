@@ -1,0 +1,16 @@
+{
+  "name": "Sociro",
+  "short_name": "Sociro",
+  "description": "Sociro - social ragnarok online",
+  "icons": [
+      {
+          "src": "icoX.png",
+          "sizes": "144x144",
+          "purpose": "any"
+      }
+  ],
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "theme_color": "#4e84e9",
+  "background_color": "#ffffff"
+}
