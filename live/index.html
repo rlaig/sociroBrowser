@@ -1,52 +1,18 @@
-
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <link rel="manifest" href="sociroapp.webmanifest">
-                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-                <title>sroclient20240917</title>
-                <script>
-                    window.addEventListener("load", (event) => {
-                        window.ROConfig = {
-                            development: false,
-							target: document.getElementById("browser"),
-							remoteClient:  "https://grf.rlaig.com/",
-                            servers: [
-                                {
-                                    display: 'Sociro',
-                                    desc: "Social Ragnarok Online",
-                                    address: 'rlaig.com',
-                                    port: 6900,
-                                    version: 55,
-                                    langtype: 1,
-                                    packetver: 20220406,
-                                    socketProxy: "wss://rlaig.com:5999/",
-                                    packetKeys: false,
-									renewal: true
-                                }
-                            ],
-							version: 20240917.00,
-                            packetDump: false,
-                            skipServerList: true,
-                            skipIntro: true,
-							clientHash: null,
-							enableCashShop: false,
-							enableBank: true,
-							enableMapName: true,
-                            enableRefineUI: true,
-                            enableDmgSuffix: true,
-							enableCheckAttendance: true,
-							CameraMaxZoomOut: 3,
-                            loadLua: true,
-                        };
-                        script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.src = 'Online.js';
-                        document.getElementsByTagName('body')[0].appendChild(script);
-                    }, false);
-                </script>
-			</head>
-            <body>
-				<div id="browser"></div>
-            </body>
-        </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>sro</title>
+  <style>
+    #browser {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="browser">
+    <iframe id="app"src="app.html"></iframe>
+  </div>
+</body>
+</html>
