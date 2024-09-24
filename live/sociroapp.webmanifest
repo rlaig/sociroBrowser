@@ -9,7 +9,7 @@
           "purpose": "any"
       }
   ],
-  "start_url": "app.html",
+  "start_url": "app.html?fullscreen=true",
   "display": "fullscreen",
   "theme_color": "#4e84e9",
   "background_color": "#ffffff"
