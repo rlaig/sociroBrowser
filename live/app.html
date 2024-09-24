@@ -47,24 +47,5 @@
             }, false);
         </script>
     </head>
-    <body>
-<script>
-  function toggleFullScreen() {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-    } else if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
-  document.addEventListener(
-    "touchstart",
-    (e) => {
-      if (e.touches.length === 3) {
-        toggleFullScreen();
-      }
-    },
-    false,
-  );
-</script>
-	</body>
+    <body></body>
 </html>
