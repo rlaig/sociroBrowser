@@ -70,6 +70,7 @@ define(function(require)
 			.on('mouseup',		function(e){ jQuery(e.target).removeClass('pressed'); })
 			.on('touchend',		function(e){ jQuery(e.target).removeClass('pressed'); });
 		
+		Context.requestFullScreen();
 	}
 	
 	
