@@ -9,11 +9,11 @@
 }
 
 #MobileUI #toggleUIButton{
-	font-size: 3cqb;
+	font-size: 2cqb;
 	top: 3px;
 	left: 3px;
-	width: 10cqb;
-	height: 10cqb;
+	width: 5cqb;
+	height: 5cqb;
 }
 
 #MobileUI .buttons{
@@ -34,7 +34,7 @@
 	margin: 15px 0px;
 }
 
-#MobileUI .disabled { visibility:visible; }
+#MobileUI .disabled { visibility:hidden; }
 
 #MobileUI #topBar{
 	left: 50%;
@@ -67,13 +67,13 @@
 }
 
 #MobileUI .primary{
-	font-size: 3cqb;
-	width: 11cqb;
-	height: 11cqb;
+	font-size: 2cqb;
+	width: 7cqb;
+	height: 7cqb;
 }
 
 #MobileUI .secondary{
-	font-size: 3cqb;
-	width: 10cqb;
-	height: 10cqb;
+	font-size: 2cqb;
+	width: 6cqb;
+	height: 6cqb;
 }
