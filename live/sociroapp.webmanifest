@@ -1,10 +1,10 @@
 {
-  "name": "Sociro",
-  "short_name": "Sociro",
-  "description": "Sociro - social ragnarok online",
+  "name": "sociRO",
+  "short_name": "sociRO",
+  "description": "sociRO - sRO",
   "icons": [
       {
-          "src": "icoX.png",
+          "src": "slogo.png",
           "sizes": "144x144",
           "purpose": "any"
       }
