@@ -9,7 +9,7 @@
 define(function(require)
 {
 	'use strict';
-	
+
 	var jQuery			= require('Utils/jquery');
 	var Context			= require('Core/Context');
 	var UIManager		= require('UI/UIManager');
@@ -26,12 +26,12 @@ define(function(require)
 	var Events          = require('Core/Events');
 	var htmlText		= require('text!./MobileUI.html');
 	var cssText			= require('text!./MobileUI.css');
-	
+
 	/**
 	* Create Component
 	*/
 	var MobileUI = new UIComponent('MobileUI', htmlText, cssText);
-	
+
 	/**
 	* @var {Preferences} window preferences
 	*/
@@ -43,11 +43,11 @@ define(function(require)
 		height: Renderer.height,
 		show: false,
 	}, 1.0);
-	
+
 	var showButtons = false;
 	var autoTargetTimer;
 	const C_AUTOTARGET_DELAY = 500; //in ms. Lower values increase targeting frequency, but might cause performance drop when there are many enemies around!
-	
+
 	/**
 	* Initialize UI
 	*/
@@ -57,24 +57,23 @@ define(function(require)
 		this.ui.find('#f10Button').click(				function(e){ keyPress(121);				stopPropagation(e);});
 		this.ui.find('#f12Button').click(				function(e){ keyPress(123);				stopPropagation(e);});
 		this.ui.find('#insButton').click(				function(e){ keyPress(45);				stopPropagation(e);});
-		
+
 		this.ui.find('#toggleTargetingButton').click(	function(e){ toggleTouchTargeting();	stopPropagation(e);});
 		this.ui.find('#toggleAutoFollowButton').click(	function(e){ toggleAutoFollow();		stopPropagation(e);});
 		this.ui.find('#toggleAutoTargetButton').click(	function(e){ toggleAutoTargeting();		stopPropagation(e);});
-		
+
 		this.ui.find('#attackButton').click(			function(e){ attackTargeted();			stopPropagation(e);});
-		
+
 		this.ui.find('.buttons')
 		.on('mousedown',	function(e){ jQuery(e.target).addClass('pressed'); })
 		.on('touchstart',	function(e){ jQuery(e.target).addClass('pressed'); })
 		.on('mouseup',		function(e){ jQuery(e.target).removeClass('pressed'); })
 		.on('touchend',		function(e){ jQuery(e.target).removeClass('pressed'); });
-		
-		makeDraggable(this.ui.find('#toggleUIButton'));
+
 		Context.requestFullScreen();
 	}
-	
-	
+
+
 	/**
 	* Toggles full screen display
 	*/
@@ -85,7 +84,7 @@ define(function(require)
 			Context.cancelFullScreen();
 		}
 	}
-	
+
 	/**
 	* Emulates a keypress event
 	*
@@ -99,61 +98,61 @@ define(function(require)
 			which: k
 		}));
 	}
-	
+
 	/**
 	* Toggles MobileUI button bars visibility (and thus buttons)
 	*/
 	function toggleButtons(){
 		if(showButtons){
-			
+
 			MobileUI.ui.find('#topBar').addClass('disabled');
 			MobileUI.ui.find('#leftBar').addClass('disabled');
 			MobileUI.ui.find('#rightBar').addClass('disabled');
-			
+
 			if(Session.TouchTargeting){
 				toggleTouchTargeting();
 			}
-			
+
 			showButtons = false;
 		} else {
-			
+
 			MobileUI.ui.find('#topBar').removeClass('disabled');
 			MobileUI.ui.find('#leftBar').removeClass('disabled');
 			MobileUI.ui.find('#rightBar').removeClass('disabled');
-			
+
 			showButtons = true;
 		}
 	}
-	
+
 	/**
 	* Toggles touch targeting
 	*/
 	function toggleTouchTargeting(){
 		if(Session.TouchTargeting){
-			
+
 			MobileUI.ui.find('#toggleTargetingButton').removeClass('active');
-			
+
 			MobileUI.ui.find('#toggleAutoFollowButton').addClass('disabled');
 			MobileUI.ui.find('#toggleAutoTargetButton').addClass('disabled');
 			MobileUI.ui.find('#attackButton').addClass('disabled');
-			
+
 			if(Session.AutoTargeting){
 				toggleAutoTargeting();
 			}
-			
+
 			Session.TouchTargeting = false;
 		} else {
-			
+
 			MobileUI.ui.find('#toggleTargetingButton').addClass('active');
-			
+
 			MobileUI.ui.find('#toggleAutoFollowButton').removeClass('disabled');
 			MobileUI.ui.find('#toggleAutoTargetButton').removeClass('disabled');
 			MobileUI.ui.find('#attackButton').removeClass('disabled');
-			
+
 			Session.TouchTargeting = true;
 		}
 	}
-	
+
 	/**
 	* Toggles automatic targeting
 	*/
@@ -184,21 +183,21 @@ define(function(require)
 			}
 		}
 	}
-	
+
 	/**
 	* Attacks a targeted enemy (if present)
 	*/
 	function attackTargeted(){
 		var main   = Session.Entity;
 		var pkt;
-		
+
 		var entityFocus = EntityManager.getFocusEntity();
-		
+
 		if(!entityFocus || entityFocus.action === entityFocus.ACTION.DIE){ //If no target, try picking one first
 			autoTarget();
 			entityFocus = EntityManager.getFocusEntity();
 		}
-		
+
 		if(entityFocus){
 			var out   = [];
 			var count = PathFinding.search(
@@ -207,12 +206,12 @@ define(function(require)
 				main.attack_range + 1,
 				out
 			);
-			
+
 			// Can't attack
 			if (!count) {
 				return true;
 			}
-			
+
 			if(PACKETVER.value >= 20180307) {
 				pkt        = new PACKET.CZ.REQUEST_ACT2();
 			} else {
@@ -220,16 +219,16 @@ define(function(require)
 			}
 			pkt.action    = 7;
 			pkt.targetGID = entityFocus.GID;
-			
+
 			// in range send packet
 			if (count < 2) {
 				Network.sendPacket(pkt);
 				return true;
 			}
-			
+
 			// Move to entity
 			Session.moveAction = pkt;
-			
+
 			if(PACKETVER.value >= 20180307) {
 				pkt         = new PACKET.CZ.REQUEST_MOVE2();
 			} else {
@@ -240,24 +239,24 @@ define(function(require)
 			Network.sendPacket(pkt);
 		}
 	}
-	
+
 	/**
 	* Automatically targeting the closest enemy
 	*/
 	function autoTarget(){
 		var Player = Session.Entity;
 		var Entity = Player.constructor;
-		
+
 		var entityFocus = EntityManager.getFocusEntity();
-		
+
 		var closestEntity = EntityManager.getClosestEntity(Player, Entity.TYPE_MOB);
-		
+
 		if( closestEntity){
-			
+
 			if( entityFocus && closestEntity.GID !== entityFocus.GID ){
 				entityFocus.onFocusEnd();
 				EntityManager.setFocusEntity(null);
-				
+
 				//closestEntity.onMouseDown();
 				closestEntity.onFocus();
 				EntityManager.setFocusEntity(closestEntity);
@@ -269,26 +268,26 @@ define(function(require)
 				//Same entity, nothing to do
 			}
 		}
-		
+
 		if(Session.AutoTargeting && Session.Playing){
 			startAutoTarget();
 		}
 	}
-	
+
 	/**
 	* Starting automatic targeting cycle
 	*/
 	function startAutoTarget(){
 		autoTargetTimer = window.setTimeout(autoTarget, C_AUTOTARGET_DELAY);
 	}
-	
+
 	/**
 	* Stopping automatic targeting cycle
 	*/
 	function stopAutoTarget(){
 		window.clearTimeout(autoTargetTimer);
 	}
-	
+
 	/**
 	* Stop event propagation
 	*/
@@ -296,7 +295,7 @@ define(function(require)
 		event.stopImmediatePropagation();
 		return false;
 	}
-	
+
 	/**
 	* Auto follow logic
 	*/
@@ -304,14 +303,14 @@ define(function(require)
 		if(Session.autoFollow){
 			var player = Session.Entity;
 			var target = Session.autoFollowTarget;
-			
+
 			var dx = Math.abs(player.position[0] - target.position[0]);
 			var dy = Math.abs(player.position[1] - target.position[1]);
-			
+
 			// Use square based range check instead of Pythagorean because of diagonals
 			if( dx>1 || dy>1 ){
 				var dest = [0,0];
-				
+
 				// If there is valid cell send move packet
 				if (checkFreeCell(Math.round(target.position[0]), Math.round(target.position[1]), 1, dest)) {
 					var pkt;
@@ -324,13 +323,13 @@ define(function(require)
 					Network.sendPacket(pkt);
 				}
 			}
-			
+
 			Events.setTimeout( onAutoFollow, 500);
 		} else {
 			MobileUI.ui.find('#toggleAutoFollowButton').removeClass('active');
 		}
 	}
-	
+
 	/**
 	* Search free cells around a position
 	*
@@ -344,7 +343,7 @@ define(function(require)
 		var _x, _y, r;
 		var d_x = Session.Entity.position[0] < x ? -1 : 1;
 		var d_y = Session.Entity.position[1] < y ? -1 : 1;
-		
+
 		// Search possible positions
 		for (r = 0; r <= range; ++r) {
 			for (_x = -r; _x <= r; ++_x) {
@@ -357,10 +356,10 @@ define(function(require)
 				}
 			}
 		}
-		
+
 		return false;
 	}
-	
+
 	/**
 	* Does a cell is free (walkable, and no entity on)
 	*
@@ -373,9 +372,9 @@ define(function(require)
 		if (!(Altitude.getCellType(x, y) & Altitude.TYPE.WALKABLE)) {
 			return false;
 		}
-		
+
 		var free = true;
-		
+
 		EntityManager.forEach(function(entity){
 			if (entity.objecttype != entity.constructor.TYPE_EFFECT &&
 				entity.objecttype != entity.constructor.TYPE_UNIT &&
@@ -385,13 +384,13 @@ define(function(require)
 					free = false;
 					return false;
 				}
-				
+
 				return true;
 			});
-			
+
 			return free;
 		}
-		
+
 		/**
 		* Apply preferences once append to body
 		*/
@@ -402,7 +401,7 @@ define(function(require)
 			} else {
 				this.ui.hide();
 			}
-			
+
 			this.ui.css({
 				top: 0,
 				left: 0,
@@ -411,7 +410,7 @@ define(function(require)
 				height: Renderer.height
 			});
 		};
-		
+
 		/**
 		* Process shortcut
 		*
@@ -430,16 +429,16 @@ define(function(require)
 				case 'TG':
 				toggleTouchTargeting();
 				break;
-				case 'AT':	
+				case 'AT':
 				toggleAutoTargeting();
 				break;
-				case 'ATK':	
+				case 'ATK':
 				attackTargeted();
 				break;
-				
+
 			}
 		};
-		
+
 		/**
 		* Removes MobileUI
 		*/
@@ -451,96 +450,22 @@ define(function(require)
 			_preferences.width = Renderer.width;
 			_preferences.height = Renderer.height;
 			_preferences.save();
-			
+
 			if(Session.AutoTargeting){
 				toggleAutoTargeting();
 			}
 		};
-		
+
 		/**
 		* Shows MobileUI
 		*/
 		MobileUI.show = function show() {
 			this.ui.show();
 		};
-		
-		/**
-		* Make MobileUI toggle Draggable
-		*/
-		function makeDraggable(elmnt) {
-			let pos1 = 0,
-			pos2 = 0,
-			pos3 = 0,
-			pos4 = 0;
-			
-			let dragHandle = elmnt.getElementsByClassName("drag-handle")[0];
-			
-			if (dragHandle !== undefined) {
-				dragHandle.onmousedown = dragMouseDown;
-				dragHandle.ontouchstart = dragMouseDown;
-			} else {
-				elmnt.onmousedown = dragMouseDown;
-				elmnt.ontouchstart = dragMouseDown; 
-			}
-			
-			function dragMouseDown(e) {
-				e = e || window.event;
-				if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
-					let evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
-					let touch = evt.touches[0] || evt.changedTouches[0];
-					x = touch.pageX;
-					y = touch.pageY;
-				} else if (e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover' || e.type == 'mouseout' || e.type == 'mouseenter' || e.type == 'mouseleave') {
-					x = e.clientX;
-					y = e.clientY;
-				}
-				pos3 = x;
-				pos4 = y;
-				document.onmouseup = closeDragElement;
-				document.ontouchend = closeDragElement;
-				document.onmousemove = elementDrag;
-				document.ontouchmove = elementDrag;
-			}
-			
-			function elementDrag(e) {
-				e = e || window.event;
-				e.preventDefault();
-				
-				//Get touch or click position
-				//https://stackoverflow.com/a/41993300/5078983
-				if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
-					let evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
-					let touch = evt.touches[0] || evt.changedTouches[0];
-					x = touch.pageX;
-					y = touch.pageY;
-				} else if (e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover' || e.type == 'mouseout' || e.type == 'mouseenter' || e.type == 'mouseleave') {
-					x = e.clientX;
-					y = e.clientY;
-				}
-				
-				// calculate the new cursor position:
-				pos1 = pos3 - x;
-				pos2 = pos4 - y;
-				pos3 = x;
-				pos4 = y;
-				// set the element's new position:
-				elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-				elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-			}
-			
-			function closeDragElement() {
-				// stop moving when mouse button is released:
-				document.onmouseup = null;
-				document.ontouchcancel = null; //added touch event
-				document.ontouchend = null; //added touch event
-				document.onmousemove = null;
-				document.ontouchmove = null; //added touch event
-			}
-		}
-		
+
 		/**
 		* Create component and export it
 		*/
 		return UIManager.addComponent(MobileUI);
 	});
-	
+
