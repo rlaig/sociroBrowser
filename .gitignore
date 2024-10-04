@@ -16,6 +16,8 @@
 /StrViewer.js
 /ThreadEventHandler.js
 /EffectViewer.js
+/live/download*
+/live/src
 
 # IDE files
 .idea/
