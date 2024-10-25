@@ -160,10 +160,6 @@ define(function(require)
 		var customname = '';
 		var hideslots = false;
 		
-		if(item.type == ItemType.WEAPON && item.location == 0){ //Pet Egg
-			hideslots = true;
-		}
-		
 		if(item.slot){
 
 			var very = '';
@@ -281,9 +277,14 @@ define(function(require)
 			default:
 				cardList.parent().hide();
 				break;
-
+			
+			case ItemType.ARMOR:
+				// Pet Egg check for old versions (before ItemType.PETEGG existed)
+				if (DB.isPetEgg(item.ITID)){
+					hideslots = true;
+				}
 			case ItemType.WEAPON:
-			case ItemType.EQUIP:
+			case ItemType.SHADOWGEAR:
 				if (hideslots){
 					cardList.parent().hide();
 					break;

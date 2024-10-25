@@ -1,7 +1,7 @@
 ## ROBrowser Legacy
 This is a continuation of [roBrowser](https://www.robrowser.com/) expanded with some features. This repo is not directly forked from the original repository due to safety concerns, but it is roBrowser.
 
-If you wish to discuss anything related to this project, or you want to join, contact us on Discord: https://discord.gg/8JdHwM4Kqm
+If you wish to discuss anything related to this project, or you want to join, contact us on [Discord](https://discord.gg/8JdHwM4Kqm) or in the [GIT Discussions](https://github.com/MrAntares/roBrowserLegacy/discussions)
 
 For info on how to setup the client read the contents of our [Getting Started doc](https://github.com/MrAntares/roBrowserLegacy/blob/master/doc/README.md). For the original branche's docs please visit the https://www.robrowser.com/ site.
 
@@ -13,7 +13,9 @@ All credits to the original owners/creators and the new ones.
 
 _Use `<Username>_M` or `<Username>_F` to register a male or a female account on the login screen._
 
-Visit [#robrowser-servers](https://discord.gg/MFtJj9n5Hr) for more live examples.
+More live examples:
+* [#robrowser-servers on Discord](https://discord.gg/MFtJj9n5Hr)
+* [roBrowserLegacy Servers on Discussions](https://github.com/MrAntares/roBrowserLegacy/discussions/categories/robrowserlegacy-servers)
 
 ## Guide
 Checkout the [getting started guide](doc/README.md)
@@ -37,4 +39,5 @@ roBrowser was started by this [awesome team](https://github.com/vthibault/roBrow
 
 ## Contact
 
-* Join us on [Discord](https://discord.gg/8JdHwM4Kqm)!
+* Join us on [Discord](https://discord.gg/8JdHwM4Kqm)
+* Or in the [GIT Discussions](https://github.com/MrAntares/roBrowserLegacy/discussions)
