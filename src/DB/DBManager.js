@@ -19,7 +19,6 @@ define(function (require) {
 	var Configs = require('Core/Configs');
 	var TextEncoding = require('Vendors/text-encoding');
 	var CLua = require('Vendors/wasmoon-lua5.1');
-	var fengari = require('Vendors/fengari-web');
 	var JobId = require('./Jobs/JobConst');
 	var ClassTable = require('./Jobs/JobNameTable');
 	var PaletteTable = require('./Jobs/PalNameTable');
@@ -67,7 +66,7 @@ define(function (require) {
 	var DB = {};
 
 	/**
-	 * Lua
+	 * @var {Object} lua instance
 	 */
 	var lua;
 	startLua();
@@ -126,28 +125,24 @@ define(function (require) {
 	var PetTalkTable = {};
 
 	/**
-	 * @var Attendance config
-	 * json object
+	 * @var {Object} CheckAttendanceTable Attendance config
 	 */
 	var CheckAttendanceTable = { Config: {}, Rewards: [] };
 
 	/**
-	 * @var buyingStoreItemList config
-	 * array
+	 * @var {Array }buyingStoreItemList Table
 	 */
 	var buyingStoreItemList = new Array();
 
 	/**
-	 * @var LaphineSys Table
-	 * json object
+	 * @var {Array} LaphineSysTable Table
 	 */
-	var LaphineSysTable = {};
+	var LaphineSysTable = [];
 
 	/**
-	 * @var LaphineUpg Table
-	 * json object
+	 * @var {Array} LaphineUpgTable Table
 	 */
-	var LaphineUpgTable = {};
+	var LaphineUpgTable = [];
 
 	/**
 	 * @var ItemDBName Table
@@ -159,7 +154,7 @@ define(function (require) {
 	 * @var ItemReform Table
 	 * json object
 	 */
-	var ItemReformTable = {};
+	var ItemReformTable = { ReformInfo: {}, ReformItemList: {} };
 
 	/**
 	 * @var SignBoardTranslated Table
@@ -200,20 +195,22 @@ define(function (require) {
 		loadTable('data/msgstringtable.txt', '#', 1, function (index, val) { MsgStringTable[index] = val; }, onLoad());
 		loadTable('data/resnametable.txt', '#', 2, function (index, key, val) { DB.mapalias[key] = val; }, onLoad());
 
+		// TODO: load these load files by PACKETVER
 		if (Configs.get('loadLua')) {
-			loadLuaFile('System/itemInfo.lub', function (json) { ItemTable = json; }, onLoad());
-			loadMapTbl('System/mapInfo_true_EN.lub', function (json) { for (const key in json) { if (json.hasOwnProperty(key)) { MapInfo[key] = json[key]; } } updateMapTable(); }, onLoad());
-			loadSignBoardData('System/Sign_Data_EN.lub', function (json) { SignBoardTranslatedTable = json; }, onLoad());
-			loadItemDBTable(DB.LUA_PATH + 'ItemDBNameTbl.lub', function (json) { ItemDBNameTbl = json; }, onLoad());
-			loadSignBoardList(DB.LUA_PATH + 'SignBoardList.lub', function (signBoardList) { SignBoardTable = signBoardList; }, onLoad());
+			loadItemInfo('System/itemInfo.lub', null, onLoad()); // 2012-04-10
 			loadLuaTable([DB.LUA_PATH + 'datainfo/accessoryid.lub', DB.LUA_PATH + 'datainfo/accname.lub'], 'AccNameTable', function (json) { HatTable = json; }, onLoad());
 			loadLuaTable([DB.LUA_PATH + 'datainfo/spriterobeid.lub', DB.LUA_PATH + 'datainfo/spriterobename.lub'], 'RobeNameTable', function (json) { RobeTable = json; }, onLoad());
 			loadLuaTable([DB.LUA_PATH + 'datainfo/npcidentity.lub', DB.LUA_PATH + 'datainfo/jobname.lub'], 'JobNameTable', function (json) { MonsterTable = json; }, onLoad());
 			loadLuaTable([DB.LUA_PATH + 'datainfo/enumvar.lub', DB.LUA_PATH + 'datainfo/addrandomoptionnametable.lub'], 'NameTable_VAR', function (json) { RandomOption = json; }, onLoad());
-			loadItemReformFile(DB.LUA_PATH + 'ItemReform/ItemReformSystem.lub', function (json) { ItemReformTable = json; }, onLoad());
 			loadLuaTable([DB.LUA_PATH + 'skillinfoz/skillid.lub', DB.LUA_PATH + 'skillinfoz/skilldescript.lub'], 'SKILL_DESCRIPT', function (json) { SkillDescription = json; }, onLoad());
-			loadLaphineSysFile(DB.LUA_PATH + 'datainfo/lapineddukddakbox.lub', function (laphinesys_list) { LaphineSysTable = laphinesys_list; }, onLoad());
-			loadLaphineUpgFile(DB.LUA_PATH + 'datainfo/LapineUpgradeBox.lub', function (laphineupg_list) { LaphineUpgTable = laphineupg_list; }, onLoad());
+			loadItemDBTable(DB.LUA_PATH + 'ItemDBNameTbl.lub', null, onLoad());
+			loadLaphineSysFile(DB.LUA_PATH + 'datainfo/lapineddukddakbox.lub', null, onLoad()); // 2017-06-14
+			loadLaphineUpgFile(DB.LUA_PATH + 'datainfo/lapineupgradebox.lub', null, onLoad()); // 2017-06-14
+			loadItemReformFile(DB.LUA_PATH + 'ItemReform/ItemReformSystem.lub', null, onLoad()); // 2021-10-18
+			loadMapTbl('System/mapInfo.lub', function (json) { for (const key in json) { if (json.hasOwnProperty(key)) { MapInfo[key] = json[key]; } } updateMapTable(); }, onLoad()); // 2019-06-05
+			loadSignBoardData('System/Sign_Data.lub', null, onLoad()); // this is not official, its a translation file
+			loadSignBoardList(DB.LUA_PATH + 'SignBoardList.lub', null, onLoad());
+			loadAttendanceFile('System/CheckAttendance.lub', null, onLoad());
 		} else {
 			loadTable('data/num2itemdisplaynametable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).unidentifiedDisplayName = val.replace(/_/g, " "); }, onLoad());
 			loadTable('data/num2itemresnametable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).unidentifiedResourceName = val; }, onLoad());
@@ -236,7 +233,6 @@ define(function (require) {
 		loadTable('data/dc_scream.txt', '\t', 1, function (index, val) { ScreamTable[index] = val; }, onLoad());
 
 		loadXMLFile('data/pettalktable.xml', function (json) { PetTalkTable = json["monster_talk_table"]; }, onLoad());
-		LoadAttendanceFile('System/CheckAttendance.lub', null, onLoad());
 
 		if (PACKETVER.value >= 20100427) {
 			loadTable('data/buyingstoreitemlist.txt', '#', 1, function (index, key) { buyingStoreItemList.push(parseInt(key, 10)); }, onLoad());
@@ -285,7 +281,8 @@ define(function (require) {
 	}
 
 
-	/* LoadXML to json object
+	/**
+	  * LoadXML to json object
 	*
 	* @param {string} filename to load
 	* @param {function} onEnd to run once the file is loaded
@@ -307,14 +304,15 @@ define(function (require) {
 		);
 	}
 
-	/* LoadAttendanceFile to json object
+	/**
+	* Load CheckAttendance file to object
 	*
 	* @param {string} filename to load
 	* @param {function} onEnd to run once the file is loaded
 	*
 	* @author alisonrag
 	*/
-	function LoadAttendanceFile(filename, callback, onEnd) {
+	function loadAttendanceFile(filename, callback, onEnd) {
 		Client.loadFile(filename,
 			async function (file) {
 				try {
@@ -338,18 +336,140 @@ define(function (require) {
 					// execute main lua function
 					lua.doStringSync(`main()`);
 				} catch (error) {
-					console.error('[LoadAttendanceFile] Error: ', error);
+					console.error('[loadAttendanceFile] Error: ', error);
 				} finally {
 					// release file from memmory
 					lua.unmountFile('CheckAttendance.lub');
+					// call onEnd
+					onEnd();
 				}
-				onEnd();
 			},
 			onEnd
 		);
 	}
 
-	/* load lapineddukddakbox.lub to json object
+	/* Load ItemInfo file to object
+	*
+	* @param {string} filename to load
+	* @param {function} onEnd to run once the file is loaded
+	*
+	* @author alisonrag
+	*/
+	function loadItemInfo(filename, callback, onEnd) {
+		Client.loadFile(filename,
+			async function (file) {
+				try {
+					console.log('Loading file "' + filename + '"...');
+					// check if file is ArrayBuffer and convert to Uint8Array if necessary
+					let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
+					// get context, a proxy. It will be used to interact with lua conveniently
+					const ctx = lua.ctx;
+					// create decoders
+					let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
+					let userStringDecoder = new TextEncoding.TextDecoder('euc-kr'); // TODO: Add keys to config
+					// create itemInfo required functions in context
+					ctx.AddItem = (ItemID, unidentifiedDisplayName, unidentifiedResourceName, identifiedDisplayName, identifiedResourceName, slotCount, ClassNum) => {
+						ItemTable[ItemID] = {
+							unidentifiedDisplayName: userStringDecoder.decode(unidentifiedDisplayName),
+							unidentifiedResourceName: iso88591Decoder.decode(unidentifiedResourceName),
+							identifiedDisplayName: userStringDecoder.decode(identifiedDisplayName),
+							identifiedResourceName: iso88591Decoder.decode(identifiedResourceName),
+							unidentifiedDescriptionName: [],
+							identifiedDescriptionName: [],
+							EffectID: null,
+							costume: null,
+							PackageID: null,
+							slotCount: slotCount,
+							ClassNum: ClassNum
+						};
+
+						return 1;
+					};
+					ctx.AddItemUnidentifiedDesc = (ItemID, v) => {
+						ItemTable[ItemID].unidentifiedDescriptionName.push(userStringDecoder.decode(v));
+						return 1;
+					};
+					ctx.AddItemIdentifiedDesc = (ItemID, v) => {
+						ItemTable[ItemID].identifiedDescriptionName.push(userStringDecoder.decode(v));
+						return 1;
+					};
+					ctx.AddItemEffectInfo = (ItemID, EffectID) => {
+						ItemTable[ItemID].EffectID = EffectID;
+						return 1;
+					};
+					ctx.AddItemIsCostume = (ItemID, costume) => {
+						ItemTable[ItemID].costume = costume;
+						return 1;
+					};
+					ctx.AddItemPackageID = (ItemID, PackageID) => {
+						ItemTable[ItemID].PackageID = PackageID;
+						return 1;
+					};
+					// mount file
+					lua.mountFile('iteminfo.lub', buffer);
+					// execute file
+					await lua.doFile('iteminfo.lub');
+					// create and execute our own main function
+					// this is necessary because some servers has main function on itemInfo.lub and others load it from itemInfo_f.lub
+					// doing this way we avoid to have to load the other file
+					// on my tests dont care if the main() is on itemInfo.lub or itemInfo_f.lub the content is always the same
+					lua.doStringSync(`
+						function main_item()
+							for ItemID, DESC in pairs(tbl) do
+								result, msg = AddItem(ItemID, DESC.unidentifiedDisplayName, DESC.unidentifiedResourceName, DESC.identifiedDisplayName, DESC.identifiedResourceName, DESC.slotCount, DESC.ClassNum)
+								if not result then
+								return false, msg
+								end
+								for k, v in pairs(DESC.unidentifiedDescriptionName) do
+								result, msg = AddItemUnidentifiedDesc(ItemID, v)
+								if not result then
+									return false, msg
+								end
+								end
+								for k, v in pairs(DESC.identifiedDescriptionName) do
+								result, msg = AddItemIdentifiedDesc(ItemID, v)
+								if not result then
+									return false, msg
+								end
+								end
+								if nil ~= DESC.EffectID then
+								result, msg = AddItemEffectInfo(ItemID, DESC.EffectID)
+								if not result then
+									return false, msg
+								end
+								end
+								if nil ~= DESC.costume then
+								result, msg = AddItemIsCostume(ItemID, DESC.costume)
+								if not result then
+									return false, msg
+								end
+								end
+								if nil ~= DESC.PackageID then
+								result, msg = AddItemPackageID(ItemID, DESC.PackageID)
+								if not result then
+									return false, msg
+								end
+								end
+							end
+							return true, "good"
+							end
+						main_item()
+						`);
+				} catch (error) {
+					console.error('[loadItemInfo] Error: ', error);
+				} finally {
+					// release file from memmory
+					lua.unmountFile('iteminfo.lub');
+					// call onEnd
+					onEnd();
+				}
+			},
+			onEnd
+		);
+	}
+
+	/**
+	 * load lapineddukddakbox.lub to array
 	 *
 	 * @param {string} filename to load
 	 * @param {function} callback to run once the file is loaded
@@ -358,130 +478,90 @@ define(function (require) {
 	 */
 	function loadLaphineSysFile(filename, callback, onEnd) {
 		Client.loadFile(filename,
-			async function (lua) {
-				console.log('Loading file "' + filename + '"...');
-				let laphinesys_list = new Array();
+			async function (file) {
 				try {
-					if (lua instanceof ArrayBuffer) {
-						lua = new TextDecoder('iso-8859-1').decode(lua);
-					}
+					console.log('Loading file "' + filename + '"...');
 
-					// load lua file
-					fengari.load(lua)();
+					// check if file is ArrayBuffer and convert to Uint8Array if necessary
+					let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
 
-					// Get the global table "tblLapineDdukddakBox"
-					fengari.lua.lua_getglobal(fengari.L, "tblLapineDdukddakBox");
+					// get context, a proxy. It will be used to interact with lua conveniently
+					const ctx = lua.ctx;
 
-					// Check if it's a table
-					if (!fengari.lua.lua_istable(fengari.L, -1)) {
-						console.log('[loadLapineFile] tblLapineDdukddakBox is not a table');
-						return;
-					}
+					// create decoders
+					let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
+					let userStringDecoder = new TextEncoding.TextDecoder('euc-kr'); // TODO: Add keys to config
 
-					// Get the "sources" table
-					fengari.lua.lua_getfield(fengari.L, -1, "sources");
+					// create required functions in context
+					ctx.AddLaphineSysItem = (key, ItemID, NeedCount, NeedRefineMin, NeedRefineMax, NeedSource_String) => {
+						let decoded_key = key && key.length > 1 ? iso88591Decoder.decode(key) : null;
+						let decoded_NeedSource_String = NeedSource_String && NeedSource_String.length > 1 ? userStringDecoder.decode(NeedSource_String) : "";
+						LaphineSysTable[decoded_key] = {
+							ItemID: ItemID,
+							NeedCount: NeedCount,
+							NeedRefineMin: NeedRefineMin,
+							NeedRefineMax: NeedRefineMax,
+							SourceItems: new Array(),
+							NeedSource_String: decoded_NeedSource_String
+						};
+						return 1;
+					};
 
-					// Check if "sources" is a table
-					if (!fengari.lua.lua_istable(fengari.L, -1)) {
-						console.log('[loadLapineFile] sources is not a table');
-						return;
-					}
+					ctx.AddLaphineSysSourceItem = (key, name, count, ItemID) => {
+						let decoded_key = key && key.length > 1 ? iso88591Decoder.decode(key) : null;
+						let decoded_name = name && name.length > 1 ? iso88591Decoder.decode(name) : "";
+						LaphineSysTable[decoded_key].SourceItems.push(
+							{
+								name: decoded_name,
+								count: count,
+								id: ItemID
+							}
+						);
+						return 1;
+					};
 
-					// Push nil key to start iteration
-					fengari.lua.lua_pushnil(fengari.L);
+					// mount file
+					lua.mountFile('lapineddukddakbox.lub', buffer);
 
-					// Iterate over the "sources" table
-					while (fengari.lua.lua_next(fengari.L, -2)) {
-						// get key (sourceId)
-						let sourceId = fengari.lua.lua_tojsstring(fengari.L, -2);
-						let source = { ItemID: 0, NeedCount: 0, NeedRefineMin: 0, NeedRefineMax: 0, SourceItems: new Array(), NeedSource_String: "" };
+					// execute file
+					await lua.doFile('lapineddukddakbox.lub');
 
-						// get ItemID
-						fengari.lua.lua_getfield(fengari.L, -1, "ItemID");
-						source.ItemID = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+					// create and execute our own main function
+					lua.doStringSync(`
+						function main_laphynesys()
+                            for key, value in pairs(tblLapineDdukddakBox.sources) do
+                                result, msg = AddLaphineSysItem(key, value.ItemID, value.NeedCount, value.NeedRefineMin, value.NeedRefineMax, value.NeedSource_String)
+                                if not result then
+                                    return false, msg
+                                end
+                                for _, item in ipairs(value.SourceItems) do
+                                    result, msg = AddLaphineSysSourceItem(key, item[1], item[2], item[3])
+                                    if not result then
+                                        return false, msg
+                                    end
 
-						// get NeedCount
-						fengari.lua.lua_getfield(fengari.L, -1, "NeedCount");
-						source.NeedCount = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+                                end
+                            end
+                        end
+                        main_laphynesys()
+					`);
 
-						// get NeedRefineMin
-						fengari.lua.lua_getfield(fengari.L, -1, "NeedRefineMin");
-						source.NeedRefineMin = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+				} catch (error) {
+					console.error('[loadLaphineSysFile] Error: ', error);
 
-						// get NeedRefineMax
-						fengari.lua.lua_getfield(fengari.L, -1, "NeedRefineMax");
-						source.NeedRefineMax = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// get NeedSource_String
-						fengari.lua.lua_getfield(fengari.L, -1, "NeedSource_String");
-						source.NeedSource_String = fengari.lua.lua_tojsstring(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// get SourceItems
-						fengari.lua.lua_getfield(fengari.L, -1, "SourceItems");
-
-						// Push nil key to start iteration
-						fengari.lua.lua_pushnil(fengari.L);
-
-						// iterate over SourceItems table
-						while (fengari.lua.lua_next(fengari.L, -2)) {
-							// create SourceItem object
-							let sourceItem = { name: "", count: 0, id: 0 };
-
-							// get SourceItem values
-							fengari.lua.lua_pushinteger(fengari.L, 1);
-							fengari.lua.lua_gettable(fengari.L, -2);
-							sourceItem.name = fengari.lua.lua_tojsstring(fengari.L, -1);
-							fengari.lua.lua_pop(fengari.L, 1);
-
-							fengari.lua.lua_pushinteger(fengari.L, 2);
-							fengari.lua.lua_gettable(fengari.L, -2);
-							sourceItem.count = fengari.lua.lua_tointeger(fengari.L, -1);
-							fengari.lua.lua_pop(fengari.L, 1);
-
-							fengari.lua.lua_pushinteger(fengari.L, 3);
-							fengari.lua.lua_gettable(fengari.L, -2);
-							sourceItem.id = fengari.lua.lua_tointeger(fengari.L, -1);
-							fengari.lua.lua_pop(fengari.L, 1);
-
-							// add sourceItem to SourceItems array
-							source.SourceItems.push(sourceItem);
-
-							// Pop the value and move to the next key
-							fengari.lua.lua_pop(fengari.L, 1);
-						}
-
-						// pop SourceItems
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// add source to lapine_list
-						laphinesys_list[sourceId] = source;
-
-						// Pop the value and move to the next key
-						fengari.lua.lua_pop(fengari.L, 1);
-					}
-
-					// pop table
-					fengari.lua.lua_pop(fengari.L, 1);
-
-					// clean lua stack
-					fengari.lua.lua_settop(fengari.L, 0);
+				} finally {
+					// release file from memmory
+					lua.unmountFile('lapineddukddakbox.lub');
+					// call onEnd
+					onEnd();
 				}
-				catch (hException) {
-					console.error('error: ', hException);
-				}
-				callback.call(null, laphinesys_list);
-				onEnd();
 			},
 			onEnd
 		);
 	};
 
-	/* load LapineUpgradeBox.lub to json object
+	/**
+	 *  load LapineUpgradeBox.lub to json object
 	 *
 	 * @param {string} filename to load
 	 * @param {function} callback to run once the file is loaded
@@ -490,128 +570,89 @@ define(function (require) {
 	 */
 	function loadLaphineUpgFile(filename, callback, onEnd) {
 		Client.loadFile(filename,
-			async function (lua) {
-				console.log('Loading file "' + filename + '"...');
-				let laphineupg_list = new Array();
+			async function (file) {
 				try {
-					if (lua instanceof ArrayBuffer) {
-						lua = new TextDecoder('iso-8859-1').decode(lua);
-					}
+					console.log('Loading file "' + filename + '"...');
 
-					// load lua file
-					fengari.load(lua)();
+					// check if file is ArrayBuffer and convert to Uint8Array if necessary
+					let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
 
-					// Get the global table "tblLapineUpgradeBox"
-					fengari.lua.lua_getglobal(fengari.L, "tblLapineUpgradeBox");
+					// get context, a proxy. It will be used to interact with lua conveniently
+					const ctx = lua.ctx;
 
-					// Check if it's a table
-					if (!fengari.lua.lua_istable(fengari.L, -1)) {
-						console.log('[loadLapineFile] tblLapineUpgradeBox is not a table');
-						return;
-					}
+					// create decoders
+					let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
+					let userStringDecoder = new TextEncoding.TextDecoder('euc-kr'); // TODO: Add keys to config
 
-					// Get the "targets" table
-					fengari.lua.lua_getfield(fengari.L, -1, "targets");
+					// create required functions in context
+					ctx.AddLaphineUpgradeItem = (key, ItemID, NeedCount, NeedRefineMin, NeedRefineMax, NeedSource_String, NeedOptionNumMin, NotSocketEnchantItem) => {
+						let decoded_key = key && key.length > 1 ? iso88591Decoder.decode(key) : null;
+						let decoded_NeedSource_String = NeedSource_String && NeedSource_String.length > 1 ? userStringDecoder.decode(NeedSource_String) : "";
 
-					// Check if "targets" is a table
-					if (!fengari.lua.lua_istable(fengari.L, -1)) {
-						console.log('[loadLapineFile] targets is not a table');
-						return;
-					}
+						LaphineUpgTable[decoded_key] = {
+							ItemID: ItemID,
+							NeedCount: NeedCount,
+							NeedRefineMin: NeedRefineMin,
+							NeedRefineMax: NeedRefineMax,
+							NeedOptionNumMin: NeedOptionNumMin,
+							NotSocketEnchantItem: NotSocketEnchantItem,
+							TargetItems: new Array(),
+							NeedSource_String: decoded_NeedSource_String
+						};
+						return 1;
+					};
 
-					// Push nil key to start iteration
-					fengari.lua.lua_pushnil(fengari.L);
+					ctx.AddLaphineUpgradeTargetItem = (key, name, ItemID) => {
+						let decoded_key = key && key.length > 1 ? iso88591Decoder.decode(key) : null;
+						let decoded_name = name && name.length > 1 ? iso88591Decoder.decode(name) : "";
+						LaphineUpgTable[decoded_key].TargetItems.push(
+							{
+								name: decoded_name,
+								id: ItemID
+							}
+						);
+						return 1;
+					};
 
-					// Iterate over the "targets" table
-					while (fengari.lua.lua_next(fengari.L, -2)) {
-						// get key (sourceId)
-						let targetId = fengari.lua.lua_tojsstring(fengari.L, -2);
-						let target = { ItemID: 0, NeedRefineMin: 0, NeedRefineMax: 0, NeedOptionNumMin: 0, NotSocketEnchantItem: false, TargetItems: new Array(), NeedSource_String: "" };
+					// mount file
+					lua.mountFile('lapineupgradebox.lub', buffer);
 
-						// get ItemID
-						fengari.lua.lua_getfield(fengari.L, -1, "ItemID");
-						target.ItemID = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+					// execute file
+					await lua.doFile('lapineupgradebox.lub');
 
-						// get NeedRefineMin
-						fengari.lua.lua_getfield(fengari.L, -1, "NeedRefineMin");
-						target.NeedRefineMin = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+					// create and execute our own main function
+					lua.doStringSync(`
+						function main_laphyneupg()
+                            for key, value in pairs(tblLapineUpgradeBox.targets) do
+                                result, msg = AddLaphineUpgradeItem(key, value.ItemID, value.NeedCount, value.NeedRefineMin, value.NeedRefineMax, value.NeedSource_String, value.NeedOptionNumMin, value.NotSocketEnchantItem)
+                                if not result then
+                                    return false, msg
+                                end
+                                for _, item in ipairs(value.TargetItems) do
+                                    result, msg = AddLaphineUpgradeTargetItem(key, item[1], item[2])
+                                    if not result then
+                                        return false, msg
+                                    end
 
-						// get NeedRefineMax
-						fengari.lua.lua_getfield(fengari.L, -1, "NeedRefineMax");
-						target.NeedRefineMax = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+                                end
+                            end
+                        end
+                        main_laphyneupg()
+					`);
 
-						// get NeedOptionNumMin
-						fengari.lua.lua_getfield(fengari.L, -1, "NeedOptionNumMin");
-						target.NeedOptionNumMin = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+				} catch (error) {
+					console.error('[loadLaphineUpgFile] Error: ', error);
 
-						// get NotSocketEnchantItem
-						fengari.lua.lua_getfield(fengari.L, -1, "NotSocketEnchantItem");
-						target.NotSocketEnchantItem = fengari.lua.lua_toboolean(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// get NeedSource_String
-						fengari.lua.lua_getfield(fengari.L, -1, "NeedSource_String");
-						target.NeedSource_String = fengari.lua.lua_tojsstring(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// get TargetItems
-						fengari.lua.lua_getfield(fengari.L, -1, "TargetItems");
-
-						// Push nil key to start iteration
-						fengari.lua.lua_pushnil(fengari.L);
-
-						// iterate over TargetItems table
-						while (fengari.lua.lua_next(fengari.L, -2)) {
-							// create TargetItems object
-							let targetItem = { name: "", id: 0 };
-
-							// get TargetItem values
-							fengari.lua.lua_pushinteger(fengari.L, 1);
-							fengari.lua.lua_gettable(fengari.L, -2);
-							targetItem.name = fengari.lua.lua_tojsstring(fengari.L, -1);
-							fengari.lua.lua_pop(fengari.L, 1);
-
-							fengari.lua.lua_pushinteger(fengari.L, 2);
-							fengari.lua.lua_gettable(fengari.L, -2);
-							targetItem.id = fengari.lua.lua_tointeger(fengari.L, -1);
-							fengari.lua.lua_pop(fengari.L, 1);
-
-							// add targetItem to TargetItems array
-							target.TargetItems.push(targetItem);
-
-							// Pop the value and move to the next key
-							fengari.lua.lua_pop(fengari.L, 1);
-						}
-
-						// pop TargetItems
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// add target to lapine_list
-						laphineupg_list[targetId] = target;
-
-						// Pop the value and move to the next key
-						fengari.lua.lua_pop(fengari.L, 1);
-					}
-
-					// pop table
-					fengari.lua.lua_pop(fengari.L, 1);
-
-					// clean lua stack
-					fengari.lua.lua_settop(fengari.L, 0);
+				} finally {
+					// release file from memmory
+					lua.unmountFile('lapineupgradebox.lub');
+					// call onEnd
+					onEnd();
 				}
-				catch (hException) {
-					console.error('error: ', hException);
-				}
-				callback.call(null, laphineupg_list);
-				onEnd();
 			},
 			onEnd
 		);
-	};
+	}
 
 	/**
 	 * Loads ItemDBNameTbl.lub which is used in newer UI System (holds ItemDBName and ItemID)
@@ -623,58 +664,58 @@ define(function (require) {
 	 */
 	function loadItemDBTable(filename, callback, onEnd) {
 		Client.loadFile(filename,
-			async function (lua) {
-				console.log('Loading file "' + filename + '"...');
-				let json = {};
-
+			async function (file) {
 				try {
-					if (lua instanceof ArrayBuffer) {
-						lua = new TextDecoder('iso-8859-1').decode(lua);
-					}
+					console.log('Loading file "' + filename + '"...');
 
-					// Load lua file
-					fengari.load(lua)();
+					// check if file is ArrayBuffer and convert to Uint8Array if necessary
+					let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
 
-					// Get the global table "ItemDBNameTbl"
-					fengari.lua.lua_getglobal(fengari.L, "ItemDBNameTbl");
+					// get context, a proxy. It will be used to interact with lua conveniently
+					const ctx = lua.ctx;
 
-					// Check if it's a table
-					if (!fengari.lua.lua_istable(fengari.L, -1)) {
-						console.log('[loadItemDBTable] ItemDBNameTbl is not a table');
-						return;
-					}
+					// create decoders
+					let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
 
-					// Push nil key to start iteration
-					fengari.lua.lua_pushnil(fengari.L);
+					// create required functions in context
+					ctx.AddDBItemName = (baseItem, itemID) => {
+						let decoded_baseItem = baseItem && baseItem.length > 1 ? iso88591Decoder.decode(baseItem) : null;
+						ItemDBNameTbl[decoded_baseItem] = itemID;
+						return 1;
+					};
 
-					// Iterate over the "ItemDBNameTbl" table
-					while (fengari.lua.lua_next(fengari.L, -2)) {
-						// get key (BaseItem)
-						let baseItem = fengari.lua.lua_tojsstring(fengari.L, -2);
-						// get value (ItemID)
-						let itemID = fengari.lua.lua_tointeger(fengari.L, -1);
+					// mount file
+					lua.mountFile('ItemDBNameTbl.lub', buffer);
 
-						// add to json object
-						json[baseItem] = itemID;
+					// execute file
+					await lua.doFile('ItemDBNameTbl.lub');
 
-						// Pop the value and move to the next key
-						fengari.lua.lua_pop(fengari.L, 1);
-					}
+					// create and execute our own main function
+					lua.doStringSync(`
+						function main_itemDBTable()
+                            for key, value in pairs(ItemDBNameTbl) do
+                                result, msg = AddDBItemName(key, value)
+                                if not result then
+                                    return false, msg
+                                end
+                        	end
+						end
+                        main_itemDBTable()
+					`);
 
-					// pop table
-					fengari.lua.lua_pop(fengari.L, 1);
+				} catch (error) {
+					console.error('[loadItemDBTable] Error: ', error);
 
-					// clean lua stack
-					fengari.lua.lua_settop(fengari.L, 0);
-				} catch (hException) {
-					console.error('error: ', hException);
+				} finally {
+					// release file from memmory
+					lua.unmountFile('ItemDBNameTbl.lub');
+					// call onEnd
+					onEnd();
 				}
-				callback.call(null, json);
-				onEnd();
 			},
 			onEnd
 		);
-	};
+	}
 
 	/**
 	 * Loads ItemReformSystem.lub file into json content.
@@ -686,151 +727,125 @@ define(function (require) {
 	 */
 	function loadItemReformFile(filename, callback, onEnd) {
 		Client.loadFile(filename,
-			async function (lua) {
-				console.log('Loading file "' + filename + '"...');
-				let json = { ReformInfo: {}, ReformItemList: {} };
-
+			async function (file) {
 				try {
-					if (lua instanceof ArrayBuffer) {
-						lua = new TextDecoder('iso-8859-1').decode(lua);
+					console.log('Loading file "' + filename + '"...');
+
+					// check if file is ArrayBuffer and convert to Uint8Array if necessary
+					let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
+
+					// get context, a proxy. It will be used to interact with lua conveniently
+					const ctx = lua.ctx;
+
+					// create decoders
+					let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
+
+					// create required functions in context
+					ctx.AddReformInfo = (key, BaseItem, ResultItem, NeedRefineMin, NeedRefineMax, NeedOptionNumMin, IsEmptySocket, ChangeRefineValue, RandomOptionCode, PreserveSocketItem, PreserveGrade) => {
+						let decoded_BaseItem = BaseItem && BaseItem.length > 1 ? iso88591Decoder.decode(BaseItem) : null;
+						let decoded_ResultItem = ResultItem && ResultItem.length > 1 ? iso88591Decoder.decode(ResultItem) : null;
+						let decoded_RandomOptionCode = RandomOptionCode && RandomOptionCode.length > 1 ? iso88591Decoder.decode(RandomOptionCode) : null;
+
+						ItemReformTable.ReformInfo[key] = {
+							BaseItem: decoded_BaseItem,
+							BaseItemId: DB.getItemIdfromBase(decoded_BaseItem),
+							ResultItem: decoded_ResultItem,
+							ResultItemId: DB.getItemIdfromBase(decoded_ResultItem),
+							NeedRefineMin: NeedRefineMin,
+							NeedRefineMax: NeedRefineMax,
+							NeedOptionNumMin: NeedOptionNumMin,
+							IsEmptySocket: IsEmptySocket,
+							ChangeRefineValue: ChangeRefineValue,
+							RandomOptionCode: decoded_RandomOptionCode,
+							PreserveSocketItem: PreserveSocketItem,
+							PreserveGrade: PreserveGrade,
+							Materials: [],
+							InformationString: [],
+						};
+						return 1;
+					};
+
+					ctx.ReformInfoAddInformationString = (key, string) => {
+						let decoded_string = string && string.length > 1 ? iso88591Decoder.decode(string) : null;
+						ItemReformTable.ReformInfo[key].InformationString.push(decoded_string);
+						return 1;
 					}
 
-					// Load lua file
-					fengari.load(lua)();
-
-					// Helper function to safely get Lua field values
-					function getLuaField(fieldName, convertFunc) {
-						fengari.lua.lua_getfield(fengari.L, -1, fieldName);
-						const value = convertFunc(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
-						return value;
-					}
-
-					// Helper function to push and check table field
-					function pushFieldAndCheck(tableName) {
-						fengari.lua.lua_getglobal(fengari.L, tableName);
-						if (!fengari.lua.lua_istable(fengari.L, -1)) {
-							console.error(`[loadItemReformFile] ${tableName} is not a table`);
-							fengari.lua.lua_pop(fengari.L, 1);
-							return false;
-						}
-						return true;
-					}
-
-					// Helper function to get the keys of a Lua table
-					function getTableKeys() {
-						let keys = [];
-						fengari.lua.lua_pushnil(fengari.L); // Push nil to start iteration
-						while (fengari.lua.lua_next(fengari.L, -2)) {
-							keys.push(fengari.lua.lua_tointeger(fengari.L, -2));
-							fengari.lua.lua_pop(fengari.L, 1); // Remove value, keep key for next iteration
-						}
-						return keys.sort((a, b) => a - b); // Sort keys in ascending order
-					}
-
-					// Process ReformInfo table
-					if (pushFieldAndCheck("ReformInfo")) {
-						const reformKeys = getTableKeys(); // Get sorted keys
-						reformKeys.forEach(reformId => {
-							fengari.lua.lua_pushinteger(fengari.L, reformId);
-							fengari.lua.lua_gettable(fengari.L, -2);
-
-							let itemInfo = {
-								BaseItem: "",
-								BaseItemId: 0,
-								ResultItem: "",
-								ResultItemId: 0,
-								Materials: [],
-								NeedRefineMin: 0,
-								NeedRefineMax: 0,
-								NeedOptionNumMin: 0,
-								IsEmptySocket: false,
-								ChangeRefineValue: 0,
-								RandomOptionCode: "",
-								PreserveSocketItem: false,
-								PreserveGrade: false,
-								InformationString: [],
-							};
-
-							// Populate itemInfo fields
-							itemInfo.BaseItem = getLuaField("BaseItem", fengari.lua.lua_tojsstring);
-							itemInfo.BaseItemId = DB.getItemIdfromBase(itemInfo.BaseItem);
-							itemInfo.ResultItem = getLuaField("ResultItem", fengari.lua.lua_tojsstring);
-							itemInfo.ResultItemId = DB.getItemIdfromBase(itemInfo.ResultItem);
-							itemInfo.NeedRefineMin = getLuaField("NeedRefineMin", fengari.lua.lua_tointeger);
-							itemInfo.NeedRefineMax = getLuaField("NeedRefineMax", fengari.lua.lua_tointeger);
-							itemInfo.NeedOptionNumMin = getLuaField("NeedOptionNumMin", fengari.lua.lua_tointeger);
-							itemInfo.IsEmptySocket = getLuaField("IsEmptySocket", fengari.lua.lua_toboolean);
-							itemInfo.ChangeRefineValue = getLuaField("ChangeRefineValue", fengari.lua.lua_tointeger);
-							itemInfo.RandomOptionCode = getLuaField("RandomOptionCode", fengari.lua.lua_tojsstring);
-							itemInfo.PreserveSocketItem = getLuaField("PreserveSocketItem", fengari.lua.lua_toboolean);
-							itemInfo.PreserveGrade = getLuaField("PreserveGrade", fengari.lua.lua_toboolean);
-
-							// Get InformationString
-							fengari.lua.lua_getfield(fengari.L, -1, "InformationString");
-							if (fengari.lua.lua_istable(fengari.L, -1)) {
-								const infoKeys = getTableKeys();
-								infoKeys.forEach(key => {
-									fengari.lua.lua_pushinteger(fengari.L, key);
-									fengari.lua.lua_gettable(fengari.L, -2);
-									itemInfo.InformationString.push(fengari.lua.lua_tojsstring(fengari.L, -1));
-									fengari.lua.lua_pop(fengari.L, 1);
-								});
+					ctx.ReformInfoAddMaterial = (key, Material, Amount) => {
+						let decoded_Material = Material && Material.length > 1 ? iso88591Decoder.decode(Material) : null;
+						ItemReformTable.ReformInfo[key].Materials.push(
+							{
+								Material: decoded_Material,
+								Amount: Amount,
+								MaterialItemID: DB.getItemIdfromBase(decoded_Material)
 							}
-							fengari.lua.lua_pop(fengari.L, 1);
-
-							// Get Materials
-							fengari.lua.lua_getfield(fengari.L, -1, "Material");
-							if (fengari.lua.lua_istable(fengari.L, -1)) {
-								fengari.lua.lua_pushnil(fengari.L); // Push nil to start iteration
-								while (fengari.lua.lua_next(fengari.L, -2)) {
-									let materialName = fengari.lua.lua_tojsstring(fengari.L, -2); // Key of the current table entry
-									let materialAmount = fengari.lua.lua_tointeger(fengari.L, -1); // Value of the current table entry
-									let materialItemId = DB.getItemIdfromBase(materialName);
-									itemInfo.Materials.push({ Material: materialName, Amount: materialAmount, MaterialItemID: materialItemId });
-									fengari.lua.lua_pop(fengari.L, 1); // Remove value, keep key for next iteration
-								}
-							}
-							fengari.lua.lua_pop(fengari.L, 1);
-
-							// Add itemInfo to ReformInfo
-							json.ReformInfo[reformId] = itemInfo;
-
-							// Pop the value and move to the next key
-							fengari.lua.lua_pop(fengari.L, 1);
-						});
-						fengari.lua.lua_pop(fengari.L, 1);  // Pop ReformInfo table
+						);
+						return 1;
 					}
 
-					// Process ReformItemList table
-					if (pushFieldAndCheck("ReformItemList")) {
-						fengari.lua.lua_pushnil(fengari.L); // Push nil to start iteration
-						while (fengari.lua.lua_next(fengari.L, -2)) {
-							let reformListName = fengari.lua.lua_tojsstring(fengari.L, -2);
-							let reformItems = [];
+					ctx.AddReformItem = (baseItem, itemID) => {
+						let decoded_baseItem = baseItem && baseItem.length > 1 ? iso88591Decoder.decode(baseItem) : null;
+						if (!ItemReformTable.ReformItemList[decoded_baseItem])
+							ItemReformTable.ReformItemList[decoded_baseItem] = [];
+						ItemReformTable.ReformItemList[decoded_baseItem].push(itemID);
+						return 1;
+					};
 
-							// Get sorted keys for the item list
-							fengari.lua.lua_pushnil(fengari.L);
-							while (fengari.lua.lua_next(fengari.L, -2)) {
-								let itemId = fengari.lua.lua_tointeger(fengari.L, -1);
-								reformItems.push(itemId);
-								fengari.lua.lua_pop(fengari.L, 1);
-							}
-							json.ReformItemList[reformListName] = reformItems.sort((a, b) => a - b);
-							fengari.lua.lua_pop(fengari.L, 1);  // Pop sub-table
-						}
-						fengari.lua.lua_pop(fengari.L, 1);  // Pop ReformItemList table
-					}
+					// mount file
+					lua.mountFile('ItemReformSystem.lub', buffer);
 
-					// Clean Lua stack
-					fengari.lua.lua_settop(fengari.L, 0);
-				} catch (e) {
-					console.error('Error:', e);
+					// execute file
+					await lua.doFile('ItemReformSystem.lub');
+
+					// create and execute our own main function
+					lua.doStringSync(`
+						function main_itemReform()
+							for key, value in pairs(ReformInfo) do
+								result, msg = AddReformInfo(key, value.BaseItem, value.ResultItem, value.NeedRefineMin, value.NeedRefineMax, value.NeedOptionNumMin, value.IsEmptySocket, value.ChangeRefineValue, value.RandomOptionCode, value.PreserveSocketItem, value.PreserveGrade)
+								if not result then
+									return false, msg
+								end
+								if type(value.InformationString) == "table" then
+									for _, info in pairs(value.InformationString) do
+										result, msg = ReformInfoAddInformationString(key, info)
+										if not result then
+											return false, msg
+										end
+									end
+								end
+								if type(value.Material) == "table" then
+									for material, quantity in pairs(value.Material) do
+										result, msg = ReformInfoAddMaterial(key, material, quantity)
+										if not result then
+											return false, msg
+										end
+									end
+								end
+							end
+							for key, itemList in pairs(ReformItemList) do
+								for index, value in ipairs(itemList) do
+									result, msg = AddReformItem(key, value)
+									if not result then
+										return false, msg
+									end
+								end
+							end
+						end
+                        main_itemReform()
+					`);
+				} catch (error) {
+					console.error('[loadItemReformFile] Error: ', error);
+
+				} finally {
+					// release file from memmory
+					lua.unmountFile('ItemReformSystem.lub');
+					// call onEnd
+					onEnd();
 				}
-				callback.call(null, json);
-				onEnd();
-			}, onEnd);
-	};
+			},
+			onEnd
+		);
+	}
 
 	/**
 	 * Loads the System/Sign_Data_EN.lub to json object.
@@ -841,50 +856,60 @@ define(function (require) {
 	 * @return {void}
 	 */
 	function loadSignBoardData(filename, callback, onEnd) {
-		Client.loadFile(filename, async function (lua) {
-			console.log('Loading file "' + filename + '"...');
-			let json = {};
+		Client.loadFile(filename,
+			async function (file) {
+				try {
+					console.log('Loading file "' + filename + '"...');
 
-			try {
-				if (lua instanceof ArrayBuffer) {
-					lua = new TextDecoder('iso-8859-1').decode(lua);
+					// check if file is ArrayBuffer and convert to Uint8Array if necessary
+					let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
+
+					// get context, a proxy. It will be used to interact with lua conveniently
+					const ctx = lua.ctx;
+
+					// create decoders
+					let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
+
+					// create required functions in context
+					ctx.AddSignBoardData = (key, translation) => {
+						let decoded_key = key && key.length > 1 ? iso88591Decoder.decode(key) : null;
+						let decoded_translation = translation && translation.length > 1 ? iso88591Decoder.decode(translation) : null;
+						SignBoardTranslatedTable[decoded_key] = decoded_translation;
+						return 1;
+					};
+
+					// mount file
+					lua.mountFile('Sign_Data.lub', buffer);
+
+					// execute file
+					await lua.doFile('Sign_Data.lub');
+
+					// create and execute our own main function
+					lua.doStringSync(`
+						function main_SignBoardData()
+                            for key, value in pairs(SignBoardData) do
+                                result, msg = AddSignBoardData(key, value)
+                                if not result then
+                                    return false, msg
+                                end
+                        	end
+						end
+                        main_SignBoardData()
+					`);
+
+				} catch (error) {
+					console.error('[loadSignBoardData] Error: ', error);
+
+				} finally {
+					// release file from memmory
+					lua.unmountFile('Sign_Data.lub');
+					// call onEnd
+					onEnd();
 				}
-
-				// Load the Lua file
-				fengari.load(lua)();
-
-				// Get the global table "SignBoardData"
-				fengari.lua.lua_getglobal(fengari.L, "SignBoardData");
-
-				// Check if it's a table
-				if (!fengari.lua.lua_istable(fengari.L, -1)) {
-					console.log('[loadSignBoardData] SignBoardData is not a table');
-					return;
-				}
-
-				// Push nil key to start iteration
-				fengari.lua.lua_pushnil(fengari.L);
-
-				// Iterate over the "SignBoardData" table
-				while (fengari.lua.lua_next(fengari.L, -2)) {
-					let key = fengari.lua.lua_tojsstring(fengari.L, -2);
-					let value = fengari.lua.lua_tojsstring(fengari.L, -1);
-					json[key] = value;
-
-					// Pop the value and move to the next key
-					fengari.lua.lua_pop(fengari.L, 1);
-				}
-
-				// Clean Lua stack
-				fengari.lua.lua_settop(fengari.L, 0);
-			} catch (hException) {
-				console.error('error: ', hException);
-			}
-
-			callback.call(null, json);
-			onEnd();
-		}, onEnd);
-	};
+			},
+			onEnd
+		);
+	}
 
 	/**
 	 * Load SignBoardList.lub to JSON object
@@ -896,111 +921,85 @@ define(function (require) {
 	 */
 	function loadSignBoardList(filename, callback, onEnd) {
 		Client.loadFile(filename,
-			async function (lua) {
-				console.log('Loading file "' + filename + '"...');
-				let signBoardList = [];
-
+			async function (file) {
 				try {
-					if (lua instanceof ArrayBuffer) {
-						lua = new TextDecoder('iso-8859-1').decode(lua);
-					}
+					console.log('Loading file "' + filename + '"...');
 
-					// Load the Lua file
-					fengari.load(lua)();
+					// create signboard list
+					let signBoardList = [];
 
-					// Get the global table "SignBoardList"
-					fengari.lua.lua_getglobal(fengari.L, "SignBoardList");
+					// check if file is ArrayBuffer and convert to Uint8Array if necessary
+					let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
 
-					// Check if it's a table
-					if (!fengari.lua.lua_istable(fengari.L, -1)) {
-						console.log('[loadSignBoardList] SignBoardList is not a table');
-						return;
-					}
+					// get context, a proxy. It will be used to interact with lua conveniently
+					const ctx = lua.ctx;
 
-					// Push nil key to start iteration
-					fengari.lua.lua_pushnil(fengari.L);
+					// create decoders
+					let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
 
-					// Iterate over the "SignBoardList" table
-					while (fengari.lua.lua_next(fengari.L, -2)) {
-						let entry = {};
+					// create required functions in context
+					ctx.AddSignBoard = (mapname, x, y, height, type, icon_location, description, color) => {
+						let decoded_mapname = mapname && mapname.length > 1 ? iso88591Decoder.decode(mapname) : null;
+						let decoded_icon_location = icon_location && icon_location.length > 1 ? iso88591Decoder.decode(icon_location) : null;
+						let decoded_description = description && description.length > 1 ? iso88591Decoder.decode(description) : null;
+						let decoded_color = color && color.length > 1 ? iso88591Decoder.decode(color) : null;
 
-						// get mapname (index 1)
-						fengari.lua.lua_pushinteger(fengari.L, 1);
-						fengari.lua.lua_gettable(fengari.L, -2);
-						entry.mapname = fengari.lua.lua_tojsstring(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+						signBoardList.push({
+							mapname: decoded_mapname,
+							x: x,
+							y: y,
+							height: height,
+							type: type,
+							icon_location: decoded_icon_location,
+							description: DB.getTranslatedSignBoard(decoded_description),
+							color: decoded_color
+						});
 
-						// get x (index 2)
-						fengari.lua.lua_pushinteger(fengari.L, 2);
-						fengari.lua.lua_gettable(fengari.L, -2);
-						entry.x = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+						return 1;
+					};
 
-						// get y (index 3)
-						fengari.lua.lua_pushinteger(fengari.L, 3);
-						fengari.lua.lua_gettable(fengari.L, -2);
-						entry.y = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+					// mount file
+					lua.mountFile('SignBoardList.lub', buffer);
 
-						// get height (index 4)
-						fengari.lua.lua_pushinteger(fengari.L, 4);
-						fengari.lua.lua_gettable(fengari.L, -2);
-						entry.height = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+					// execute file
+					await lua.doFile('SignBoardList.lub');
 
-						// get type (index 5)
-						fengari.lua.lua_pushinteger(fengari.L, 5);
-						fengari.lua.lua_gettable(fengari.L, -2);
-						entry.type = fengari.lua.lua_tointeger(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+					// create and execute our own main function
+					lua.doStringSync(`
+						function main_SignBoardList()
+                            for key, value in pairs(SignBoardList) do
+								local description = "";
+								local color = "";
+								if value[7] ~= nil then
+									description = value[7];
+								end
+								if value[8] ~= nil then
+									color = value[8];
+								end
+                                result, msg = AddSignBoard(value[1], value[2], value[3], value[4], value[5], value[6], description, color)
+                                if not result then
+                                    return false, msg
+                                end
+                        	end
+						end
+                        main_SignBoardList()
+					`);
 
-						// get icon_location (index 6)
-						fengari.lua.lua_pushinteger(fengari.L, 6);
-						fengari.lua.lua_gettable(fengari.L, -2);
-						entry.icon_location = fengari.lua.lua_tojsstring(fengari.L, -1);
-						fengari.lua.lua_pop(fengari.L, 1);
+					SignBoardTable = preprocessSignboardData(signBoardList);
 
-						// get description (index 7, optional)
-						fengari.lua.lua_pushinteger(fengari.L, 7);
-						fengari.lua.lua_gettable(fengari.L, -2);
-						if (fengari.lua.lua_isstring(fengari.L, -1)) {
-							let rawDescription = fengari.lua.lua_tojsstring(fengari.L, -1);
-							entry.description = DB.getTranslatedSignBoard(rawDescription);
-						} else {
-							entry.description = null;
-						}
-						fengari.lua.lua_pop(fengari.L, 1);
+				} catch (error) {
+					console.error('[loadSignBoardList] Error: ', error);
 
-						// get color (index 8, optional)
-						fengari.lua.lua_pushinteger(fengari.L, 8);
-						fengari.lua.lua_gettable(fengari.L, -2);
-						if (fengari.lua.lua_isstring(fengari.L, -1)) {
-							entry.color = fengari.lua.lua_tojsstring(fengari.L, -1);
-						} else {
-							entry.color = null;
-						}
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// Add entry to signBoardList
-						signBoardList.push(entry);
-
-						// Pop the value and move to the next key
-						fengari.lua.lua_pop(fengari.L, 1);
-					}
-
-					// Clean Lua stack
-					fengari.lua.lua_settop(fengari.L, 0);
-				} catch (hException) {
-					console.error('error: ', hException);
+				} finally {
+					// release file from memmory
+					lua.unmountFile('SignBoardList.lub');
+					// call onEnd
+					onEnd();
 				}
-				// Preprocess the signboard list into a nested dictionary
-				const signboardDict = preprocessSignboardData(signBoardList);
-				callback.call(null, signboardDict);
-				onEnd();
 			},
 			onEnd
 		);
-	};
+	}
 
 	/**
 	 * Preprocesses an array of signboard objects and organizes them into a nested dictionary.
@@ -1146,9 +1145,10 @@ define(function (require) {
 		);
 	}
 
-	/* Load Ragnarok Lua table to json object
+	/* Load Ragnarok Lua table to object
 	* A lot of ragnarok lua tables are splited in 2 files ( 1 - ID table, 2 - Table of values )
-	* @param {Array} list of files to be load (2)
+	* @param {Array} list of files to be load (must be 2 files)
+	* @param {String} name of table in lua file
 	* @param {function} callback to run once the file is loaded
 	* @param {function} onEnd to run once the file is loaded
 	*
@@ -1158,206 +1158,176 @@ define(function (require) {
 		let id_filename = file_list[0];
 		let value_table_filename = file_list[1];
 
-		console.log('Loading file "' + id_filename + '"...');
-		Client.loadFile(id_filename,
-			async function (data) {
-				try {
-					// check if is ArrayBuffer or String
-					if (data instanceof ArrayBuffer) {
-						data = new TextDecoder().decode(data);
-					}
-					// load data into lua vm
-					fengari.load(data)();
-					loadValueTable();
-				} catch (hException) {
-					onEnd.call();
-					console.error(`(${id_filename}) error: `, hException);
-				}
-			}
-		);
-
-		function loadValueTable() {
-			console.log('Loading file "' + value_table_filename + '"...');
-			Client.loadFile(value_table_filename,
-				async function (data) {
+		try {
+			console.log('Loading file "' + id_filename + '"...');
+			Client.loadFile(id_filename,
+				async function (file) {
 					try {
-						// check if is ArrayBuffer or String
-						if (data instanceof ArrayBuffer) {
-							data = new TextDecoder('iso-8859-1').decode(data);
-						}
-						fengari.load(data)();
-						parseTable();
+						// check if file is ArrayBuffer and convert to Uint8Array if necessary
+						let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
+						// mount file
+						lua.mountFile(id_filename, buffer);
+						// execute file
+						await lua.doFile(id_filename);
+						loadValueTable();
 					} catch (hException) {
-						onEnd.call();
-						console.error(`(${value_table_filename}) error: `, hException);
+						console.error(`(${id_filename}) error: `, hException);
 					}
-				},
-			);
-		}
-
-		function parseTable() {
-			// Get the global table
-			fengari.lua.lua_getglobal(fengari.L, table_name);
-
-			// Check if it's a table
-			if (!fengari.lua.lua_istable(fengari.L, -1)) {
-				console.log('[parseTable] ' + table_name + ' is not a table');
-				onEnd.call();
-				return;
-			}
-
-			// Push nil key to start iteration
-			fengari.lua.lua_pushnil(fengari.L);
-
-			// declare the table array
-			let table = new Array();
-
-			// iterate over table
-			while (fengari.lua.lua_next(fengari.L, -2)) {
-				let id;
-				let name = "";
-				if (fengari.lua.lua_istable(fengari.L, -1)) {
-					// go to first key
-					id = fengari.lua.lua_tointeger(fengari.L, -2);
-					fengari.lua.lua_pushnil(fengari.L);
-					let value_array = new Array();
-					while (fengari.lua.lua_next(fengari.L, -2) != 0) { // skilldescription
-						if (fengari.lua.lua_isstring(fengari.L, -1)) {
-							value_array.push(fengari.lua.lua_tojsstring(fengari.L, -1) + "\n");
-						}
-						fengari.lua.lua_pop(fengari.L, 1);
-					}
-					name = value_array.reverse().join('');
-				} else {
-					// get key
-					id = fengari.lua.lua_tointeger(fengari.L, -2);
-					name = fengari.lua.lua_tojsstring(fengari.L, -1);
 				}
-				table[id] = name;
-				// Pop the value and move to the next key
-				fengari.lua.lua_pop(fengari.L, 1);
+			);
+
+			function loadValueTable() {
+				console.log('Loading file "' + value_table_filename + '"...');
+				Client.loadFile(value_table_filename,
+					async function (file) {
+						try {
+							// check if file is ArrayBuffer and convert to Uint8Array if necessary
+							let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
+							// mount file
+							lua.mountFile(value_table_filename, buffer);
+							// execute file
+							await lua.doFile(value_table_filename);
+							parseTable();
+						} catch (hException) {
+							console.error(`(${value_table_filename}) error: `, hException);
+						}
+					},
+				);
 			}
 
-			// pop table
-			fengari.lua.lua_pop(fengari.L, 1);
+			function parseTable() {
+				// declare the table object
+				let table = {};
 
-			// clean lua stack
-			fengari.lua.lua_settop(fengari.L, 0);
+				// get context
+				const ctx = lua.ctx;
 
-			callback.call(null, table);
+				// create a decoder for iso-8859-1
+				let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
+
+				// create context function
+				ctx.addKeyAndValueToTable = (key, value) => {
+					table[key] = iso88591Decoder.decode(value);
+					return 1;
+				}
+
+				// used in some specific cases like skilldescript.lub
+				ctx.addKeyAndMoreValuesToTable = (key, value) => {
+					if (!table[key])
+						table[key] = "";
+					table[key] += iso88591Decoder.decode(value) + "\n";
+					return 1;
+				}
+
+				// create and execute a wrapper lua code
+				// this way we let webassembly handle the code and still can get the table data
+				lua.doStringSync(`
+						function main_table()
+							for key, value in pairs(${table_name}) do
+								if type(value) == "table" then
+									for k, v in pairs(value) do
+										result, msg = addKeyAndMoreValuesToTable(key, v)
+									end
+								else
+									result, msg = addKeyAndValueToTable(key, value)
+								end
+								if not result then
+									return false, msg
+								end
+							end
+							return true, "good"
+						end
+						main_table()
+					`);
+
+				// unmount files
+				lua.unmountFile(value_table_filename);
+				lua.unmountFile(id_filename);
+
+				// return table
+				callback.call(null, table);
+			}
+		} catch (e) {
+			console.error('error: ', e);
+		} finally {
 			onEnd.call();
 		}
 	}
 
 	/**
-	 * Loads System/mapInfo_true_EN.lub
+	 * Loads System/mapInfo.lub
 	 *
 	 * @param {string} filename - The name of the file to load.
 	 * @param {function} callback - The function to invoke with the parsed data.
 	 * @param {function} onEnd - The function to invoke when loading is complete.
 	 */
 	function loadMapTbl(filename, callback, onEnd) {
-		Client.loadFile(filename, async function (lua) {
-			console.log('Loading file "' + filename + '"...');
-			let mapData = {};
+		Client.loadFile(filename,
+			async function (file) {
+				try {
+					console.log('Loading file "' + filename + '"...');
+					// check if file is ArrayBuffer and convert to Uint8Array if necessary
+					let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
 
-			try {
-				if (lua instanceof ArrayBuffer) {
-					lua = new TextDecoder('iso-8859-1').decode(lua);
+					// get context, a proxy. It will be used to interact with lua conveniently
+					const ctx = lua.ctx;
+
+					// create decoders
+					let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
+					let userStringDecoder = new TextEncoding.TextDecoder('euc-kr'); // TODO: Add keys to config
+
+					// create mapInfo required functions in context
+					ctx.AddMapDisplayName = (name, displayName, notify_enter) => {
+						let decoded_name = iso88591Decoder.decode(name);
+						MapInfo[decoded_name] = {
+							displayName: userStringDecoder.decode(displayName),
+							notifyEnter: notify_enter,
+							signName: {
+								subTitle: null,
+								mainTitle: null
+							},
+							backgroundBmp: null
+						};
+
+						return 1;
+					};
+
+					ctx.AddMapSignName = (name, subTitle, mainTitle) => {
+						let decoded_name = iso88591Decoder.decode(name);
+						let decoded_subTitle = subTitle && subTitle.length > 1 ? iso88591Decoder.decode(subTitle) : null;
+						let decoded_mainTitle = mainTitle && mainTitle.length > 1 ? iso88591Decoder.decode(mainTitle) : null;
+						MapInfo[decoded_name].signName = {
+							subTitle: decoded_subTitle,
+							mainTitle: decoded_mainTitle
+						};
+						return 1;
+					};
+
+					ctx.AddMapBackgroundBmp = (name, backgroundBmp) => {
+						let decoded_name = iso88591Decoder.decode(name);
+						MapInfo[decoded_name].backgroundBmp = backgroundBmp ? iso88591Decoder.decode(backgroundBmp) : "field";
+						return 1;
+					};
+
+					// mount file
+					lua.mountFile('mapInfo.lub', buffer);
+
+					// execute file
+					await lua.doFile('mapInfo.lub');
+
+					// execute main function
+					lua.doStringSync(`main()`);
+				} catch (error) {
+					console.error('[loadMapTbl] Error: ', error);
+				} finally {
+					// release file from memmory
+					lua.unmountFile('mapInfo.lub');
+					// call onEnd
+					onEnd();
 				}
-
-				// Load Lua file
-				fengari.load(lua)();
-
-				// Get the global table "mapTbl"
-				fengari.lua.lua_getglobal(fengari.L, "mapTbl");
-
-				// Check if it's a table
-				if (!fengari.lua.lua_istable(fengari.L, -1)) {
-					console.log('[loadMapTbl] mapTbl is not a table');
-					return;
-				}
-
-				// Push nil key to start iteration
-				fengari.lua.lua_pushnil(fengari.L);
-
-				// Iterate over the "mapTbl" table
-				while (fengari.lua.lua_next(fengari.L, -2)) {
-					// Get key (filename)
-					let filename = fengari.lua.lua_tojsstring(fengari.L, -2);
-
-					// Get value (table)
-					if (fengari.lua.lua_istable(fengari.L, -1)) {
-						let entry = {};
-
-						// Get displayName
-						fengari.lua.lua_pushstring(fengari.L, "displayName");
-						fengari.lua.lua_gettable(fengari.L, -2);
-						if (fengari.lua.lua_isstring(fengari.L, -1)) {
-							entry.displayName = fengari.lua.lua_tojsstring(fengari.L, -1);
-						}
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// Get notifyEnter
-						fengari.lua.lua_pushstring(fengari.L, "notifyEnter");
-						fengari.lua.lua_gettable(fengari.L, -2);
-						if (fengari.lua.lua_isboolean(fengari.L, -1)) {
-							entry.notifyEnter = fengari.lua.lua_toboolean(fengari.L, -1);
-						}
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// Get signName
-						fengari.lua.lua_pushstring(fengari.L, "signName");
-						fengari.lua.lua_gettable(fengari.L, -2);
-						if (fengari.lua.lua_istable(fengari.L, -1)) {
-							entry.signName = {};
-
-							// Get subTitle
-							fengari.lua.lua_pushstring(fengari.L, "subTitle");
-							fengari.lua.lua_gettable(fengari.L, -2);
-							if (fengari.lua.lua_isstring(fengari.L, -1)) {
-								entry.signName.subTitle = fengari.lua.lua_tojsstring(fengari.L, -1);
-							}
-							fengari.lua.lua_pop(fengari.L, 1);
-
-							// Get mainTitle
-							fengari.lua.lua_pushstring(fengari.L, "mainTitle");
-							fengari.lua.lua_gettable(fengari.L, -2);
-							if (fengari.lua.lua_isstring(fengari.L, -1)) {
-								entry.signName.mainTitle = fengari.lua.lua_tojsstring(fengari.L, -1);
-							}
-							fengari.lua.lua_pop(fengari.L, 1);
-						}
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// Get backgroundBmp
-						fengari.lua.lua_pushstring(fengari.L, "backgroundBmp");
-						fengari.lua.lua_gettable(fengari.L, -2);
-						if (fengari.lua.lua_isstring(fengari.L, -1)) {
-							entry.backgroundBmp = fengari.lua.lua_tojsstring(fengari.L, -1);
-						}
-						fengari.lua.lua_pop(fengari.L, 1);
-
-						// Add entry to mapData
-						mapData[filename] = entry;
-					}
-
-					// Pop the value and move to the next key
-					fengari.lua.lua_pop(fengari.L, 1);
-				}
-
-				// Pop table
-				fengari.lua.lua_pop(fengari.L, 1);
-
-				// Clean lua stack
-				fengari.lua.lua_settop(fengari.L, 0);
-			} catch (e) {
-				console.error('error: ', e);
-			}
-
-			callback.call(null, mapData);
-			onEnd();
-		}, onEnd);
+			},
+			onEnd
+		);
 	};
 
 	/**
