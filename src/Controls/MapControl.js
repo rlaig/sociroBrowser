@@ -149,13 +149,15 @@ define(function( require )
 
 				if (!KEYS.SHIFT && KEYS.ALT && !KEYS.CTRL) {
 					Camera.rotate( false );
-					
+
 					if (entityOver && entityOver != Session.Entity && entityOver.objecttype != Entity.TYPE_EFFECT && entityOver.objecttype != Entity.TYPE_TRAP) {
-						AIDriver.setmsg(Session.homunId, '3,'+ entityOver.GID);
+						AIDriver.homunculus.setmsg(Session.homunId, '3,'+ entityOver.GID);
+						AIDriver.mercenary.setmsg(Session.mercId, '3,'+ entityOver.GID);
 					} else {
-						AIDriver.setmsg(Session.homunId, '1,'+ Mouse.world.x + ',' + Mouse.world.y);
+						AIDriver.homunculus.setmsg(Session.homunId, '1,'+ Mouse.world.x + ',' + Mouse.world.y);
+						AIDriver.mercenary.setmsg(Session.mercId, '1,'+ Mouse.world.x + ',' + Mouse.world.y);
 					}
-					
+
 				} else {
 					if (entityOver && entityOver != Session.Entity && entityOver.objecttype != Entity.TYPE_EFFECT && entityOver.objecttype != Entity.TYPE_TRAP) {
 						if (KEYS.SHIFT) {	// Shift + Right click on an entity
@@ -164,13 +166,13 @@ define(function( require )
 							onAutoFollow();
 
 						}
-						
+
 						// Right click on a NPC/Mob/Unit
 						entityOver.onMouseDown();
 						entityOver.onFocus();
 						EntityManager.setFocusEntity(entityOver);
 					}
-					
+
 					Cursor.setType( Cursor.ACTION.ROTATE );
 					Camera.rotate( true );
 				}

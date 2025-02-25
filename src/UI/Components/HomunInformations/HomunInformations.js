@@ -16,9 +16,10 @@ define(function (require) {
     var Client = require('Core/Client');
     var Preferences = require('Core/Preferences');
     var Renderer = require('Renderer/Renderer');
+	var EntityManager    = require('Renderer/EntityManager');
     var UIManager = require('UI/UIManager');
     var UIComponent = require('UI/UIComponent');
-    var SkillListMER = require('UI/Components/SkillListMER/SkillListMER');
+    var SkillListMH = require('UI/Components/SkillListMH/SkillListMH');
     var htmlText = require('text!./HomunInformations.html');
     var cssText = require('text!./HomunInformations.css');
     var Session = require('Engine/SessionStorage');
@@ -67,8 +68,13 @@ define(function (require) {
         });
 
         this.ui.find('.skill').mousedown(function () {
-            SkillListMER.toggle()
+            SkillListMH.homunculus.toggle()
         });
+
+		// If no aggressive level defined, default to 1
+		// otherwise toggle and untoggle to remain the same
+		this.toggleAggressive();
+		this.toggleAggressive();
     };
 
     HomunInformations.onAppend = function onAppend() {
@@ -128,10 +134,10 @@ define(function (require) {
                         this.focus();
                     }
                     if (!this.ui.is(':visible')) {
-                        SkillListMER.ui.hide();
+                        SkillListMH.homunculus.ui.hide();
                     }
                 } else {
-                    SkillListMER.ui.hide();
+                    SkillListMH.homunculus.ui.hide();
                     this.ui.hide();
                 }
                 break;
@@ -173,7 +179,7 @@ define(function (require) {
             this.ui.find('.name, .modify').addClass('disabled').attr('disabled', true);
         }
 
-        SkillListMER.setPoints(info.SKPoint);
+        SkillListMH.homunculus.setPoints(info.SKPoint);
     };
 
 
@@ -300,16 +306,19 @@ define(function (require) {
     };
 	
 	HomunInformations.toggleAggressive = function toggleAggressive(){
-		let agr = localStorage.getItem('AGGRESSIVE') == 0 ? 1 : 0;
-        localStorage.setItem('AGGRESSIVE', agr);
+		let agr = localStorage.getItem('HOM_AGGRESSIVE') == 0 ? 1 : 0;
+        localStorage.setItem('HOM_AGGRESSIVE', agr);
 	};
 	
 	HomunInformations.startAI = function startAI(){
 		this.stopAI();
-		AIDriver.reset();
+		AIDriver.homunculus.reset();
 		this.AILoop = setInterval(function () {
             if (Session.homunId) {
-                AIDriver.exec('AI(' + Session.homunId + ')')
+				var entity = EntityManager.get(Session.homunId);
+				if (entity) {
+                	AIDriver.homunculus.exec('AI(' + Session.homunId + ')')
+				}
             }
         }, 100);
 	};
@@ -359,7 +368,7 @@ define(function (require) {
      */
     function onClose() {
         HomunInformations.ui.hide();
-        SkillListMER.ui.hide();
+        SkillListMH.homunculus.ui.hide();
     }
 
 
