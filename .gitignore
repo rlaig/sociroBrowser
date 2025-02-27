@@ -17,7 +17,7 @@
 /ThreadEventHandler.js
 /data/*
 /EffectViewer.js
-/live/download*
+/live/download/*
 /live/src
 
 # IDE files
