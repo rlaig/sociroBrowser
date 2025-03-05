@@ -36,6 +36,9 @@ define(function()
 	Weather.sky['thana_boss.rsw']  = { skyColor:[0.88, 0.83, 0.76, 1.0], cloudColor:[0.37, 0.0, 0.0] };
 
 
+	// Set default white background for all maps
+	Weather.sky['default'] = { skyColor:[1.0, 1.0, 1.0, 1.0], cloudColor:[1.0, 1.0, 1.0] };
+
 	// TODO: add others effect (snow, fireworks, etc.)
 
 

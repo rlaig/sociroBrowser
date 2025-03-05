@@ -38,6 +38,11 @@ define( function( require )
 	 */
 	var _ctx = _canvas[0].getContext('2d');
 
+	/**
+	 * @var {string} Background default color
+	 */
+	var _backgroundColor = 'black';
+
 
 	/**
 	 * @var {jQuery} Background overlay (used for transition)
@@ -101,7 +106,7 @@ define( function( require )
 		_canvas[0].height  = height;
 		_overlay.css({ width:width, height:height });
 
-		_ctx.fillStyle = 'black';
+		_ctx.fillStyle = _backgroundColor;
 		_ctx.fillRect( 0, 0, width, height );
 
 		render();
@@ -231,7 +236,7 @@ define( function( require )
 			_ctx.drawImage( _image, 0, 0, _canvas[0].width, _canvas[0].height );
 		}
 		else {
-			_ctx.fillStyle='#000';
+			_ctx.fillStyle = _backgroundColor;
 			_ctx.fillRect( 0, 0, _canvas[0].width, _canvas[0].height );
 		}
 

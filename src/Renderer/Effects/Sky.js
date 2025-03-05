@@ -65,16 +65,18 @@ define(function( require )
 		var color;
 		var i;
 
-		// Not found on weather, black sky, no cloud.
-		if (!WeatherTable.sky[mapname]) {
+		// Use default white background if map not found in weather table
+		// default = WeatherTable.sky['default']
+		var skyData = WeatherTable.sky[mapname];
+		if (!skyData) {
 			gl.clearColor( 0.0, 0.0, 0.0, 1.0);
 			_display = false;
 			return;
 		}
 
 		// Save color
-		_color   = WeatherTable.sky[mapname].cloudColor;
-		color    = WeatherTable.sky[mapname].skyColor;
+		_color   = skyData.cloudColor;
+		color    = skyData.skyColor;
 		_display = true;
 
 		gl.clearColor( color[0], color[1], color[2], color[3]);
