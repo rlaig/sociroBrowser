@@ -53,6 +53,18 @@ define(function( require )
 	 * @var {boolean} is thread ready ? (fix)
 	 */
 	var _thread_ready = false;
+	
+	
+	/**
+	 * @var {string} Default background image
+	 */
+	var _defaultBGImage = 'bgi_temp.bmp';
+	
+	
+	/**
+	 * @var {string} Default BGM
+	 */
+	var _defaultBGM = '01.mp3';
 
 
 	/**
@@ -91,7 +103,7 @@ define(function( require )
 		// Loading Game file (txt, lua, lub)
 		q.add(function(){
 			DB.onReady = function(){
-				Background.setImage( 'bgi_temp.bmp'); // remove loading
+				Background.setImage( _defaultBGImage ); // remove loading
 				q._next();
 			};
 			DB.onProgress = function(i, count) {
@@ -100,7 +112,7 @@ define(function( require )
 			UIManager.removeComponents();
 			Background.init();
 			Background.resize( Renderer.width, Renderer.height );
-			Background.setImage( 'bgi_temp.bmp', function(){
+			Background.setImage( _defaultBGImage, function(){
 				DB.init();
 			});
 		});
@@ -184,7 +196,7 @@ define(function( require )
 	function reload()
 	{
 		BGM.setAvailableExtensions( Configs.get('BGMFileExtension', ['mp3']) );
-		BGM.play('01.mp3');
+		BGM.play(_defaultBGM);
 
 		UIManager.removeComponents();
 		Network.close();
@@ -192,33 +204,35 @@ define(function( require )
 		// Setup background
 		Background.init();
 		Background.resize( Renderer.width, Renderer.height );
-		Background.setImage( 'bgi_temp.bmp', function(){
+		Background.setImage( _defaultBGImage, function(){
 			// Display server list
-			var list = new Array( _servers.length );
-			var i, count = list.length;
+			var count = _servers.length;
 
 			// WTF no servers ?
 			if (count === 0) {
 				UIManager.showMessageBox( 'Sorry, no server found.', 'ok', init);
+				return;
 			}
 
 			// Just 1 server, skip the WinList
-			else if (count === 1 && Configs.get('skipServerList')) {
+			if (count === 1 && Configs.get('skipServerList')) {
 				LoginEngine.onExitRequest = reload;
 				LoginEngine.init( _servers[0] );
+				return;
 			}
-			else {
-				for (i = 0; i < count; ++i) {
-					list[i] = _servers[i].display;
-				}
+			
+			// Create server list once
+			var list = new Array(count);
+			for (var i = 0; i < count; ++i) {
+				list[i] = _servers[i].display;
+			}
 
-				WinList.append();
-				WinList.setList( list );
-			}
+			WinList.append();
+			WinList.setList( list );
 
 			Renderer.stop();
 			MapRenderer.free();
-			BGM.play('01.mp3');
+			BGM.play(_defaultBGM);
 		});
 
 		// Hooking WinList
@@ -255,7 +269,7 @@ define(function( require )
 
 			Background.init();
 			Background.resize( Renderer.width, Renderer.height );
-			Background.setImage( 'bgi_temp.bmp' );
+			Background.setImage( _defaultBGImage );
 
 			// Need to reload the files.
 			loadFiles(function(){
@@ -277,7 +291,7 @@ define(function( require )
 		Sound.stop();
 		Renderer.stop();
 		UIManager.removeComponents();
-		Background.setImage('bgi_temp.bmp', reload);
+		Background.setImage(_defaultBGImage, reload);
 	}
 
 
@@ -288,7 +302,7 @@ define(function( require )
 	 */
 	function loadClientInfo( callback )
 	{
-		var servers     = Configs.get('servers', 'data/clientinfo.xml');
+		var servers = Configs.get('servers', 'data/clientinfo.xml');
 
 		if (servers instanceof Array) {
 			_servers = servers;
@@ -304,20 +318,23 @@ define(function( require )
 			var parser = new DOMParser();
 			var doc = parser.parseFromString(xml, 'application/xml');
 
-			var connections      = jQuery(doc).find('clientinfo connection');
-			var stop             = connections.length - 1;
-			var list             = [];
-
-			if (!connections.length) {
+			var connections = jQuery(doc).find('clientinfo connection');
+			var length = connections.length;
+			
+			if (!length) {
 				callback();
+				return;
 			}
 
+			// Pre-allocate array size for better performance
+			_servers = new Array(length);
+			
 			connections.each(function(index, element){
 				var connection = jQuery(element);
-
-				list.push( connection.find('display:first').text() );
-				_servers.push({
-					display:    connection.find('display:first').text(),
+				var displayText = connection.find('display:first').text();
+				
+				_servers[index] = {
+					display:    displayText,
 					desc:       connection.find('desc:first').text(),
 					address:    connection.find('address:first').text(),
 					port:       connection.find('port:first').text(),
@@ -327,15 +344,15 @@ define(function( require )
 					registrationweb: connection.find('registrationweb:first').text(),
 					renewal:    ['true', '1', 1, true].includes(connection.find('renewal:first').text().toLowerCase()),
 					adminList:  (function(){
-						var list   = [];
+						var list = [];
 						connection.find('yellow admin, aid admin').each(function(){
 							list.push(parseInt(this.textContent,10));
 						});
 						return list;
 					})()
-				});
+				};
 
-				if (index === stop) {
+				if (index === length - 1) {
 					callback();
 				}
 			});
