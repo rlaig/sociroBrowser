@@ -66,6 +66,41 @@ define(function( require )
 	 */
 	var _creatingPincode = false;
 
+	// Cache common packet types for better performance
+	var PACKET_CH_ENTER = PACKET.CH.ENTER;
+	var PACKET_CH_SELECT_CHAR = PACKET.CH.SELECT_CHAR;
+	var PACKET_CH_MAKE_CHAR = PACKET.CH.MAKE_CHAR;
+	var PACKET_CH_MAKE_CHAR2 = PACKET.CH.MAKE_CHAR2;
+	var PACKET_CH_MAKE_CHAR3 = PACKET.CH.MAKE_CHAR3;
+	var PACKET_CH_DELETE_CHAR = PACKET.CH.DELETE_CHAR;
+	var PACKET_CH_DELETE_CHAR3 = PACKET.CH.DELETE_CHAR3;
+	var PACKET_CH_DELETE_CHAR3_CANCEL = PACKET.CH.DELETE_CHAR3_CANCEL;
+	var PACKET_CH_DELETE_CHAR3_RESERVED = PACKET.CH.DELETE_CHAR3_RESERVED;
+	var PACKET_CH_PINCODE_CHECK = PACKET.CH.PINCODE_CHECK;
+	var PACKET_CH_PINCODE_FIRST_PIN = PACKET.CH.PINCODE_FIRST_PIN;
+	var PACKET_CH_PINCODE_CHANGE = PACKET.CH.PINCODE_CHANGE;
+	var PACKET_CH_PINCODE_REQUEST = PACKET.CH.PINCODE_REQUEST;
+
+	// Cache packet hooks for better performance
+	var PACKET_HOOKS = {
+		ACCEPT_ENTER_NEO_UNION: PACKET.HC.ACCEPT_ENTER_NEO_UNION,
+		REFUSE_ENTER: PACKET.HC.REFUSE_ENTER,
+		ACCEPT_MAKECHAR_NEO_UNION: PACKET.HC.ACCEPT_MAKECHAR_NEO_UNION,
+		ACCEPT_MAKECHAR: PACKET.HC.ACCEPT_MAKECHAR,
+		REFUSE_MAKECHAR: PACKET.HC.REFUSE_MAKECHAR,
+		ACCEPT_DELETECHAR: PACKET.HC.ACCEPT_DELETECHAR,
+		DELETE_CHAR3: PACKET.HC.DELETE_CHAR3,
+		REFUSE_DELETECHAR: PACKET.HC.REFUSE_DELETECHAR,
+		NOTIFY_ZONESVR: PACKET.HC.NOTIFY_ZONESVR,
+		NOTIFY_ZONESVR2: PACKET.HC.NOTIFY_ZONESVR2,
+		ACCEPT_ENTER_NEO_UNION_HEADER: PACKET.HC.ACCEPT_ENTER_NEO_UNION_HEADER,
+		ACCEPT_ENTER_NEO_UNION_LIST: PACKET.HC.ACCEPT_ENTER_NEO_UNION_LIST,
+		ACCEPT_ENTER_NEO_UNION_LIST2: PACKET.HC.ACCEPT_ENTER_NEO_UNION_LIST2,
+		NOTIFY_ACCESSIBLE_MAPNAME: PACKET.HC.NOTIFY_ACCESSIBLE_MAPNAME,
+		SECOND_PASSWD_LOGIN: PACKET.HC.SECOND_PASSWD_LOGIN,
+		DELETE_CHAR3_RESERVED: PACKET.HC.DELETE_CHAR3_RESERVED
+	};
+
 	/*
 	 * Connect to char server
 	 */
@@ -79,56 +114,79 @@ define(function( require )
 		// Storing variable
 		_server = server;
 
-		// Connect to char server
+		// Cache frequently used configurations
 		var forceAddress = Configs.get('forceUseAddress');
 		var server_info = Configs.getServer();
-		var ip = forceAddress ? server_info.address : Network.utils.longToIP( server.ip );
-		Network.connect( ip, server.port, function( success ){
-
-			// Fail to connect...
-			if (!success) {
-				UIManager.showErrorBox( DB.getMessage(1) );
-				return;
-			}
-
-			// Success, try to connect
-			var pkt        = new PACKET.CH.ENTER();
-			pkt.AID        = Session.AID;
-			pkt.AuthCode   = Session.AuthCode;
-			pkt.userLevel  = Session.UserLevel;
-			pkt.Sex        = Session.Sex;
-			pkt.clientType = Session.LangType;
-			Network.sendPacket(pkt);
-
-			// Server send back (new) AID
-			Network.read(function(fp){
-				Session.AID = fp.readLong();
-			});
-		});
 		
-		//Select UI version
+		// Determine server IP
+		var ip = forceAddress ? server_info.address : Network.utils.longToIP(server.ip);
+		
+		// Connect to char server with optimized connection handling
+		connectToCharServer(ip, server.port);
+		
+		//Select UI version - do this once during initialization
 		CharSelect.selectUIVersion();
 		CharCreate.selectUIVersion();
 
 		// Hook packets
-		Network.hookPacket( PACKET.HC.ACCEPT_ENTER_NEO_UNION,        onConnectionAccepted );
-		Network.hookPacket( PACKET.HC.REFUSE_ENTER,                  onConnectionRefused );
-		Network.hookPacket( PACKET.HC.ACCEPT_MAKECHAR_NEO_UNION,     onCreationSuccess );
-		Network.hookPacket( PACKET.HC.ACCEPT_MAKECHAR,    			 onCreationSuccess );
-		Network.hookPacket( PACKET.HC.REFUSE_MAKECHAR,               onCreationFail );
-		Network.hookPacket( PACKET.HC.ACCEPT_DELETECHAR,             onDeleteAnswer );
-		Network.hookPacket( PACKET.HC.DELETE_CHAR3,					 onDeleteAnswer );
-		Network.hookPacket( PACKET.HC.REFUSE_DELETECHAR,             onDeleteAnswer );
-		Network.hookPacket( PACKET.HC.NOTIFY_ZONESVR,                onReceiveMapInfo);
-		Network.hookPacket( PACKET.HC.NOTIFY_ZONESVR2,               onReceiveMapInfo );
-		Network.hookPacket( PACKET.HC.ACCEPT_ENTER_NEO_UNION_HEADER, onConnectionAccepted );
-		Network.hookPacket( PACKET.HC.ACCEPT_ENTER_NEO_UNION_LIST,   onConnectionAccepted );
-		Network.hookPacket( PACKET.HC.ACCEPT_ENTER_NEO_UNION_LIST2,  onConnectionAccepted );
-		Network.hookPacket( PACKET.HC.NOTIFY_ACCESSIBLE_MAPNAME,     onMapUnavailable);
-		Network.hookPacket( PACKET.HC.SECOND_PASSWD_LOGIN, 			 onPincodeCheckSuccess);
-		Network.hookPacket( PACKET.HC.DELETE_CHAR3_RESERVED,		 onRequestCharDel);
+		setupPacketHooks();
+	}
+	
+	/**
+	 * Connect to the character server with proper error handling
+	 */
+	function connectToCharServer(ip, port) {
+		Network.connect(ip, port, function(success) {
+			// Fail to connect...
+			if (!success) {
+				UIManager.showErrorBox(DB.getMessage(1));
+				return;
+			}
+
+			// Success, try to connect
+			sendLoginPacket();
+		});
+	}
+	
+	/**
+	 * Send login packet to the server
+	 */
+	function sendLoginPacket() {
+		var pkt = new PACKET_CH_ENTER();
+		pkt.AID = Session.AID;
+		pkt.AuthCode = Session.AuthCode;
+		pkt.userLevel = Session.UserLevel;
+		pkt.Sex = Session.Sex;
+		pkt.clientType = Session.LangType;
+		Network.sendPacket(pkt);
+
+		// Server send back (new) AID
+		Network.read(function(fp) {
+			Session.AID = fp.readLong();
+		});
 	}
 
+	/**
+	 * Setup packet hooks - extracted to a separate function for better organization
+	 */
+	function setupPacketHooks() {
+		Network.hookPacket( PACKET_HOOKS.ACCEPT_ENTER_NEO_UNION, onConnectionAccepted );
+		Network.hookPacket( PACKET_HOOKS.REFUSE_ENTER, onConnectionRefused );
+		Network.hookPacket( PACKET_HOOKS.ACCEPT_MAKECHAR_NEO_UNION, onCreationSuccess );
+		Network.hookPacket( PACKET_HOOKS.ACCEPT_MAKECHAR, onCreationSuccess );
+		Network.hookPacket( PACKET_HOOKS.REFUSE_MAKECHAR, onCreationFail );
+		Network.hookPacket( PACKET_HOOKS.ACCEPT_DELETECHAR, onDeleteAnswer );
+		Network.hookPacket( PACKET_HOOKS.DELETE_CHAR3, onDeleteAnswer );
+		Network.hookPacket( PACKET_HOOKS.REFUSE_DELETECHAR, onDeleteAnswer );
+		Network.hookPacket( PACKET_HOOKS.NOTIFY_ZONESVR, onReceiveMapInfo);
+		Network.hookPacket( PACKET_HOOKS.NOTIFY_ZONESVR2, onReceiveMapInfo );
+		Network.hookPacket( PACKET_HOOKS.ACCEPT_ENTER_NEO_UNION_HEADER, onConnectionAccepted );
+		Network.hookPacket( PACKET_HOOKS.ACCEPT_ENTER_NEO_UNION_LIST, onConnectionAccepted );
+		Network.hookPacket( PACKET_HOOKS.ACCEPT_ENTER_NEO_UNION_LIST2, onConnectionAccepted );
+		Network.hookPacket( PACKET_HOOKS.NOTIFY_ACCESSIBLE_MAPNAME, onMapUnavailable);
+		Network.hookPacket( PACKET_HOOKS.SECOND_PASSWD_LOGIN, onPincodeCheckSuccess);
+		Network.hookPacket( PACKET_HOOKS.DELETE_CHAR3_RESERVED, onRequestCharDel);
+	}
 
 	/**
 	 * Reload Char-Select
@@ -259,9 +317,9 @@ define(function( require )
 	 * Char Delete Request Result
 	 */
 	function onRequestCharDel (pkt) {
-		
-		if (!pkt)
+		if (!pkt) {
 			return;
+		}
 
 		// Just pass the packet info
 		CharSelect.getUI().reqdeleteAnswer(pkt);
@@ -270,12 +328,12 @@ define(function( require )
 	/**
 	 * Char Delete Request Cancel
 	 */
-	function onCancelDeleteRequest ( charID ) {
-		
-		if (charID === 0)
+	function onCancelDeleteRequest (charID) {
+		if (charID === 0) {
 			return;
+		}
 		
-		var pkt = new PACKET.CH.DELETE_CHAR3_CANCEL();
+		var pkt = new PACKET_CH_DELETE_CHAR3_CANCEL();
 		pkt.GID = charID;
 		Network.sendPacket(pkt);
 	}
@@ -285,12 +343,12 @@ define(function( require )
 	 *
 	 * @param {number} charID - Character ID
 	 */
-	function onDeleteReqDelay ( charID )
-	{
-		if (!charID)
-		return;
+	function onDeleteReqDelay (charID) {
+		if (!charID) {
+			return;
+		}
 		
-		var pkt = new PACKET.CH.DELETE_CHAR3_RESERVED();
+		var pkt = new PACKET_CH_DELETE_CHAR3_RESERVED();
 		pkt.GID = charID;
 		Network.sendPacket(pkt);
 	}
@@ -313,12 +371,12 @@ define(function( require )
 		// Delete the character
 		function deleteCharacter() {
 			if (PACKETVER.value > 20100803) {
-				var pkt = new PACKET.CH.DELETE_CHAR3();
+				var pkt = new PACKET_CH_DELETE_CHAR3();
 				pkt.GID = charID;
 				pkt.Birth = _inputValue.substring(2);	// Server only needs the 6 digits
 				Network.sendPacket(pkt);
 			} else {
-				var pkt = new PACKET.CH.DELETE_CHAR();
+				var pkt = new PACKET_CH_DELETE_CHAR();
 				pkt.GID = charID;
 				pkt.key = _inputValue;
 				Network.sendPacket(pkt);
@@ -378,8 +436,8 @@ define(function( require )
 				_time_end = Date.now() + 10000;
 				_render  = true;
 
-				// Start the timing
-				render();
+				// Start the timing with requestAnimationFrame for better performance
+				requestAnimationFrame(render);
 			} else {	// No waiting time
 				_ui_box.remove();
 				_overlay.detach();
@@ -388,11 +446,16 @@ define(function( require )
 			}
 		}
 
-		// Rendering
-		function render() {
+		// Rendering - optimize the render function to reduce calculations
+		function render(timestamp) {
+			if (!_render) {
+				return;
+			}
+			
 			// Calculate percent
 			var time_left = _time_end - Date.now();
-			var percent   =  Math.round( 100 - time_left / 100 );
+			var percent = Math.min(100, Math.round(100 - time_left / 100));
+			var secondsLeft = Math.max(0, Math.round(10 - percent / 10));
 
 			// Delete character
 			if (percent >= 100) {
@@ -402,21 +465,33 @@ define(function( require )
 				return;
 			}
 
-			// Update text
-			_ui_box.ui.find('.text').text( DB.getMessage(296).replace('%d', Math.round(10-percent/10) ) );
+			// Update text - only update when seconds change
+			var textElement = _ui_box.ui.find('.text');
+			if (textElement.data('seconds') !== secondsLeft) {
+				textElement.text(DB.getMessage(296).replace('%d', secondsLeft));
+				textElement.data('seconds', secondsLeft);
+			}
 
-			// Update progressbar
+			// Update progressbar - optimize by reducing unnecessary operations
 			_ctx.clearRect(0, 0, _width, _height);
 			_ctx.fillStyle = 'rgb(0,255,255)';
-			_ctx.fillRect( 0, 0, _width, _height );
+			_ctx.fillRect(0, 0, _width, _height);
 			_ctx.fillStyle = 'rgb(140,140,140)';
-			_ctx.fillRect( 1, 1, _width-2 , _height-2 );
+			_ctx.fillRect(1, 1, _width - 2, _height - 2);
+			
+			var barWidth = Math.round(percent * (_width - 4) / 100);
 			_ctx.fillStyle = 'rgb(66,99,165)';
-			_ctx.fillRect( 2, 2, Math.round(percent*(_width-4)/100) , _height-4 );
+			_ctx.fillRect(2, 2, barWidth, _height - 4);
+			
+			var percentText = percent + '%';
 			_ctx.fillStyle = 'rgb(255,255,0)';
-			_ctx.fillText( percent + '%' ,  ( _width - _ctx.measureText( percent+'%').width ) * 0.5 , 12  );
+			var textWidth = _ctx.measureText(percentText).width;
+			_ctx.fillText(percentText, (_width - textWidth) * 0.5, 12);
 
-			_TimeOut = Events.setTimeout( render, 30);
+			// Use requestAnimationFrame instead of setTimeout for smoother animation
+			if (_render) {
+				requestAnimationFrame(render);
+			}
 		}
 	}
 
@@ -480,7 +555,7 @@ define(function( require )
 
 		// Old Packet required stats
 		if (PACKETVER.value < 20120307) {
-			pkt = new PACKET.CH.MAKE_CHAR();
+			pkt = new PACKET_CH_MAKE_CHAR();
 			pkt.Str  = Str;
 			pkt.Agi  = Agi;
 			pkt.Vit  = Vit;
@@ -489,10 +564,10 @@ define(function( require )
 			pkt.Luk  = Luk;
 		}
 		else if ( ( PACKETVER.value >= 20120307 ) && ( PACKETVER.value < 20151001 ) ) {
-			pkt = new PACKET.CH.MAKE_CHAR2();
+			pkt = new PACKET_CH_MAKE_CHAR2();
 		}
 		else {
-			pkt = new PACKET.CH.MAKE_CHAR3();
+			pkt = new PACKET_CH_MAKE_CHAR3();
 		}
 
 		pkt.name    = name;
@@ -542,47 +617,33 @@ define(function( require )
 	}
 
 	function sendPincodeRequest() {
-		var pkt;
-
-		pkt = new PACKET.CH.PINCODE_REQUEST();
+		var pkt = new PACKET_CH_PINCODE_REQUEST();
 		pkt.AID = Session.AID;
-
 		Network.sendPacket(pkt);
 	}
 
-        function onPincodeCheckRequest(pincode) {
-		var pkt;
-
-		pkt = new PACKET.CH.PINCODE_CHECK();
+	function onPincodeCheckRequest(pincode) {
+		var pkt = new PACKET_CH_PINCODE_CHECK();
 		pkt.AID = Session.AID;
 		pkt.PINCODE = pincode;
-
 		Network.sendPacket(pkt);
 	}
 
 	function onPincodeCreate(pincode, bad) {
-		var pkt;
-
 		_creatingPincode = true;
-
-		pkt = new PACKET.CH.PINCODE_FIRST_PIN();
+		var pkt = new PACKET_CH_PINCODE_FIRST_PIN();
 		pkt.AID = Session.AID;
 		pkt.PINCODE = pincode;
-
 		Network.sendPacket(pkt);
 	}
 
 	function onPincodeReset(oldpin, newpin) {
-		var pkt;
-
 		_inAuthPincodeReset = false;
 		_resettingPincode = true;
-
-		pkt = new PACKET.CH.PINCODE_CHANGE();
+		var pkt = new PACKET_CH_PINCODE_CHANGE();
 		pkt.AID = Session.AID;
 		pkt.OLD_PINCODE = oldpin;
 		pkt.NEW_PINCODE = newpin;
-
 		Network.sendPacket(pkt);
 	}
 
@@ -597,6 +658,7 @@ define(function( require )
 	}
 
 	function onPincodeCheckSuccess(pkt) {
+		// Early return if pincode is disabled and state is 0
 		if(!PincodeWindow.__active && pkt.State == 0){
 			console.log("Pincode is disabled.");
 			return;
@@ -604,21 +666,24 @@ define(function( require )
 		
 		PincodeWindow.remove();
 		
+		// Early return if PACKETVER is too old
 		if (PACKETVER.value < 20110309) {
 			console.log("Pincode packet sent from server, but PACKETVER is too old. Ignoring.");
 			return;
         }
-		PincodeWindow.onPincodeCheckRequest = onPincodeCheckRequest;
-		PincodeWindow.onUserPincodeResetReq = onUserPincodeResetReq;
-		PincodeWindow.onExitRequest = function(){
-			_pincodeAttempts = 0;
-			_inAuthPincodeReset = false;
-			_resettingPincode = false;
-			_creatingPincode = false;
-			PincodeWindow.resetUI();
-			PincodeWindow.remove();
-			onExitRequest();
-		}
+		
+		// Setup common event handlers
+		setupPincodeWindowHandlers();
+		
+		// Cache message IDs for better performance
+		var MSG_PINCODE_CREATED = 1889;
+		var MSG_PINCODE_RESET = 1891;
+		var MSG_PINCODE_CREATE_FAILED = 1893;
+		var MSG_PINCODE_INCORRECT = 1892;
+		var MSG_PINCODE_ERROR_1 = 1895;
+		var MSG_PINCODE_ERROR_2 = 1896;
+		var MSG_PINCODE_MUST_CHANGE = 2345;
+		var MSG_PINCODE_CREATE_NEW = 1900;
 
 		/*
 		 * Pincode
@@ -644,86 +709,129 @@ define(function( require )
 				if (PACKETVER.value >= 20180124) {
 					console.log("PINCODE: Received invalid state from server for configured PACKETVER: " + pkt.State + ". Aborting, please fix your PACKETVER in the config.");
 					PincodeWindow.onExitRequest();
+					return;
 				}
+				// Fall through to case 0 intentionally
 			case 0: // pin is correct
-				_pincodeAttempts = 0;
-				if (_inAuthPincodeReset === true) {
-					PincodeWindow.onPincodeReset = onPincodeReset;
-					PincodeWindow.onOldPincodeCheckResult(true);
-                                } else {
-					if (_creatingPincode === true) {
-						_creatingPincode = false;
-						UIManager.showMessageBox( DB.getMessage( 1889 ), 'ok' );
-					}
-					if (_resettingPincode === true) {
-						_resettingPincode = false;
-						UIManager.showMessageBox( DB.getMessage( 1891 ), 'ok' );
-					}
-					PincodeWindow.resetUI();
-					var ChSel = CharSelect.getUI();
-					ChSel.setUIEnabled(true);
-                                }
+				handlePincodeSuccess();
 				break;
 			case 1: // ask for pin
-                                var ChSel = CharSelect.getUI();
-                                ChSel.setUIEnabled(false);
-				PincodeWindow.selectInput(0);
-				if (_pincodeAttempts < 3) {
-					PincodeWindow.clearPin();
-					PincodeWindow.setUserSeed(pkt.Seed);
-					PincodeWindow.append();
-				} else {
-					PincodeWindow.onExitRequest(); // Failed authentication.
-				}
+				handlePincodePrompt(pkt);
 				break;
 			case 2: // create new pin
 			case 4: // create new pin ??
-				var ChSel = CharSelect.getUI();
-				ChSel.setUIEnabled(false);
-				UIManager.showMessageBox( DB.getMessage( 1900 ), 'ok' );
-				PincodeWindow.selectInput(0);
-				PincodeWindow.setUserSeed(pkt.Seed);
-				PincodeWindow.onPincodeCheckRequest = onPincodeCreate;
-				PincodeWindow.append();
+				handlePincodeCreate(pkt);
 				break;
 			case 3: // pin must be changed
-				var ChSel = CharSelect.getUI();
-				ChSel.setUIEnabled(false);
-				if (_pincodeAttempts < 3) {
-					UIManager.showMessageBox( DB.getMessage( 2345 ), 'ok' );
-					PincodeWindow.setUserSeed(pkt.Seed);
-					PincodeWindow.onPincodeReset = onPincodeReset;
-					PincodeWindow.onParentPincodeResetReq();
-					PincodeWindow.append();
-				} else {
-					PincodeWindow.onExitRequest(); // Failed authentication.
-				}
+				handlePincodeChange(pkt);
 				break;
 			case 5: // client shows msgstr(1896)
 			case 6: // client shows msgstr(1897) Unable to use your KSSN number
 			case 8: // pincode was incorrect
-				if (_creatingPincode === true) {
-					UIManager.showMessageBox( DB.getMessage( 1893 ), 'ok' );
-				} else {
-					UIManager.showMessageBox( DB.getMessage( ((pkt.State == 5) ? 1895 : ((pkt.State == 6) ? 1896 : 1892)) ), 'ok' );
-				}
-				_pincodeAttempts++;
-				if (_pincodeAttempts < 3) {
-					PincodeWindow.resetPins();
-					PincodeWindow.setUserSeed(pkt.Seed);
-					if (_inAuthPincodeReset === true) {
-						_inAuthPincodeReset = false;
-						PincodeWindow.onOldPincodeCheckResult(false);
-					}
-					PincodeWindow.append();
-				} else {
-					PincodeWindow.onExitRequest(); // Failed authentication.
-				}
+				handlePincodeError(pkt);
 				break;
 			default:
 				console.log("PINCODE: Received unknown state from server: " + pkt.State);
 				PincodeWindow.append();
 				break;
+		}
+		
+		// Helper functions for better code organization
+		function setupPincodeWindowHandlers() {
+			PincodeWindow.onPincodeCheckRequest = onPincodeCheckRequest;
+			PincodeWindow.onUserPincodeResetReq = onUserPincodeResetReq;
+			PincodeWindow.onExitRequest = function(){
+				_pincodeAttempts = 0;
+				_inAuthPincodeReset = false;
+				_resettingPincode = false;
+				_creatingPincode = false;
+				PincodeWindow.resetUI();
+				PincodeWindow.remove();
+				onExitRequest();
+			};
+		}
+		
+		function handlePincodeSuccess() {
+			_pincodeAttempts = 0;
+			if (_inAuthPincodeReset === true) {
+				PincodeWindow.onPincodeReset = onPincodeReset;
+				PincodeWindow.onOldPincodeCheckResult(true);
+			} else {
+				if (_creatingPincode === true) {
+					_creatingPincode = false;
+					UIManager.showMessageBox(DB.getMessage(MSG_PINCODE_CREATED), 'ok');
+				}
+				if (_resettingPincode === true) {
+					_resettingPincode = false;
+					UIManager.showMessageBox(DB.getMessage(MSG_PINCODE_RESET), 'ok');
+				}
+				PincodeWindow.resetUI();
+				var ChSel = CharSelect.getUI();
+				ChSel.setUIEnabled(true);
+			}
+		}
+		
+		function handlePincodePrompt(pkt) {
+			var ChSel = CharSelect.getUI();
+			ChSel.setUIEnabled(false);
+			PincodeWindow.selectInput(0);
+			if (_pincodeAttempts < 3) {
+				PincodeWindow.clearPin();
+				PincodeWindow.setUserSeed(pkt.Seed);
+				PincodeWindow.append();
+			} else {
+				PincodeWindow.onExitRequest(); // Failed authentication.
+			}
+		}
+		
+		function handlePincodeCreate(pkt) {
+			var ChSel = CharSelect.getUI();
+			ChSel.setUIEnabled(false);
+			UIManager.showMessageBox(DB.getMessage(MSG_PINCODE_CREATE_NEW), 'ok');
+			PincodeWindow.selectInput(0);
+			PincodeWindow.setUserSeed(pkt.Seed);
+			PincodeWindow.onPincodeCheckRequest = onPincodeCreate;
+			PincodeWindow.append();
+		}
+		
+		function handlePincodeChange(pkt) {
+			var ChSel = CharSelect.getUI();
+			ChSel.setUIEnabled(false);
+			if (_pincodeAttempts < 3) {
+				UIManager.showMessageBox(DB.getMessage(MSG_PINCODE_MUST_CHANGE), 'ok');
+				PincodeWindow.setUserSeed(pkt.Seed);
+				PincodeWindow.onPincodeReset = onPincodeReset;
+				PincodeWindow.onParentPincodeResetReq();
+				PincodeWindow.append();
+			} else {
+				PincodeWindow.onExitRequest(); // Failed authentication.
+			}
+		}
+		
+		function handlePincodeError(pkt) {
+			var messageId;
+			if (_creatingPincode === true) {
+				messageId = MSG_PINCODE_CREATE_FAILED;
+			} else {
+				messageId = (pkt.State == 5) ? MSG_PINCODE_ERROR_1 : 
+							(pkt.State == 6) ? MSG_PINCODE_ERROR_2 : 
+							MSG_PINCODE_INCORRECT;
+			}
+			
+			UIManager.showMessageBox(DB.getMessage(messageId), 'ok');
+			_pincodeAttempts++;
+			
+			if (_pincodeAttempts < 3) {
+				PincodeWindow.resetPins();
+				PincodeWindow.setUserSeed(pkt.Seed);
+				if (_inAuthPincodeReset === true) {
+					_inAuthPincodeReset = false;
+					PincodeWindow.onOldPincodeCheckResult(false);
+				}
+				PincodeWindow.append();
+			} else {
+				PincodeWindow.onExitRequest(); // Failed authentication.
+			}
 		}
 	}
 
@@ -741,7 +849,7 @@ define(function( require )
 		UIManager.getComponent('WinLoading').append();
 		Session.Character = entity;
 
-		var pkt = new PACKET.CH.SELECT_CHAR();
+		var pkt = new PACKET_CH_SELECT_CHAR();
 		pkt.CharNum = entity.CharNum;
 		Network.sendPacket(pkt);
 	}
