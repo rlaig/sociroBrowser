@@ -37,7 +37,11 @@ define(function( require )
 	var getModule    = require;
 	
 	// Version Dependent UIs
-	var WinLogin = require('UI/Components/WinLogin/WinLogin');;
+	var WinLogin = require('UI/Components/WinLogin/WinLogin');
+
+	// Cache commonly used messages
+	var MSG_SERVER_CLOSED = DB.getMessage(3);
+	var MSG_CONNECTION_FAILED = DB.getMessage(1);
 
 	/**
 	 * Creating WinLoading
@@ -67,6 +71,10 @@ define(function( require )
 	 */
 	var _loginID = '';
 
+	/**
+	 * @var {string} Sound file for button clicks
+	 */
+	var _buttonSound = '\xB9\xF6\xC6\xB0\xBC\xD2\xB8\xAE.wav';
 
 	/**
 	 * Init Game
@@ -217,7 +225,7 @@ define(function( require )
 		}
 
 		if (!PACKETVER.value) {
-			UIManager.showErrorBox('Sorry, no PACKETVER configs found.')
+			UIManager.showErrorBox('Sorry, no PACKETVER configs found.');
 			return;
 		}
 
@@ -267,26 +275,32 @@ define(function( require )
 		// Autologin features
 		if (autoLogin instanceof Array && autoLogin[0] && autoLogin[1]) {
 			onConnectionRequest.apply( null, autoLogin);
-			Configs.set('autoLogin',null);
+			Configs.set('autoLogin', null);
 		}
 		else {
 			q.add(function(){ WinLogin.getUI().append(); });
 		}
 
-		// Hook packets
-		if (PACKETVER.value < 20170315) {
-			Network.hookPacket( PACKET.AC.ACCEPT_LOGIN,    onConnectionAccepted );
-		} else {
-			Network.hookPacket( PACKET.AC.ACCEPT_LOGIN3,    onConnectionAccepted );
-		}
-		Network.hookPacket( PACKET.AC.REFUSE_LOGIN,    onConnectionRefused );
-		Network.hookPacket( PACKET.AC.REFUSE_LOGIN_R2, onConnectionRefused );
-		Network.hookPacket( PACKET.SC.NOTIFY_BAN,      onServerClosed );
+		// Hook packets - Use a single function to handle packet version differences
+		setupPacketHooks();
 		
 		// Execute
 		q.run();
 	}
 
+	/**
+	 * Setup packet hooks based on packet version
+	 */
+	function setupPacketHooks() {
+		if (PACKETVER.value < 20170315) {
+			Network.hookPacket(PACKET.AC.ACCEPT_LOGIN, onConnectionAccepted);
+		} else {
+			Network.hookPacket(PACKET.AC.ACCEPT_LOGIN3, onConnectionAccepted);
+		}
+		Network.hookPacket(PACKET.AC.REFUSE_LOGIN, onConnectionRefused);
+		Network.hookPacket(PACKET.AC.REFUSE_LOGIN_R2, onConnectionRefused);
+		Network.hookPacket(PACKET.SC.NOTIFY_BAN, onServerClosed);
+	}
 
 	/**
 	 * Reload WinLogin
@@ -310,8 +324,8 @@ define(function( require )
 	 */
 	function onConnectionRequest( username, password )
 	{
-		// Play "¹öÆ°¼Ò¸®.wav" (possible problem with charset)
-		Sound.play('\xB9\xF6\xC6\xB0\xBC\xD2\xB8\xAE.wav');
+		// Play button sound
+		Sound.play(_buttonSound);
 
 		// Add the loading screen
 		// Store the ID to use for the ping
@@ -323,7 +337,7 @@ define(function( require )
 		Network.connect( _server.address, _server.port, function( success ) {
 			// Fail to connect...
 			if ( !success ) {
-				UIManager.showErrorBox(DB.getMessage(1));
+				UIManager.showErrorBox(MSG_CONNECTION_FAILED);
 				return;
 			}
 
@@ -332,50 +346,21 @@ define(function( require )
 			
 			// Get client hash
 			if ( Configs.get('calculateHash') && !Configs.get('development') ){
-				// Calucalte hash from files (slower, more "secure")
-				var files = Configs.get('hashFiles');
-				var fileStatus = 0;
-				var fileContents = [];
-				
-				for (var i=0; i<files.length; i++ ){
-					var jsonFile = new XMLHttpRequest();
-					jsonFile.open("GET",files[i],true);
-					jsonFile.send();
-
-					jsonFile.onreadystatechange = function() {
-						if (jsonFile.readyState== 4 && jsonFile.status == 200) {
-							fileContents[i] = jsonFile.responseText;
-							fileStatus++;
-						}
-						
-						if(fileStatus == files.length){
-							var contentString = fileContents.join("\r\n"); // Join strings with carrige return & newline
-							hash = MD5.hash(contentString); // Just hash the whole array
-							sendLogin();
-						}
-					}
-				}
-
-				
+				calculateHashFromFiles(function(calculatedHash) {
+					hash = calculatedHash;
+					sendLogin();
+				});
 			} else {
 				// Just use the predefined value (faster, less "secure")
 				hash = Configs.get('clientHash');
 				sendLogin();
 			}
 			
-
 			function sendLogin(){
 				if (hash) {
 					// Convert hexadecimal hash to binary
 					if (/^[a-f0-9]+$/i.test(hash)) {
-						var str = '';
-						var i, count = hash.length;
-
-						for (i = 0; i < count; i += 2) {
-							str += String.fromCharCode(parseInt(hash.substr(i,2),16));
-						}
-
-						hash = str;
+						hash = hexToBinary(hash);
 					}
 
 					pkt           = new PACKET.CA.EXE_HASHCHECK();
@@ -394,6 +379,51 @@ define(function( require )
 		});
 	}
 
+	/**
+	 * Calculate hash from files
+	 * @param {Function} callback - Called with the calculated hash
+	 */
+	function calculateHashFromFiles(callback) {
+		var files = Configs.get('hashFiles');
+		var fileStatus = 0;
+		var fileContents = [];
+		
+		for (var i = 0; i < files.length; i++) {
+			(function(index) {
+				var jsonFile = new XMLHttpRequest();
+				jsonFile.open("GET", files[index], true);
+				jsonFile.send();
+
+				jsonFile.onreadystatechange = function() {
+					if (jsonFile.readyState == 4 && jsonFile.status == 200) {
+						fileContents[index] = jsonFile.responseText;
+						fileStatus++;
+					}
+					
+					if (fileStatus == files.length) {
+						var contentString = fileContents.join("\r\n"); // Join strings with carriage return & newline
+						callback(MD5.hash(contentString)); // Just hash the whole array
+					}
+				};
+			})(i);
+		}
+	}
+
+	/**
+	 * Convert hexadecimal string to binary string
+	 * @param {string} hex - Hexadecimal string
+	 * @return {string} Binary string
+	 */
+	function hexToBinary(hex) {
+		var str = '';
+		var i, count = hex.length;
+
+		for (i = 0; i < count; i += 2) {
+			str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+		}
+
+		return str;
+	}
 
 	/**
 	 * Go back to intro window
@@ -411,8 +441,8 @@ define(function( require )
 	 */
 	function onCharServerSelected( index )
 	{
-		// Play "¹öÆ°¼Ò¸®.wav" (encode to avoid problem with charset)
-		Sound.play('\xB9\xF6\xC6\xB0\xBC\xD2\xB8\xAE.wav');
+		// Play button sound
+		Sound.play(_buttonSound);
 
 		WinList.remove();
 		WinLoading.append();

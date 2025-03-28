@@ -7,7 +7,6 @@
 /dist/
 /node_modules/
 /src/Plugins/*/
-/index.html
 /package-lock.json
 /GrannyModelViewer.js
 /GrfViewer.js
@@ -17,6 +16,9 @@
 /StrViewer.js
 /ThreadEventHandler.js
 /data/*
+/EffectViewer.js
+/live/download/*
+/live/src
 
 # IDE files
 .idea/

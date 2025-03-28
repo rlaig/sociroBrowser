@@ -110,14 +110,6 @@ function compile(appName, isMinify) {
         },
         name: appPath,
         out: async (source) => {
-            const header = [
-                '/*',
-                ' * Build with RONW Builder [MrUnzO] (https://github.com/MrUnzO/RONW)',
-                ' * ',
-                ' * This file is part of ROBrowser, (http://www.robrowser.com/).',
-                ' * @author Vincent Thibault and the community',
-                ' */\n',
-            ].join("\n");
             // Remove importScripts(requirejs), included directly
             source = source.replace(/importScripts\([^\)]+\)(\,|\;|\n)?/g, '');
 
@@ -136,7 +128,7 @@ function compile(appName, isMinify) {
                 // fileName = "./dist/" + appName + '.min.js';
             }
 
-            fs.writeFileSync(fileName, header + source, { encoding: "utf8" });
+            fs.writeFileSync(fileName, source, { encoding: "utf8" });
             console.log(appName + ".js has been created in", (Date.now() - startTime), "ms.");
         }
     };

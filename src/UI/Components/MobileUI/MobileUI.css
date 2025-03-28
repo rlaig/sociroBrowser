@@ -1,5 +1,6 @@
 #MobileUI *{
 	z-index: 1000;
+	font-size: 12px;
 }
 
 #MobileUI .buttonBar, 
@@ -8,15 +9,17 @@
 }
 
 #MobileUI #toggleUIButton{
-	top: 3px;
+	font-size: 2cqb;
+	top: 10%;
 	left: 3px;
-	width: 25px;
-	height: 25px;
+	width: 5cqb;
+	height: 5cqb;
+	;
 }
 
 #MobileUI .buttons{
 	background: rgba(193,193,193,0.33);
-	border-radius: 6px;
+	border-radius: 50%;
 	border: 1px solid grey;
 }
 
@@ -25,18 +28,18 @@
 }
 
 #MobileUI .horizontal{
-	margin: 0px 15px;
+	margin: 0px 10px;
 }
 
 #MobileUI .vertical{
-	margin: 15px 0px;
+	margin: 10px 0px;
 }
 
-#MobileUI .disabled { visibility:hidden; }
+#MobileUI .disabled { visibility: hidden; }
 
 #MobileUI #topBar{
 	left: 50%;
-	top: 3px;
+	top: 10px;
 	transform: translate(-50%, 0);
 }
 
@@ -65,11 +68,13 @@
 }
 
 #MobileUI .primary{
-	width: 45px;
-	height: 45px;
+	font-size: 2cqb;
+	width: 8cqb;
+	height: 8cqb;
 }
 
 #MobileUI .secondary{
-	width: 30px;
-	height: 30px;
+	font-size: 2cqb;
+	width: 7cqb;
+	height: 7cqb;
 }
