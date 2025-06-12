@@ -1,5 +1,4 @@
 /AI/*
-/applications/settings.js
 /client/BGM/*
 /client/data/*
 /client/resources/*
@@ -19,6 +18,7 @@
 /EffectViewer.js
 /live/download/*
 /live/src
+/save/*
 
 # IDE files
 .idea/
