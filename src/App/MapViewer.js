@@ -69,6 +69,12 @@ function(
 
 
 	/**
+	 * @var {HTMLElement} readonly textbox for coordinates
+	 */
+	MapViewer.coordsDisplay = null;
+
+
+	/**
 	 * Initialize MapViewer
 	 */
 	MapViewer.init = function Init()
@@ -190,6 +196,23 @@ function(
 					document.body.removeChild( MapViewer.dropDown );
 				};
 			});
+
+			// Initialize coordinates display textbox
+			MapViewer.coordsDisplay = document.createElement('input');
+			MapViewer.coordsDisplay.type = 'text';
+			MapViewer.coordsDisplay.readOnly = true;
+			MapViewer.coordsDisplay.style.position = 'fixed';
+			MapViewer.coordsDisplay.style.top = '10px';
+			MapViewer.coordsDisplay.style.right = '10px';
+			MapViewer.coordsDisplay.style.zIndex = 60;
+			MapViewer.coordsDisplay.style.background = 'rgba(0, 0, 0, 0.7)';
+			MapViewer.coordsDisplay.style.color = 'white';
+			MapViewer.coordsDisplay.style.border = '1px solid #333';
+			MapViewer.coordsDisplay.style.padding = '5px';
+			MapViewer.coordsDisplay.style.fontFamily = 'monospace';
+			MapViewer.coordsDisplay.style.fontSize = '12px';
+			MapViewer.coordsDisplay.placeholder = 'World Coordinates';
+			MapViewer.coordsDisplay.value = 'X: -, Y: -, Z: -';
 		});
 
 		// Start queue system
@@ -207,6 +230,9 @@ function(
 		if (!Configs.get('API')) {
 			document.body.appendChild( MapViewer.dropDown );
 		}
+
+		// Always append coordinates display
+		document.body.appendChild( MapViewer.coordsDisplay );
 
 		MapViewer.spot.position[0] = Altitude.width  >> 1;
 		MapViewer.spot.position[1] = Altitude.height >> 1;
@@ -229,6 +255,9 @@ function(
 			MapViewer.spot.position[0] = Mouse.world.x;
 			MapViewer.spot.position[1] = Mouse.world.y;
 			MapViewer.spot.position[2] = Mouse.world.z;
+
+			// Update coordinates display
+			MapViewer.coordsDisplay.value = 'X: ' + Mouse.world.x.toFixed(2) + ', Y: ' + Mouse.world.y.toFixed(2) + ', Z: ' + Mouse.world.z.toFixed(2);
 		}
 	};
 
