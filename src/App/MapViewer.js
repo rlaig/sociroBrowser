@@ -186,6 +186,14 @@ function(
 				MapViewer.dropDown.style.zIndex   = 50;
 				MapViewer.dropDown.style.position = 'relative';
 
+				// Initialize coordinates display textbox
+				MapViewer.coordsDisplay = document.createElement('input');
+				MapViewer.coordsDisplay.type = 'text';
+				MapViewer.coordsDisplay.readOnly = true;
+				MapViewer.coordsDisplay.style.position = 'relative';
+				MapViewer.coordsDisplay.style.zIndex   = 50;
+				MapViewer.coordsDisplay.value = 'X: -, Y: -, Z: -';
+
 				for (i = 0, count = mapList.length; i < count; ++i) {
 					mapList[i] = mapList[i].substr(5); // Remove 'data\\' part
 					MapViewer.dropDown.add( new Option( mapList[i], mapList[i]), null );
@@ -194,16 +202,9 @@ function(
 				MapViewer.dropDown.onchange = function OnChange() {
 					MapRenderer.setMap( this.value );
 					document.body.removeChild( MapViewer.dropDown );
+					document.body.removeChild( MapViewer.coordsDisplay );
 				};
 			});
-
-			// Initialize coordinates display textbox
-			MapViewer.coordsDisplay = document.createElement('input');
-			MapViewer.coordsDisplay.type = 'text';
-			MapViewer.coordsDisplay.readOnly = true;
-			MapViewer.coordsDisplay.style.position = 'relative';
-			MapViewer.coordsDisplay.style.zIndex   = 50;
-			MapViewer.coordsDisplay.value = 'X: -, Y: -, Z: -';
 		});
 
 		// Start queue system
