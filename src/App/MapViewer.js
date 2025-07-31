@@ -202,6 +202,7 @@ function(
 			MapViewer.coordsDisplay.type = 'text';
 			MapViewer.coordsDisplay.readOnly = true;
 			MapViewer.coordsDisplay.style.position = 'relative';
+			MapViewer.coordsDisplay.style.zIndex   = 50;
 			MapViewer.coordsDisplay.value = 'X: -, Y: -, Z: -';
 		});
 
