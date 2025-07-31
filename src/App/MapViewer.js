@@ -201,17 +201,7 @@ function(
 			MapViewer.coordsDisplay = document.createElement('input');
 			MapViewer.coordsDisplay.type = 'text';
 			MapViewer.coordsDisplay.readOnly = true;
-			MapViewer.coordsDisplay.style.position = 'fixed';
-			MapViewer.coordsDisplay.style.top = '10px';
-			MapViewer.coordsDisplay.style.right = '10px';
-			MapViewer.coordsDisplay.style.zIndex = 60;
-			MapViewer.coordsDisplay.style.background = 'rgba(0, 0, 0, 0.7)';
-			MapViewer.coordsDisplay.style.color = 'white';
-			MapViewer.coordsDisplay.style.border = '1px solid #333';
-			MapViewer.coordsDisplay.style.padding = '5px';
-			MapViewer.coordsDisplay.style.fontFamily = 'monospace';
-			MapViewer.coordsDisplay.style.fontSize = '12px';
-			MapViewer.coordsDisplay.placeholder = 'World Coordinates';
+			MapViewer.coordsDisplay.style.position = 'relative';
 			MapViewer.coordsDisplay.value = 'X: -, Y: -, Z: -';
 		});
 
