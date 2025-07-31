@@ -220,10 +220,8 @@ function(
 
 		if (!Configs.get('API')) {
 			document.body.appendChild( MapViewer.dropDown );
+			document.body.appendChild( MapViewer.coordsDisplay );
 		}
-
-		// Always append coordinates display
-		document.body.appendChild( MapViewer.coordsDisplay );
 
 		MapViewer.spot.position[0] = Altitude.width  >> 1;
 		MapViewer.spot.position[1] = Altitude.height >> 1;
