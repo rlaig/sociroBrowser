@@ -61,3 +61,14 @@ This directory contains the main application entry points for different ROBrowse
 - Initializes the Str viewer component
 - Handles API messages for loading and stopping effects
 - Manages thread initialization and client setup
+
+### UIViewer.js
+**Purpose:** Interactive UI Component Viewer for testing and debugging individual UI components.
+
+**Core Functions:**
+- Provides a toggleable interface for showing/hiding UI components
+- Lists all available UI components with individual controls
+- Includes batch operations (Show All/Hide All)
+- Features a draggable, minimizable control panel
+- Handles component loading and error management
+- Useful for UI development and testing purposes

@@ -69,6 +69,12 @@ function(
 
 
 	/**
+	 * @var {HTMLElement} readonly textbox for coordinates
+	 */
+	MapViewer.coordsDisplay = null;
+
+
+	/**
 	 * Initialize MapViewer
 	 */
 	MapViewer.init = function Init()
@@ -180,6 +186,14 @@ function(
 				MapViewer.dropDown.style.zIndex   = 50;
 				MapViewer.dropDown.style.position = 'relative';
 
+				// Initialize coordinates display textbox
+				MapViewer.coordsDisplay = document.createElement('input');
+				MapViewer.coordsDisplay.type = 'text';
+				MapViewer.coordsDisplay.readOnly = true;
+				MapViewer.coordsDisplay.style.position = 'relative';
+				MapViewer.coordsDisplay.style.zIndex   = 50;
+				MapViewer.coordsDisplay.value = 'X: -, Y: -, Z: -';
+
 				for (i = 0, count = mapList.length; i < count; ++i) {
 					mapList[i] = mapList[i].substr(5); // Remove 'data\\' part
 					MapViewer.dropDown.add( new Option( mapList[i], mapList[i]), null );
@@ -188,6 +202,7 @@ function(
 				MapViewer.dropDown.onchange = function OnChange() {
 					MapRenderer.setMap( this.value );
 					document.body.removeChild( MapViewer.dropDown );
+					document.body.removeChild( MapViewer.coordsDisplay );
 				};
 			});
 		});
@@ -206,6 +221,7 @@ function(
 
 		if (!Configs.get('API')) {
 			document.body.appendChild( MapViewer.dropDown );
+			document.body.appendChild( MapViewer.coordsDisplay );
 		}
 
 		MapViewer.spot.position[0] = Altitude.width  >> 1;
@@ -229,6 +245,9 @@ function(
 			MapViewer.spot.position[0] = Mouse.world.x;
 			MapViewer.spot.position[1] = Mouse.world.y;
 			MapViewer.spot.position[2] = Mouse.world.z;
+
+			// Update coordinates display
+			MapViewer.coordsDisplay.value = 'X: ' + Mouse.world.x.toFixed(2) + ', Y: ' + Mouse.world.y.toFixed(2) + ', Z: ' + Mouse.world.z.toFixed(2);
 		}
 	};
 
