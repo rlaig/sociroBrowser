@@ -87,8 +87,8 @@ require( {
 		jquery: 'Vendors/jquery-1.9.1'
 	}
 },
-	['Core/Thread', 'Core/Client', 'Core/Configs', 'Utils/jquery'],
-	function(Thread, Client, Configs, $) {
+	['Core/Thread', 'Core/Client', 'Core/Configs', 'Utils/jquery', 'UI/UIManager'],
+	function(Thread, Client, Configs, $, UIManager) {
 		'use strict';
 
 		/**
@@ -134,7 +134,7 @@ require( {
 		];
 
 		/**
-		 * Active component instances
+		 * Track which components are currently active (visible)
 		 */
 		UIViewer.activeComponents = {};
 
@@ -230,8 +230,41 @@ require( {
 				});
 			});
 
-			buttonContainer.append(showAllBtn, hideAllBtn);
+			// Add clear all button for complete cleanup
+			var clearAllBtn = $('<button>Clear All</button>');
+			clearAllBtn.css({
+				background: '#f44336',
+				color: 'white',
+				border: 'none',
+				padding: '5px 10px',
+				margin: '0 5px',
+				borderRadius: '3px',
+				cursor: 'pointer',
+				fontSize: '11px'
+			});
+
+			clearAllBtn.click(function() {
+				UIViewer.clearAllComponents();
+			});
+
+			buttonContainer.append(showAllBtn, hideAllBtn, clearAllBtn);
 			container.append(buttonContainer);
+
+			// Add status display
+			var statusContainer = $('<div id="status-info"></div>');
+			statusContainer.css({
+				marginBottom: '10px',
+				padding: '8px',
+				background: 'rgba(255, 255, 255, 0.1)',
+				borderRadius: '4px',
+				fontSize: '10px',
+				lineHeight: '1.3'
+			});
+			container.append(statusContainer);
+
+			// Update status periodically
+			UIViewer.updateStatus();
+			setInterval(UIViewer.updateStatus, 2000);
 
 			// Add component list
 			var componentList = $('<div id="component-list"></div>');
@@ -337,28 +370,59 @@ require( {
 				require(['UI/Components/' + componentName + '/' + componentName], function(Component) {
 					try {
 						if (Component && typeof Component.append === 'function') {
-							Component.prepare();
-							Component.append();
-							UIViewer.activeComponents[componentName] = Component;
+							// Component is already registered with UIManager when loaded
+							// Get the component from UIManager to ensure proper integration
+							var managedComponent;
+							try {
+								managedComponent = UIManager.getComponent(componentName);
+							} catch (e) {
+								// If not found in UIManager, use the loaded component directly
+								managedComponent = Component;
+								console.log('UIViewer: Component ' + componentName + ' not found in UIManager, using direct reference');
+							}
+
+							// Check if component supports getUI() method (for versioned components)
+							if (typeof managedComponent.getUI === 'function') {
+								managedComponent = managedComponent.getUI();
+							}
+
+							// Prepare and append the component
+							if (typeof managedComponent.prepare === 'function') {
+								managedComponent.prepare();
+							}
+							
+							// Handle components that might already be appended
+							if (managedComponent.__active) {
+								console.log('UIViewer: Component ' + componentName + ' already active');
+							} else {
+								managedComponent.append();
+							}
+							
+							UIViewer.activeComponents[componentName] = managedComponent;
 							UIViewer.updateButton(componentName, true);
+							UIViewer.updateStatus();
 							console.log('UIViewer: Showing ' + componentName);
 						} else {
 							console.warn('UIViewer: Component ' + componentName + ' does not have append method');
+							UIViewer.updateButton(componentName, false);
 						}
 					} catch (error) {
 						console.error('UIViewer: Error showing ' + componentName + ':', error);
+						UIViewer.updateButton(componentName, false);
 					}
 				}, function(error) {
 					console.error('UIViewer: Failed to load ' + componentName + ':', error);
+					UIViewer.updateButton(componentName, false);
 				});
 			} else if (!shouldShow && isActive) {
 				// Hide component
 				try {
-					if (UIViewer.activeComponents[componentName] && 
-						typeof UIViewer.activeComponents[componentName].remove === 'function') {
-						UIViewer.activeComponents[componentName].remove();
+					var component = UIViewer.activeComponents[componentName];
+					if (component && typeof component.remove === 'function') {
+						component.remove();
 						delete UIViewer.activeComponents[componentName];
 						UIViewer.updateButton(componentName, false);
+						UIViewer.updateStatus();
 						console.log('UIViewer: Hiding ' + componentName);
 					}
 				} catch (error) {
@@ -381,6 +445,41 @@ require( {
 			} else {
 				button.text('Show').css('background', '#2196F3');
 			}
+		};
+
+		/**
+		 * Clear all currently active components
+		 */
+		UIViewer.clearAllComponents = function ClearAllComponents() {
+			for (var componentName in UIViewer.activeComponents) {
+				if (UIViewer.activeComponents.hasOwnProperty(componentName)) {
+					UIViewer.toggleComponent(componentName, false);
+				}
+			}
+			UIViewer.updateStatus();
+		};
+
+		/**
+		 * Update the status display
+		 */
+		UIViewer.updateStatus = function UpdateStatus() {
+			var activeCount = Object.keys(UIViewer.activeComponents).length;
+			var registeredCount = Object.keys(UIManager.components).length;
+			
+			var statusText = 'Active: ' + activeCount + ' | UIManager: ' + registeredCount + '\n';
+			
+			if (activeCount > 0) {
+				statusText += 'Active Components:\n';
+				for (var componentName in UIViewer.activeComponents) {
+					if (UIViewer.activeComponents.hasOwnProperty(componentName)) {
+						var component = UIViewer.activeComponents[componentName];
+						var isInManager = componentName in UIManager.components;
+						statusText += '• ' + componentName + (isInManager ? ' ✓' : ' ⚠') + '\n';
+					}
+				}
+			}
+			
+			$('#status-info').text(statusText.trim());
 		};
 
 		/**
@@ -417,7 +516,29 @@ require( {
 			}
 		};
 
+		/**
+		 * Handle window resize - integrate with UIManager
+		 */
+		UIViewer.onResize = function OnResize() {
+			try {
+				// Use UIManager's resize handling for all managed components
+				UIManager.fixResizeOverflow(window.innerWidth, window.innerHeight);
+			} catch (error) {
+				console.error('UIViewer: Error during resize handling:', error);
+			}
+		};
+
+		/**
+		 * Setup window resize handling
+		 */
+		UIViewer.setupResizeHandling = function SetupResizeHandling() {
+			$(window).on('resize', UIViewer.onResize);
+		};
+
 		// Initialize the UIViewer
 		UIViewer.init();
+		
+		// Setup resize handling after initialization
+		UIViewer.setupResizeHandling();
 	}
 ); 
