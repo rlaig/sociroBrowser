@@ -93,14 +93,24 @@ require( {
 	 'Network/PacketVerManager', 'Controls/KeyEventHandler',
 	 'Network/NetworkManager', 'Network/PacketStructure',
 	 'DB/Items/ItemType', 'Controls/MouseEventHandler',
-	 'Renderer/SpriteRenderer', 'Core/Context', 'Core/Events'],
+	 'Renderer/SpriteRenderer', 'Core/Context', 'Core/Events',
+	 // Pre-load commonly used UI components to prevent cross-dependency errors
+	 'UI/Components/Emoticons/Emoticons',
+	 'UI/Components/ItemInfo/ItemInfo',
+	 'UI/Components/WinPopup/WinPopup',
+	 'UI/Components/ContextMenu/ContextMenu',
+	 'UI/Components/ItemCompare/ItemCompare',
+	 'UI/Components/Escape/Escape',
+	 'UI/Components/InputBox/InputBox'],
 	function(Thread, Client, Configs, $, UIManager, 
 	         DB, Session, Renderer,
 	         MapPrefs, ControlPrefs, Preferences,
 	         PACKETVER, KEYS,
 	         Network, PACKET,
 	         ItemType, Mouse,
-	         SpriteRenderer, Context, Events) {
+	         SpriteRenderer, Context, Events,
+	         // Pre-loaded UI components
+	         Emoticons, ItemInfo, WinPopup, ContextMenu, ItemCompare, Escape, InputBox) {
 		'use strict';
 
 		/**
@@ -234,7 +244,41 @@ require( {
 				console.warn('UIViewer: Could not initialize PACKETVER:', e.message);
 			}
 
+			// Initialize pre-loaded components to ensure they're available
+			try {
+				UIViewer.initializePreloadedComponents();
+			} catch (e) {
+				console.warn('UIViewer: Could not initialize pre-loaded components:', e.message);
+			}
+
 			console.log('UIViewer: Basic systems initialized');
+		};
+
+		/**
+		 * Initialize pre-loaded UI components
+		 */
+		UIViewer.initializePreloadedComponents = function InitializePreloadedComponents() {
+			var preloadedComponents = [
+				{ name: 'Emoticons', component: Emoticons },
+				{ name: 'ItemInfo', component: ItemInfo },
+				{ name: 'WinPopup', component: WinPopup },
+				{ name: 'ContextMenu', component: ContextMenu },
+				{ name: 'ItemCompare', component: ItemCompare },
+				{ name: 'Escape', component: Escape },
+				{ name: 'InputBox', component: InputBox }
+			];
+
+			preloadedComponents.forEach(function(item) {
+				try {
+					// Ensure component is prepared but not appended
+					if (item.component && typeof item.component.prepare === 'function') {
+						item.component.prepare();
+					}
+					console.log('UIViewer: Pre-loaded component:', item.name);
+				} catch (e) {
+					console.warn('UIViewer: Failed to prepare pre-loaded component ' + item.name + ':', e.message);
+				}
+			});
 		};
 
 		/**
@@ -540,16 +584,19 @@ require( {
 		UIViewer.updateStatus = function UpdateStatus() {
 			var activeCount = Object.keys(UIViewer.activeComponents).length;
 			var registeredCount = Object.keys(UIManager.components).length;
+			var preloadedComponents = ['Emoticons', 'ItemInfo', 'WinPopup', 'ContextMenu', 'ItemCompare', 'Escape', 'InputBox'];
 			
 			var statusText = 'Active: ' + activeCount + ' | UIManager: ' + registeredCount + '\n';
+			statusText += 'Pre-loaded: ' + preloadedComponents.length + '\n';
 			
 			if (activeCount > 0) {
-				statusText += 'Active Components:\n';
+				statusText += '\nActive Components:\n';
 				for (var componentName in UIViewer.activeComponents) {
 					if (UIViewer.activeComponents.hasOwnProperty(componentName)) {
 						var component = UIViewer.activeComponents[componentName];
 						var isInManager = componentName in UIManager.components;
-						statusText += '• ' + componentName + (isInManager ? ' ✓' : ' ⚠') + '\n';
+						var isPreloaded = preloadedComponents.indexOf(componentName) !== -1;
+						statusText += '• ' + componentName + (isInManager ? ' ✓' : ' ⚠') + (isPreloaded ? ' (P)' : '') + '\n';
 					}
 				}
 			}
