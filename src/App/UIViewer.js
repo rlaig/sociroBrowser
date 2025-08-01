@@ -87,8 +87,20 @@ require( {
 		jquery: 'Vendors/jquery-1.9.1'
 	}
 },
-	['Core/Thread', 'Core/Client', 'Core/Configs', 'Utils/jquery', 'UI/UIManager'],
-	function(Thread, Client, Configs, $, UIManager) {
+	['Core/Thread', 'Core/Client', 'Core/Configs', 'Utils/jquery', 'UI/UIManager', 
+	 'DB/DBManager', 'Engine/SessionStorage', 'Renderer/Renderer',
+	 'Preferences/Map', 'Preferences/Controls', 'Core/Preferences',
+	 'Network/PacketVerManager', 'Controls/KeyEventHandler',
+	 'Network/NetworkManager', 'Network/PacketStructure',
+	 'DB/Items/ItemType', 'Controls/MouseEventHandler',
+	 'Renderer/SpriteRenderer', 'Core/Context', 'Core/Events'],
+	function(Thread, Client, Configs, $, UIManager, 
+	         DB, Session, Renderer,
+	         MapPrefs, ControlPrefs, Preferences,
+	         PACKETVER, KEYS,
+	         Network, PACKET,
+	         ItemType, Mouse,
+	         SpriteRenderer, Context, Events) {
 		'use strict';
 
 		/**
@@ -145,6 +157,9 @@ require( {
 			// Remove loading spinner
 			window.roInitSpinner.remove();
 
+			// Initialize basic systems that UI components expect
+			UIViewer.initializeSystems();
+
 			// Create UI Viewer interface
 			UIViewer.createInterface();
 
@@ -156,10 +171,70 @@ require( {
 			Thread.hook('THREAD_READY', function(){
 				Client.onFilesLoaded = function(){
 					console.log('UIViewer: Client files loaded');
+					// Initialize DB after client files are loaded
+					DB.init();
 				};
 				Client.init([]);
 			});
 			Thread.init();
+		};
+
+		/**
+		 * Initialize basic systems required by UI components
+		 */
+		UIViewer.initializeSystems = function InitializeSystems() {
+			// Initialize basic session data that components might expect
+			if (!Session.Entity) {
+				Session.Entity = {
+					position: [0, 0, 0],
+					direction: 0,
+					hp: 100,
+					hp_max: 100,
+					sp: 100,
+					sp_max: 100,
+					base_level: 1,
+					job_level: 1,
+					zeny: 0
+				};
+			}
+
+			// Initialize basic character data if not present
+			if (!Session.character) {
+				Session.character = {
+					name: 'UIViewer',
+					job: 0,
+					sex: 0
+				};
+			}
+
+			// Initialize renderer if not already done
+			if (!Renderer.canvas) {
+				try {
+					Renderer.init();
+				} catch (e) {
+					console.warn('UIViewer: Could not initialize Renderer:', e.message);
+				}
+			}
+
+			// Set up basic preferences that components might need
+			try {
+				if (typeof Preferences.init === 'function') {
+					Preferences.init();
+				}
+			} catch (e) {
+				console.warn('UIViewer: Could not initialize Preferences:', e.message);
+			}
+
+			// Initialize packet version manager
+			try {
+				if (!PACKETVER.value) {
+					PACKETVER.value = 20230621; // Set a default packet version
+				}
+			} catch (e) {
+				console.warn('UIViewer: Could not initialize PACKETVER:', e.message);
+			}
+
+			console.log('UIViewer: Basic systems initialized');
 		};
 
 		/**
