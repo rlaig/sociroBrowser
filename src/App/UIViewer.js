@@ -1,0 +1,423 @@
+/**
+ * App/UIViewer.js
+ *
+ * UI Component Viewer for testing and debugging UI components
+ *
+ * This file is part of ROBrowser, (http://www.robrowser.com/).
+ *
+ * @author Generated for UI Testing
+ */
+
+// Add spinner before starting the require chain to let the user know things are happening in the background
+window.roInitSpinner = {
+	add: function(){
+		// Loading spinner ring
+		var loading = document.createElement('div');
+		loading.id = 'loading-element';
+		loading.className = 'lds-dual-ring';
+		
+		var loadingStyle = document.createElement('style');
+		loadingStyle.id = 'loading-style';
+		loadingStyle.textContent = `
+			.lds-dual-ring { color: #1c4c5b }
+			.lds-dual-ring,
+			.lds-dual-ring:after { box-sizing: border-box; }
+			.lds-dual-ring {
+				position: absolute;
+				display: inline-block;
+				width: 80px;
+				height: 80px;
+				top: 50%;
+				left: 50%;
+				margin-top: -40px;
+				margin-left: -40px;
+			}
+			.lds-dual-ring:after {
+				content: " ";
+				display: block;
+				width: 64px;
+				height: 64px;
+				margin: 8px;
+				border-radius: 50%;
+				border: 6.4px solid currentColor;
+				border-color: currentColor transparent currentColor transparent;
+				animation: lds-dual-ring 1.2s linear infinite;
+			}
+			@keyframes lds-dual-ring {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+		`;
+		
+		// roBrowser will append all the css in the first style tag in the DOM, 
+		// so we add a style tag before our own to avoid removing every style altogether,
+		// when we remove the spinner later.
+		document.head.appendChild(document.createElement('style'));
+		// We also need to store a direct reference, because iframe messes with document
+		window.roInitSpinner.styleElem = document.head.appendChild(loadingStyle);
+		window.roInitSpinner.divElem = document.body.appendChild(loading);
+	},
+	remove: function(){
+		window.roInitSpinner.styleElem?.remove();
+		window.roInitSpinner.divElem?.remove();
+	}
+};
+
+// Add spinner before starting the require chain
+window.roInitSpinner.add();
+
+// Errors Handler (hack)
+require.onError = function (err) {
+	'use strict';
+
+	if (require.defined('UI/Components/Error/Error')) {
+		require('UI/Components/Error/Error').addTrace(err);
+		return;
+	}
+
+	require(['UI/Components/Error/Error'], function( Errors ){
+		Errors.addTrace(err);
+	});
+};
+
+require( {
+	baseUrl: '../../src/',
+	paths: {
+		text:   'Vendors/text.require',
+		jquery: 'Vendors/jquery-1.9.1'
+	}
+},
+	['Core/Thread', 'Core/Client', 'Core/Configs', 'Utils/jquery'],
+	function(Thread, Client, Configs, $) {
+		'use strict';
+
+		/**
+		 * UIViewer namespace
+		 */
+		var UIViewer = {};
+
+		/**
+		 * Available UI Components to test
+		 */
+		UIViewer.components = [
+			'BasicInfo',
+			'ChatBox',
+			'Inventory',
+			'Equipment',
+			'MiniMap',
+			'ShortCut',
+			'StatusIcons',
+			'FPS',
+			'InputBox',
+			'WinPopup',
+			'WinPrompt',
+			'ContextMenu',
+			'Emoticons',
+			'WinStats',
+			'ItemInfo',
+			'SkillList',
+			'Quest',
+			'Mail',
+			'Guild',
+			'Trade',
+			'Storage',
+			'CartItems',
+			'CharSelect',
+			'CharCreate',
+			'WinLogin',
+			'Announce',
+			'Bank',
+			'CashShop',
+			'CheckAttendance',
+			'GraphicsOption',
+			'SoundOption'
+		];
+
+		/**
+		 * Active component instances
+		 */
+		UIViewer.activeComponents = {};
+
+		/**
+		 * Initialize UIViewer
+		 */
+		UIViewer.init = function Init() {
+			// Remove loading spinner
+			window.roInitSpinner.remove();
+
+			// Create UI Viewer interface
+			UIViewer.createInterface();
+
+			// Initialize Thread and Client
+			if (Configs.get('API')) {
+				Thread.delegate(window.parent, '*');
+			}
+			
+			Thread.hook('THREAD_READY', function(){
+				Client.onFilesLoaded = function(){
+					console.log('UIViewer: Client files loaded');
+				};
+				Client.init([]);
+			});
+			Thread.init();
+		};
+
+		/**
+		 * Create the UI Viewer interface
+		 */
+		UIViewer.createInterface = function CreateInterface() {
+			// Create main container
+			var container = $('<div id="uiviewer-container"></div>');
+			container.css({
+				position: 'fixed',
+				top: '10px',
+				right: '10px',
+				width: '300px',
+				maxHeight: '80vh',
+				background: 'rgba(0, 0, 0, 0.9)',
+				border: '2px solid #444',
+				borderRadius: '8px',
+				padding: '15px',
+				zIndex: 10000,
+				color: 'white',
+				fontFamily: 'Arial, sans-serif',
+				fontSize: '12px',
+				overflow: 'auto'
+			});
+
+			// Add title
+			var title = $('<h2>UI Component Viewer</h2>');
+			title.css({
+				margin: '0 0 15px 0',
+				color: '#4CAF50',
+				fontSize: '16px',
+				textAlign: 'center'
+			});
+			container.append(title);
+
+			// Add toggle all buttons
+			var buttonContainer = $('<div></div>');
+			buttonContainer.css({
+				marginBottom: '15px',
+				textAlign: 'center'
+			});
+
+			var showAllBtn = $('<button>Show All</button>');
+			var hideAllBtn = $('<button>Hide All</button>');
+			
+			[showAllBtn, hideAllBtn].forEach(function(btn) {
+				btn.css({
+					background: '#4CAF50',
+					color: 'white',
+					border: 'none',
+					padding: '5px 10px',
+					margin: '0 5px',
+					borderRadius: '3px',
+					cursor: 'pointer',
+					fontSize: '11px'
+				});
+			});
+
+			showAllBtn.click(function() {
+				UIViewer.components.forEach(function(componentName) {
+					UIViewer.toggleComponent(componentName, true);
+				});
+			});
+
+			hideAllBtn.click(function() {
+				UIViewer.components.forEach(function(componentName) {
+					UIViewer.toggleComponent(componentName, false);
+				});
+			});
+
+			buttonContainer.append(showAllBtn, hideAllBtn);
+			container.append(buttonContainer);
+
+			// Add component list
+			var componentList = $('<div id="component-list"></div>');
+			UIViewer.components.forEach(function(componentName) {
+				var item = UIViewer.createComponentItem(componentName);
+				componentList.append(item);
+			});
+			container.append(componentList);
+
+			// Add minimize/maximize functionality
+			var minimizeBtn = $('<button>−</button>');
+			minimizeBtn.css({
+				position: 'absolute',
+				top: '5px',
+				right: '5px',
+				background: '#f44336',
+				color: 'white',
+				border: 'none',
+				width: '20px',
+				height: '20px',
+				borderRadius: '50%',
+				cursor: 'pointer',
+				fontSize: '14px',
+				lineHeight: '1'
+			});
+
+			var isMinimized = false;
+			var originalHeight = container.height();
+			
+			minimizeBtn.click(function() {
+				if (isMinimized) {
+					container.css('height', 'auto');
+					componentList.show();
+					buttonContainer.show();
+					$(this).text('−');
+					isMinimized = false;
+				} else {
+					componentList.hide();
+					buttonContainer.hide();
+					container.css('height', '50px');
+					$(this).text('+');
+					isMinimized = true;
+				}
+			});
+
+			container.append(minimizeBtn);
+			$('body').append(container);
+
+			// Make draggable
+			UIViewer.makeDraggable(container[0]);
+		};
+
+		/**
+		 * Create a component item in the list
+		 */
+		UIViewer.createComponentItem = function CreateComponentItem(componentName) {
+			var item = $('<div class="component-item"></div>');
+			item.css({
+				display: 'flex',
+				justifyContent: 'space-between',
+				alignItems: 'center',
+				padding: '5px 0',
+				borderBottom: '1px solid #333',
+				marginBottom: '5px'
+			});
+
+			var label = $('<span>' + componentName + '</span>');
+			label.css({
+				flex: '1',
+				marginRight: '10px'
+			});
+
+			var toggleBtn = $('<button>Show</button>');
+			toggleBtn.css({
+				background: '#2196F3',
+				color: 'white',
+				border: 'none',
+				padding: '3px 8px',
+				borderRadius: '3px',
+				cursor: 'pointer',
+				fontSize: '10px',
+				minWidth: '50px'
+			});
+
+			toggleBtn.click(function() {
+				var isActive = UIViewer.activeComponents[componentName];
+				UIViewer.toggleComponent(componentName, !isActive);
+			});
+
+			item.append(label, toggleBtn);
+			return item;
+		};
+
+		/**
+		 * Toggle a UI component
+		 */
+		UIViewer.toggleComponent = function ToggleComponent(componentName, forceShow) {
+			var isActive = UIViewer.activeComponents[componentName];
+			var shouldShow = forceShow !== undefined ? forceShow : !isActive;
+
+			if (shouldShow && !isActive) {
+				// Load and show component
+				require(['UI/Components/' + componentName + '/' + componentName], function(Component) {
+					try {
+						if (Component && typeof Component.append === 'function') {
+							Component.prepare();
+							Component.append();
+							UIViewer.activeComponents[componentName] = Component;
+							UIViewer.updateButton(componentName, true);
+							console.log('UIViewer: Showing ' + componentName);
+						} else {
+							console.warn('UIViewer: Component ' + componentName + ' does not have append method');
+						}
+					} catch (error) {
+						console.error('UIViewer: Error showing ' + componentName + ':', error);
+					}
+				}, function(error) {
+					console.error('UIViewer: Failed to load ' + componentName + ':', error);
+				});
+			} else if (!shouldShow && isActive) {
+				// Hide component
+				try {
+					if (UIViewer.activeComponents[componentName] && 
+						typeof UIViewer.activeComponents[componentName].remove === 'function') {
+						UIViewer.activeComponents[componentName].remove();
+						delete UIViewer.activeComponents[componentName];
+						UIViewer.updateButton(componentName, false);
+						console.log('UIViewer: Hiding ' + componentName);
+					}
+				} catch (error) {
+					console.error('UIViewer: Error hiding ' + componentName + ':', error);
+				}
+			}
+		};
+
+		/**
+		 * Update button state
+		 */
+		UIViewer.updateButton = function UpdateButton(componentName, isActive) {
+			var item = $('#component-list').find('.component-item').filter(function() {
+				return $(this).find('span').text() === componentName;
+			});
+			
+			var button = item.find('button');
+			if (isActive) {
+				button.text('Hide').css('background', '#f44336');
+			} else {
+				button.text('Show').css('background', '#2196F3');
+			}
+		};
+
+		/**
+		 * Make element draggable
+		 */
+		UIViewer.makeDraggable = function MakeDraggable(element) {
+			var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+			
+			element.onmousedown = dragMouseDown;
+
+			function dragMouseDown(e) {
+				e = e || window.event;
+				e.preventDefault();
+				pos3 = e.clientX;
+				pos4 = e.clientY;
+				document.onmouseup = closeDragElement;
+				document.onmousemove = elementDrag;
+			}
+
+			function elementDrag(e) {
+				e = e || window.event;
+				e.preventDefault();
+				pos1 = pos3 - e.clientX;
+				pos2 = pos4 - e.clientY;
+				pos3 = e.clientX;
+				pos4 = e.clientY;
+				element.style.top = (element.offsetTop - pos2) + "px";
+				element.style.left = (element.offsetLeft - pos1) + "px";
+			}
+
+			function closeDragElement() {
+				document.onmouseup = null;
+				document.onmousemove = null;
+			}
+		};
+
+		// Initialize the UIViewer
+		UIViewer.init();
+	}
+); 

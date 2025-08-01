@@ -20,6 +20,7 @@ const platform = "Web";
         'O': { path: '/Online.js', action: () => compile("Online", args['m']) },
         'S': { path: '/StrViewer.js', action: () => compile("StrViewer", args['m']) },
         'E': { path: '/EffectViewer.js', action: () => compile("EffectViewer", args['m']) },
+        'U': { path: '/UIViewer.js', action: () => compile("UIViewer", args['m']) },
         'T': { path: '/ThreadEventHandler.js', action: () => compile("ThreadEventHandler", args['m']) },
         'H': { path: '/index.html', action: createHTML },
         'PWA': { path: '/index.html', action: () => { createHTML(true); copyPwaFiles() } }
@@ -90,6 +91,11 @@ function compile(appName, isMinify) {
 
         case "EffectViewer":
             appPath = "App/EffectViewer";
+            startFile = ["src/Vendors/require.js"];
+            break;
+
+        case "UIViewer":
+            appPath = "App/UIViewer";
             startFile = ["src/Vendors/require.js"];
             break;
 

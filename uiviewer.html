@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ROBrowser - UI Component Viewer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: #222;
+			color: white;
+			font-family: Arial, sans-serif;
+			overflow: hidden;
+		}
+		
+		#info {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			background: rgba(0, 0, 0, 0.8);
+			padding: 10px;
+			border-radius: 5px;
+			z-index: 9999;
+			font-size: 12px;
+		}
+		
+		#info h3 {
+			margin: 0 0 10px 0;
+			color: #4CAF50;
+		}
+	</style>
+</head>
+<body>
+	<div id="info">
+		<h3>ROBrowser UI Component Viewer</h3>
+		<p>This tool allows you to test and view individual UI components.</p>
+		<p>Use the panel on the right to toggle components on/off.</p>
+		<p><strong>Note:</strong> Some components may require game data files to display properly.</p>
+	</div>
+
+	<!-- RequireJS -->
+	<script>
+		// Configuration for ROBrowser
+		var ROConfig = {
+			version: '?v=' + Date.now(), // Cache busting
+			API: false
+		};
+	</script>
+	
+	<script src="src/Vendors/require.js" data-main="src/App/UIViewer.js"></script>
+</body>
+</html> 
