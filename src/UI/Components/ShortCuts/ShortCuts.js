@@ -21,7 +21,7 @@
 	 var Mouse              = require('Controls/MouseEventHandler');
 	 var UIManager          = require('UI/UIManager');
 	 var UIComponent        = require('UI/UIComponent');
-	 var Emoticons          = require('UI/Components/Emoticons/Emoticons');
+	 // Emoticons is lazy-loaded on demand to avoid circular dependency
 	 var htmlText           = require('text!./ShortCuts.html');
 	 var cssText            = require('text!./ShortCuts.css');
 	 var ChatBox      		= require('UI/Components/ChatBox/ChatBox');
@@ -100,8 +100,12 @@
 	 {
 
 		this.ui.find('.footer button').mousedown(function(){
-			if( this.className == 'emoticons')
-				Emoticons.onShortCut({cmd: 'TOGGLE'})
+			if (this.className === 'emoticons') {
+				// Lazy-load Emoticons to avoid circular require
+				require(['UI/Components/Emoticons/Emoticons'], function(Emoticons){
+					Emoticons.onShortCut({ cmd: 'TOGGLE' });
+				});
+			}
 		});
 
 		this.ui.find('.close').click(onClose);

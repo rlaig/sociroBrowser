@@ -229,12 +229,13 @@ define(function(require)
 	{
 		var idx = this.getAttribute('data-index');
 		var cmd = EmoticonsDB.names[idx];
-		var ShortCuts 	= require('UI/Components/ShortCuts/ShortCuts');
-
-		if(cmd && ShortCuts.ui.is(':visible')){
-			if(ShortCuts.ui.find('.input_alt_focus').length)
-				ShortCuts.ui.find('.input_alt_focus').val('/' + cmd).select()
-		}
+		// Lazy-load ShortCuts to avoid circular dependency
+		require(['UI/Components/ShortCuts/ShortCuts'], function(ShortCuts){
+			if (cmd && ShortCuts.ui.is(':visible')) {
+				if (ShortCuts.ui.find('.input_alt_focus').length)
+					ShortCuts.ui.find('.input_alt_focus').val('/' + cmd).select();
+			}
+		});
 	}
 
 
@@ -246,8 +247,11 @@ define(function(require)
 		var idx = this.getAttribute('data-index');
 		var cmd = EmoticonsDB.names[idx];
 
-		ChatBox.ui.find('.input .message').val('/' + cmd);
-		ChatBox.submit();
+		// Ensure ChatBox is loaded before using it
+		require(['UI/Components/ChatBox/ChatBox'], function(ChatBox){
+			ChatBox.ui.find('.input .message').val('/' + cmd);
+			ChatBox.submit();
+		});
 	}
 
 
