@@ -40,8 +40,10 @@ define(function( require )
 	var Sky            = require('Renderer/Effects/Sky');
 	var Damage         = require('Renderer/Effects/Damage');
 	var MapPreferences = require('Preferences/Map');
-	const PACKETVER   = require('Network/PacketVerManager');
-
+	const glMatrix     = require('Utils/gl-matrix');
+	const PACKETVER    = require('Network/PacketVerManager');
+	
+	const mat4         = glMatrix.mat4;
 
 	/**
 	 * Renderer Namespace
@@ -83,6 +85,11 @@ define(function( require )
 	 * @var {array} is loading a map ?
 	 */
 	MapRenderer.loading = false;
+
+	/**
+	 * @var {Float32Array} diffuse Modified diffuse color
+	 */
+	MapRenderer.diffuse = null;
 
 
 	/**
@@ -211,15 +218,30 @@ define(function( require )
 		this.water   = data.water;
 		this.sounds  = data.sound;
 		this.effects = data.effect;
+		this.diffuse = new Float32Array(this.light.diffuse);
+
+		// Set default env color
+		this.light.env = new Float32Array([
+			1 - (1 - this.light.diffuse[0]) * (1 - this.light.ambient[0]),
+			1 - (1 - this.light.diffuse[1]) * (1 - this.light.ambient[1]),
+			1 - (1 - this.light.diffuse[2]) * (1 - this.light.ambient[2]),
+		]);
 
 		// Calculate light direction
 		this.light.direction = new Float32Array(3);
 		var longitude        = this.light.longitude * Math.PI / 180;
 		var latitude         = this.light.latitude  * Math.PI / 180;
 
-		this.light.direction[0] = -Math.cos(longitude) * Math.sin(latitude);
-		this.light.direction[1] = -Math.cos(latitude);
-		this.light.direction[2] = -Math.sin(longitude) * Math.sin(latitude);
+		const dirMat4 = mat4.create();
+		// Original client first rotates around X then Y, but then multiplies matrixes in reverse order
+		// Which means we have to rotate Y first then X
+		mat4.rotateY(dirMat4, dirMat4, longitude);
+		mat4.rotateX(dirMat4, dirMat4, latitude);
+		const dirVec = mat4.multiplyVec3([0, 1, 0], dirMat4);
+
+		this.light.direction[0] = -dirVec[0];
+		this.light.direction[1] = -dirVec[1];
+		this.light.direction[2] = -dirVec[2];
 	}
 
 
@@ -436,6 +458,38 @@ define(function( require )
 	{
 	};
 
+	/**
+	 * Set night mode by changing the diffuse color
+	 * This effect is the same as SC_SKE
+	 * 
+	 * @param {boolean} night - true for night mode, false for day mode
+	 */
+	MapRenderer.setNight = function(night) {
+		const intervalId = setInterval(() => {
+			if (night) {
+				if (this.diffuse[0] > 0.5)
+					this.diffuse[0] -= 0.005;
+				if (this.diffuse[1] > 0.5)
+					this.diffuse[1] -= 0.005;
+			} else {
+				if (this.diffuse[0] < this.light.diffuse[0])
+					this.diffuse[0] += 0.005;
+				if (this.diffuse[1] < this.light.diffuse[1])
+					this.diffuse[1] += 0.005; 
+			}
+	
+			this.light.env = [
+				1 - (1 - this.diffuse[0]) * (1 - this.light.ambient[0]),
+				1 - (1 - this.diffuse[1]) * (1 - this.light.ambient[1]),
+				1 - (1 - this.diffuse[2]) * (1 - this.light.ambient[2])
+			]
+
+			if ((night && this.diffuse[0] <= 0.5 && this.diffuse[1] <= 0.5) ||
+				(!night && this.diffuse[0] >= this.light.diffuse[0] && this.diffuse[1] >= this.light.diffuse[1])) {
+					clearInterval(intervalId);
+			}
+		}, 8);
+	}
 
 	/**
 	 * Export

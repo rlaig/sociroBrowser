@@ -2851,92 +2851,47 @@ define(function( require )
 			attachedEntity: false
 		}],
 
-		142: [{ //WZ_HEAVENDRIVE
-		//Main Spike
-			type: 'QuadHorn',
-			textureFile: 'effect/stone.bmp',
-			attachedEntity: false,
-			duration: 1000,
-			height: [0.75, 1.2],
-			offsetX: [0.4, 0.6],
-			offsetY: [0.4, 0.6],
-			offsetZ: -0.1,
-			bottomSize: [0.3, 0.45],
-			blendMode: 1,
-			rotateY: [1, 360],
-			rotateZ: [-8.0, 8.0],
-			color: [1.0, 1.0, 1.0, 1.0],
-			animation: 3,
-			animationSpeed: 250,
-			animationOut: true,
-		}, {
-			type: 'QuadHorn',
-			textureFile: 'effect/stone.bmp',
-			attachedEntity: false,
-			duration: 1000,
-			height: [0.2, 0.4],
-			offsetX: [0.0, 0.0],
-			offsetY: [0.5, 0.5],
-			offsetZ: -0.1,
-			bottomSize: [0.1, 0.2],
-			blendMode: 1,
-			rotateY: [1, 360],
-			rotateZ: [-15.0, 15.0],
-			color: [1.0, 1.0, 1.0, 1.0],
-			animation: 3,
-			animationSpeed: 250,
-			animationOut: true,
-		}, {
-			type: 'QuadHorn',
-			textureFile: 'effect/stone.bmp',
-			attachedEntity: false,
-			duration: 1000,
-			height: [0.2, 0.4],
-			offsetX: [0.0, 0.5],
-			offsetY: [0.5, 1.0],
-			offsetZ: -0.1,
-			bottomSize: [0.1, 0.2],
-			blendMode: 1,
-			rotateY: [1, 360],
-			rotateZ: [-15.0, 15.0],
-			color: [1.0, 1.0, 1.0, 1.0],
-			animation: 3,
-			animationSpeed: 250,
-			animationOut: true,
-		}, {
-			type: 'QuadHorn',
-			textureFile: 'effect/stone.bmp',
-			attachedEntity: false,
-			duration: 1000,
-			height: [0.2, 0.4],
-			offsetX: [1.0, 1.2],
-			offsetY: [0.5, 0.8],
-			offsetZ: -0.1,
-			bottomSize: [0.1, 0.2],
-			blendMode: 1,
-			rotateY: [1, 360],
-			rotateZ: [-15.0, 15.0],
-			color: [1.0, 1.0, 1.0, 1.0],
-			animation: 3,
-			animationSpeed: 250,
-			animationOut: true,
-		}, {
-			type: 'QuadHorn',
-			textureFile: 'effect/stone.bmp',
-			attachedEntity: false,
-			duration: 1000,
-			height: [0.2, 0.4],
-			offsetX: [0.5, 0.7],
-			offsetY: [0.0, -0.2],
-			offsetZ: -0.1,
-			bottomSize: [0.1, 0.2],
-			blendMode: 1,
-			rotateY: [1, 360],
-			rotateZ: [-15.0, 15.0],
-			color: [1.0, 1.0, 1.0, 1.0],
-			animation: 3,
-			animationSpeed: 250,
-			animationOut: true,
+		142: [{ //EF_HEAVENDRIVE
+			type: 'FUNC',
+			func: function( Params ){
+				var QuadHorn = require('Renderer/Effects/QuadHorn');
+				var Altitude = require('Renderer/Map/Altitude');
+				for(let i=-2; i<=2; i++){
+					for(let j=-2; j<=2; j++){
+						var newParams = {
+							effect: {
+								type: 'QuadHorn',
+								textureFile: 'effect/stone.bmp',
+								attachedEntity: false,
+								duration: 1000,
+								height: [0.75, 1.2],
+								offsetX: [0.2, 0.2],
+								offsetY: [0.2, 0.2],
+								offsetZ: -0.1,
+								bottomSize: [0.4, 0.7],
+								blendMode: 1,
+								rotateY: [1, 360],
+								rotateZ: [-8.0, 8.0],
+								color: [1.0, 1.0, 1.0, 1.0],
+								animation: 3,
+								animationSpeed: 250,
+								animationOut: true,
+							},
+							Init: {},
+							Inst: {},
+						};
+						var newPos = [Params.Init.position[0]+i, Params.Init.position[1]+j];
+						Object.assign(newParams.Init, Params.Init);
+						newParams.Init.position = [newPos[0], newPos[1], Altitude.getCellHeight(newPos[0], newPos[1])];
+						newParams.Init.duration = newParams.effect.duration;
+						Object.assign(newParams.Inst, Params.Inst);
+						newParams.Inst.position = [newPos[0], newPos[1], Altitude.getCellHeight(newPos[0], newPos[1])];
+						newParams.Inst.duration = newParams.effect.duration;
+						newParams.Inst.endTick = newParams.Inst.startTick + newParams.effect.duration;
+						this.add(new QuadHorn(newParams.effect, newParams.Inst, newParams.Init), newParams);
+					}
+				}
+			}
 		}, {
 			wav:  'effect/wizard_earthspike',
 			attachedEntity: false
@@ -2951,7 +2906,7 @@ define(function( require )
 			}
 		}],
 
-		143: [{ //sonicblow at target	//EF_SONICBLOW2	Sonic Blow (Part 2/2)
+		143: [{ //EF_SONICBLOW2	Sonic Blow (Part 2/2) - sonicblow at target
 			type: 'STR',
 			file: 'sonicblow',
 			attachedEntity: true
@@ -6179,7 +6134,7 @@ define(function( require )
 		}],
 
 		368: [{	//EF_REDBODY	Berserk
-			wav:  'effect/\xef\x82\xb9\xef\x83\xb6\xef\x82\xbc\xef\x82\xad\xc5\xa9',
+			wav:  'effect/\xb9\xf6\xbc\xad\xc5\xa9',
 			attachedEntity: true
 			//shake screen
 		}],
@@ -8736,8 +8691,34 @@ define(function( require )
 		}],
 
 		732: [{	//EF_EARTHWALL	   Spike from the ground
-			wav: 'effect/wizard_earthspike'
+			type: 'QuadHorn',
+			textureFile: 'effect/stone.bmp',
+			attachedEntity: false,
+			duration: 1000,
+			height: [0.75, 1.2],
+			offsetX: [0.2, 0.2],
+			offsetY: [0.2, 0.2],
+			offsetZ: -0.1,
+			bottomSize: [0.4, 0.9],
+			blendMode: 1,
+			rotateY: [1, 360],
+			rotateZ: [-8.0, 8.0],
+			color: [1.0, 1.0, 1.0, 1.0],
+			animation: 3,
+			animationSpeed: 250,
+			animationOut: true,
+			wav: 'effect/wizard_earthspike',
+		}, {
+			type: 'FUNC',
+			attachedEntity: true,
+			func: function( Params ) {
+				var Camera = require('Renderer/Camera');
+				var start = Params.Inst.startTick;
+				var duration = 200;
+				Camera.setQuake( start, duration );
+			}
 		}],
+		
 		//733: [{}],	//EF_SOULBREAKER4	   Fluffy Ball flying by
 
 		734: [{	//EF_CHAINL_STR	Chain Lightning
@@ -11450,6 +11431,229 @@ define(function( require )
 			size: 50,
 			zOffset: 1,
 			zIndex: 1
+		}],
+		
+		'ef_parasite_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/parasite_bullet',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_stone_shooter_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/stone_shooter_bullet',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_wootan_shooter_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/wootan_shooter_bullet',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_peach_tree_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/peach_tree_bullet',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_hermit_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/ginseng_bullet',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_canon_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/canon_bullet',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_canon1_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/canon_bullet_1',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_canon2_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/canon_bullet_2',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_canon3_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/canon_bullet_3',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_tanee_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/lady_tanee_bullet',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_ragged_projectile': [{
+			type: '3D',
+			alphaMax: 1,
+			angle: 180,
+			attachedEntity: true,
+			duration: 140,
+			fadeIn: true,
+			fadeOut: true,
+			spriteName: '../npc/ragged_zombie_bullet',
+			toSrc: true,
+			rotateToTarget: true,
+			rotateWithCamera: true,
+			size: 100,
+			zOffset: 1,
+			zIndex: 1
+		}],
+		
+		'ef_mandragora_attack': [{
+			type: 'SPR',
+			file: '../npc/mandragora_atk',
+			attachedEntity: false
+		}],
+		
+		'ef_hydra_attack': [{
+			type: 'SPR',
+			file: '../npc/hydra_atk',
+			attachedEntity: false
+		}],
+		
+		'ef_odium_attack': [{
+			type: 'SPR',
+			file: '../npc/tha_odium_ef',
+			attachedEntity: false
+		}],
+		
+		'ef_drosera_attack': [{
+			type: 'SPR',
+			file: '../npc/drosera_bullet',
+			attachedEntity: false
+		}],
+		
+		'ef_mavka_attack': [{
+			type: 'SPR',
+			file: '../npc/mavka_bullet',
+			attachedEntity: false
+		}],
+		
+		'ef_entweihen_attack': [{
+			type: 'SPR',
+			file: '../npc/entweihen_bullet',
+			attachedEntity: false
 		}],
 
 		'ef_c_marker1': [{

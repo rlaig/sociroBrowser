@@ -25,6 +25,7 @@ define(function (require) {
 	var EffectConst = require('DB/Effects/EffectConst');
 	var PetMessageConst = require('DB/Pets/PetMessageConst');
 	var JobId = require('DB/Jobs/JobConst');
+	var AttackEffect = require('DB/Monsters/AttackEffectTable');
 	var WeaponType = require('DB/Items/WeaponType');
 	var Sound = require('Audio/SoundManager');
 	var Events = require('Core/Events');
@@ -393,12 +394,6 @@ define(function (require) {
 	function onEntityStopMove(pkt) {
 		var entity = EntityManager.get(pkt.AID);
 		if (entity) {
-			entity.position[0] = pkt.xPos;
-			entity.position[1] = pkt.yPos;
-			entity.position[2] = Altitude.getCellHeight(pkt.xPos, pkt.yPos);
-
-			entity.resetRoute();
-
 			if (entity.action === entity.ACTION.WALK) {
 				entity.setAction({
 					action: entity.ACTION.IDLE,
@@ -407,6 +402,11 @@ define(function (require) {
 					play: true
 				});
 			}
+			
+			entity.resetRoute();
+			entity.position[0] = pkt.xPos;
+			entity.position[1] = pkt.yPos;
+			entity.position[2] = Altitude.getCellHeight(pkt.xPos, pkt.yPos);
 		}
 	}
 
@@ -583,6 +583,25 @@ define(function (require) {
 						EffectManager.spam(EF_Init_Par);
 					}
 
+				} else if (srcEntity.job in AttackEffect.PROJECTILE){ // Non player projectiles
+					var EF_Init_Par = {
+						effectId: AttackEffect.PROJECTILE[srcEntity.job],
+						ownerAID: dstEntity.GID,
+						otherAID: srcEntity.GID,
+						startTick: Renderer.tick + pkt.attackMT,
+						otherPosition: srcEntity.position
+					};
+					EffectManager.spam(EF_Init_Par);
+					
+				} else if (srcEntity.job in AttackEffect.SPAWN){ // Non player special ranged attack
+					var EF_Init_Par = {
+						effectId: AttackEffect.SPAWN[srcEntity.job],
+						ownerAID: dstEntity.GID,
+						otherAID: srcEntity.GID,
+						startTick: Renderer.tick + pkt.attackMT,
+						otherPosition: srcEntity.position
+					};
+					EffectManager.spam(EF_Init_Par);
 				}
 
 				//attack sound
@@ -1261,7 +1280,11 @@ define(function (require) {
 						srcEntity.setAction(action(srcEntity, Renderer.tick));
 					}
 				} else {
-					srcEntity.setAction(SkillActionTable['DEFAULT'](srcEntity, Renderer.tick));
+					if(DB.isDoram(srcEntity.job)){
+						srcEntity.setAction(SkillActionTable['DEFAULT_DORAM'](srcEntity, Renderer.tick));
+					} else {
+						srcEntity.setAction(SkillActionTable['DEFAULT'](srcEntity, Renderer.tick));
+					}
 				}
 			}
 		}
@@ -1818,7 +1841,10 @@ define(function (require) {
 				//SC_MERC_QUICKEN
 				//SC_SKA
 				//SC_INCATKRATE
-				entity.toggleOpt3(pkt.index, pkt.state)
+				entity.toggleOpt3(pkt.index, pkt.state);
+				if (entity === Session.Entity && [StatusConst.SOULLINK, StatusConst.SKE].includes(pkt.index)) {
+					getModule("Renderer/MapRenderer").setNight(pkt.state === 1);
+				}
 				break;
 
 			case StatusConst.RUN: //state: 1 ON  0 OFF
@@ -2037,6 +2063,47 @@ define(function (require) {
 					};
 
 					EffectManager.spam(EF_Init_Par);
+				}
+				break;
+				
+			case StatusConst.SUHIDE:
+				if (pkt.state == 1) {
+					entity.setAction({
+						action: entity.ACTION.SKILL,
+						frame: 4,
+						repeat: false,
+						play: false,
+						next: false
+					});
+				} else if (pkt.state == 0) {
+					entity.setAction({
+						action: entity.ACTION.IDLE,
+						frame: 0,
+						repeat: false,
+						play: true,
+						next: false
+					});
+				}
+				break;
+				
+			case StatusConst.SU_STOOP:
+				if (pkt.state == 1) {
+					entity.setAction({
+						action: entity.ACTION.SKILL,
+						frame: 1,
+						length: 3,
+						repeat: true,
+						play: true,
+						next: false
+					});
+				} else if (pkt.state == 0) {
+					entity.setAction({
+						action: entity.ACTION.IDLE,
+						frame: 0,
+						repeat: false,
+						play: true,
+						next: false
+					});
 				}
 				break;
 

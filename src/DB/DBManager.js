@@ -45,7 +45,6 @@ define(function (require) {
 	var WeaponTrailTable = require('./Items/WeaponTrailTable');
 	var TownInfo = require('./TownInfo');
 	var XmlParse = require('Vendors/xmlparse');
-	var QuestInfo = require('./QuestTable');
 
 	//Pet
 	var PetEmotionTable = require('./Pets/PetEmotionTable')
@@ -195,6 +194,11 @@ define(function (require) {
 	 * @var NaviNpcDistance Table
 	 */
 	var NaviNpcDistanceTable = {};
+	
+	/**
+	 * @var QuestInfo Table
+	 */
+	var QuestInfo = {};
 
 	/**
 	 * Initialize DB
@@ -227,27 +231,76 @@ define(function (require) {
 
 		// TODO: load these load files by PACKETVER
 		if (Configs.get('loadLua')) {
+			// Item
 			loadItemInfo('System/itemInfo.lub', null, onLoad()); // 2012-04-10
 			loadLuaTable([DB.LUA_PATH + 'datainfo/accessoryid.lub', DB.LUA_PATH + 'datainfo/accname.lub'], 'AccNameTable', function (json) { HatTable = json; }, onLoad());
 			loadLuaTable([DB.LUA_PATH + 'datainfo/spriterobeid.lub', DB.LUA_PATH + 'datainfo/spriterobename.lub'], 'RobeNameTable', function (json) { RobeTable = json; }, onLoad());
 			loadLuaTable([DB.LUA_PATH + 'datainfo/npcidentity.lub', DB.LUA_PATH + 'datainfo/jobname.lub'], 'JobNameTable', function (json) { MonsterTable = json; }, onLoad());
 			loadLuaTable([DB.LUA_PATH + 'datainfo/enumvar.lub', DB.LUA_PATH + 'datainfo/addrandomoptionnametable.lub'], 'NameTable_VAR', function (json) { RandomOption = json; }, onLoad());
-			loadLuaTable([DB.LUA_PATH + 'skillinfoz/skillid.lub', DB.LUA_PATH + 'skillinfoz/skilldescript.lub'], 'SKILL_DESCRIPT', function (json) { SkillDescription = json; }, onLoad());
-			loadLuaValue(DB.LUA_PATH + 'navigation/navi_map_krpri.lub', 'Navi_Map', function (json) { NaviMapTable = json; }, onLoad());
-			loadLuaValue(DB.LUA_PATH + 'navigation/navi_mob_krpri.lub', 'Navi_Mob', function (json) { NaviMobTable = json; }, onLoad());
-			loadLuaValue(DB.LUA_PATH + 'navigation/navi_npc_krpri.lub', 'Navi_Npc', function (json) { NaviNpcTable = json; }, onLoad());
-			loadLuaValue(DB.LUA_PATH + 'navigation/navi_link_krpri.lub', 'Navi_Link', function (json) { NaviLinkTable = json; }, onLoad());
-			loadLuaValue(DB.LUA_PATH + 'navigation/navi_linkdistance_krpri.lub', 'Navi_Distance', function (json) { NaviLinkDistanceTable = json; }, onLoad());
-			loadLuaValue(DB.LUA_PATH + 'navigation/navi_npcdistance_krpri.lub', 'Navi_NpcDistance', function (json) { NaviNpcDistanceTable = json; }, onLoad());
 			loadItemDBTable(DB.LUA_PATH + 'ItemDBNameTbl.lub', null, onLoad());
-			loadLaphineSysFile(DB.LUA_PATH + 'datainfo/lapineddukddakbox.lub', null, onLoad()); // 2017-06-14
-			loadLaphineUpgFile(DB.LUA_PATH + 'datainfo/lapineupgradebox.lub', null, onLoad()); // 2017-06-14
-			loadItemReformFile(DB.LUA_PATH + 'ItemReform/ItemReformSystem.lub', null, onLoad()); // 2021-10-18
-			loadMapTbl('System/mapInfo.lub', function (json) { for (const key in json) { if (json.hasOwnProperty(key)) { MapInfo[key] = json[key]; } } updateMapTable(); }, onLoad()); // 2019-06-05
+			
+			// Skill
+			loadLuaTable([DB.LUA_PATH + 'skillinfoz/skillid.lub', DB.LUA_PATH + 'skillinfoz/skilldescript.lub'], 'SKILL_DESCRIPT', function (json) { SkillDescription = json; }, onLoad());
+			// TODO: DB.LUA_PATH + skillinfoz/skillinfolist.lub	- Replaces part of DB/Skills/SkillInfo.js (if we can find a txt version, otherwise just overrides)
+			// TODO: DB.LUA_PATH + skillinfoz/skilltreeview.lub	- Replaces DB/Skills/SkillTreeView.js
+			
+			// Status
+			// TODO: DB.LUA_PATH + stateicon/stateiconinfo.lub
+	
+			// Legacy Navigation
+			if(PACKETVER.value >= 20111010){
+				loadLuaValue(DB.LUA_PATH + 'navigation/navi_map_krpri.lub', 'Navi_Map', function (json) { NaviMapTable = json; }, onLoad());
+				loadLuaValue(DB.LUA_PATH + 'navigation/navi_mob_krpri.lub', 'Navi_Mob', function (json) { NaviMobTable = json; }, onLoad());
+				loadLuaValue(DB.LUA_PATH + 'navigation/navi_npc_krpri.lub', 'Navi_Npc', function (json) { NaviNpcTable = json; }, onLoad());
+				loadLuaValue(DB.LUA_PATH + 'navigation/navi_link_krpri.lub', 'Navi_Link', function (json) { NaviLinkTable = json; }, onLoad());
+				loadLuaValue(DB.LUA_PATH + 'navigation/navi_linkdistance_krpri.lub', 'Navi_Distance', function (json) { NaviLinkDistanceTable = json; }, onLoad());
+				loadLuaValue(DB.LUA_PATH + 'navigation/navi_npcdistance_krpri.lub', 'Navi_NpcDistance', function (json) { NaviNpcDistanceTable = json; }, onLoad());
+			}
+			
+			// LaphineSys
+			if(PACKETVER.value >= 20160601){
+				loadLaphineSysFile(DB.LUA_PATH + 'datainfo/lapineddukddakbox.lub', null, onLoad());
+			}
+			
+			// LaphineUpg
+			if(PACKETVER.value >= 20170726){
+				loadLaphineUpgFile(DB.LUA_PATH + 'datainfo/lapineupgradebox.lub', null, onLoad());
+			}
+			
+			// ItemReform
+			if(PACKETVER.value >= 20200916){
+				loadItemReformFile(DB.LUA_PATH + 'ItemReform/ItemReformSystem.lub', null, onLoad());
+			}
+			
+			// MapName
+			if( Configs.get('enableMapName')  /*PACKETVER.value >= 20190605*/){ // We allow this feature to be enabled on any version due to popular demand
+				loadMapTbl('System/mapInfo.lub', function (json) { for (const key in json) { if (json.hasOwnProperty(key)) { MapInfo[key] = json[key]; } } updateMapTable(); }, onLoad());
+			}
+			
+			// EntitySignBoard
 			loadSignBoardData('System/Sign_Data.lub', null, onLoad()); // this is not official, its a translation file
 			loadSignBoardList(DB.LUA_PATH + 'SignBoardList.lub', null, onLoad());
-			loadAttendanceFile('System/CheckAttendance.lub', null, onLoad());
+			
+			// CheckAttendance
+			if(Configs.get('enableCheckAttendance') && PACKETVER.value >= 20180307) {
+				loadAttendanceFile('System/CheckAttendance.lub', null, onLoad());
+			}
+			
+			// Quest
+			loadQuestInfo('System/OngoingQuestInfoList.lub', null, onLoad());
+			// TODO: System/RecommendedQuests.lub
+			
+			// WoldMap
+			// TODO: DB.LUA_PATH + woldviewdata/worldviewdata_list.lub	- Replaces DB/Map/WorldMap.js
+			// TODO: DB.LUA_PATH + woldviewdata/worldviewdata_table.lub	- Replaces DB/Map/WorldMap.js
+			
+			// Achievements
+			// TODO: System/achievements.lub
+			
+			// Town Info
+			// TODO: System/Towninfo.lub	- Replaces DB/TownInfo.js
 		} else {
+			// Item
 			loadTable('data/num2itemdisplaynametable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).unidentifiedDisplayName = val.replace(/_/g, " "); }, onLoad());
 			loadTable('data/num2itemresnametable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).unidentifiedResourceName = val; }, onLoad());
 			loadTable('data/num2itemdesctable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).unidentifiedDescriptionName = val.split("\n"); }, onLoad());
@@ -255,18 +308,36 @@ define(function (require) {
 			loadTable('data/idnum2itemresnametable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).identifiedResourceName = val; }, onLoad());
 			loadTable('data/idnum2itemdesctable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).identifiedDescriptionName = val.split("\n"); }, onLoad());
 			loadTable('data/itemslotcounttable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).slotCount = val; }, onLoad());
+			
+			// Skill
 			loadTable('data/skilldesctable.txt', '#', 2, function (index, key, val) { SkillDescription[SKID[key]] = val.replace("\r\n", "\n"); }, onLoad());
+			// TODO: data/skillnametable.txt	- ?
+			// TODO: data/skilltreeview.txt	- Replaces DB/Skills/SkillTreeView.js
+			// TODO: data/leveluseskillspamount.txt	- Replaces DB/Skills/SkillInfo.js -> SkillInfo.SpAmount
+			
+			// Quest
+			loadTable('data/questid2display.txt', '#', 6, parseQuestEntry, onLoad());
 		}
 
+		// Forging/Creation
 		loadTable('data/metalprocessitemlist.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).processitemlist = val.split("\n"); }, onLoad());
+
+		// Card
 		loadTable('data/num2cardillustnametable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).illustResourcesName = val; }, onLoad());
 		loadTable('data/cardprefixnametable.txt', '#', 2, function (index, key, val) { (ItemTable[key] || (ItemTable[key] = {})).prefixName = val; }, onLoad());
 		loadTable('data/cardpostfixnametable.txt', '#', 1, function (index, key) { (ItemTable[key] || (ItemTable[key] = {})).isPostfix = true; }, onLoad());
+
+		// EtcMapData
 		loadTable('data/fogparametertable.txt', '#', 5, parseFogEntry, onLoad());
 		loadTable('data/indoorrswtable.txt', '#', 1, parseIndoorEntry, onLoad());
-
+		
+		// Frost/Scream
 		loadTable('data/ba_frostjoke.txt', '\t', 1, function (index, val) { JokeTable[index] = val; }, onLoad());
 		loadTable('data/dc_scream.txt', '\t', 1, function (index, val) { ScreamTable[index] = val; }, onLoad());
+		
+		// Tips
+		// TODO: /tipoftheday.txt
+		// TODO: /GuildTip.txt
 
 		loadXMLFile('data/pettalktable.xml', function (json) { PetTalkTable = json["monster_talk_table"]; }, onLoad());
 
@@ -376,6 +447,131 @@ define(function (require) {
 				} finally {
 					// release file from memmory
 					lua.unmountFile('CheckAttendance.lub');
+					// call onEnd
+					onEnd();
+				}
+			},
+			onEnd
+		);
+	}
+
+	function loadQuestInfo(filename, callback, onEnd) {
+		Client.loadFile(filename,
+			async function (file) {
+				console.log('Loading file "' + filename + '"...');
+
+				try {
+				// check if file is ArrayBuffer and convert to Uint8Array if necessary
+				let buffer = (file instanceof ArrayBuffer) ? new Uint8Array(file) : file;
+
+				// create decoders
+				let iso88591Decoder = new TextEncoding.TextDecoder('iso-8859-1');
+				let userStringDecoder = new TextEncoding.TextDecoder('euc-kr'); // TODO: Add keys to config
+
+				// get context, a proxy. It will be used to interact with lua conveniently
+				const ctx = lua.ctx;
+
+				// create required functions in context
+
+				// add quest info
+				ctx.AddQuestInfo = (QuestID, Title, Summary, IconName, NpcSpr, NpcNavi, NpcPosX, NpcPosY, RewardEXP, RewardJEXP) => {
+
+					QuestInfo[QuestID] = { 
+						"Title": userStringDecoder.decode(Title),
+						"Summary": userStringDecoder.decode(Summary),
+						"IconName": userStringDecoder.decode(IconName),
+						"Description": [],
+						"NpcSpr": (NpcSpr instanceof Uint8Array) ? userStringDecoder.decode(NpcSpr) : null,
+						"NpcNavi": (NpcNavi instanceof Uint8Array) ? userStringDecoder.decode(NpcNavi) : null,
+						"NpcPosX": NpcPosX,
+						"NpcPosY": NpcPosY,
+						"RewardItemList": [],
+						"RewardEXP": RewardEXP,
+						"RewardJEXP": RewardJEXP
+					};
+
+					return 1;
+				};
+
+				// add quest description
+				ctx.AddQuestDescription = (QuestID, QuestDescription) => {
+					QuestInfo[QuestID].Description.push(userStringDecoder.decode(QuestDescription));
+					return 1;
+				};
+
+				// add quest reward item
+				ctx.AddQuestRewardItem = (QuestID, ItemID, ItemNum) => {
+					QuestInfo[QuestID].RewardItemList.push({ItemID: ItemID, ItemNum: ItemNum});
+					return 1;
+				};
+
+				// mount file
+				lua.mountFile('OngoingQuestInfoList.lub', buffer);
+				// execute file
+				await lua.doFile('OngoingQuestInfoList.lub');
+
+				// create and execute our own main function
+				lua.doStringSync(`
+					function main_quest()
+					-- Check if QuestInfoList is a table and not nil
+					if type(QuestInfoList) ~= "table" or QuestInfoList == nil then
+						return false, "Error: Quest table is nil or not a table"
+					end
+
+					for QuestID, DESC in pairs(QuestInfoList) do
+						-- Ensure DESC is a table, use empty table if nil
+						DESC = type(DESC) == "table" and DESC or {}
+
+						-- Provide default values for DESC fields if they are nil
+						local questData = {
+							Title = DESC.Title or "Unknown Quest",
+							Summary = DESC.Summary or "Unknown Quest",
+							IconName = DESC.IconName or "",
+							NpcSpr = DESC.NpcSpr or "",
+							NpcNavi = DESC.NpcNavi or "",
+							NpcPosX = DESC.NpcPosX or 0,
+							NpcPosY = DESC.NpcPosY or 0,
+							RewardItemList = DESC.RewardItemList or {},
+							RewardEXP = tonumber(DESC.RewardEXP) or 0,
+							RewardJEXP = tonumber(DESC.RewardJEXP) or 0,
+
+							Description = type(DESC.Description) == "table" and DESC.Description or {}
+						}
+
+						result, msg = AddQuestInfo(QuestID, questData.Title, questData.Summary, questData.IconName, 
+												questData.NpcSpr, questData.NpcNavi, questData.NpcPosX, 
+												questData.NpcPosY, questData.RewardEXP, 
+												questData.RewardJEXP)
+						if not result then
+							return false, msg
+						end
+
+						-- Iterate over RewardItemList table, use empty table if nil
+						for k, v in pairs(questData.RewardItemList) do
+							result, msg = AddQuestRewardItem(QuestID, v.ItemID, v.ItemNum)
+							if not result then
+								return false, msg
+							end
+						end
+
+						-- Iterate over Description table, use empty table if nil
+						for k, v in pairs(questData.Description) do
+							result, msg = AddQuestDescription(QuestID, v or "No description available")
+							if not result then
+								return false, msg
+							end
+						end
+					end
+					return true, "good"
+				end
+
+				main_quest()
+					`);
+				} catch (error) {
+					console.error('[loadQuestInfo] Error: ', error);
+				} finally {
+					// release file from memmory
+					lua.unmountFile('OngoingQuestInfoList.lub');
 					// call onEnd
 					onEnd();
 				}
@@ -1513,6 +1709,26 @@ define(function (require) {
 	}
 
 	/**
+	 * Quest entry parser
+	 *
+	 * @param {number} index
+	 * @param {string} title
+	 * @param {string} group
+	 * @param {string} image
+	 * @param {string} description
+	 * @param {string} summary
+	 */
+	function parseQuestEntry(index, key, title, group, image, description, summary) {
+		var quest = (QuestInfo[key] || (QuestInfo[key] = {}));
+
+		quest.Title = title;
+		quest.Group = group;
+		quest.Image = image;
+		quest.Description = description;
+		quest.Summary = summary;
+	}
+	
+	/**
 	 * Actor Type checks
 	 *
 	 * @param {number} jobid
@@ -1537,7 +1753,7 @@ define(function (require) {
 		return jobid < 45 || (jobid >= 4001 && jobid <= 4317) || jobid == 4294967294;
 	}
 
-	function isDoram(jobid) {
+	DB.isDoram = function (jobid) {
 		return (jobid >= 4217 && jobid <= 4220) || jobid === 4308 || jobid === 4315;
 	}
 
@@ -1577,7 +1793,7 @@ define(function (require) {
 		// PC
 		if (isPlayer(id)) {
 			// DORAM
-			if (isDoram(id)) {
+			if (DB.isDoram(id)) {
 				return 'data/sprite/\xb5\xb5\xb6\xf7\xc1\xb7/\xb8\xf6\xc5\xeb/' + SexTable[sex] + '/' + (ClassTable[id] || ClassTable[0]) + '_' + SexTable[sex];
 			}
 
@@ -1668,7 +1884,7 @@ define(function (require) {
 		}
 
 		// DORAM
-		if (isDoram(job)) {
+		if (DB.isDoram(job)) {
 			return 'data/sprite/\xb5\xb5\xb6\xf7\xc1\xb7/\xb8\xd3\xb8\xae\xc5\xeb/' + SexTable[sex] + '/' + (HairIndexTable[sex + 2][id] || id) + '_' + SexTable[sex];
 		}
 
@@ -3337,7 +3553,7 @@ define(function (require) {
 	 * @author alisonrag
 	 */
 	DB.getQuestInfo = function getQuestInfo(questID) {
-		return QuestInfo[questID] || { "Title": "Unknown Quest", "Description": "Uknown Quest", "Summary": "Uknown Quest", "IconName": "", "NpcSpr": null, "NpcNavi": null, "NpcPosX": null, "NpcPosY": null, "RewardItemList": null, "RewardEXP": 0, "RewardJEXP": 0 };
+		return QuestInfo[questID] || { "Title": "Unknown Quest", "Description": [], "Summary": "Uknown Quest", "IconName": "", "NpcSpr": null, "NpcNavi": null, "NpcPosX": null, "NpcPosY": null, "RewardItemList": [], "RewardEXP": 0, "RewardJEXP": 0 };
 	};
 
 	DB.getCheckAttendanceInfo = function getCheckAttendanceInfo() {

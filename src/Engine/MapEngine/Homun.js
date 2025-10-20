@@ -93,9 +93,7 @@ define(function (require) {
 			pkt.life = entity.life;
 		}
 
-		HomunInformations.append();
 		HomunInformations.setInformations(pkt);
-		HomunInformations.startAI();
 
 		SkillListMH.homunculus.setPoints(pkt.SKPoint);
 	}
@@ -132,6 +130,8 @@ define(function (require) {
 		switch (pkt.state) {
 			case 0:
 				Session.homunId = pkt.GID;
+				HomunInformations.append();
+				HomunInformations.startAI();
 				break;
 
 			case 1:
@@ -319,8 +319,8 @@ define(function (require) {
 		Network.hookPacket(PACKET.ZC.PROPERTY_HOMUN5, onHomunInformation);
 		Network.hookPacket(PACKET.ZC.CHANGESTATE_MER, onHomunInformationUpdate);
 		Network.hookPacket(PACKET.ZC.FEED_MER, onFeedResult);
-		Network.hookPacket(PACKET.ZC.MER_SKILLINFO_LIST, onSkillList);
-		Network.hookPacket(PACKET.ZC.MER_SKILLINFO_UPDATE, onSkillUpdate);
+		Network.hookPacket(PACKET.ZC.HOSKILLINFO_LIST, onSkillList);
+		Network.hookPacket(PACKET.ZC.HOSKILLINFO_UPDATE, onSkillUpdate);
 		Network.hookPacket(PACKET.ZC.HO_PAR_CHANGE, onParamsUpdate);
 
 		// Network.hookPacket( PACKET.ZC.MER_INIT, testing);

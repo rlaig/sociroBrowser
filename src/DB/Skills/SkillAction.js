@@ -29,6 +29,22 @@ define(['./SkillConst'], function(SK) {
 			}
 		};
 	};
+	
+	SkillAction['DEFAULT_DORAM'] = function(entity, tick){
+		return {
+			action: entity.ACTION.ATTACK2,
+			frame:  0,
+			repeat: false,
+			play:   true,
+			next: {
+				action: entity.ACTION.IDLE,
+				frame:  0,
+				repeat: true,
+				play:   true,
+				next:   false
+			}
+		};
+	};
 		
 	//Skill action overrides
 	
@@ -603,15 +619,24 @@ define(['./SkillConst'], function(SK) {
 	
 		
 	//Prevent default skill action
+	SkillAction[SK.NV_BASIC] =
 	SkillAction[SK.TF_BACKSLIDING] =
 	SkillAction[SK.NV_TRICKDEAD] =
+	SkillAction[SK.TK_READYSTORM] =
+	SkillAction[SK.TK_READYDOWN] =
+	SkillAction[SK.TK_READYTURN] =
+	SkillAction[SK.TK_READYCOUNTER] =
 	SkillAction[SK.TK_HIGHJUMP] =
 	SkillAction[SK.TK_DODGE] =
 	SkillAction[SK.LK_TENSIONRELAX] =
 	SkillAction[SK.NC_F_SIDESLIDE] =
-	SkillAction[SK.NC_B_SIDESLIDE] = false;
+	SkillAction[SK.NC_B_SIDESLIDE] =
+	SkillAction[SK.SU_HIDE] = 
+	SkillAction[SK.SU_STOOP] = false;
 		
 	
 	return SkillAction;
 
 });	
+
+

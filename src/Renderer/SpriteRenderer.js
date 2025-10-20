@@ -53,7 +53,6 @@ function(      WebGL,         glMatrix,      Camera )
 			float x =  pos.x + 0.5;
 			float y = -pos.z;
 			float z =  pos.y + 0.5;
-			float NEARPLANE = 1.0;
 
 			// Matrix translation
 			mat[3].x += mat[0].x * x + mat[1].x * y + mat[2].x * z;
@@ -70,7 +69,7 @@ function(      WebGL,         glMatrix,      Camera )
 		}
 
 		void main(void) {
-			
+			float zScaleFactor = 2.0;
 			// Calculate position base on angle and sprite offset/size
 			vec4 position = uSpriteRendererAngle * vec4( aPosition.x * uSpriteRendererSize.x, aPosition.y * uSpriteRendererSize.y, 0.0, 1.0 );
 			position.x   += uSpriteRendererOffset.x;

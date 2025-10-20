@@ -17,6 +17,7 @@ define(function (require) {
     var Preferences = require('Core/Preferences');
     var Renderer = require('Renderer/Renderer');
     var EntityManager = require('Renderer/EntityManager');
+	var KEYS = require('Controls/KeyEventHandler');
     var UIManager = require('UI/UIManager');
     var UIComponent = require('UI/UIComponent');
     var SkillListMH = require('UI/Components/SkillListMH/SkillListMH');
@@ -195,6 +196,11 @@ define(function (require) {
         }
     };
 
+	HomunInformations.onKeyDown = function onKeyDown(event) {
+		if ((event.which === KEYS.ESCAPE || event.key === "Escape") && this.ui.is(':visible')) {
+			this.ui.toggle();
+		}
+	}
 
     /**
      * Update UI
@@ -359,21 +365,22 @@ define(function (require) {
     };
 
     HomunInformations.startAI = function startAI() {
-        this.stopAI();
-        AIDriver.homunculus.reset();
-        this.AILoop = setInterval(function () {
-            if (Session.homunId) {
-                var entity = EntityManager.get(Session.homunId);
-                if (entity) {
-                    AIDriver.homunculus.exec('AI(' + Session.homunId + ')')
+        if (!this.AILoop) {
+            AIDriver.homunculus.reset();
+            this.AILoop = setInterval(function () {
+                if (Session.homunId) {
+                    var entity = EntityManager.get(Session.homunId);
+                    if (entity) {
+                        AIDriver.homunculus.exec('AI(' + Session.homunId + ')')
+                    }
                 }
-            }
-        }, 100);
+            }, 100);
+        }
     };
 
     HomunInformations.stopAI = function stopAI() {
         if (this.AILoop) {
-            clearInterval(this.AILoop);
+            this.AILoop = clearInterval(this.AILoop);
         }
     };
 

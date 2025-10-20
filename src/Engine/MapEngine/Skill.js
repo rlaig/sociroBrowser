@@ -188,7 +188,18 @@ define(function( require )
 
 		if (error) {
 			ChatBox.addText( DB.getMessage(error), ChatBox.TYPE.ERROR, ChatBox.FILTER.SKILL_FAIL );
-			srcEntity.setAction(SkillActionTable['DEFAULT']( srcEntity, Renderer.tick ));
+			if (pkt.SKID in SkillActionTable) {
+				var action = SkillActionTable[pkt.SKID];
+				if (action) {
+					srcEntity.setAction(action(srcEntity, Renderer.tick));
+				}
+			} else {
+				if(DB.isDoram(srcEntity.job)){
+					srcEntity.setAction(SkillActionTable['DEFAULT_DORAM'](srcEntity, Renderer.tick));
+				} else {
+					srcEntity.setAction(SkillActionTable['DEFAULT'](srcEntity, Renderer.tick));
+				}
+			}
 		}
 	}
 
@@ -586,10 +597,16 @@ define(function( require )
 		var entity, skill, target, pkt, out;
 		var count, range;
 
-		var isHomun = (id > 8000 && id < 8044);
+		var isHomun = (id > SkillId.HOMUN_BEGIN && id < SkillId.HOMUN_LAST);
+		var isMerc = (id > SkillId.MERCENARY_BEGIN && id < SkillId.MERCENARY_LAST);
+		
+		// Not used so far
+		//var isElem = (id > SkillId.ELEMENTAL_BEGIN && id < SkillId.ELEMENTAL_LAST);
 
 		if (isHomun){
 			entity = EntityManager.get(Session.homunId);
+		} else if (isMerc) {
+			entity = EntityManager.get(Session.mercId);
 		} else {
 			entity = Session.Entity;
 			//Fixme: this check is needed, but not here, because flywing and other AUTORUN_SKILL then doesn't work
@@ -662,6 +679,9 @@ define(function( require )
 		if(isHomun){
 			pkt         = new PACKET.CZ.REQUEST_MOVENPC();
 			pkt.GID		= Session.homunId;
+		} else if (isMerc) {
+			pkt         = new PACKET.CZ.REQUEST_MOVENPC();
+			pkt.GID		= Session.mercId;
 		} else {
 			if(PACKETVER.value >= 20180307) {
 				pkt         = new PACKET.CZ.REQUEST_MOVE2();
@@ -864,6 +884,7 @@ define(function( require )
 		Network.hookPacket( PACKET.ZC.AUTOSPELLLIST,          onAutoSpellList );
 		Network.hookPacket( PACKET.ZC.SKILL_SELECT_REQUEST,   onSelectSkillList );
 		Network.hookPacket( PACKET.ZC.WARPLIST,               onTeleportList );
+		Network.hookPacket( PACKET.ZC.WARPLIST2,              onTeleportList );
 		Network.hookPacket( PACKET.ZC.NOTIFY_MAPINFO,         onTeleportResult );
 		Network.hookPacket( PACKET.ZC.ACK_REMEMBER_WARPPOINT, onMemoResult );
 		Network.hookPacket( PACKET.ZC.MAKINGARROW_LIST,       onMakingarrowList );

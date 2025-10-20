@@ -127,7 +127,7 @@
 	 SkillEffect[SK.WZ_FROSTNOVA]                   = {effectIdOnCaster: 28, hitEffectId: 51};		//Frost Nova
 	 SkillEffect[SK.WZ_STORMGUST]                   = {effectId: 89, hitEffectId: 51};		//Storm Gust
 	 SkillEffect[SK.WZ_EARTHSPIKE]                  = {effectId: 79, hitEffectId: 147};		//Earth Spike
-	 SkillEffect[SK.WZ_HEAVENDRIVE]                 = {groundEffectId: 142,hitEffectId: 147};		//Heaven's Drive
+	 SkillEffect[SK.WZ_HEAVENDRIVE]                 = {effectId: 142,hitEffectId: 147};		//Heaven's Drive
 	 SkillEffect[SK.WZ_QUAGMIRE]                    = {groundEffectId: 95};		//Quagmire
 	 SkillEffect[SK.WZ_ESTIMATION]                  = {};		//Sense
 	 // Blacksmith
@@ -1070,7 +1070,7 @@
 	 SkillEffect[SK.MA_SANDMAN]                     = SkillEffect[SK.HT_SANDMAN];		//Sandman
 	 SkillEffect[SK.MA_FREEZINGTRAP]                = SkillEffect[SK.HT_FREEZINGTRAP];		//Freezing_Trap
 	 SkillEffect[SK.MA_REMOVETRAP]                  = SkillEffect[SK.HT_REMOVETRAP];		//Remove_Trap
-	 SkillEffect[SK.MA_CHARGEARROW]                 = SkillEffect[SK.HT_CHARGEARROW];		//Arrow_Repel
+	 SkillEffect[SK.MA_CHARGEARROW]                 = SkillEffect[SK.AC_CHARGEARROW];		//Arrow_Repel
 	 SkillEffect[SK.MA_SHARPSHOOTING]               = SkillEffect[SK.SN_SHARPSHOOTING];		//Focused_Arrow_Strike
 	 SkillEffect[SK.ML_PIERCE]                      = SkillEffect[SK.KN_PIERCE];		//Pierce
 	 SkillEffect[SK.ML_BRANDISH]                    = SkillEffect[SK.KN_BRANDISH];		//Brandish_Spear

@@ -64,31 +64,28 @@ define(function(require)
 
 
 	/**
+	 * @var {initialPreferences}
+	 */
+	const initialPreferences = {
+		[NpcStore.Type.BARTER_MARKET_EXTENDED]: {
+			inputWindow: { x: 100, y: 100, height: 7, width: 350 },
+			outputWindow: { x: 100 + 350 + 10, y: 100, height: 7, width: 350 },
+			AvailableItemsWindow: { x: 100 + 280 + 10, y: 100 + (4*32) - (2*32), height: 2 },
+			PurchaseResult: { x: 100 + 280 + 10, y: 100 + (7*32) - (2*32), height: 2 }
+		},
+		DEFAULT: {
+			inputWindow: { x: 100, y: 100, height: 7, width: 280 },
+			outputWindow: { x: 100 + 280 + 10, y: 100 + (7*32) - (2*32), height: 2, width: 280 },
+			AvailableItemsWindow: { x: 100 + 280 + 10, y: 100 + (4*32) - (2*32), height: 2 },
+			PurchaseResult: { x: 100 + 280 + 10, y: 100 + (7*32) - (2*32), height: 2 }
+		}
+	};
+
+
+	/**
 	 * @var {Preferences}
 	 */
-	var _preferences = Preferences.get('NpcStore', {
-		inputWindow: {
-			x:    100,
-			y:    100,
-			height: 7
-		},
-		outputWindow: {
-			x:    100 + 280 + 10,
-			y:    100 + (7*32) - (2*32),
-			height: 2
-		},
-		AvailableItemsWindow: {
-			x:    100 + 280 + 10,
-			y:    100 + (4*32) - (2*32),
-			height: 2
-		},
-		PurchaseResult: {
-			x:    100 + 280 + 10,
-			y:    100 + (4*32) - (2*32),
-			height: 2
-		},
-		select_all: false
-	}, 1.0);
+	var _preferences = Preferences.get('NpcStore', {}, 1.0);
 
 
 	/**
@@ -178,24 +175,9 @@ define(function(require)
 	 */
 	NpcStore.onAppend = function onAppend()
 	{
-		var InputWindow  = this.ui.find('.InputWindow');
-		var OutputWindow = this.ui.find('.OutputWindow');
-		var AvailableItemsWindow = this.ui.find('.AvailableItemsWindow');
-		var PurchaseResult = this.ui.find('.PurchaseResult');
-
-		InputWindow.css({  top:  _preferences.inputWindow.y,  left: _preferences.inputWindow.x });
-		OutputWindow.css({ top:  _preferences.outputWindow.y, left: _preferences.outputWindow.x });
-		AvailableItemsWindow.css({ top:  _preferences.AvailableItemsWindow.y, left: _preferences.AvailableItemsWindow.x });
-		PurchaseResult.css({ top:  _preferences.PurchaseResult.y, left: _preferences.PurchaseResult.x });
-
 		Client.loadFile(DB.INTERFACE_PATH + 'checkbox_' + (_preferences.select_all ? 1 : 0) + '.bmp', function(data){
 			this.ui.find('.selectall:first').css('backgroundImage', 'url('+ data +')');
 		}.bind(this));
-
-		resize( InputWindow.find('.content'),  _preferences.inputWindow.height );
-		resize( OutputWindow.find('.content'), _preferences.outputWindow.height );
-		resize( AvailableItemsWindow.find('.content'), _preferences.AvailableItemsWindow.height );
-		resize( PurchaseResult.find('.content'), _preferences.PurchaseResult.height );
 
 		// Seems like "EscapeWindow" is execute first, push it before.
 		var events = jQuery._data( window, 'events').keydown;
@@ -216,21 +198,23 @@ define(function(require)
 		_input.length    = 0;
 		_output.length   = 0;
 
-		_preferences.inputWindow.x       = parseInt( InputWindow.css('left'), 10);
-		_preferences.inputWindow.y       = parseInt( InputWindow.css('top'), 10);
-		_preferences.inputWindow.height  = InputWindow.find('.content').height() / 32 | 0;
+		var currentPref = getCurrentPref();
 
-		_preferences.outputWindow.x      = parseInt( OutputWindow.css('left'), 10);
-		_preferences.outputWindow.y      = parseInt( OutputWindow.css('top'), 10);
-		_preferences.outputWindow.height = OutputWindow.find('.content').height() / 32 | 0;
+		currentPref.inputWindow.x = parseInt(InputWindow.css('left'), 10);
+		currentPref.inputWindow.y = parseInt(InputWindow.css('top'), 10);
+		currentPref.inputWindow.height = InputWindow.find('.content').height() / 32 | 0;
 
-		_preferences.AvailableItemsWindow.x      = parseInt( AvailableItemsWindow.css('left'), 10);
-		_preferences.AvailableItemsWindow.y      = parseInt( AvailableItemsWindow.css('top'), 10);
-		_preferences.AvailableItemsWindow.height = AvailableItemsWindow.find('.content').height() / 32 | 0;
+		currentPref.outputWindow.x = parseInt(OutputWindow.css('left'), 10);
+		currentPref.outputWindow.y = parseInt(OutputWindow.css('top'), 10);
+		currentPref.outputWindow.height = OutputWindow.find('.content').height() / 32 | 0;
 
-		_preferences.PurchaseResult.x      = parseInt( PurchaseResult.css('left'), 10);
-		_preferences.PurchaseResult.y      = parseInt( PurchaseResult.css('top'), 10);
-		_preferences.PurchaseResult.height = PurchaseResult.find('.content').height() / 32 | 0;
+		currentPref.AvailableItemsWindow.x = parseInt(AvailableItemsWindow.css('left'), 10);
+		currentPref.AvailableItemsWindow.y = parseInt(AvailableItemsWindow.css('top'), 10);
+		currentPref.AvailableItemsWindow.height = AvailableItemsWindow.find('.content').height() / 32 | 0;
+
+		currentPref.PurchaseResult.x = parseInt(PurchaseResult.css('left'), 10);
+		currentPref.PurchaseResult.y = parseInt(PurchaseResult.css('top'), 10);
+		currentPref.PurchaseResult.height = PurchaseResult.find('.content').height() / 32 | 0;
 
 		_preferences.save();
 
@@ -247,18 +231,13 @@ define(function(require)
 	 */
 	NpcStore.onKeyDown = function onKeyDown( event )
 	{
-		if (event.which === KEYS.ESCAPE) {
+		if ((event.which === KEYS.ESCAPE || event.key === "Escape") && this.ui.is(':visible')) {
 			this.remove();
-			event.stopImmediatePropagation();
 
 			if (PACKETVER.value >= 20131223) {
 				NpcStore.StoreClosePacket(_type);
 			}
-
-			return false;
 		}
-
-		return true;
 	};
 
 
@@ -294,6 +273,7 @@ define(function(require)
 				break;
 
 			case NpcStore.Type.BARTER_MARKET:
+			case NpcStore.Type.BARTER_MARKET_EXTENDED:
 				this.ui.find('.WinSell, .WinVendingStore, .WinCash, .WinBuyingStore, .AvailableItemsWindow, .PurchaseResult').hide();
 				this.ui.find('.WinBuy').show();
 				this.ui.find('.total').hide();
@@ -306,6 +286,29 @@ define(function(require)
 		}
 
 		_type = type;
+
+		var currentPref = getCurrentPref();
+
+		var InputWindow  = this.ui.find('.InputWindow');
+		var OutputWindow = this.ui.find('.OutputWindow');
+		var AvailableItemsWindow = this.ui.find('.AvailableItemsWindow');
+		var PurchaseResult = this.ui.find('.PurchaseResult');
+
+		// Apply saved positions
+		InputWindow.css({ top: currentPref.inputWindow.y, left: currentPref.inputWindow.x });
+		OutputWindow.css({ top: currentPref.outputWindow.y, left: currentPref.outputWindow.x });
+		AvailableItemsWindow.css({ top: currentPref.AvailableItemsWindow.y, left: currentPref.AvailableItemsWindow.x });
+		PurchaseResult.css({ top: currentPref.PurchaseResult.y, left: currentPref.PurchaseResult.x });
+
+		// Apply resize heights
+		resize(InputWindow.find('.content'), currentPref.inputWindow.height);
+		resize(OutputWindow.find('.content'), currentPref.outputWindow.height);
+		resize(AvailableItemsWindow.find('.content'), currentPref.AvailableItemsWindow.height);
+		resize(PurchaseResult.find('.content'), currentPref.PurchaseResult.height);
+
+		// Apply width
+		InputWindow.css('width', currentPref.inputWindow.width);
+		OutputWindow.css('width', currentPref.outputWindow.width);
 	};
 
 
@@ -381,6 +384,7 @@ define(function(require)
 				break;
 
 			case NpcStore.Type.BARTER_MARKET:
+			case NpcStore.Type.BARTER_MARKET_EXTENDED:
 				for (i = 0, count = items.length; i < count; ++i) {
 					if (!('index' in items[i])) {
 						items[i].index = i;
@@ -403,7 +407,7 @@ define(function(require)
 					it = Inventory.getUI().getItemByIndex(items[i].index);
 
 					var condition = (InventoryVersion !== 'InventoryV0') ? it && (!Inventory.getUI().npcsalelock || it.PlaceETCTab < 1) : it;
-					
+
 					if (condition) {
 						item                 = jQuery.extend({}, it);
 						item.price           = items[i].price;
@@ -582,7 +586,7 @@ define(function(require)
 			return;
 		}
 
-		if(!(content.hasClass('contentAvailable')) && (_type !== NpcStore.Type.BARTER_MARKET)) {
+		if(!(content.hasClass('contentAvailable')) && (_type !== NpcStore.Type.BARTER_MARKET && _type !== NpcStore.Type.BARTER_MARKET_EXTENDED)) {
 			price = prettyZeny(item.price, _type === NpcStore.Type.VENDING_STORE || _type === NpcStore.Type.BUYING_STORE);
 
 			// Discount price
@@ -616,6 +620,58 @@ define(function(require)
 					'<div class="currency_nameOverlay">'+ jQuery.escape(DB.getItemName(currency_item)) +' '+ item.currencyamount +' ea</div>' +
 				'</div>'
 			);
+		} else if (_type === NpcStore.Type.BARTER_MARKET_EXTENDED) {
+			// Build the second layer (currency list)
+			let currencySlotsHTML = '';
+			let currencyOverlay = '';
+			if (item.currencyList && item.currencyList.length > 0) {
+				// Ensure fixed slots (2 slots max for currencies)
+				for (let i = 0; i < item.currencyList.length; i++) {
+					if (i < item.currencyList.length) {
+						const currency = item.currencyList[i];
+						const currencyItem = DB.getItemInfo(currency.ITID);
+
+						//currency_item = { ...item };  // Shallow copy of the item
+						//currency_item.ITID = item.currencyITID;
+
+						currencySlotsHTML +=
+                    	'<div class="currency_slot" data-item="' + currency.ITID + '">' +
+                    	    '<div class="expanded_currency_holder">' +
+								'<div class="expanded_currency_icon"></div>' +
+							'</div>' +
+                    	    '<div class="expanded_currency_amount">' + currency.amount + '</div>' +
+							(currency.refine_level > 0 ? '<div class="expanded_currency_refinelvl">+' + currency.refine_level + '</div>' : '') +
+                    	'</div>';
+
+						currencyOverlay += '' + jQuery.escape(currencyItem.identifiedDisplayName) + ' ' + currency.amount + ' ea<br>';
+					}
+				}
+			}
+			content.append(
+				'<div class="item expanded-barter" draggable="true" data-index="'+ item.index +'" data-weight="'+ item.weight +'" data-location="'+ item.location +'" data-viewSprite="'+ item.viewSprite +'">' +
+					'<div class="expanded_currency_holder">' +
+						'<div class="icon"></div>' +
+					'</div>' +
+					'<div class="amount">' + (isFinite(item.count) ? item.count : '') + '</div>' +
+					'<div class="name">'+ jQuery.escape(DB.getItemName(item)) +'</div>' +
+					'<div class="currency_section">' +
+                		currencySlotsHTML +
+            		'</div>' +
+					'<div class="expanded_price">'+ item.price +'z</div>' +
+					'<div class="expanded_currency_nameOverlay">' + currencyOverlay + '</div>' +
+				'</div>'
+			);
+			// Lazy-load icons after appending
+			if (item.currencyList && item.currencyList.length > 0) {
+				for (let i = 0; i < item.currencyList.length; i++) {
+					const currency = item.currencyList[i];
+					const currencyItem = DB.getItemInfo(currency.ITID);
+
+					Client.loadFile(DB.INTERFACE_PATH + 'item/' + currencyItem.identifiedResourceName + '.bmp', function(data) {
+						content.find(`.currency_slot[data-item="${currency.ITID}"] .expanded_currency_icon`).css('backgroundImage', `url(${data})`);
+					});
+				}
+			}
 		} else {
 			content.append(
 				'<div class="item itemAvailable" draggable="true" data-index="'+ item.index +'">' +
@@ -628,6 +684,10 @@ define(function(require)
 		// Add the icon once loaded
 		Client.loadFile( DB.INTERFACE_PATH + 'item/' + (item.IsIdentified ? it.identifiedResourceName : it.unidentifiedResourceName) + '.bmp', function(data){
 			content.find('.item[data-index="'+ item.index +'"] .icon').css('backgroundImage', 'url('+ data +')');
+		});
+
+		Client.loadFile( DB.INTERFACE_PATH + 'basic_interface/itemwin_mid.bmp', function(data){
+			content.find('.expanded_currency_holder').css('backgroundImage', 'url('+ data +')');
 		});
 
 		Client.loadFile( DB.INTERFACE_PATH + 'item/' + (item.IsIdentified ? currencyit.identifiedResourceName : currencyit.unidentifiedResourceName) + '.bmp', function(data){
@@ -782,7 +842,7 @@ define(function(require)
 					let inputCurrency = NpcStore.ui.find(`.InputWindow .item[data-index="${index}"]`);
 					let currencyItemWeight = parseInt(inputCurrency.attr('data-weight'), 10);
 					outputItem.total_weight = currencyItemWeight * outputItem.count;
-		
+
 					let inputCurrencyDiv = NpcStore.ui.find(`.InputWindow .item[data-index="${index}"] .currency_amount`);
 					let outputCurrencyDiv = NpcStore.ui.find(`.OutputWindow .item[data-index="${index}"] .currency_amount`);
 					let currencyAmount = parseInt(inputCurrencyDiv.text(), 10);
@@ -799,7 +859,7 @@ define(function(require)
 
 			NpcStore.calculateCost();
 			NpcStore.calculateWeight(); // Update total weight after every operation
-		};		
+		};
 	}();
 
 
@@ -1043,6 +1103,9 @@ define(function(require)
 		let inputWindow  = NpcStore.ui.find('.InputWindow');
 		let outputWindow = NpcStore.ui.find('.OutputWindow');
 
+		// Also remove the input box, if present
+		InputBox.remove();
+
 		let pkt;
 		switch(type) {
 			case NpcStore.Type.MARKETSHOP:
@@ -1052,6 +1115,9 @@ define(function(require)
 				break;
 			case NpcStore.Type.BARTER_MARKET:
 				pkt = new PACKET.CZ.NPC_BARTER_MARKET_CLOSE();
+				break;
+			case NpcStore.Type.BARTER_MARKET_EXTENDED:
+				pkt = new PACKET.CZ.NPC_EXPANDED_BARTER_MARKET_CLOSE();
 				break;
 			default:
 				pkt = new PACKET.CZ.NPC_TRADE_QUIT();
@@ -1067,6 +1133,18 @@ define(function(require)
 	 */
 	NpcStore.getCurrentType = function() {
 		return _type;
+	};
+
+
+	/**
+	 * Returns the current preference for NPCStore Type, or initialize from defaults
+	 * @returns {_preferences[_type]}
+	 */
+	function getCurrentPref() {
+		if (!_preferences[_type]) {
+			_preferences[_type] = JSON.parse(JSON.stringify(initialPreferences[_type] || initialPreferences.DEFAULT));
+		}
+		return _preferences[_type];
 	};
 
 
