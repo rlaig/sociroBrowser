@@ -69,6 +69,7 @@ define(function( require )
 	var LaphineUpg		 = require('UI/Components/LaphineUpg/LaphineUpg');
 	var Rodex            = require('UI/Components/Rodex/Rodex');
 	var RodexIcon        = require('UI/Components/Rodex/RodexIcon');	
+	var PCGoldTimer      = require('UI/Components/PCGoldTimer/PCGoldTimer');
 	var Refine           = require('UI/Components/Refine/Refine');
 	var PetInformations  = require('UI/Components/PetInformations/PetInformations');
 	var HomunInformations = require('UI/Components/HomunInformations/HomunInformations');
@@ -139,7 +140,12 @@ define(function( require )
 			}
 
 			// Success, try to login.
-			var pkt = PACKETVER.value >= 20180307 ? new PACKET.CZ.ENTER2() : new PACKET.CZ.ENTER();
+			var pkt;
+			if(PACKETVER.value >= 20180307) {
+				pkt        = new PACKET.CZ.ENTER2();
+			} else {
+				pkt        = new PACKET.CZ.ENTER();
+			}
 			pkt.AID        = Session.AID;
 			pkt.GID        = Session.GID;
 			pkt.AuthCode   = Session.AuthCode;
@@ -159,19 +165,21 @@ define(function( require )
 			var is_sec_hbt = Configs.get('sec_HBT', null);
 
 			// Ping
-			var ping;
-			var SP = Session.ping;
-			ping = PACKETVER.value >= 20180307 ? new PACKET.CZ.REQUEST_TIME2() : new PACKET.CZ.REQUEST_TIME();
-			
+			var ping, SP;
+			SP = Session.ping;
+
+			if(PACKETVER.value >= 20180307) {
+				ping = new PACKET.CZ.REQUEST_TIME2();
+			} else {
+				ping = new PACKET.CZ.REQUEST_TIME();
+			}
 			var startTick = Date.now();
 			Network.setPing(function(){
 				if(is_sec_hbt) { Network.sendPacket(hbt); }
 
 				ping.clientTime = Date.now() - startTick;
 				
-				if(!SP.returned && SP.pingTime) { 
-					console.warn('[Network] The server did not answer the previous PING!'); 
-				}
+				if(!SP.returned && SP.pingTime)	{ console.warn('[Network] The server did not answer the previous PING!'); }
 				SP.pingTime = ping.clientTime;
 				SP.returned = false;
 
@@ -246,6 +254,7 @@ define(function( require )
 			require('./MapEngine/UIOpen').call();
 			require('./MapEngine/Quest').call();
 			require('./MapEngine/Rodex').call();
+			require('./MapEngine/PCGoldTimer').call();
 			if(Configs.get('enableCashShop')){
 				require('./MapEngine/CashShop').call();
 			}
@@ -276,6 +285,7 @@ define(function( require )
 			SkillListMH.mercenary.prepare();
 			Rodex.prepare();
 			RodexIcon.prepare();
+			PCGoldTimer.prepare();
 			Navigation.prepare();
 
 			if(Configs.get('enableMapName')){
@@ -386,42 +396,42 @@ define(function( require )
 	 */
 	function onConfig( pkt )
 	{
-		var messageId, component;
-		
 		switch(pkt.Config) {
-			case 0: // Equipment
-				component = Equipment.getUI();
-				component.setEquipConfig(pkt.Value);
-				messageId = 1358 + (pkt.Value ? 1 : 0);
+			case 0:
+				Equipment.getUI().setEquipConfig( pkt.Value );
+				ChatBox.addText(
+					DB.getMessage(1358 + (pkt.Value ? 1 : 0) ),
+					ChatBox.TYPE.INFO,
+					ChatBox.FILTER.PUBLIC_LOG
+				);
 				break;
-				
-			case 1: // Call
+			case 1:
 				Session.Entity.call_flag = pkt.Value;
-				messageId = 2978 + (pkt.Value ? 0 : 1);
+				ChatBox.addText(
+					DB.getMessage(2978 + (pkt.Value ? 0 : 1) ),
+					ChatBox.TYPE.INFO,
+					ChatBox.FILTER.PUBLIC_LOG
+				);
 				break;
-				
-			case 2: // Pet Auto-Feeding
-				component = PetInformations;
-				component.setFeedConfig(pkt.Value);
-				messageId = 2579 + (pkt.Value ? 0 : 1);
+			case 2:
+				PetInformations.setFeedConfig( pkt.Value );
+				ChatBox.addText(
+					DB.getMessage(2579 + (pkt.Value ? 0 : 1) ),
+					ChatBox.TYPE.INFO,
+					ChatBox.FILTER.PUBLIC_LOG
+				);
 				break;
-				
-			case 3: // Homunculus Auto-Feeding
-				component = HomunInformations;
-				component.setFeedConfig(pkt.Value);
-				messageId = 3282 + (pkt.Value ? 0 : 1);
+			case 3:
+				HomunInformations.setFeedConfig( pkt.Value );
+				ChatBox.addText(
+					DB.getMessage(3282 + (pkt.Value ? 0 : 1) ),
+					ChatBox.TYPE.INFO,
+					ChatBox.FILTER.PUBLIC_LOG
+				);
 				break;
-				
 			default:
-				console.log('[PACKET_ZC_CONFIG] Unknown Config Type %d (value:%d)', pkt.Config, pkt.Value);
-				return;
+				console.error('[PACKET_ZC_CONFIG] Unknown Config Type %d (value:%d)', pkt.Config, pkt.Value);
 		}
-		
-		ChatBox.addText(
-			DB.getMessage(messageId),
-			ChatBox.TYPE.INFO,
-			ChatBox.FILTER.PUBLIC_LOG
-		);
 	}
 
 	/**
@@ -431,41 +441,34 @@ define(function( require )
 	 */
 	function onConfigNotify( pkt )
 	{
-		// Equipment visibility
 		if (typeof pkt.show_eq_flag !== 'undefined') {
-			Equipment.getUI().setEquipConfig(pkt.show_eq_flag);
+			Equipment.getUI().setEquipConfig( pkt.show_eq_flag );
 			ChatBox.addText(
-				DB.getMessage(1358 + (pkt.show_eq_flag ? 1 : 0)),
+				DB.getMessage(1358 + (pkt.show_eq_flag ? 1 : 0) ),
 				ChatBox.TYPE.INFO,
 				ChatBox.FILTER.PUBLIC_LOG
 			);
 		}
-		
-		// Pet auto-feeding
 		if (typeof pkt.pet_autofeeding_flag !== 'undefined') {
-			PetInformations.setFeedConfig(pkt.pet_autofeeding_flag);
+			PetInformations.setFeedConfig( pkt.pet_autofeeding_flag );
 			ChatBox.addText(
-				DB.getMessage(2579 + (pkt.pet_autofeeding_flag ? 0 : 1)),
+				DB.getMessage(2579 + (pkt.pet_autofeeding_flag ? 0 : 1) ),
 				ChatBox.TYPE.INFO,
 				ChatBox.FILTER.PUBLIC_LOG
 			);
 		}
-		
-		// Call flag
 		if (typeof pkt.call_flag !== 'undefined') {
 			Session.Entity.call_flag = pkt.call_flag;
 			ChatBox.addText(
-				DB.getMessage(2978 + (pkt.call_flag ? 0 : 1)),
+				DB.getMessage(2978 + (pkt.call_flag ? 0 : 1) ),
 				ChatBox.TYPE.INFO,
 				ChatBox.FILTER.PUBLIC_LOG
 			);
 		}
-		
-		// Homunculus auto-feeding
 		if (typeof pkt.homunculus_autofeeding_flag !== 'undefined') {
-			HomunInformations.setFeedConfig(pkt.homunculus_autofeeding_flag);
+			HomunInformations.setFeedConfig( pkt.homunculus_autofeeding_flag );
 			ChatBox.addText(
-				DB.getMessage(3282 + (pkt.homunculus_autofeeding_flag ? 0 : 1)),
+				DB.getMessage(3282 + (pkt.homunculus_autofeeding_flag ? 0 : 1) ),
 				ChatBox.TYPE.INFO,
 				ChatBox.FILTER.PUBLIC_LOG
 			);
@@ -558,7 +561,12 @@ define(function( require )
 			// TODO: find a better place to put it
 			jQuery(window).on('keydown.map', function( event ){
 				if (event.which === KEYS.INSERT) {
-					var pkt = PACKETVER.value >= 20180307 ? new PACKET.CZ.REQUEST_ACT2() : new PACKET.CZ.REQUEST_ACT();
+					var pkt;
+					if(PACKETVER.value >= 20180307) {
+						pkt        = new PACKET.CZ.REQUEST_ACT2();
+					} else {
+						pkt        = new PACKET.CZ.REQUEST_ACT();
+					}
 					pkt.action = Session.Entity.action === Session.Entity.ACTION.SIT ? 3 : 2;
 					Network.sendPacket(pkt);
 					event.stopImmediatePropagation();
@@ -571,12 +579,9 @@ define(function( require )
 				GID: Session.Character.GID
 			});
 			EntityManager.add( Session.Entity );
-			
-			// Handle falcon
 			if(Session.Entity.effectState & StatusConst.EffectState.FALCON) {
-				if(!Session.Entity.falcon) {
+				if(!Session.Entity.falcon)
 					Session.Entity.falcon = new Entity();
-				}
 				
 				Session.Entity.falcon.set({
 					objecttype: Session.Entity.falcon.constructor.TYPE_FALCON,
@@ -590,12 +595,9 @@ define(function( require )
 					hideShadow: true,
 				});
 				EntityManager.add(Session.Entity.falcon);
-			} 
-			// Handle wug
-			else if(Session.Entity.effectState & StatusConst.EffectState.WUG) {
-				if(!Session.Entity.wug) {
+			} else if(Session.Entity.effectState & StatusConst.EffectState.WUG) {
+				if(!Session.Entity.wug)
 					Session.Entity.wug = new Entity();
-				}
 
 				Session.Entity.wug.set({
 					objecttype: Session.Entity.wug.constructor.TYPE_WUG,
@@ -941,7 +943,12 @@ define(function( require )
 		if (Session.Entity.action === Session.Entity.ACTION.SIT || KEYS.SHIFT) {
 			Session.Entity.lookTo( Mouse.world.x, Mouse.world.y );
 
-			var pkt = PACKETVER.value >= 20180307 ? new PACKET.CZ.CHANGE_DIRECTION2() : new PACKET.CZ.CHANGE_DIRECTION();
+			var pkt;
+			if(PACKETVER.value >= 20180307) {
+				pkt = new PACKET.CZ.CHANGE_DIRECTION2();
+			} else {
+				pkt = new PACKET.CZ.CHANGE_DIRECTION();
+			}
 			pkt.headDir = Session.Entity.headDir;
 			pkt.dir     = Session.Entity.direction;
 			Network.sendPacket(pkt);
@@ -972,26 +979,28 @@ define(function( require )
 			return;
 		}
 
-		var mouseX = Mouse.world.x;
-		var mouseY = Mouse.world.y;
-		var isWalkable = (mouseX > -1 && mouseY > -1);
-		var entityX = Math.round(Session.Entity.position[0]);
-		var entityY = Math.round(Session.Entity.position[1]);
-		var isCurrentPos = (entityX === mouseX && entityY === mouseY);
+		var isWalkable   = (Mouse.world.x > -1 && Mouse.world.y > -1);
+		var isCurrentPos = (Math.round(Session.Entity.position[0]) === Mouse.world.x &&
+		                    Math.round(Session.Entity.position[1]) === Mouse.world.y);
 
 		if (isWalkable && !isCurrentPos) {
-			var pkt = PACKETVER.value >= 20180307 ? new PACKET.CZ.REQUEST_MOVE2() : new PACKET.CZ.REQUEST_MOVE();
-			if (!checkFreeCell(mouseX, mouseY, 9, pkt.dest)) {
-				pkt.dest[0] = mouseX;
-				pkt.dest[1] = mouseY;
+			var pkt;
+			if(PACKETVER.value >= 20180307) {
+				pkt         = new PACKET.CZ.REQUEST_MOVE2();
+			} else {
+				pkt         = new PACKET.CZ.REQUEST_MOVE();
+			}
+			if (!checkFreeCell(Mouse.world.x, Mouse.world.y, 9, pkt.dest)) {
+				pkt.dest[0] = Mouse.world.x;
+				pkt.dest[1] = Mouse.world.y;
 			}
 
 			Network.sendPacket(pkt);
 		}
 
 		Events.clearTimeout(_walkTimer);
-		_walkTimer    = Events.setTimeout(walkIntervalProcess, 500);
-		_walkLastTick = Renderer.tick;
+		_walkTimer    =  Events.setTimeout( walkIntervalProcess, 500);
+		_walkLastTick = +Renderer.tick;
 	}
 
 
@@ -1002,22 +1011,20 @@ define(function( require )
 	 * @param {number} y
 	 * @param {number} range
 	 * @param {array} out
-	 * @returns {boolean} whether a free cell was found
 	 */
 	function checkFreeCell(x, y, range, out)
 	{
+		var _x, _y, r;
 		var d_x = Session.Entity.position[0] < x ? -1 : 1;
 		var d_y = Session.Entity.position[1] < y ? -1 : 1;
 
 		// Search possible positions
-		for (var r = 0; r <= range; ++r) {
-			for (var _x = -r; _x <= r; ++_x) {
-				for (var _y = -r; _y <= r; ++_y) {
-					var newX = x + _x * d_x;
-					var newY = y + _y * d_y;
-					if (isFreeCell(newX, newY)) {
-						out[0] = newX;
-						out[1] = newY;
+		for (r = 0; r <= range; ++r) {
+			for (_x = -r; _x <= r; ++_x) {
+				for (_y = -r; _y <= r; ++_y) {
+					if (isFreeCell(x + _x * d_x, y + _y * d_y)) {
+						out[0] = x + _x * d_x;
+						out[1] = y + _y * d_y;
 						return true;
 					}
 				}
@@ -1033,7 +1040,7 @@ define(function( require )
 	 *
 	 * @param {number} x
 	 * @param {number} y
-	 * @returns {boolean} is free
+	 * @param {returns} is free
 	 */
 	function isFreeCell(x, y)
 	{
@@ -1044,9 +1051,9 @@ define(function( require )
 		var free = true;
 
 		EntityManager.forEach(function(entity){
-			if (entity.objecttype !== entity.constructor.TYPE_EFFECT &&
-				entity.objecttype !== entity.constructor.TYPE_UNIT &&
-				entity.objecttype !== entity.constructor.TYPE_TRAP &&
+			if (entity.objecttype != entity.constructor.TYPE_EFFECT &&
+				entity.objecttype != entity.constructor.TYPE_UNIT &&
+				entity.objecttype != entity.constructor.TYPE_TRAP &&
 				Math.round(entity.position[0]) === x &&
 				Math.round(entity.position[1]) === y) {
 				free = false;
@@ -1103,10 +1110,14 @@ define(function( require )
 	 * @param {number} index in inventory
 	 * @param {number} count to drop
 	 */
-	function onDropItem(index, count)
+	function onDropItem( index, count )
 	{
 		if (count) {
-			var pkt = PACKETVER.value >= 20180307 ? new PACKET.CZ.ITEM_THROW2() : new PACKET.CZ.ITEM_THROW();
+			if(PACKETVER.value >= 20180307) {
+				var pkt   = new PACKET.CZ.ITEM_THROW2();
+			} else {
+				var pkt   = new PACKET.CZ.ITEM_THROW();
+			}
 			pkt.Index = index;
 			pkt.count = count;
 			Network.sendPacket(pkt);
@@ -1118,9 +1129,8 @@ define(function( require )
 	 * Use an item
 	 *
 	 * @param {number} item's index
-	 * @returns {boolean} whether the item was used
 	 */
-	function onUseItem(index)
+	function onUseItem( index )
 	{
 		// Items are not usable when Laphine Synthesis, Upgrade, ItemReform UI is open (if they are available at all)
 		if ((LaphineSys.__loaded && LaphineSys.__active && LaphineSys.ui.is(':visible')) || 
@@ -1129,11 +1139,15 @@ define(function( require )
 			return false;
 		}
 
-		var pkt = PACKETVER.value >= 20180307 ? new PACKET.CZ.USE_ITEM2() : new PACKET.CZ.USE_ITEM();
+		var pkt;
+		if(PACKETVER.value >= 20180307) { // not sure - this date is when the shuffle packets stoped
+			pkt = new PACKET.CZ.USE_ITEM2();
+		} else {
+			pkt = new PACKET.CZ.USE_ITEM();
+		}
 		pkt.index = index;
 		pkt.AID   = Session.Entity.GID;
 		Network.sendPacket(pkt);
-		return true;
 	}
 
 
@@ -1167,9 +1181,6 @@ define(function( require )
 
 	/**
 	 * Add Switch Equip
-	 * 
-	 * @param {number} index - item index
-	 * @param {number} location - where to equip
 	 */
 	function onAddSwitchEquip( index, location )
 	{
@@ -1182,8 +1193,6 @@ define(function( require )
 
 	/**
 	 * Remove Switch Equip
-	 * 
-	 * @param {number} index - item index
 	 */
 	function onRemoveSwitchEquip( index )
 	{
